@@ -1,0 +1,474 @@
+@import 'fonts.scss';
+@import 'normalize.scss';
+@import 'mixsins.scss';
+@import 'smart-grid.scss';
+
+
+
+/*=============================================
+      ОБЩИЕ ПРАВИЛА
+  ============================================= */
+
+.clearfix {
+    @include clearfix;
+}
+
+.wrapper {
+    @include wrapper;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.375;
+    font-family: 'Montserrat', 'sans serif';
+}
+
+.hide {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/*============================================= */
+
+
+/*=============================================
+        ШАПКА
+============================================= */
+.header {
+    position: relative;
+    padding-top: 50px;
+    background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
+    background-image: url(../img/images/bg-top.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include sm-block {
+        padding-top: 30px;
+        padding-bottom: 57px;
+        text-align: center;
+    }
+
+    .wrapper {
+        .topLine {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 233px;
+
+            @include md-block {
+                margin-bottom: 150px;
+            }
+
+            @include sm-block {
+                margin-bottom: 303px;
+            }
+
+            &__btn {
+                display: flex;
+                align-items: center;
+                padding: 13px 22px;
+                border: 1.5px solid rgba(255, 255, 255, .2);
+                background: transparent;
+                border-radius: 12px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 160%;
+                color: #FFFFFF;
+                cursor: pointer;
+
+                @include md-block {
+                    display: none;
+                    ;
+                }
+
+                &:hover {
+                    border: 1.5px solid rgba(255, 255, 255, .8);
+                }
+
+                svg {
+                    width: 15px;
+                    height: 18px;
+                    margin-right: 8px;
+                    fill: #FFFFFF;
+                }
+            }
+        }
+
+        h1 {
+            max-width: 1002px;
+            margin-bottom: 53px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 3.125vw;
+            line-height: 130%;
+            color: #FFFFFF;
+
+            @include md-block {               
+                font-size: 32px;
+            }
+
+            @include sm-block {
+                margin-bottom: 214px;
+            }
+
+            @include xs-block {
+                margin-bottom: 24px;
+                font-size: 28px;
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.header__burger {
+    z-index: 101;
+
+    @include llg-block {
+        display: block;
+    }
+}
+
+.burger {
+    @include gamburger(28px, 10px, 28px, 2px, 6px, #FFFFFF, transparent);
+}
+
+.logo {
+    width: 298px;
+    z-index: 102;
+
+    @include xs-block {
+        width: 162px;
+    }
+
+    .logo__img {
+        display: block;
+    }
+}
+
+.nav {
+    @include llg-block {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        z-index: 100;
+        margin-left: 101%;
+        transition: all ease 0.8s;
+    }
+
+    .nav__list {
+        list-style-type: none;
+        display: flex;
+
+        @include llg-block {
+            display: block;
+            padding-left: 100px;
+            text-align: left;
+            height: 100vh;
+            padding-top: 130px;
+            background: #8D8A8A;
+        }
+
+        li {
+
+            a {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.3;
+                color: #FFFFFF;
+                transition: all ease 0.5s;
+
+                @include llg-block {
+                    font-size: 26px;
+                    line-height: 1.7;
+                    text-transform: uppercase;
+                }
+
+                &:hover {
+                    color: #FFCC00;
+                }
+            }
+        }
+    }
+}
+
+.btnBase {
+    padding: 15px 38px;
+    text-align: center;
+    background: #FFCC00;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+
+    p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        color: #000000;
+    }
+
+    &:hover {
+        box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+    }
+}
+
+.btnBase--header {
+    @include md-block {
+        padding: 0;
+        background: transparent;
+    }
+
+    svg {
+        display: none;
+
+        @include md-block {
+            display: block;
+            width: 24px;
+            height: 24px;
+            fill: #FFFFFF;
+        }
+    }
+
+    p {
+        @include md-block {
+            display: none;
+        }
+    }
+}
+
+.btnBase__header {
+    position: absolute;
+    top: 67px;
+    right: 70px;
+
+    @include llg-block {
+        top: 170px;
+        right: 30px;
+    }
+
+    @include md-block {
+        position: static;
+    }
+}
+
+.btnBase--downHeader {
+    @include xs-block {
+        padding: 14px 30px;
+        margin-top: 20px;
+    }
+
+    p {
+        @include xs-block {
+            font-size: 3.7vw;
+        }
+    }
+}
+
+.btnVideo__wrapper {
+    position: absolute;
+    top: 350px;
+    right: 140px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include md-block {
+        right: 16px;
+    }
+
+    @include sm-block {
+        top: 28%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    @include xs-block {
+        top: 162px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    .btnVideo__ellipse1,
+    .btnVideo__ellipse2,
+    .btnVideo__ellipse3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, .1);
+        border-radius: 50%;
+    }
+
+    .btnVideo__ellipse1 {
+        width: 19.84vw;
+        height: 19.84vw;
+
+        @include xs-block {
+            width: 155px;
+            height: 155px;
+        }
+
+        .btnVideo__ellipse2 {
+            width: 16.88vw;
+            height: 16.88vw;
+
+            @include xs-block {
+                width: 132px;
+                height: 132px;
+            }
+
+            .btnVideo__ellipse3 {
+                width: 14.1vw;
+                height: 14.1vw;
+
+                @include xs-block {
+                    width: 110px;
+                    height: 110px;
+                }
+            }
+        }
+    }
+}
+
+.btnVideo {
+    padding: 0;
+
+    &--play,
+    &--stop {
+        width: 5.2vw;
+        height: 4.8vw;
+
+        @include xs-block {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &--play {
+        fill: #FFCC00;
+    }
+
+    &--stop {
+        fill: rgba(0, 0, 0, .65);
+    }
+}
+
+.btnVideo__wrapper:hover .btnVideo__ellipse1,
+.btnVideo__wrapper:hover .btnVideo__ellipse2,
+.btnVideo__wrapper:hover .btnVideo__ellipse3 {
+    box-shadow: 0px 8px 30px #FFFFFF;
+}
+
+
+.header__items {
+    @include row-flex();
+    justify-content: space-between;
+    margin-top: 184px;    
+
+    @include sm-block {
+        display: none;
+    }
+
+    .header__item {
+        @include col();
+        @include size(3);
+        max-width: 228px;
+
+        @include llg-block {
+            max-width: none;
+        }
+
+        &>span {
+            margin-bottom: 11px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: 0.1em;
+            color: #FFCC00;
+            text-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+        }
+
+        p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+
+            @include md-block {
+                font-size: 14px;
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+/*============================================= */
+
+
+/*=============================================
+        ОСНОВНОЙ КОНТЕНТ
+============================================= */
+
+/*---------------------------------------------
+  Секция ...................
+--------------------------------------------- */
+
+
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция ..................
+--------------------------------------------- */
+
+
+/*----------------------------------------------*/
+/*============================================= */
+
+
+/*=============================================
+        ПОДВАЛ
+============================================= */
+
+
+
+/*============================================= */
+
+
+/*=============================================
+        АДАПТИВ
+============================================= */
+
+@import '_media.scss';
+
+/*============================================= */
