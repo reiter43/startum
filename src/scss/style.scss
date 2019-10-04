@@ -46,6 +46,7 @@ body {
 .header {
     position: relative;
     padding-top: 50px;
+    padding-bottom: 64px;
     background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
     background-image: url(../img/images/bg-top.jpg);
     background-repeat: no-repeat;
@@ -116,7 +117,7 @@ body {
             line-height: 130%;
             color: #FFFFFF;
 
-            @include md-block {               
+            @include md-block {
                 font-size: 32px;
             }
 
@@ -385,7 +386,7 @@ body {
 .header__items {
     @include row-flex();
     justify-content: space-between;
-    margin-top: 184px;    
+    margin-top: 184px;
 
     @include sm-block {
         display: none;
@@ -440,17 +441,288 @@ body {
 ============================================= */
 
 /*---------------------------------------------
-  Секция ...................
+  Секция mostly
 --------------------------------------------- */
+.mostly {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 126px;
+    overflow: hidden;
+
+    @include lg-block {
+        padding-top: 70px;
+        padding-bottom: 46px;
+    }
+
+    @include sm-block {
+        text-align: center;
+        padding-top: 83px;
+    }
+
+    @include xxs-block {
+        text-align: left;
+        padding-bottom: 103px;
+    }
+}
+
+.rest {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+    @include xs-block {
+        top: -25px;
+    }
+
+    .restYellow {
+        width: 684px;
+        height: 34px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include xs-block {
+            width: 206px;
+            height: 10px;
+            margin-left: -130px;
+        }
+    }
+
+    .restBlue {
+        width: 684px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: -400px;
+        background: #2098D5;
+
+        @include xs-block {
+            width: 206px;
+            height: 39px;
+            margin-left: -73px;
+        }
+    }
+}
+
+.mostly__content {
+    display: flex;
+
+    @include sm-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include xxs-block {
+        align-items: flex-start;
+    }
+
+    img {
+        display: block;
+    }
+
+    .mostly__block1 {
+        width: 37%;
+
+        @include sm-block {
+            width: 80%;
+        }
+
+        @include xs-block {
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 62px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2.5vw;
+            line-height: 130%;
+            color: #000000;
+
+            @include md-block {
+                font-size: 25px;
+            }
+
+            @include lg-block {
+                font-size: 28px;
+            }
+
+            @include xs-block {
+                font-weight: 600;
+            }
+
+            @include xxs-block {
+                text-align: center;
+            }
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        img {
+            @include sm-block {
+                display: none;
+            }
+        }
+
+        p {
+            margin-top: 45px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 170%;
+            color: #000000;
+
+            @include md-block {
+                font-size: 14px;
+            }
+
+            @include sm-block {
+                display: none;
+            }
+
+        }
+    }
+
+    .mostly__block2 {
+        width: 57%;
+        margin-left: 6%;
+
+        @include sm-block {
+            width: 80%;
+            margin-left: 0;
+        }
+
+        @include xs-block {
+            width: 100%;
+        }
+
+        &>p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 190%;
+            color: #000000;
+
+            @include llg-block {
+                font-size: 16px;
+            }
+
+            @include md-block {
+                font-size: 14px;
+            }
+
+            @include sm-block {
+                font-size: 16px;
+            }
+
+            @include xs-block {
+                margin-bottom: 29px;
+                font-size: 14px;
+            }
+        }
+
+        &>p:nth-child(2) {
+            margin-top: 40px;
+            margin-bottom: 32px;
+
+            @include lg-block {
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+
+            @include sm-block {
+                margin-bottom: 30px;
+            }
+
+            @include xs-block {
+                display: none;
+            }
+        }
+
+        .btnBase--mostly {
+            p {
+                @include xxs-block {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &>p:nth-child(6) {
+            display: none;
+
+            @include sm-block {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+
+        &>img:nth-child(5) {
+            display: none;
+
+            @include sm-block {
+                display: block;
+                margin-top: 48px;
+                margin-bottom: 51px;
+            }
+        }
+
+        img {
+            margin-top: 83px;
+
+            @include lg-block {
+                margin-top: 33px;
+            }
+
+            @include sm-block {
+                display: none;
+            }
+        }
+    }
+}
 
 
+.rest2 {
+    position: absolute;
+    bottom: -135px;
+    right: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+    @include sm-block {
+        display: none;
+    }
+
+    .restYellow2 {
+        width: 703px;
+        height: 126px;
+        margin-top: 10px;
+        margin-right: -250px;
+        background: #FFCC00;
+    }
+
+    .restBlue2 {
+        width: 684px;
+        height: 19px;
+        margin-right: -400px;
+        background: #2098D5;
+    }
+}
 
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция ..................
+  Секция indicators
 --------------------------------------------- */
-
+.indicators {
+    padding: 59px 0;
+    background: #2098D5;
+}
 
 /*----------------------------------------------*/
 /*============================================= */
