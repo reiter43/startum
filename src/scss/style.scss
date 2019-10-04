@@ -722,6 +722,119 @@ body {
 .indicators {
     padding: 59px 0;
     background: #2098D5;
+
+    @include xxs-block {
+        padding-top: 44px;
+        padding-bottom: 37px;
+    }
+
+    h3 {
+        width: 20%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        color: #FFFFFF;
+
+        @include llg-block {
+            font-size: 30px;
+        }
+
+        @include md-block {
+            width: 16%;
+            font-size: 21px;
+        }
+
+        @include sm-block {
+            width: 75%;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        @include xxs-block {
+            width: 80%;
+            font-size: 28px;
+        }
+    }
+
+    .indicators__content {
+        @include row-flex();
+        align-items: center;
+
+        @include sm-block {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .indicators__item {
+            @include col();
+            width: 23%;
+            display: flex;
+            align-items: center;
+
+            @include lg-block {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @include sm-block {
+                width: 75%;
+                text-align: center;
+            }
+
+
+            span {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 5vw;
+                line-height: 130%;
+                color: #FFFFFF;
+
+                @include llg-block {
+                    font-size: 60px;
+                }
+
+                @include sm-block {
+                   font-size: 75px;
+                }
+
+                @include xxs-block {
+                    font-size: 72px;
+                }
+            }
+
+            p {
+                margin-left: 10px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 150%;
+                color: #FFFFFF;
+
+                @include llg-block {
+                    font-size: 15px;
+                }
+
+                @include lg-block {
+                    margin: 0;
+                    font-size: 14px;
+                }
+
+                @include sm-block {
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                }
+
+                @include xxs-block {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
 }
 
 /*----------------------------------------------*/
@@ -742,5 +855,3 @@ body {
 ============================================= */
 
 @import '_media.scss';
-
-/*============================================= */
