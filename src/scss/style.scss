@@ -797,7 +797,7 @@ body {
                 }
 
                 @include sm-block {
-                   font-size: 75px;
+                    font-size: 75px;
                 }
 
                 @include xxs-block {
@@ -833,6 +833,80 @@ body {
                     margin-bottom: 25px;
                 }
             }
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция map
+--------------------------------------------- */
+.map {
+    position: relative;
+    width: 100%;
+
+    @include sm-block {
+        display: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    h2 {
+        margin: 0;
+        padding-top: 86px;
+        text-align: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5vw;
+        line-height: 120%;
+        color: #FFFFFF;
+
+        @include llg-block {
+            padding-top: 35px;
+        }
+
+        @include md-block {
+            font-size: 28px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    p {
+        width: 888px;
+        margin: 0 auto;
+        margin-top: 27px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2vw;
+        line-height: 160%;
+        text-align: center;
+        color: #FFFFFF;
+
+        @include llg-block {
+            margin-top: 13px;
+            font-size: 16px;
+        }
+
+        @include md-block {
+            width: 750px;
+            padding: 0 20px;
         }
     }
 }

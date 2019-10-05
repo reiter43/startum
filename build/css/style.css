@@ -50,15 +50,6 @@
 
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
-
 *,
 *::before,
 *::after {
@@ -68,24 +59,14 @@
 
 html {
   line-height: 1.15;
-  /* 1 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
 
 body {
   margin: 0;
   padding: 0;
 }
-
-/* Sections
-      ========================================================================== */
-
-/**
-    * Add the correct display in IE 9-.
-    */
 
 article,
 aside,
@@ -96,18 +77,10 @@ section {
   display: block;
 }
 
-/**
-    * Correct the font size and margin on `h1` elements within `section` and
-    * `article` contexts in Chrome, Firefox, and Safari.
-    */
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
-/* Grouping content
-      ========================================================================== */
 
 /**
     * Add the correct display in IE 9-.
@@ -1125,6 +1098,61 @@ body {
 
 /*----------------------------------------------*/
 
+/*---------------------------------------------
+  Секция map
+--------------------------------------------- */
+
+.map {
+  position: relative;
+  width: 100%;
+}
+
+.map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map__content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.map h2 {
+  margin: 0;
+  padding-top: 86px;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5vw;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.map h2 span {
+  font-weight: 600;
+}
+
+.map p {
+  width: 888px;
+  margin: 0 auto;
+  margin-top: 27px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 160%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/*----------------------------------------------*/
+
 /*============================================= */
 
 /*=============================================
@@ -1205,6 +1233,15 @@ body {
 
   .indicators .indicators__content .indicators__item p {
     font-size: 15px;
+  }
+
+  .map h2 {
+    padding-top: 35px;
+  }
+
+  .map p {
+    margin-top: 13px;
+    font-size: 16px;
   }
 }
 
@@ -1311,6 +1348,15 @@ body {
   .indicators h3 {
     width: 16%;
     font-size: 21px;
+  }
+
+  .map h2 {
+    font-size: 28px;
+  }
+
+  .map p {
+    width: 750px;
+    padding: 0 20px;
   }
 }
 
@@ -1437,6 +1483,10 @@ body {
   .indicators .indicators__content .indicators__item p {
     margin-bottom: 20px;
     font-size: 18px;
+  }
+
+  .map {
+    display: none;
   }
 }
 
