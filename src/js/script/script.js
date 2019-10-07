@@ -10,11 +10,11 @@
 // 			elem.classList.remove('buttonCat--active');
 // 			event.target.classList.add('buttonCat--active');
 //         });
-        
+
 //         let buttonFilter = elem.getAttribute('data-filter');        
 
 //         let portfolioItems = document.querySelectorAll('.portfolio__item');
-        
+
 //         portfolioItems.forEach(elem => {
 //             elem.style.display = 'none';
 
@@ -28,7 +28,7 @@
 //         })
 //     }
 // }); 	
-	
+
 
 // Скрыть/показать меню
 
@@ -36,17 +36,17 @@ let burger = document.querySelector('.burger');
 let nav = document.querySelector('nav.nav');
 let bod = document.querySelector('body');
 
-burger.addEventListener('click',  event => {
+burger.addEventListener('click', event => {
 	event.preventDefault;
-	
+
 	if (burger.classList.contains('burger--active')) {
 		burger.classList.remove('burger--active');
-        nav.style.marginLeft = '101%';
+		nav.style.marginLeft = '101%';
 		nav.style.width = '0';
-        bod.style.overflow = 'auto';        
+		bod.style.overflow = 'auto';
 	}
 	else {
-		burger.classList.add('burger--active');		
+		burger.classList.add('burger--active');
 		nav.style.marginLeft = '0';
 		nav.style.width = '100%';
 		bod.style.overflow = 'hidden';
@@ -54,22 +54,31 @@ burger.addEventListener('click',  event => {
 });
 
 
-// // Включение видеоролика
+// Показ кнопки на определенной карточке программы
 
-// let video = document.querySelector('.video__wrapper');
-// let btnVideo = document.querySelector('.btnVideo');
+window.addEventListener('resize', function () {
+	let screen = document.documentElement.clientWidth;
+	let programItems = document.querySelectorAll('.programItem');
 
-// btnVideo.addEventListener('click',  event => {		
+	programItems.forEach(elem => {
+		if (screen < 1920 && screen > 1200) {
+			elem.classList.remove('programItem--button');
+			programItems[3].classList.add('programItem--button');
+		}
+		else if (screen < 1200 && screen > 996) {
+			elem.classList.remove('programItem--button');
+			programItems[2].classList.add('programItem--button');
+		}
+		else if (screen < 996 && screen > 576) {
+			elem.classList.remove('programItem--button');
+			programItems[1].classList.add('programItem--button');
+		}
+		else {
+			elem.classList.remove('programItem--button');
+		}
 
-// 	if (video.classList.contains('hide')) {
-// 		video.classList.remove('hide');		
-// 		btnVideo.innerHTML = '<svg class="btnVideo--stop"><use xlink:href="img/svg/sprite.svg#stopButton"></use></svg>';		
-// 	}
-// 	else{
-// 		video.classList.add('hide');	
-// 		btnVideo.innerHTML = '<svg class="btnVideo--play"><use xlink:href="img/svg/sprite.svg#playArrow"></use></svg>';	
-// 	}
-// });
+	})
+}, false);
 
 
 // // Аякс-запрос формы обратной связи
@@ -80,7 +89,7 @@ burger.addEventListener('click',  event => {
 //     event.preventDefault();
 
 //     let formData = new FormData(form);    
-    
+
 //     let xhttp = new XMLHttpRequest(); 
 //     xhttp.open('POST', 'mail.php'); 
 //     xhttp.send(formData); 
