@@ -983,9 +983,11 @@ body {
         display: none;
 
         @include xs-block {
-            display: block;            
+            display: block;
+            margin: 0 auto;
         }
-        @include xxs-block {  
+
+        @include xxs-block {
             margin: 0 auto;
             margin-top: 26px;
             padding: 14px 20px;
@@ -1278,7 +1280,7 @@ body {
 }
 
 .programItem--button {
-    margin-top: -50px;    
+    margin-top: -50px;
 
     .programItem__quote {
         margin-top: 10px;
@@ -1350,8 +1352,329 @@ body {
     }
 }
 
-
 /*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция formAnswer
+--------------------------------------------- */
+.rest5 {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    z-index: 1;
+    transform: rotate(-45deg);
+
+    @include xs-block {
+        display: none;
+    }
+
+
+    .restYellow7 {
+        width: 684px;
+        height: 10px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 8px;
+        }
+
+        @include sm-block {
+            height: 6px;
+        }
+    }
+
+    .restYellow8 {
+        width: 684px;
+        height: 83px;
+        margin-top: 70px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 60px;
+            margin-top: 50px;
+        }
+
+        @include sm-block {
+            height: 45px;
+            margin-top: 25px;
+        }
+    }
+
+    .restYellow9 {
+        width: 684px;
+        height: 10px;
+        margin-top: 20px;
+        margin-left: -400px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 8px;
+            margin-top: 15px;
+        }
+
+        @include sm-block {
+            height: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+.formAnswer {
+    position: relative;
+    padding: 83px 20px 10px 20px;
+    background: #2098D5;
+    overflow: hidden;
+
+    @include xs-block {
+        padding: 47px 15px 7px;
+    }
+
+
+    .titleSection--formAnswer {
+        position: relative;
+        z-index: 5;
+        font-weight: 600;
+        line-height: 1.5;
+
+        @include md-block {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+        @include xxs-block {
+            font-size: 28px;
+            color: #FFFFFF;
+        }
+    }
+
+    p {
+        margin-top: 10px;
+        margin-bottom: 73px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 160%;
+        text-align: center;
+        color: #FFFFFF;
+
+        @include lg-block {
+            font-size: 22px;
+        }
+
+        @include md-block {
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        @include xxs-block {
+            font-size: 16px;
+        }
+    }
+
+    small {
+        max-width: 1160px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 160%;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.5;
+
+        @include llg-block {
+            display: block;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1;
+        }
+
+        @include md-block {
+            max-width: 580px;
+            line-height: 1.2;
+        }
+
+        @include xxs-block {
+            font-size: 11px;
+            line-height: 1.6;
+        }
+    }
+}
+
+.formAnswer__form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    @include md-block {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .input__wrapper {
+        position: relative;
+        width: 352px;
+        margin-right: 15px;
+
+        @include md-block {
+            width: 352px;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+
+        @include xxs-block {
+            width: 100%
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 68px;
+        padding-left: 59px;
+
+        background: #FFFFFF;
+        border-radius: 12px;
+        border: none;
+        font-size: 14px;
+        outline: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include xxs-block {
+            height: 60px;
+        }
+    }
+
+    @include input-placeholder {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 160%;
+        color: #000000;
+        opacity: 0.5;
+
+        @include lg-block {
+            @include input-placeholder {
+                font-size: 14px;
+            }
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: #000000;
+        }
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 46px;
+        padding-right: 46px;
+        background: #FFCC00;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+        }
+
+        @include lg-block {
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+
+        @include md-block {
+            width: 352px;
+            margin: 0;
+            margin-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        @include xxs-block {
+            width: 223px;
+            height: 60px;
+            margin-bottom: 33px;
+            padding-top: 15px;
+        }
+
+        span {
+            margin-right: 11px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 160%;
+            color: #000000;
+        }
+
+        svg {
+            width: 17px;
+            height: 16px;
+            fill: #000000;
+        }
+    }
+}
+
+.rest6 {
+    position: absolute;
+    bottom: -170px;
+    right: 0;
+    z-index: 1;
+    transform: rotate(-45deg);
+
+    @include sm-block {
+        display: none;
+    }
+
+    .restYellow10 {
+        width: 684px;
+        height: 17px;
+        margin-right: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 12px;
+        }
+    }
+
+    .restYellow11 {
+        width: 684px;
+        height: 83px;
+        margin-top: 20px;
+        margin-right: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 60px;
+            margin-top: 15px;
+        }
+    }
+}
+
+
+
+
+
 /*============================================= */
 
 
