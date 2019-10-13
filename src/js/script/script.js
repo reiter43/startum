@@ -81,6 +81,16 @@ window.addEventListener('resize', function () {
 }, false);
 
 
+let video = document.querySelector('.videoSlider__wrapper');
+let btnVideo = document.querySelectorAll('.btnVideoSlider__wrapper');
+
+btnVideo.forEach(elem => {
+	elem.onclick = (event) => {
+		video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/lTKr_Sb4xq4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	};
+});
+
+
 // // Аякс-запрос формы обратной связи
 
 // let form = document.querySelector('#form');

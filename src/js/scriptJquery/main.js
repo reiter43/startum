@@ -1,37 +1,57 @@
-// $(document).ready(function () {
 
-// 	//Инициализация слайдера owl-carousel
-// 	$(".owl-carousel").owlCarousel({
-// 		items: 4,
-// 		loop: true,
-// 		dots: true,
-// 		smartSpeed: 500,
-// 		// nav: true,
-// 		// autoHeight: true,               
-// 		center: true,
-// 		// margin: 20,
-// 		responsive: { 
-// 			0: {
-// 				items: 1,
-// 			},
-// 			320: {
-// 				items: 1,
-// 			},
-// 			576: {
-// 				items: 2,
-// 			},
-// 			720: {
-// 				items: 3,
-// 			},
-// 			992: {
-// 				items: 3,
-// 			},
-// 			1200: {
-// 				items: 4,
-// 			}
-// 		}
-// 	});
+$(document).ready(function () {
 
+    //Инициализация слайдера owl-carousel
+    var owl=$(".owl-carousel");
+	owl.owlCarousel({
+		items: 1,
+		loop: true,
+		dots: false,
+		smartSpeed: 800,
+        nav: false,        
+        margin:80,  
+		responsive: { 	
+			750: {
+                items: 1,
+                margin:150,
+                nav: true,
+                navText: [
+                    "<span class='slider-prev'></span>",
+                    "<span class='slider-next'></span>",            
+                ],
+			},
+			996: {
+                items: 1,                 
+                margin:150,
+                nav: true,
+                navText: [
+                    "<span class='slider-prev'></span>",
+                    "<span class='slider-next'></span>",            
+                ],  
+			},
+			1200: {
+                items: 1,
+                center: true,
+                margin: 150,
+                autoWidth: true,
+                nav: true,
+                navText: [
+                    "<span class='slider-prev'></span>",
+                    "<span class='slider-next'></span>",            
+                ],
+			}
+		}
+    });
+   
+	owl.owlCarousel();
+	
+	$(".navSlider__next").click(function(){
+		owl.trigger("next.owl.carousel");
+	});
+	$(".navSlider__prev").click(function(){
+		owl.trigger("prev.owl.carousel");
+    });
+    
 
 // 	//Плавный переход к якорям с помощью плагина PageScroll2
 // 	$(".nav__link").mPageScroll2id({
@@ -78,7 +98,34 @@
 // });
 
 
-
+// // Инициализация слик-слайдера
+// $(document).ready(function(){
+// $('.reviews__slider').slick({
+//     centerMode: true,
+//     centerPadding: '60px',
+//     slidesToShow: 3,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           arrows: false,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 3
+//         }
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           arrows: false,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 1
+//         }
+//       }
+//     ]
+//   });
+});
 
 
 

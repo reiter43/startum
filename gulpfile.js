@@ -31,7 +31,7 @@ const svgSprite = require("gulp-svg-sprite");
 //Таск для обработки стилей
 gulp.task('styles', () => {
 	return gulp.src([
-		// './src/libs/owlcarousel/*.css',
+		'./src/libs/owlcarousel/*.css',
 		// './src/libs/slick/*.css',
 		// './src/libs/magneficPopap/*.css',		
 		'./src/scss/style.scss'
@@ -57,11 +57,11 @@ gulp.task('styles', () => {
 //Таск для обработки скриптов jQUery
 gulp.task('scripts', () => {
 	return gulp.src([
-		// './src/libs/jQuery/*.js',
-		// './src/libs/owlcarousel/*.js',
+		'./src/libs/jQuery/*.js',
+		'./src/libs/owlcarousel/*.js',
 		// './src/libs/slick/*.js',
 		// './src/libs/pageToScroll/*.js',
-		'./src/libs/magneficPopap/*.js',
+		// './src/libs/magneficPopap/*.js',
 		// './src/libs/spincrement/*.js',
 		'./src/js/scriptJquery/*.js'
 	])
