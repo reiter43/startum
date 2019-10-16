@@ -80,15 +80,45 @@ window.addEventListener('resize', function () {
 	})
 }, false);
 
-
+// Запуск видеоотзыва в слайдере
 let video = document.querySelector('.videoSlider__wrapper');
 let btnVideo = document.querySelectorAll('.btnVideoSlider__wrapper');
 
 btnVideo.forEach(elem => {
 	elem.onclick = (event) => {
-		video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/lTKr_Sb4xq4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/lTKr_Sb4xq4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 	};
 });
+
+
+// Фильтрация центров и карт в контактах
+
+let centers = document.querySelectorAll('.listCenter ul li button');
+console.log(centers);
+
+centers.forEach(elem => {
+	elem.onclick = (event) => {
+		event.preventDefault();
+		
+		document.querySelector('.mapContacts p').classList.add('hide');
+		centers.forEach(elem => {
+			elem.classList.remove('active');
+			event.target.classList.add('active');
+		});
+
+		let map = document.querySelectorAll('.mapContacts iframe');
+		let centersData = elem.getAttribute('data-center');
+
+		map.forEach(elem => {
+			elem.classList.add('hide');			
+			if (elem.classList.contains(centersData)) {
+				elem.src = elem.getAttribute('data-map');
+				elem.classList.remove('hide');
+			}
+		})
+
+	}
+})
 
 
 // // Аякс-запрос формы обратной связи

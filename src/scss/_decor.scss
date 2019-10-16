@@ -1,0 +1,257 @@
+.rest {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+    @include xs-block {
+        top: -25px;
+    }
+
+    .restYellow {
+        width: 684px;
+        height: 34px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include xs-block {
+            width: 206px;
+            height: 10px;
+            margin-left: -130px;
+        }
+    }
+
+    .restBlue {
+        width: 684px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: -400px;
+        background: #2098D5;
+
+        @include xs-block {
+            width: 206px;
+            height: 39px;
+            margin-left: -73px;
+        }
+    }
+}
+
+.rest2 {
+    position: absolute;
+    bottom: -135px;
+    right: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+    @include sm-block {
+        display: none;
+    }
+
+    .restYellow2 {
+        width: 703px;
+        height: 126px;
+        margin-top: 10px;
+        margin-right: -250px;
+        background: #FFCC00;
+    }
+
+    .restBlue2 {
+        width: 684px;
+        height: 19px;
+        margin-right: -400px;
+        background: #2098D5;
+    }
+}
+
+.rest3 {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+
+    .restYellow3 {
+        width: 684px;
+        height: 8px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include sm-block {
+            height: 6px;
+        }
+    }
+
+    .restYellow4 {
+        width: 684px;
+        height: 83px;
+        margin-top: 10px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include sm-block {
+            height: 45px;
+            margin-top: 5px;
+        }
+    }
+
+    .restBlue3 {
+        width: 684px;
+        height: 7px;
+        margin-top: 10px;
+        margin-left: -400px;
+        background: #2098D5;
+
+        @include sm-block {
+            height: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.rest4 {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+    @include sm-block {
+        display: none;
+    }
+
+    .restYellow5 {
+        width: 684px;
+        height: 17px;
+        margin-right: -250px;
+        background: #FFCC00;
+    }
+
+    .restBlue4 {
+        width: 684px;
+        height: 83px;
+        margin-top: 20px;
+        margin-right: -400px;
+        background: #2098D5;
+    }
+
+    .restYellow6 {
+        width: 684px;
+        height: 10px;
+        margin-top: 10px;
+        margin-right: -250px;
+        background: #FFCC00;
+    }
+}
+
+.rest5 {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    z-index: 1;
+    transform: rotate(-45deg);
+
+    @include xs-block {
+        display: none;
+    }
+
+
+    .restYellow7 {
+        width: 684px;
+        height: 10px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 8px;
+        }
+
+        @include sm-block {
+            height: 6px;
+        }
+    }
+
+    .restYellow8 {
+        width: 684px;
+        height: 83px;
+        margin-top: 70px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 60px;
+            margin-top: 50px;
+        }
+
+        @include sm-block {
+            height: 45px;
+            margin-top: 25px;
+        }
+    }
+
+    .restYellow9 {
+        width: 684px;
+        height: 10px;
+        margin-top: 20px;
+        margin-left: -400px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 8px;
+            margin-top: 15px;
+        }
+
+        @include sm-block {
+            height: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.rest6 {
+    position: absolute;
+    bottom: -170px;
+    right: 0;
+    z-index: 1;
+    transform: rotate(-45deg);
+
+    @include sm-block {
+        display: none;
+    }
+
+    .restYellow10 {
+        width: 684px;
+        height: 17px;
+        margin-right: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 12px;
+        }
+    }
+
+    .restYellow11 {
+        width: 684px;
+        height: 83px;
+        margin-top: 20px;
+        margin-right: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 60px;
+            margin-top: 15px;
+        }
+    }
+}
+
+.contacts{
+    .rest3,
+    .rest4{
+        z-index: 1;
+
+        @include sm-block {
+            display: none;
+        }
+    }
+}
