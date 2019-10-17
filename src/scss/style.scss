@@ -74,6 +74,10 @@ body {
     &:hover {
         box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
     }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .hide {
@@ -2157,6 +2161,7 @@ body {
             @include md-block {
                 font-size: 26px;
             }
+
             @include xxs-block {
                 text-align: center;
                 font-size: 24px;
@@ -2219,8 +2224,8 @@ body {
                     transition: color ease .5s;
 
                     &:hover,
-                    &.active{
-                        color:  #FFCC00;
+                    &.active {
+                        color: #FFCC00;
                     }
 
                     @include llg-block {
@@ -2230,7 +2235,7 @@ body {
 
                     @include md-block {
                         font-size: 18px;
-                    }                 
+                    }
                 }
             }
 
@@ -2301,7 +2306,7 @@ body {
         z-index: 5;
         width: 70%;
         padding-top: 30%;
-        border-radius: 0px 12px 12px 0px;        
+        border-radius: 0px 12px 12px 0px;
         background-image: url(../img/images/bg-top.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -2312,7 +2317,7 @@ body {
             padding-top: 15%;
             border-radius: 0px 0 12px 12px;
         }
-        
+
         @include xs-block {
             width: 100%;
         }
@@ -2323,9 +2328,9 @@ body {
         }
 
 
-        p{
+        p {
             text-align: center;
-            color: #FFFFFF;
+            color: rgba(255, 255, 255, .8);
             font-size: 24px;
             font-weight: 600;
 
@@ -2345,7 +2350,230 @@ body {
     }
 }
 
+/*----------------------------------------------*/
 
+
+/*---------------------------------------------
+  Секция faq
+--------------------------------------------- */
+.faq {
+    padding: 90px 60px 60px;
+    background: #FFCC00;
+
+    @include md-block {
+        padding: 60px 30px 30px;
+    }
+
+    @include xs-block {
+        padding: 60px 15px 30px;
+    }
+
+    h2 {
+        @include xs-block {
+            font-weight: 600;
+        }
+    }
+
+    .faq__content {
+        display: flex;
+        max-width: 1335px;
+        margin: 0 auto;
+        margin-top: 60px;
+        background: #FFFFFF;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        border-radius: 12px;
+
+        @include llg-block {
+            max-width: 1200px;
+        }
+
+        @include sm-block {
+            display: none;
+        }
+
+        .faq__quest {
+            width: 25%;
+            padding: 0;
+            border-right: 1px solid rgba(0, 0, 0, .05);
+
+            @include md-block {
+                width: 30%;
+            }
+
+            p {
+                position: relative;
+                padding: 35px 10px 30px 37px;
+                border-bottom: 1px solid rgba(0, 0, 0, .05);
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 150%;
+                color: #000000;
+                cursor: pointer;
+                transition: all ease .3s;
+
+                &:hover,
+                &.active {
+                    background: #2098D5;
+                }
+
+
+                @include llg-block {
+                    font-size: 16px;
+                }
+
+                @include md-block {
+                    font-size: 14px;
+                }
+            }
+
+            .active {
+                color: #FFFFFF;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    right: -14px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    border-left: 14px solid #2098D5;
+                    border-bottom: 12px solid #FFFFFF;
+                    border-top: 12px solid #FFFFFF;
+                }
+            }
+
+            p:first-child {
+                padding-top: 30px;
+            }
+
+            p:last-child {
+                padding-bottom: 30px;
+                border-bottom: none;
+            }
+        }
+
+        .faq__answer {
+            width: 75%;
+            padding: 44px 57px 63px 53px;
+            color: #000;
+
+            @include md-block {
+                width: 70%;
+                padding: 24px 27px 23px 23px;
+            }
+
+            h4 {
+                margin-top: 0;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 180%;
+
+                @include llg-block {
+                    font-size: 22px;
+                }
+            }
+
+            p {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 200%;
+
+                @include llg-block {
+                    font-size: 15px;
+                }
+
+                @include md-block {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .faq__content--mob {
+        display: none;
+        margin-top: 37px;
+        padding: 40px 0px;
+        background: #FFFFFF;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        border-radius: 12px;
+
+        @include sm-block {
+            display: block;
+        }
+
+        details {          
+            margin-bottom: 20px;
+            font-family: Montserrat;
+            font-style: normal;
+            color: #000000;
+
+            summary {
+                padding: 20px 10px 20px 20px;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 150%;
+                cursor: pointer;
+                transition: all ease .3s;
+
+                &::marker {
+                    display: none;
+                }
+
+                &::-webkit-details-marker {
+                    display: none;
+                }
+
+                &::-moz-list-bullet {
+                    list-style-type: none;
+                }
+
+                &:hover,
+                &:focus{
+                    background: #2098D5;
+                    color: #FFFFFF;
+                    outline: none; 
+                }
+            }
+
+            h4 {
+                margin-top: 30px;
+                padding-left: 20px;
+                padding-right: 10px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 160%;
+            }
+
+            p {
+               padding: 0 20px 40px;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 180%;
+            }
+        }
+
+        details:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 60px;
+        background: #FFFFFF;
+        border-radius: 12px;
+
+        &:hover {
+            box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
+        }
+    }
+}
 
 
 /*----------------------------------------------*/

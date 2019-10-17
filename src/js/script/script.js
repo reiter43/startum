@@ -94,13 +94,12 @@ btnVideo.forEach(elem => {
 // Фильтрация центров и карт в контактах
 
 let centers = document.querySelectorAll('.listCenter ul li button');
-console.log(centers);
 
 centers.forEach(elem => {
 	elem.onclick = (event) => {
 		event.preventDefault();
-		
 		document.querySelector('.mapContacts p').classList.add('hide');
+
 		centers.forEach(elem => {
 			elem.classList.remove('active');
 			event.target.classList.add('active');
@@ -110,15 +109,40 @@ centers.forEach(elem => {
 		let centersData = elem.getAttribute('data-center');
 
 		map.forEach(elem => {
-			elem.classList.add('hide');			
+			elem.classList.add('hide');
 			if (elem.classList.contains(centersData)) {
 				elem.src = elem.getAttribute('data-map');
 				elem.classList.remove('hide');
 			}
 		})
-
 	}
 })
+
+// Фильтрация вопросов
+
+let quests = document.querySelectorAll('.faq .faq__content .faq__quest>p');
+
+quests.forEach(item => {
+	item.onclick = (event) => {
+		event.preventDefault();
+		
+		quests.forEach(item => {
+			item.classList.remove('active');
+			event.target.classList.add('active');
+		});
+
+		let answers = document.querySelectorAll('.faq__answer div');
+		let questsData = item.getAttribute('data-answer');
+
+		answers.forEach(item => {
+			item.classList.add('hide');
+			if (item.classList.contains(questsData)) {				
+				item.classList.remove('hide');
+			}
+		})
+	};
+});
+
 
 
 // // Аякс-запрос формы обратной связи
