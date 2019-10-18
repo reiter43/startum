@@ -1077,9 +1077,9 @@ body {
   outline: none;
 }
 
-.btnVideo__wrapper .btnVideo__ellipse1,
-.btnVideo__wrapper .btnVideo__ellipse2,
-.btnVideo__wrapper .btnVideo__ellipse3 {
+.btnVideo__ellipse1,
+.btnVideo__ellipse2,
+.btnVideo__ellipse3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1096,17 +1096,17 @@ body {
   border-radius: 50%;
 }
 
-.btnVideo__wrapper .btnVideo__ellipse1 {
+.btnVideo__ellipse1 {
   width: 19.84vw;
   height: 19.84vw;
 }
 
-.btnVideo__wrapper .btnVideo__ellipse1 .btnVideo__ellipse2 {
+.btnVideo__ellipse1 .btnVideo__ellipse2 {
   width: 16.88vw;
   height: 16.88vw;
 }
 
-.btnVideo__wrapper .btnVideo__ellipse1 .btnVideo__ellipse2 .btnVideo__ellipse3 {
+.btnVideo__ellipse1 .btnVideo__ellipse2 .btnVideo__ellipse3 {
   width: 14.1vw;
   height: 14.1vw;
 }
@@ -1115,8 +1115,7 @@ body {
   padding: 0;
 }
 
-.btnVideo--play,
-.btnVideo--stop {
+.btnVideo--play {
   width: 5.2vw;
   height: 4.8vw;
 }
@@ -1131,7 +1130,10 @@ body {
 
 .btnVideo__wrapper:hover .btnVideo__ellipse1,
 .btnVideo__wrapper:hover .btnVideo__ellipse2,
-.btnVideo__wrapper:hover .btnVideo__ellipse3 {
+.btnVideo__wrapper:hover .btnVideo__ellipse3,
+.btnVideo__wrapperCenters:hover .btnVideo__ellipse1,
+.btnVideo__wrapperCenters:hover .btnVideo__ellipse2,
+.btnVideo__wrapperCenters:hover .btnVideo__ellipse3 {
   -webkit-box-shadow: 0px 8px 30px #FFFFFF;
   box-shadow: 0px 8px 30px #FFFFFF;
 }
@@ -2003,12 +2005,13 @@ body {
 .videoSlider__wrapper {
   position: relative;
   max-width: 462px;
+  position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
 
-.videoSlider__wrapper .videoSlider__img,
+.videoSlider__wrapper > img,
 .videoSlider__wrapper iframe {
   display: block;
   position: absolute;
@@ -2567,6 +2570,65 @@ body {
 
 /*----------------------------------------------*/
 
+/*---------------------------------------------
+  Секция centers
+--------------------------------------------- */
+
+.centers {
+  padding: 100px 0;
+}
+
+.centers h2 {
+  font-weight: 600;
+}
+
+.centers__desc {
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  text-align: center;
+  color: #000000;
+}
+
+.centers__video {
+  position: relative;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.centers__video > img,
+.centers__video iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.centers__video iframe {
+  border: none;
+}
+
+.btnVideo__wrapperCenters {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+/*----------------------------------------------*/
+
 /*============================================= */
 
 /*=============================================
@@ -2956,6 +3018,10 @@ body {
 
   .faq .faq__content .faq__answer p {
     font-size: 15px;
+  }
+
+  .centers__video {
+    max-width: 1200px;
   }
 
   .rest5 .restYellow7 {
@@ -3399,6 +3465,11 @@ body {
   .faq .faq__content .faq__answer p {
     font-size: 14px;
   }
+
+  .centers__desc {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }
 
 @media screen and (max-width: 996px) and (max-width: 576px) {
@@ -3637,6 +3708,10 @@ body {
     display: block;
   }
 
+  .centers {
+    padding: 60px 15px;
+  }
+
   .rest2 {
     display: none;
   }
@@ -3715,23 +3790,22 @@ body {
     top: 162px;
   }
 
-  .btnVideo__wrapper .btnVideo__ellipse1 {
+  .btnVideo__ellipse1 {
     width: 155px;
     height: 155px;
   }
 
-  .btnVideo__wrapper .btnVideo__ellipse1 .btnVideo__ellipse2 {
+  .btnVideo__ellipse1 .btnVideo__ellipse2 {
     width: 132px;
     height: 132px;
   }
 
-  .btnVideo__wrapper .btnVideo__ellipse1 .btnVideo__ellipse2 .btnVideo__ellipse3 {
+  .btnVideo__ellipse1 .btnVideo__ellipse2 .btnVideo__ellipse3 {
     width: 110px;
     height: 110px;
   }
 
-  .btnVideo--play,
-  .btnVideo--stop {
+  .btnVideo--play {
     width: 40px;
     height: 40px;
   }
@@ -3890,6 +3964,12 @@ body {
 
   .faq h2 {
     font-weight: 600;
+  }
+
+  .centers__desc {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
   }
 
   .rest {
@@ -4103,6 +4183,14 @@ body {
   .map__box .mapContacts {
     padding-top: 55%;
     height: 525px;
+  }
+
+  .faq button p {
+    font-size: 14px;
+  }
+
+  .centers {
+    padding: 45px 15px 52px 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
