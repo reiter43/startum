@@ -245,7 +245,8 @@
     }
 }
 
-.contacts{
+.contacts,
+.metods{
     .rest3,
     .rest4{
         z-index: 1;
@@ -253,5 +254,11 @@
         @include sm-block {
             display: none;
         }
+    }
+}
+
+.metods{    
+    .rest4{
+        bottom: -150px;
     }
 }

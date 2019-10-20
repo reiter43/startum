@@ -54,6 +54,28 @@ body {
     }
 }
 
+.descSection {
+    margin-bottom: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    color: #000000;
+
+    @include md-block {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    @include xs-block {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
 .btnBase {
     padding: 15px 38px;
     text-align: center;
@@ -77,6 +99,33 @@ body {
 
     &:focus {
         outline: none;
+    }
+}
+
+.owl-carousel {
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;  
+
+        .owl-next,
+        .owl-prev {
+            outline: none;
+            cursor: pointer;
+
+            .slider-next,
+            .slider-prev {
+                display: block;
+                width: 28px;
+                height: 145px;
+
+                @include sm-block {
+                    display: none;
+                }
+            }            
+        }
     }
 }
 
@@ -341,43 +390,43 @@ body {
     &:focus {
         outline: none;
     }
+}
 
-    .btnVideo__ellipse1,
-    .btnVideo__ellipse2,
-    .btnVideo__ellipse3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid rgba(255, 255, 255, .1);
-        border-radius: 50%;
+.btnVideo__ellipse1,
+.btnVideo__ellipse2,
+.btnVideo__ellipse3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 50%;
+}
+
+.btnVideo__ellipse1 {
+    width: 19.84vw;
+    height: 19.84vw;
+
+    @include xs-block {
+        width: 155px;
+        height: 155px;
     }
 
-    .btnVideo__ellipse1 {
-        width: 19.84vw;
-        height: 19.84vw;
+    .btnVideo__ellipse2 {
+        width: 16.88vw;
+        height: 16.88vw;
 
         @include xs-block {
-            width: 155px;
-            height: 155px;
+            width: 132px;
+            height: 132px;
         }
 
-        .btnVideo__ellipse2 {
-            width: 16.88vw;
-            height: 16.88vw;
+        .btnVideo__ellipse3 {
+            width: 14.1vw;
+            height: 14.1vw;
 
             @include xs-block {
-                width: 132px;
-                height: 132px;
-            }
-
-            .btnVideo__ellipse3 {
-                width: 14.1vw;
-                height: 14.1vw;
-
-                @include xs-block {
-                    width: 110px;
-                    height: 110px;
-                }
+                width: 110px;
+                height: 110px;
             }
         }
     }
@@ -386,8 +435,7 @@ body {
 .btnVideo {
     padding: 0;
 
-    &--play,
-    &--stop {
+    &--play {
         width: 5.2vw;
         height: 4.8vw;
 
@@ -408,7 +456,10 @@ body {
 
 .btnVideo__wrapper:hover .btnVideo__ellipse1,
 .btnVideo__wrapper:hover .btnVideo__ellipse2,
-.btnVideo__wrapper:hover .btnVideo__ellipse3 {
+.btnVideo__wrapper:hover .btnVideo__ellipse3,
+.btnVideo__wrapperCenters:hover .btnVideo__ellipse1,
+.btnVideo__wrapperCenters:hover .btnVideo__ellipse2,
+.btnVideo__wrapperCenters:hover .btnVideo__ellipse3 {
     box-shadow: 0px 8px 30px #FFFFFF;
 }
 
@@ -648,6 +699,7 @@ body {
 
         img {
             margin-top: 83px;
+            border-radius: 12px;
 
             @include lg-block {
                 margin-top: 33px;
@@ -1782,24 +1834,11 @@ body {
 .videoSlider__wrapper {
     position: relative;
     max-width: 462px;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+    @include fr;
 
     @include md-block {
         max-width: 100%;
         margin-top: 30px;
-    }
-
-    .videoSlider__img,
-    iframe {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
     }
 }
 
@@ -1858,19 +1897,14 @@ body {
     }
 }
 
-.owl-carousel .owl-stage-outer {
+.reviews__slider.owl-carousel .owl-stage-outer {
     overflow: visible;
 }
 
-.owl-carousel {
+.reviews .owl-carousel {
     .owl-nav {
-        position: absolute;
         left: 60px;
-        right: 60px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
+        right: 60px;        
 
         @include llg-block {
             left: 1%;
@@ -1887,22 +1921,8 @@ body {
             right: -3%;
         }
 
-
         .owl-next,
-        .owl-prev {
-            outline: none;
-            cursor: pointer;
-
-            .slider-next,
-            .slider-prev {
-                display: block;
-                width: 28px;
-                height: 145px;
-
-                @include sm-block {
-                    display: none;
-                }
-            }
+        .owl-prev {            
 
             .slider-next {
                 background-image: url(../img/images/arrowRight.png);
@@ -2067,8 +2087,6 @@ body {
                 margin-left: 0;
             }
         }
-
-
 
         .contacts__phone,
         .contacts__socials,
@@ -2506,7 +2524,7 @@ body {
             display: block;
         }
 
-        details {          
+        details {
             margin-bottom: 20px;
             font-family: Montserrat;
             font-style: normal;
@@ -2533,10 +2551,10 @@ body {
                 }
 
                 &:hover,
-                &:focus{
+                &:focus {
                     background: #2098D5;
                     color: #FFFFFF;
-                    outline: none; 
+                    outline: none;
                 }
             }
 
@@ -2550,7 +2568,7 @@ body {
             }
 
             p {
-               padding: 0 20px 40px;
+                padding: 0 20px 40px;
                 font-weight: normal;
                 font-size: 14px;
                 line-height: 180%;
@@ -2572,13 +2590,250 @@ body {
         &:hover {
             box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
         }
+
+        p {
+            @include xxs-block {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+
+/*---------------------------------------------
+  Секция centers
+--------------------------------------------- */
+.centers {
+    padding: 100px 0;
+
+    @include sm-block {
+        padding: 60px 15px;
+    }
+
+    @include xxs-block {
+        padding: 45px 15px 52px 15px;
+    }
+
+    h2 {
+        font-weight: 600;
+    }
+
+    &__video {
+        position: relative;
+        margin: 0 auto;
+        @include fr;
+
+        @include llg-block {
+            max-width: 1200px;
+        }
+
+        iframe {
+            border: none;
+            ;
+        }
+    }
+}
+
+.btnVideo__wrapperCenters {
+    @include centerer();
+    cursor: pointer;
+}
+
+/*----------------------------------------------*/
+
+
+/*---------------------------------------------
+  Секция metods
+--------------------------------------------- */
+.metods {
+    position: relative;
+    padding: 65px 0;
+    background: #FAFAFA;
+    overflow: hidden;
+
+    h2 {
+        position: relative;
+        z-index: 9;
+
+        @include xs-block {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 70px;
+        overflow: visible;
+
+        @include llg-block {
+            max-width: 1150px;
+        }
+    }
+
+    .wrapper {
+        @include xs-block {
+            padding: 0;
+        }
+    }
+
+    &>button {
+        display: block;
+        margin: 53px auto 0;
+
+        @include xs-block {
+            width: 80%;
+        }
+
+        p {
+            @include xs-block {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.metodsItem {
+    padding-bottom: 32px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+
+    @include llg-block {
+        padding-bottom: 20px;
+    }
+
+    @include xs-block {
+        text-align: center;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    figure {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: #000;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        figaption {
+            display: inline-block;
+            margin: 29px 10px 8px 20px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+
+            @include llg-block {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 130%;
+            }
+
+            @include md-block {
+                margin-left: 4px;
+                font-size: 16px;
+            }
+
+            @include sm-block {
+                margin-left: 4px;
+                font-size: 18px;
+            }
+
+            @include xs-block {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+    }
+
+    span {
+        margin-left: 20px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 130%;
+
+
+        @include llg-block {
+            font-size: 13px;
+        }
+
+        @include md-block {
+            margin-left: 4px;
+            font-size: 12px;
+        }
+
+        @include sm-block {
+            margin-left: 4px;
+            font-size: 14px;
+        }
+
+        @include xxs-block {
+            font-size: 12px;
+        }
+    }
+}
+
+// Настройки слайдера owl-carousel
+.owl-item.active.center {
+    .metodsItem {
+        @include xxs-block {
+            transform: scale(1.17);
+        }
+    }
+}
+
+.metods__slider.owl-carousel .owl-stage-outer {
+    @include xxs-block {
+        overflow: visible;
+    }
+}
+
+.metods .owl-carousel {
+    .owl-nav {        
+        left: -4%;
+        right: -4%;        
+       
+        @include lg-block {
+            left: -3%;
+            right: -3%;
+        }
+
+        @include md-block {
+            left: -5%;
+            right: -5%;
+        }
+
+        .owl-next,
+        .owl-prev {    
+            .slider-next {
+                background-image: url(../img/images/sliderMetodsrightArrow.png);
+            }
+
+            .slider-prev {
+                background-image: url(../img/images/sliderMetodsleftArrow.png);
+            }
+        }
     }
 }
 
 
 /*----------------------------------------------*/
-
-
 
 
 /*============================================= */

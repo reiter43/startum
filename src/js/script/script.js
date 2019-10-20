@@ -31,7 +31,6 @@
 
 
 // Скрыть/показать меню
-
 let burger = document.querySelector('.burger');
 let nav = document.querySelector('nav.nav');
 let bod = document.querySelector('body');
@@ -55,7 +54,6 @@ burger.addEventListener('click', event => {
 
 
 // Показ кнопки на определенной карточке программы
-
 window.addEventListener('resize', function () {
 	let screen = document.documentElement.clientWidth;
 	let programItems = document.querySelectorAll('.programItem');
@@ -81,7 +79,6 @@ window.addEventListener('resize', function () {
 }, false);
 
 // Запуск видеоотзыва в слайдере
-let video = document.querySelector('.videoSlider__wrapper');
 let btnVideo = document.querySelectorAll('.btnVideoSlider__wrapper');
 
 btnVideo.forEach(elem => {
@@ -92,7 +89,6 @@ btnVideo.forEach(elem => {
 
 
 // Фильтрация центров и карт в контактах
-
 let centers = document.querySelectorAll('.listCenter ul li button');
 
 centers.forEach(elem => {
@@ -119,7 +115,6 @@ centers.forEach(elem => {
 })
 
 // Фильтрация вопросов
-
 let quests = document.querySelectorAll('.faq .faq__content .faq__quest>p');
 
 quests.forEach(item => {
@@ -142,6 +137,17 @@ quests.forEach(item => {
 		})
 	};
 });
+
+
+// Запуск видеоролика о центре в москве
+let btnVi = document.querySelectorAll('.btnVideo__wrapperCenters');
+
+btnVi.forEach(elem => {
+	elem.onclick = (event) => {
+		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	};
+});
+
 
 
 
