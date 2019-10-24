@@ -10,131 +10,128 @@
   ============================================= */
 
 .clearfix {
-    @include clearfix;
+	@include clearfix;
 }
 
 .wrapper {
-    @include wrapper;
+	@include wrapper;
 }
 
 html {
-    font-size: 100%;
+	font-size: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.375;
-    font-family: 'Montserrat', 'sans serif';
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.375;
+	font-family: 'Montserrat', 'sans serif';
 }
 
 .titleSection {
-    margin: 0;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2.5vw;
-    line-height: 120%;
-    text-align: center;
-    color: #000;
+	margin: 0;
 
-    span {
-        font-weight: 600;
-    }
+	font-weight: normal;
+	font-size: 2.5vw;
+	line-height: 120%;
+	text-align: center;
+	color: #000;
 
-    @include lg-block {
-        font-size: 32px;
-        line-height: 1.2;
-    }
+	span {
+		font-weight: 600;
+	}
 
-    @include xs-block {
-        font-size: 28px;
-    }
+	@include lg-block {
+		font-size: 32px;
+		line-height: 1.2;
+	}
+
+	@include xs-block {
+		font-size: 28px;
+	}
 }
 
 .descSection {
-    margin-bottom: 20px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 160%;
-    text-align: center;
-    color: #000000;
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 160%;
+	text-align: center;
+	color: #000000;
 
-    @include md-block {
-        font-size: 20px;
-        line-height: 1.4;
-    }
+	@include md-block {
+		font-size: 20px;
+		line-height: 1.4;
+	}
 
-    @include xs-block {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
+	@include xs-block {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
 }
 
 .btnBase {
-    padding: 15px 38px;
-    text-align: center;
-    background: #FFCC00;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
+	padding: 15px 38px;
+	text-align: center;
+	background: #FFCC00;
+	border-radius: 12px;
+	border: none;
+	cursor: pointer;
 
-    p {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 160%;
-        color: #000000;
-    }
+	p {
 
-    &:hover {
-        box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
-    }
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 160%;
+		color: #000000;
+	}
 
-    &:focus {
-        outline: none;
-    }
+	&:hover {
+		box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .owl-carousel {
-    .owl-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;  
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
 
-        .owl-next,
-        .owl-prev {
-            outline: none;
-            cursor: pointer;
+		.owl-next,
+		.owl-prev {
+			outline: none;
+			cursor: pointer;
 
-            .slider-next,
-            .slider-prev {
-                display: block;
-                width: 28px;
-                height: 145px;
+			.slider-next,
+			.slider-prev {
+				display: block;
+				width: 28px;
+				height: 145px;
 
-                @include sm-block {
-                    display: none;
-                }
-            }            
-        }
-    }
+				@include sm-block {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .visible {
-    display: block;
+	display: block;
 }
 
 /*============================================= */
@@ -144,314 +141,311 @@ body {
         ШАПКА
 ============================================= */
 .header {
-    position: relative;
-    padding-top: 50px;
-    padding-bottom: 64px;
-    background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
-    background-image: url(../img/images/bg-top.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 64px;
+	background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
+	background-image: url(../img/images/bg-top.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 
-    @include sm-block {
-        padding-top: 30px;
-        padding-bottom: 57px;
-        text-align: center;
-    }
+	@include sm-block {
+		padding-top: 30px;
+		padding-bottom: 57px;
+		text-align: center;
+	}
 
-    .wrapper {
-        .topLine {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 233px;
+	.wrapper {
+		.topLine {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 233px;
 
-            @include md-block {
-                margin-bottom: 150px;
-            }
+			@include md-block {
+				margin-bottom: 150px;
+			}
 
-            @include sm-block {
-                margin-bottom: 303px;
-            }
+			@include sm-block {
+				margin-bottom: 303px;
+			}
 
-            &__btn {
-                display: flex;
-                align-items: center;
-                padding: 13px 22px;
-                border: 1.5px solid rgba(255, 255, 255, .2);
-                background: transparent;
-                border-radius: 12px;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 160%;
-                color: #FFFFFF;
-                cursor: pointer;
+			&__btn {
+				display: flex;
+				align-items: center;
+				padding: 13px 22px;
+				border: 1.5px solid rgba(255, 255, 255, .2);
+				background: transparent;
+				border-radius: 12px;
 
-                @include md-block {
-                    display: none;
-                    ;
-                }
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 160%;
+				color: #FFFFFF;
+				cursor: pointer;
 
-                &:hover {
-                    border: 1.5px solid rgba(255, 255, 255, .8);
-                }
+				@include md-block {
+					display: none;
+					;
+				}
 
-                svg {
-                    width: 15px;
-                    height: 18px;
-                    margin-right: 8px;
-                    fill: #FFFFFF;
-                }
-            }
-        }
+				&:hover {
+					border: 1.5px solid rgba(255, 255, 255, .8);
+				}
 
-        h1 {
-            max-width: 1002px;
-            margin-bottom: 53px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 3.125vw;
-            line-height: 130%;
-            color: #FFFFFF;
+				svg {
+					width: 15px;
+					height: 18px;
+					margin-right: 8px;
+					fill: #FFFFFF;
+				}
+			}
+		}
 
-            @include md-block {
-                font-size: 32px;
-            }
+		h1 {
+			max-width: 1002px;
+			margin-bottom: 53px;
 
-            @include sm-block {
-                margin-bottom: 214px;
-            }
+			font-weight: 400;
+			font-size: 3.125vw;
+			line-height: 130%;
+			color: #FFFFFF;
 
-            @include xs-block {
-                margin-bottom: 24px;
-                font-size: 28px;
-            }
+			@include md-block {
+				font-size: 32px;
+			}
 
-            span {
-                font-weight: 600;
-            }
-        }
-    }
+			@include sm-block {
+				margin-bottom: 214px;
+			}
+
+			@include xs-block {
+				margin-bottom: 24px;
+				font-size: 28px;
+			}
+
+			span {
+				font-weight: 600;
+			}
+		}
+	}
 }
 
 .header__burger {
-    z-index: 101;
+	z-index: 101;
 
-    @include llg-block {
-        display: block;
-    }
+	@include llg-block {
+		display: block;
+	}
 }
 
 .burger {
-    @include gamburger(28px, 10px, 28px, 2px, 6px, #FFFFFF, transparent);
+	@include gamburger(28px, 10px, 28px, 2px, 6px, #FFFFFF, transparent);
 }
 
 .logo {
-    width: 298px;
-    z-index: 102;
+	width: 298px;
+	z-index: 102;
 
-    @include xs-block {
-        width: 162px;
-    }
+	@include xs-block {
+		width: 162px;
+	}
 
-    .logo__img {
-        display: block;
-        width: 100%;
-    }
+	.logo__img {
+		display: block;
+		width: 100%;
+	}
 }
 
 .nav {
-    @include llg-block {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0;
-        z-index: 100;
-        margin-left: 101%;
-        transition: all ease 0.8s;
-    }
+	@include llg-block {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0;
+		z-index: 100;
+		margin-left: 101%;
+		transition: all ease 0.8s;
+	}
 
-    .nav__list {
-        list-style-type: none;
-        display: flex;
+	.nav__list {
+		list-style-type: none;
+		display: flex;
 
-        @include llg-block {
-            display: block;
-            padding-left: 100px;
-            text-align: left;
-            height: 100vh;
-            padding-top: 130px;
-            background: #8D8A8A;
-        }
+		@include llg-block {
+			display: block;
+			padding-left: 100px;
+			text-align: left;
+			height: 100vh;
+			padding-top: 130px;
+			background: #8D8A8A;
+		}
 
-        li {
+		li {
 
-            a {
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 1.3;
-                color: #FFFFFF;
-                transition: all ease 0.5s;
+			a {
 
-                @include llg-block {
-                    font-size: 26px;
-                    line-height: 1.7;
-                    text-transform: uppercase;
-                }
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #FFFFFF;
+				transition: all ease 0.5s;
 
-                &:hover {
-                    color: #FFCC00;
-                }
-            }
-        }
-    }
+				@include llg-block {
+					font-size: 26px;
+					line-height: 1.7;
+					text-transform: uppercase;
+				}
+
+				&:hover {
+					color: #FFCC00;
+				}
+			}
+		}
+	}
 }
 
 .btnBase--header {
-    @include md-block {
-        padding: 0;
-        background: transparent;
-    }
+	@include md-block {
+		padding: 0;
+		background: transparent;
+	}
 
-    svg {
-        display: none;
+	svg {
+		display: none;
 
-        @include md-block {
-            display: block;
-            width: 24px;
-            height: 24px;
-            fill: #FFFFFF;
-        }
-    }
+		@include md-block {
+			display: block;
+			width: 24px;
+			height: 24px;
+			fill: #FFFFFF;
+		}
+	}
 
-    p {
-        @include md-block {
-            display: none;
-        }
-    }
+	p {
+		@include md-block {
+			display: none;
+		}
+	}
 }
 
 .btnBase__header {
-    position: absolute;
-    top: 67px;
-    right: 70px;
+	position: absolute;
+	top: 67px;
+	right: 70px;
 
-    @include llg-block {
-        top: 170px;
-        right: 30px;
-    }
+	@include llg-block {
+		top: 170px;
+		right: 30px;
+	}
 
-    @include md-block {
-        position: static;
-    }
+	@include md-block {
+		position: static;
+	}
 }
 
 .btnBase--downHeader {
-    @include xs-block {
-        padding: 14px 30px;
-        margin-top: 20px;
-    }
+	@include xs-block {
+		padding: 14px 30px;
+		margin-top: 20px;
+	}
 
-    p {
-        @include xs-block {
-            font-size: 3.7vw;
-        }
-    }
+	p {
+		@include xs-block {
+			font-size: 3.7vw;
+		}
+	}
 }
 
 .btnVideo__wrapper {
-    position: absolute;
-    top: 350px;
-    right: 140px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+	position: absolute;
+	top: 350px;
+	right: 140px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
 
-    @include md-block {
-        right: 16px;
-    }
+	@include md-block {
+		right: 16px;
+	}
 
-    @include sm-block {
-        top: 28%;
-        right: 50%;
-        transform: translateX(50%);
-    }
+	@include sm-block {
+		top: 28%;
+		right: 50%;
+		transform: translateX(50%);
+	}
 
-    @include xs-block {
-        top: 162px;
-    }
+	@include xs-block {
+		top: 162px;
+	}
 
-    &:focus {
-        outline: none;
-    }
+	&:focus {
+		outline: none;
+	}
 }
 
 .btnVideo__ellipse1,
 .btnVideo__ellipse2,
 .btnVideo__ellipse3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, .1);
+	border-radius: 50%;
 }
 
 .btnVideo__ellipse1 {
-    width: 19.84vw;
-    height: 19.84vw;
+	width: 19.84vw;
+	height: 19.84vw;
 
-    @include xs-block {
-        width: 155px;
-        height: 155px;
-    }
+	@include xs-block {
+		width: 155px;
+		height: 155px;
+	}
 
-    .btnVideo__ellipse2 {
-        width: 16.88vw;
-        height: 16.88vw;
+	.btnVideo__ellipse2 {
+		width: 16.88vw;
+		height: 16.88vw;
 
-        @include xs-block {
-            width: 132px;
-            height: 132px;
-        }
+		@include xs-block {
+			width: 132px;
+			height: 132px;
+		}
 
-        .btnVideo__ellipse3 {
-            width: 14.1vw;
-            height: 14.1vw;
+		.btnVideo__ellipse3 {
+			width: 14.1vw;
+			height: 14.1vw;
 
-            @include xs-block {
-                width: 110px;
-                height: 110px;
-            }
-        }
-    }
+			@include xs-block {
+				width: 110px;
+				height: 110px;
+			}
+		}
+	}
 }
 
 .btnVideo {
-    padding: 0;
+	padding: 0;
 
-    &--play {
-        width: 5.2vw;
-        height: 4.8vw;
+	&--play {
+		width: 5.2vw;
+		height: 4.8vw;
 
-        @include xs-block {
-            width: 40px;
-            height: 40px;
-        }
-    }
+		@include xs-block {
+			width: 40px;
+			height: 40px;
+		}
+	}
 
-    &--play {
-        fill: #FFCC00;
-    }
+	&--play {
+		fill: #FFCC00;
+	}
 
-    &--stop {
-        fill: rgba(0, 0, 0, .65);
-    }
+	&--stop {
+		fill: rgba(0, 0, 0, .65);
+	}
 }
 
 .btnVideo__wrapper:hover .btnVideo__ellipse1,
@@ -460,57 +454,55 @@ body {
 .btnVideo__wrapperCenters:hover .btnVideo__ellipse1,
 .btnVideo__wrapperCenters:hover .btnVideo__ellipse2,
 .btnVideo__wrapperCenters:hover .btnVideo__ellipse3 {
-    box-shadow: 0px 8px 30px #FFFFFF;
+	box-shadow: 0px 8px 30px #FFFFFF;
 }
 
 
 .header__items {
-    @include row-flex();
-    justify-content: space-between;
-    margin-top: 184px;
+	@include row-flex();
+	justify-content: space-between;
+	margin-top: 184px;
 
-    @include sm-block {
-        display: none;
-    }
+	@include sm-block {
+		display: none;
+	}
 
-    .header__item {
-        @include col();
-        @include size(3);
-        max-width: 228px;
+	.header__item {
+		@include col();
+		@include size(3);
+		max-width: 228px;
 
-        @include llg-block {
-            max-width: none;
-        }
+		@include llg-block {
+			max-width: none;
+		}
 
-        &>span {
-            margin-bottom: 11px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 150%;
-            letter-spacing: 0.1em;
-            color: #FFCC00;
-            text-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
-        }
+		&>span {
+			margin-bottom: 11px;
 
-        p {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 150%;
-            color: #FFFFFF;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 150%;
+			letter-spacing: 0.1em;
+			color: #FFCC00;
+			text-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+		}
 
-            @include md-block {
-                font-size: 14px;
-            }
+		p {
 
-            span {
-                font-weight: 600;
-            }
-        }
-    }
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #FFFFFF;
+
+			@include md-block {
+				font-size: 14px;
+			}
+
+			span {
+				font-weight: 600;
+			}
+		}
+	}
 }
 
 
@@ -525,191 +517,186 @@ body {
   Секция mostly
 --------------------------------------------- */
 .mostly {
-    position: relative;
-    padding-top: 120px;
-    padding-bottom: 126px;
-    overflow: hidden;
+	position: relative;
+	padding-top: 120px;
+	padding-bottom: 126px;
+	color: #000000;
+	overflow: hidden;
 
-    @include lg-block {
-        padding-top: 70px;
-        padding-bottom: 46px;
-    }
+	@include lg-block {
+		padding-top: 70px;
+		padding-bottom: 46px;
+	}
 
-    @include sm-block {
-        text-align: center;
-        padding-top: 83px;
-    }
+	@include sm-block {
+		text-align: center;
+		padding-top: 83px;
+	}
 
-    @include xxs-block {
-        text-align: left;
-        padding-bottom: 74px;
-    }
+	@include xxs-block {
+		text-align: left;
+		padding-bottom: 74px;
+	}
 }
 
 .mostly__content {
-    display: flex;
+	display: flex;
 
-    @include sm-block {
-        flex-direction: column;
-        align-items: center;
-    }
+	@include sm-block {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    @include xxs-block {
-        align-items: flex-start;
-    }
+	@include xxs-block {
+		align-items: flex-start;
+	}
 
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
 
-    .mostly__block1 {
-        width: 37%;
+	.mostly__block1 {
+		width: 37%;
 
-        @include sm-block {
-            width: 80%;
-        }
+		@include sm-block {
+			width: 80%;
+		}
 
-        @include xs-block {
-            width: 100%;
-        }
+		@include xs-block {
+			width: 100%;
+		}
 
-        h2 {
-            margin-bottom: 62px;
+		h2 {
+			margin-bottom: 62px;
 
-            @include xs-block {
-                font-weight: 600;
-            }
+			@include xs-block {
+				font-weight: 600;
+			}
 
-            @include xxs-block {
-                text-align: center;
-            }
-        }
+			@include xxs-block {
+				text-align: center;
+			}
+		}
 
-        img {
-            @include sm-block {
-                display: none;
-            }
-        }
+		img {
+			@include sm-block {
+				display: none;
+			}
+		}
 
-        p {
-            margin-top: 45px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 170%;
-            color: #000000;
+		p {
+			margin-top: 45px;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 170%;
 
-            @include md-block {
-                font-size: 14px;
-            }
+			@include md-block {
+				font-size: 14px;
+			}
 
-            @include sm-block {
-                display: none;
-            }
+			@include sm-block {
+				display: none;
+			}
 
-        }
-    }
+		}
+	}
 
-    .mostly__block2 {
-        width: 57%;
-        margin-left: 6%;
+	.mostly__block2 {
+		width: 57%;
+		margin-left: 6%;
 
-        @include sm-block {
-            width: 80%;
-            margin-left: 0;
-        }
+		@include sm-block {
+			width: 80%;
+			margin-left: 0;
+		}
 
-        @include xs-block {
-            width: 100%;
-        }
+		@include xs-block {
+			width: 100%;
+		}
 
-        &>p {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 190%;
-            color: #000000;
+		&>p {
+			font-weight: normal;
+			font-size: 20px;
+			line-height: 190%;
 
-            @include llg-block {
-                font-size: 16px;
-            }
+			@include llg-block {
+				font-size: 16px;
+			}
 
-            @include md-block {
-                font-size: 14px;
-            }
+			@include md-block {
+				font-size: 14px;
+			}
 
-            @include sm-block {
-                font-size: 16px;
-            }
+			@include sm-block {
+				font-size: 16px;
+			}
 
-            @include xs-block {
-                margin-bottom: 29px;
-                font-size: 14px;
-            }
-        }
+			@include xs-block {
+				margin-bottom: 29px;
+				font-size: 14px;
+			}
+		}
 
-        &>p:nth-child(2) {
-            margin-top: 40px;
-            margin-bottom: 32px;
+		&>p:nth-child(2) {
+			margin-top: 40px;
+			margin-bottom: 32px;
 
-            @include lg-block {
-                margin-top: 20px;
-                margin-bottom: 15px;
-            }
+			@include lg-block {
+				margin-top: 20px;
+				margin-bottom: 15px;
+			}
 
-            @include sm-block {
-                margin-bottom: 30px;
-            }
+			@include sm-block {
+				margin-bottom: 30px;
+			}
 
-            @include xs-block {
-                display: none;
-            }
-        }
+			@include xs-block {
+				display: none;
+			}
+		}
 
-        .btnBase--mostly {
-            p {
-                @include xxs-block {
-                    font-size: 14px;
-                }
-            }
-        }
+		.btnBase--mostly {
+			p {
+				@include xxs-block {
+					font-size: 14px;
+				}
+			}
+		}
 
-        &>p:nth-child(6) {
-            display: none;
+		&>p:nth-child(6) {
+			display: none;
 
-            @include sm-block {
-                display: block;
-                margin-top: 20px;
-            }
-        }
+			@include sm-block {
+				display: block;
+				margin-top: 20px;
+			}
+		}
 
-        &>img:nth-child(5) {
-            display: none;
+		&>img:nth-child(5) {
+			display: none;
 
-            @include sm-block {
-                display: block;
-                margin-top: 48px;
-                margin-bottom: 51px;
-            }
-        }
+			@include sm-block {
+				display: block;
+				margin-top: 48px;
+				margin-bottom: 51px;
+			}
+		}
 
-        img {
-            margin-top: 83px;
-            border-radius: 12px;
+		img {
+			margin-top: 83px;
+			border-radius: 12px;
 
-            @include lg-block {
-                margin-top: 33px;
-            }
+			@include lg-block {
+				margin-top: 33px;
+			}
 
-            @include sm-block {
-                display: none;
-            }
-        }
-    }
+			@include sm-block {
+				display: none;
+			}
+		}
+	}
 }
 
 /*----------------------------------------------*/
@@ -718,121 +705,113 @@ body {
   Секция indicators
 --------------------------------------------- */
 .indicators {
-    padding: 59px 0;
-    background: #2098D5;
+	padding: 59px 0;
+	background: #2098D5;
+	color: #FFFFFF;
 
-    @include xxs-block {
-        padding-top: 44px;
-        padding-bottom: 37px;
-    }
+	@include xxs-block {
+		padding-top: 44px;
+		padding-bottom: 37px;
+	}
 
-    h3 {
-        width: 20%;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 120%;
-        color: #FFFFFF;
+	h3 {
+		width: 20%;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 120%;
 
-        @include llg-block {
-            font-size: 30px;
-        }
+		@include llg-block {
+			font-size: 30px;
+		}
 
-        @include md-block {
-            width: 16%;
-            font-size: 21px;
-        }
+		@include md-block {
+			width: 16%;
+			font-size: 21px;
+		}
 
-        @include sm-block {
-            width: 75%;
-            text-align: center;
-            font-size: 36px;
-        }
+		@include sm-block {
+			width: 75%;
+			text-align: center;
+			font-size: 36px;
+		}
 
-        @include xxs-block {
-            width: 80%;
-            font-size: 28px;
-        }
-    }
+		@include xxs-block {
+			width: 80%;
+			font-size: 28px;
+		}
+	}
 
-    .indicators__content {
-        @include row-flex();
-        align-items: center;
+	.indicators__content {
+		@include row-flex();
+		align-items: center;
 
-        @include sm-block {
-            flex-direction: column;
-            justify-content: center;
-        }
+		@include sm-block {
+			flex-direction: column;
+			justify-content: center;
+		}
 
-        .indicators__item {
-            @include col();
-            width: 23%;
-            display: flex;
-            align-items: center;
+		.indicators__item {
+			@include col();
+			width: 23%;
+			display: flex;
+			align-items: center;
 
-            @include lg-block {
-                flex-direction: column;
-                justify-content: center;
-            }
+			@include lg-block {
+				flex-direction: column;
+				justify-content: center;
+			}
 
-            @include sm-block {
-                width: 75%;
-                text-align: center;
-            }
+			@include sm-block {
+				width: 75%;
+				text-align: center;
+			}
 
 
-            span {
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 5vw;
-                line-height: 130%;
-                color: #FFFFFF;
+			span {
+				font-weight: normal;
+				font-size: 5vw;
+				line-height: 130%;
 
-                @include llg-block {
-                    font-size: 60px;
-                }
+				@include llg-block {
+					font-size: 60px;
+				}
 
-                @include sm-block {
-                    font-size: 75px;
-                }
+				@include sm-block {
+					font-size: 75px;
+				}
 
-                @include xxs-block {
-                    font-size: 72px;
-                }
-            }
+				@include xxs-block {
+					font-size: 72px;
+				}
+			}
 
-            p {
-                margin-left: 10px;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 150%;
-                color: #FFFFFF;
+			p {
+				margin-left: 10px;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 150%;
 
-                @include llg-block {
-                    font-size: 15px;
-                }
+				@include llg-block {
+					font-size: 15px;
+				}
 
-                @include lg-block {
-                    margin: 0;
-                    font-size: 14px;
-                }
+				@include lg-block {
+					margin: 0;
+					font-size: 14px;
+				}
 
-                @include sm-block {
-                    margin-bottom: 20px;
-                    font-size: 18px;
-                }
+				@include sm-block {
+					margin-bottom: 20px;
+					font-size: 18px;
+				}
 
-                @include xxs-block {
-                    font-size: 16px;
-                    margin-bottom: 25px;
-                }
-            }
-        }
-    }
+				@include xxs-block {
+					font-size: 16px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
 }
 
 /*----------------------------------------------*/
@@ -841,56 +820,54 @@ body {
   Секция map
 --------------------------------------------- */
 .map {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
+	color: #FFFFFF;
 
-    @include sm-block {
-        display: none;
-    }
+	@include sm-block {
+		display: none;
+	}
 
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
 
-    &__content {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%)
-    }
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%)
+	}
 
-    h2 {
-        color: #FFFFFF;
+	h2 {
+		color: #FFFFFF;
 
-        @include llg-block {
-            padding-top: 35px;
-        }
-    }
+		@include llg-block {
+			padding-top: 35px;
+		}
+	}
 
-    p {
-        width: 888px;
-        margin: 0 auto;
-        margin-top: 27px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.2vw;
-        line-height: 160%;
-        text-align: center;
-        color: #FFFFFF;
+	p {
+		width: 888px;
+		margin: 0 auto;
+		margin-top: 27px;
+		font-weight: 500;
+		font-size: 1.2vw;
+		line-height: 160%;
+		text-align: center;
 
-        @include llg-block {
-            margin-top: 13px;
-            font-size: 16px;
-        }
+		@include llg-block {
+			margin-top: 13px;
+			font-size: 16px;
+		}
 
-        @include md-block {
-            width: 750px;
-            padding: 0 20px;
-        }
-    }
+		@include md-block {
+			width: 750px;
+			padding: 0 20px;
+		}
+	}
 }
 
 /*----------------------------------------------*/
@@ -899,337 +876,320 @@ body {
   Секция program
 --------------------------------------------- */
 .program {
-    position: relative;
-    padding: 40px 87px 94px 87px;
-    overflow: hidden;
+	position: relative;
+	padding: 40px 87px 94px 87px;
+	color: #000000;
+	overflow: hidden;
 
-    @include md-block {
-        padding: 40px 47px 94px 47px;
-    }
+	@include md-block {
+		padding: 40px 47px 94px 47px;
+	}
 
-    @include xxs-block {
-        padding: 40px 0px 94px 0px;
-        text-align: center;
-    }
+	@include xxs-block {
+		padding: 40px 0px 94px 0px;
+		text-align: center;
+	}
 
-    &>h2 {
+	&>h2 {
+		@include md-block {
+			font-size: 25px;
+		}
 
-        @include md-block {
-            font-size: 25px;
-        }
+		@include xs-block {
+			font-weight: 600;
+		}
 
-        @include xs-block {
-            font-weight: 600;
-        }
+		@include xxs-block {
+			font-size: 28px;
+			margin-bottom: 85px;
+			padding: 0 40px;
+		}
+	}
 
-        @include xxs-block {
-            font-size: 28px;
-            margin-bottom: 85px;
-            padding: 0 40px;
-        }
-    }
+	&>p {
+		max-width: 906px;
+		margin: 0 auto;
+		margin-top: 24px;
+		margin-bottom: 64px;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 160%;
+		text-align: center;
 
-    &>p {
-        max-width: 906px;
-        margin: 0 auto;
-        margin-top: 24px;
-        margin-bottom: 64px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 160%;
-        text-align: center;
-        color: #000000;
+		@include lg-block {
+			font-size: 20px;
+		}
 
-        @include lg-block {
-            font-size: 20px;
-        }
+		@include md-block {
+			font-size: 18px;
+		}
 
-        @include md-block {
-            font-size: 18px;
-        }
+		@include xxs-block {
+			display: none;
+		}
+	}
 
-        @include xxs-block {
-            display: none;
-        }
-    }
+	.btnBase {
+		display: none;
 
-    .btnBase {
-        display: none;
+		@include xs-block {
+			display: block;
+			margin: 0 auto;
+		}
 
-        @include xs-block {
-            display: block;
-            margin: 0 auto;
-        }
+		@include xxs-block {
+			margin: 0 auto;
+			margin-top: 26px;
+			padding: 14px 20px;
 
-        @include xxs-block {
-            margin: 0 auto;
-            margin-top: 26px;
-            padding: 14px 20px;
-
-            p {
-                font-size: 14px;
-            }
-        }
-    }
+			p {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 .program__content {
-    @include row-flex();
-    justify-content: space-around;
+	@include row-flex();
+	justify-content: space-around;
 
-    @include md-block {
-        justify-content: center;
-    }
+	@include md-block {
+		justify-content: center;
+	}
 }
 
 .program__content .programItem:last-child {
-    @include xxs-block {
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
-    }
+	@include xxs-block {
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
 }
 
 .programItem {
-    @include col();
-    @include size(3);
+	@include col();
+	@include size(3);
 
-    @include size-lg(4);
-    @include size-md(6);
-    @include size-xs(12);
+	@include size-lg(4);
+	@include size-md(6);
+	@include size-xs(12);
 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 35px;
-    padding: 61px 40px 87px 40px;
-    text-align: center;
-    background: #FFFFFF;
-    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
-    border-radius: 12px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 35px;
+	padding: 61px 40px 87px 40px;
+	text-align: center;
+	background: #FFFFFF;
+	box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+	border-radius: 12px;
 
-    @include llg-block {
-        padding: 30px 10px;
-    }
+	@include llg-block {
+		padding: 30px 10px;
+	}
 
-    @include lg-block {
-        padding: 50px 10px;
-    }
+	@include lg-block {
+		padding: 50px 10px;
+	}
 
-    @include md-block {
-        width: 40%;
-    }
+	@include md-block {
+		width: 40%;
+	}
 
-    @include sm-block {
-        width: 44%;
-    }
+	@include sm-block {
+		width: 44%;
+	}
 
-    @include xs-block {
-        max-width: 300px;
-        width: 90%;
-    }
+	@include xs-block {
+		max-width: 300px;
+		width: 90%;
+	}
 
-    @include xxs-block {
-        max-width: 390px;
-        width: 100%;
-        margin-bottom: 0;
-        padding: 23px 6px 23px 36px;
-        flex-direction: row;
-        justify-content: flex-start;
-        box-shadow: none;
-        border-radius: 0px;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-    }
+	@include xxs-block {
+		max-width: 390px;
+		width: 100%;
+		margin-bottom: 0;
+		padding: 23px 6px 23px 36px;
+		flex-direction: row;
+		justify-content: flex-start;
+		box-shadow: none;
+		border-radius: 0px;
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
 
-    svg {
-        width: 75px;
-        height: 63px;
-        fill: #2098D5;
+	svg {
+		width: 75px;
+		height: 63px;
+		fill: #2098D5;
 
-        @include xxs-block {
-            width: 38px;
-            height: 34px;
-        }
-    }
+		@include xxs-block {
+			width: 38px;
+			height: 34px;
+		}
+	}
 
-    h4 {
-        margin-top: 30px;
-        margin-bottom: 23px;
-        font-family: Montserrat;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 130%;
-        color: #000000;
+	h4 {
+		margin-top: 30px;
+		margin-bottom: 23px;
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 130%;
 
-        @include llg-block {
-            font-size: 16px;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
+		@include llg-block {
+			font-size: 16px;
+			margin-top: 15px;
+			margin-bottom: 5px;
+		}
 
-        @include md-block {
-            font-size: 20px;
-        }
+		@include md-block {
+			font-size: 20px;
+		}
 
-        @include xxs-block {
-            margin-left: 22px;
-            font-size: 16px;
-        }
-    }
+		@include xxs-block {
+			margin-left: 22px;
+			font-size: 16px;
+		}
+	}
 
-    p {
-        margin-bottom: 25px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 170%;
-        color: #000000;
+	p {
+		margin-bottom: 25px;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 170%;
 
-        @include llg-block {
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
+		@include llg-block {
+			font-size: 13px;
+			margin-bottom: 15px;
+		}
 
-        @include md-block {
-            font-size: 15px;
-        }
+		@include md-block {
+			font-size: 15px;
+		}
 
-        @include xxs-block {
-            display: none;
-        }
-    }
+		@include xxs-block {
+			display: none;
+		}
+	}
 
-    .programItem__quote {
-        position: relative;
-        margin-top: auto;
-        background: #FAFAFA;
-        border-radius: 12px;
+	.programItem__quote {
+		position: relative;
+		margin-top: auto;
+		background: #FAFAFA;
+		border-radius: 12px;
 
+		&::before {
+			position: absolute;
+			content: '';
+			left: 17px;
+			bottom: -14px;
+			border-left: 11px solid #FAFAFA;
+			border-right: 11px solid #FAFAFA;
+			border-top: 16px solid #EDEDED;
 
-        &::before {
-            position: absolute;
-            content: '';
-            left: 17px;
-            bottom: -14px;
-            border-left: 11px solid #FAFAFA;
-            border-right: 11px solid #FAFAFA;
-            border-top: 16px solid #EDEDED;
+			@include llg-block {
+				bottom: -8px;
+				border-left: 7px solid #FAFAFA;
+				border-right: 7px solid #FAFAFA;
+				border-top: 9px solid #EDEDED;
+			}
 
-            @include llg-block {
-                bottom: -8px;
-                border-left: 7px solid #FAFAFA;
-                border-right: 7px solid #FAFAFA;
-                border-top: 9px solid #EDEDED;
-            }
+			@include xxs-block {
+				display: none;
+			}
+		}
 
-            @include xxs-block {
-                display: none;
-            }
-        }
+		blockquote {
+			margin: 15px;
+			padding: 15px 0;
+			text-align: left;
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 160%;
 
-        blockquote {
-            margin: 15px;
-            padding: 15px 0;
-            text-align: left;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 160%;
+			@include xxs-block {
+				display: none;
+			}
+		}
+	}
 
-            @include xxs-block {
-                display: none;
-            }
-        }
-    }
+	.dataQuote__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		margin-top: 15px;
 
-    .dataQuote__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        margin-top: 15px;
+		@include xxs-block {
+			display: none;
+		}
 
-        @include xxs-block {
-            display: none;
-        }
+		.dataQuote__fio {
+			padding-left: 10px;
+		}
 
-        .dataQuote__fio {
-            padding-left: 10px;
-        }
+		h6 {
+			margin: 0;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 130%;
 
-        h6 {
-            margin: 0;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 130%;
-            color: #000000;
+			@include llg-block {
+				font-size: 14px;
+			}
+		}
 
-            @include llg-block {
-                font-size: 14px;
-            }
-        }
+		span {
+			display: block;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 130%;
+		}
+	}
 
-        span {
-            display: block;
-            margin: 0;
-            padding: 0;
-            text-align: left;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 130%;
-            color: #000000;
-        }
-    }
-
-    .btnBase {
-        display: none;
-    }
+	.btnBase {
+		display: none;
+	}
 }
 
 .programItem--button {
-    margin-top: -50px;
+	margin-top: -50px;
 
-    .programItem__quote {
-        margin-top: 10px;
-    }
+	.programItem__quote {
+		margin-top: 10px;
+	}
 
-    .dataQuote__wrapper {
-        margin-bottom: 15px;
-    }
+	.dataQuote__wrapper {
+		margin-bottom: 15px;
+	}
 
-    .btnBase {
-        display: block;
-        width: 100%;
-    }
+	.btnBase {
+		display: block;
+		width: 100%;
+	}
 }
 
 .programItem .btnBase--program {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    border-radius: 0 0 12px 12px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	border-radius: 0 0 12px 12px;
 
-    @include xs-block {
-        display: none;
-    }
+	@include xs-block {
+		display: none;
+	}
 
-    P {
-        margin-bottom: 0;
-        ;
-        font-weight: 600;
-        line-height: 1.3;
-    }
+	P {
+		margin-bottom: 0;
+		;
+		font-weight: 600;
+		line-height: 1.3;
+	}
 }
 
 /*----------------------------------------------*/
@@ -1237,199 +1197,196 @@ body {
 /*---------------------------------------------
   Секция formAnswer
 --------------------------------------------- */
-.formAnswer {
-    position: relative;
-    padding: 83px 20px 10px 20px;
-    background: #2098D5;
-    overflow: hidden;
+.formAnswer,
+.formQuest {
+	position: relative;
+	padding: 83px 20px 10px 20px;
+	background: #2098D5;
+	overflow: hidden;
 
-    @include xs-block {
-        padding: 47px 15px 7px;
-    }
+	@include xs-block {
+		padding: 47px 15px 7px;
+	}
 
+	&>h2 {
+		position: relative;
+		z-index: 5;
+		font-weight: 600;
+		line-height: 1.5;
+		color: #FFFFFF;
+	}
 
-    &>h2 {
-        position: relative;
-        z-index: 5;
-        font-weight: 600;
-        line-height: 1.5;
-        color: #FFFFFF;
-    }
+	p {
+		margin-top: 10px;
+		margin-bottom: 73px;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 160%;
+		text-align: center;
+		color: #FFFFFF;
 
-    p {
-        margin-top: 10px;
-        margin-bottom: 73px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 160%;
-        text-align: center;
-        color: #FFFFFF;
+		@include lg-block {
+			font-size: 22px;
+		}
 
-        @include lg-block {
-            font-size: 22px;
-        }
+		@include md-block {
+			margin-bottom: 40px;
+			font-size: 18px;
+		}
 
-        @include md-block {
-            margin-bottom: 40px;
-            font-size: 18px;
-        }
-
-        @include xxs-block {
-            font-size: 16px;
-        }
-    }
-
-    small {
-        max-width: 1160px;
-        font: 500 13px/1.6 Montserrat;
-        text-align: center;
-        color: #FFFFFF;
-        opacity: 0.5;
-
-        @include llg-block {
-            display: block;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1;
-        }
-
-        @include md-block {
-            max-width: 580px;
-            line-height: 1.2;
-        }
-
-        @include xxs-block {
-            font-size: 11px;
-            line-height: 1.6;
-        }
-    }
+		@include xxs-block {
+			font-size: 16px;
+		}
+	}
 }
 
-.formAnswer__form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
+p>small {
+	max-width: 1160px;
+	font: 500 13px/1.6 Montserrat;
+	text-align: center;
+	color: #FFFFFF;
+	opacity: 0.5;
 
-    @include md-block {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+	@include llg-block {
+		display: block;
+		max-width: 900px;
+		margin: 0 auto;
+		line-height: 1;
+	}
 
-    .input__wrapper {
-        position: relative;
-        width: 352px;
-        margin-right: 15px;
+	@include md-block {
+		max-width: 580px;
+		line-height: 1.2;
+	}
 
-        @include md-block {
-            width: 352px;
-            margin-bottom: 20px;
-            margin-right: 0;
-        }
+	@include xxs-block {
+		font-size: 11px;
+		line-height: 1.6;
+	}
+}
 
-        @include xxs-block {
-            width: 100%
-        }
-    }
+.formAnswer__form,
+.formQuest__form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
 
-    input {
-        width: 100%;
-        height: 68px;
-        padding-left: 59px;
-        background: #FFFFFF;
-        border-radius: 12px;
-        border: none;
-        font-size: 14px;
-        outline: none;
+	@include md-block {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+}
 
-        &:focus {
-            outline: none;
-        }
+.input__wrapper {
+	position: relative;
+	width: 352px;
+	margin-right: 15px;
 
-        @include xxs-block {
-            height: 60px;
-        }
-    }
+	@include md-block {
+		width: 352px;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
 
-    @include input-placeholder {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 160%;
-        color: #000000;
-        opacity: 0.5;
+	@include xxs-block {
+		width: 100%
+	}
+}
 
-        @include lg-block {
-            @include input-placeholder {
-                font-size: 14px;
-            }
-        }
-    }
+input {
+	width: 100%;
+	height: 68px;
+	padding-left: 59px;
+	background: #FFFFFF;
+	border-radius: 12px;
+	border: none;
+	font-size: 14px;
+	outline: none;
 
-    label {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
+	&:focus {
+		outline: none;
+	}
 
-        svg {
-            width: 24px;
-            height: 24px;
-            fill: #000000;
-        }
-    }
+	@include xxs-block {
+		height: 60px;
+	}
+}
 
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 46px;
-        padding-right: 46px;
-        background: #FFCC00;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
+@include input-placeholder {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 160%;
+	color: #000000;
+	opacity: 0.5;
 
-        &:hover {
-            box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
-        }
+	@include lg-block {
+		@include input-placeholder {
+			font-size: 14px;
+		}
+	}
+}
 
-        @include lg-block {
-            padding-left: 26px;
-            padding-right: 26px;
-        }
+label {
+	position: absolute;
+	top: 55%;
+	left: 20px;
+	transform: translateY(-50%);
 
-        @include md-block {
-            width: 352px;
-            margin: 0;
-            margin-bottom: 10px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            text-align: center;
-        }
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: #000000;
+	}
+}
 
-        @include xxs-block {
-            width: 223px;
-            height: 60px;
-            margin-bottom: 33px;
-            padding-top: 15px;
-        }
+.form__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 46px;
+	padding-right: 46px;
+	background: #FFCC00;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
 
-        span {
-            margin-right: 11px;
-            font: 600 18px/1.6 Montserrat;
-            color: #000000;
-        }
+	&:hover {
+		box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+	}
 
-        svg {
-            width: 17px;
-            height: 16px;
-            fill: #000000;
-        }
-    }
+	@include lg-block {
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+
+	@include md-block {
+		width: 352px;
+		margin: 0;
+		margin-bottom: 10px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	@include xxs-block {
+		width: 223px;
+		height: 60px;
+		margin-bottom: 33px;
+		padding-top: 15px;
+	}
+
+	span {
+		margin-right: 11px;
+		font: 600 18px/1.6 Montserrat;
+		color: #000000;
+	}
+
+	svg {
+		width: 17px;
+		height: 16px;
+		fill: #000000;
+	}
 }
 
 /*----------------------------------------------*/
@@ -1439,572 +1396,553 @@ body {
   Секция reviiews
 --------------------------------------------- */
 .reviews {
-    padding: 103px 70px;
-    background: #FFCC00;
-    overflow-x: hidden;
+	padding: 103px 70px;
+	background: #FFCC00;
+	overflow-x: hidden;
 
-    @include xs-block {
-        padding: 40px 15px 68px;
-    }
+	@include xs-block {
+		padding: 40px 15px 68px;
+	}
 
-    h2 {
-        @include md-block {
-            font-size: 32px;
-            line-height: 1.2;
-        }
+	h2 {
+		@include md-block {
+			font-size: 32px;
+			line-height: 1.2;
+		}
 
-        @include xs-block {
-            font-weight: 600;
-        }
+		@include xs-block {
+			font-weight: 600;
+		}
 
-    }
+	}
 
-    .btnBase {
-        display: block;
-        margin: 0 auto;
-        margin-top: 81px;
-        background: #FFFFFF;
-        border-radius: 12px;
-        cursor: pointer;
+	.btnBase {
+		display: block;
+		margin: 0 auto;
+		margin-top: 81px;
+		background: #FFFFFF;
+		border-radius: 12px;
+		cursor: pointer;
 
-        &:hover {
-            box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
-        }
+		&:hover {
+			box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
+		}
 
-        @include xs-block {
-            margin-top: 0;
-        }
+		@include xs-block {
+			margin-top: 0;
+		}
 
-        p {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 160%;
-            color: #000000;
+		p {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 160%;
+			color: #000000;
 
-            @include xs-block {
-                font-size: 14px;
-            }
-        }
-    }
+			@include xs-block {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 .reviews__slider {
-    width: 100%;
-    margin: 90px auto 51px;
+	width: 100%;
+	margin: 90px auto 51px;
 
-    @include sm-block {
-        margin-top: 40px;
-    }
+	@include sm-block {
+		margin-top: 40px;
+	}
 
-    @include xs-block {
-        margin-top: 24px;
-        margin-bottom: 26px;
-    }
+	@include xs-block {
+		margin-top: 24px;
+		margin-bottom: 26px;
+	}
 }
 
 .reviewsItem {
-    display: flex;
-    width: 992px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 42px 55px;
-    background: #FFFFFF;
-    box-shadow: 2px 56px 44px rgba(0, 0, 0, 0.07);
-    border-radius: 12px;
+	display: flex;
+	width: 992px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 42px 55px;
+	background: #FFFFFF;
+	box-shadow: 2px 56px 44px rgba(0, 0, 0, 0.07);
+	border-radius: 12px;
 
-    @include llg-block {
-        width: 100%;
-        max-width: 900px;
-        padding: 32px 25px;
-    }
+	@include llg-block {
+		width: 100%;
+		max-width: 900px;
+		padding: 32px 25px;
+	}
 
-    @include md-block {
-        position: relative;
-        max-width: 600px;
-        flex-direction: column;
-        align-items: center;
+	@include md-block {
+		position: relative;
+		max-width: 600px;
+		flex-direction: column;
+		align-items: center;
 
-        @include xs-block {
-            padding: 32px 20px;
-        }
-    }
+		@include xs-block {
+			padding: 32px 20px;
+		}
+	}
 
-    .reviewsItem__block1 {
-        width: 50%;
+	.reviewsItem__block1 {
+		width: 50%;
 
-        @include md-block {
-            width: 100%;
-            padding-top: 205px;
-        }
+		@include md-block {
+			width: 100%;
+			padding-top: 205px;
+		}
 
-        blockquote {
-            position: relative;
-            margin: 0;
-            padding: 20px 20px 10px 25px;
-            background: #FAFAFA;
-            border-radius: 12px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 175%;
-            color: #000000;
+		blockquote {
+			position: relative;
+			margin: 0;
+			padding: 20px 20px 10px 25px;
+			background: #FAFAFA;
+			border-radius: 12px;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 175%;
+			color: #000000;
 
-            &::before {
-                position: absolute;
-                content: '';
+			&::before {
+				position: absolute;
+				content: '';
 
-                @include md-block {
-                    left: 40px;
-                    top: -11px;
-                    border-bottom: 11px solid #EDEDED;
-                    border-left: 12px solid #FFFFFF;
-                    border-right: 12px solid #FFFFFF;
-                }
-            }
+				@include md-block {
+					left: 40px;
+					top: -11px;
+					border-bottom: 11px solid #EDEDED;
+					border-left: 12px solid #FFFFFF;
+					border-right: 12px solid #FFFFFF;
+				}
+			}
 
-            &::after {
-                position: absolute;
-                content: '';
-                right: -11px;
-                bottom: 50%;
-                transform: translateY(50%);
-                border-left: 11px solid #EDEDED;
-                border-bottom: 12px solid #FFFFFF;
-                border-top: 12px solid #FFFFFF;
+			&::after {
+				position: absolute;
+				content: '';
+				right: -11px;
+				bottom: 50%;
+				transform: translateY(50%);
+				border-left: 11px solid #EDEDED;
+				border-bottom: 12px solid #FFFFFF;
+				border-top: 12px solid #FFFFFF;
 
-                @include md-block {
-                    display: none;
-                }
-            }
+				@include md-block {
+					display: none;
+				}
+			}
 
-            @include llg-block {
-                font-size: 13px;
-            }
+			@include llg-block {
+				font-size: 13px;
+			}
 
-            @include md-block {
-                width: 100%;
-                font-size: 15px;
-            }
+			@include md-block {
+				width: 100%;
+				font-size: 15px;
+			}
 
-            @include xs-block {
-                font-size: 13px;
-            }
+			@include xs-block {
+				font-size: 13px;
+			}
 
-            @include xxs-block {
-                font-size: 12px;
-            }
+			@include xxs-block {
+				font-size: 12px;
+			}
 
-            svg {
-                position: absolute;
-                top: -17px;
-                right: 17px;
-                width: 42px;
-                height: 34px;
-                fill: #FFCC00;
-            }
-        }
+			svg {
+				position: absolute;
+				top: -17px;
+				right: 17px;
+				width: 42px;
+				height: 34px;
+				fill: #FFCC00;
+			}
+		}
 
-        h3 {
-            margin: 100px 0 10px 0;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 170%;
-            color: #000000;
+		h3 {
+			margin: 100px 0 10px 0;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 170%;
+			color: #000000;
 
-            @include llg-block {
-                margin-top: 75px;
-            }
+			@include llg-block {
+				margin-top: 75px;
+			}
 
-            @include md-block {
-                margin-top: 45px;
-            }
+			@include md-block {
+				margin-top: 45px;
+			}
 
-            @include xs-block {
-                margin-top: 65px;
-                font-size: 18px;
-                line-height: 1.3;
-            }
+			@include xs-block {
+				margin-top: 65px;
+				font-size: 18px;
+				line-height: 1.3;
+			}
 
-        }
+		}
 
-        p {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 190%;
-            color: #000000;
+		p {
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 190%;
+			color: #000000;
 
-            @include llg-block {
-                font-size: 12px;
-            }
+			@include llg-block {
+				font-size: 12px;
+			}
 
-            @include md-block {
-                font-size: 14px;
-            }
+			@include md-block {
+				font-size: 14px;
+			}
 
-            @include xxs-block {
-                font-size: 12px;
-            }
+			@include xxs-block {
+				font-size: 12px;
+			}
 
-        }
+		}
 
-        p:nth-child(4) {
-            margin-top: 15px;
-        }
+		p:nth-child(4) {
+			margin-top: 15px;
+		}
 
-        button {
-            width: 100%;
-            margin-top: 20px;
-            padding: 12px 110px;
-            border: 2px solid #FFCC00;
-            border-radius: 12px;
-            text-align: center;
-            background: none;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 160%;
-            color: #000000;
-            cursor: pointer;
+		button {
+			width: 100%;
+			margin-top: 20px;
+			padding: 12px 110px;
+			border: 2px solid #FFCC00;
+			border-radius: 12px;
+			text-align: center;
+			background: none;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 160%;
+			color: #000000;
+			cursor: pointer;
 
-            &:hover {
-                box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
-            }
+			&:hover {
+				box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+			}
 
-            @include llg-block {
-                padding: 12px 78px;
-            }
+			@include llg-block {
+				padding: 12px 78px;
+			}
 
-            @include md-block {
-                display: block;
-                width: 80%;
-                margin: 0 auto;
-                margin-top: 20px;
-                padding: 12px 58px;
-                font-size: 16px;
-            }
+			@include md-block {
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+				margin-top: 20px;
+				padding: 12px 58px;
+				font-size: 16px;
+			}
 
-            @include xs-block {
-                width: 100%;
-                padding: 12px 37px;
-                font-size: 14px;
-            }
+			@include xs-block {
+				width: 100%;
+				padding: 12px 37px;
+				font-size: 14px;
+			}
 
-            @include xxs-block {
-                font-size: 12px;
-            }
+			@include xxs-block {
+				font-size: 12px;
+			}
 
-        }
-    }
+		}
+	}
 
-    .reviewsItem__block2 {
-        display: flex;
-        flex-direction: column;
-        padding-left: 40px;
+	.reviewsItem__block2 {
+		display: flex;
+		flex-direction: column;
+		padding-left: 40px;
 
-        @include md-block {
-            padding-left: 0;
-            width: 100%;
-        }
+		@include md-block {
+			padding-left: 0;
+			width: 100%;
+		}
 
-        figure {
-            display: flex;
-            margin: 0;
-            margin-bottom: auto;
-            padding: 0;
+		figure {
+			display: flex;
+			margin: 0;
+			margin-bottom: auto;
+			padding: 0;
 
-            @include md-block {
-                position: absolute;
-                top: 32px;
-                left: 25px;
-            }
+			@include md-block {
+				position: absolute;
+				top: 32px;
+				left: 25px;
+			}
 
-            @include xs-block {
-                left: 20px;
-            }
+			@include xs-block {
+				left: 20px;
+			}
 
-            @include xxs-block {
-                width: 100%;
-            }
+			@include xxs-block {
+				width: 100%;
+			}
 
-            .img__wrapper {
-                max-width: 175px;
-                margin-right: 35px;
+			.img__wrapper {
+				max-width: 175px;
+				margin-right: 35px;
 
-                @include xs-block {
-                    margin-right: 20px;
-                }
+				@include xs-block {
+					margin-right: 20px;
+				}
 
-                @include xxs-block {
-                    display: none;
-                }
+				@include xxs-block {
+					display: none;
+				}
 
-                img {
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                }
-            }
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
 
-            figaption {
+			figaption {
 
-                @include xs-block {
-                    min-width: 160px;
-                }
-            }
+				@include xs-block {
+					min-width: 160px;
+				}
+			}
 
-            h4 {
-                margin: 0;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 170%;
-                color: #000000;
+			h4 {
+				margin: 0;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 170%;
+				color: #000000;
 
-                @include xs-block {
-                    font-size: 16px;
-                }
-            }
+				@include xs-block {
+					font-size: 16px;
+				}
+			}
 
-            p {
-                margin: 0;
-                padding: 0;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 1.4;
-                color: #000000;
-            }
+			p {
+				margin: 0;
+				padding: 0;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 1.4;
+				color: #000000;
+			}
 
-            p:nth-child(3) {
-                margin-top: 13px;
-                margin-bottom: 16px;
-                font-size: 13px;
+			p:nth-child(3) {
+				margin-top: 13px;
+				margin-bottom: 16px;
+				font-size: 13px;
 
-                span {
-                    font-weight: 600;
-                }
+				span {
+					font-weight: 600;
+				}
 
-                @include xs-block {
-                    font-size: 12px;
-                }
-            }
+				@include xs-block {
+					font-size: 12px;
+				}
+			}
 
-            h6,
-            li {
-                margin-top: 0;
-                margin-bottom: 5px;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 13px;
-                line-height: 160%;
-                color: #000000;
+			h6,
+			li {
+				margin-top: 0;
+				margin-bottom: 5px;
+				font-weight: normal;
+				font-size: 13px;
+				line-height: 160%;
+				color: #000000;
 
-                @include xs-block {
-                    font-size: 12px;
-                }
-            }
+				@include xs-block {
+					font-size: 12px;
+				}
+			}
 
-            ul {
-                list-style-type: none;
+			ul {
+				list-style-type: none;
 
-                li {
-                    margin: 0;
-                    padding-left: 19px;
-                    background-image: url(../img/images/marker.png);
-                    background-repeat: no-repeat;
-                    background-position: 0 3px;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
+				li {
+					margin: 0;
+					padding-left: 19px;
+					background-image: url(../img/images/marker.png);
+					background-repeat: no-repeat;
+					background-position: 0 3px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
 }
 
 .videoSlider__wrapper {
-    position: relative;
-    max-width: 462px;
-    @include fr;
+	position: relative;
+	max-width: 462px;
+	@include fr;
 
-    @include md-block {
-        max-width: 100%;
-        margin-top: 30px;
-    }
+	@include md-block {
+		max-width: 100%;
+		margin-top: 30px;
+	}
 }
 
 
 .navSlider {
-    display: flex;
-    justify-content: center;
-    margin-top: 31px;
-    display: none;
+	display: flex;
+	justify-content: center;
+	margin-top: 31px;
+	display: none;
 
-    @include sm-block {
-        display: flex;
-    }
+	@include sm-block {
+		display: flex;
+	}
 
-    .navSlider__prev,
-    .navSlider__next {
-        width: 100%;
-        max-width: 137px;
-        margin-bottom: 0;
-        padding: 15px 0;
-        text-align: center;
-        border: none;
-        background: #FFFFFF;
-        font-family: Montserrat, Verdana;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 160%;
-        color: #000000;
-        cursor: pointer;
-        outline: none;
-    }
+	.navSlider__prev,
+	.navSlider__next {
+		width: 100%;
+		max-width: 137px;
+		margin-bottom: 0;
+		padding: 15px 0;
+		text-align: center;
+		border: none;
+		background: #FFFFFF;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 160%;
+		color: #000000;
+		cursor: pointer;
+		outline: none;
+	}
 
-    .navSlider__prev {
-        border-right: 0.5px solid rgba(0, 0, 0, .1);
-        border-radius: 12px 0 0 12px;
-    }
+	.navSlider__prev {
+		border-right: 0.5px solid rgba(0, 0, 0, .1);
+		border-radius: 12px 0 0 12px;
+	}
 
-    .navSlider__next {
-        border-left: 0.5px solid rgba(0, 0, 0, .1);
-        border-radius: 0 12px 12px 0;
-    }
+	.navSlider__next {
+		border-left: 0.5px solid rgba(0, 0, 0, .1);
+		border-radius: 0 12px 12px 0;
+	}
 }
 
 //Настройки слайдера
 .owl-item.active.center {
+	.reviewsItem {
+		position: relative;
+		transform: scale(1.2);
+		z-index: 100;
 
-    .reviewsItem {
-        position: relative;
-        transform: scale(1.2);
-        z-index: 100;
-
-        @include llg-block {
-            transform: scale(1.1);
-        }
-    }
+		@include llg-block {
+			transform: scale(1.1);
+		}
+	}
 }
 
 .reviews__slider.owl-carousel .owl-stage-outer {
-    overflow: visible;
+	overflow: visible;
 }
 
 .reviews .owl-carousel {
-    .owl-nav {
-        left: 60px;
-        right: 60px;        
+	.owl-nav {
+		left: 60px;
+		right: 60px;
 
-        @include llg-block {
-            left: 1%;
-            right: 1%;
-        }
+		@include llg-block {
+			left: 1%;
+			right: 1%;
+		}
 
-        @include lg-block {
-            left: -7%;
-            right: -7%;
-        }
+		@include lg-block {
+			left: -7%;
+			right: -7%;
+		}
 
-        @include md-block {
-            left: -3%;
-            right: -3%;
-        }
+		@include md-block {
+			left: -3%;
+			right: -3%;
+		}
 
-        .owl-next,
-        .owl-prev {            
+		.owl-next,
+		.owl-prev {
 
-            .slider-next {
-                background-image: url(../img/images/arrowRight.png);
-            }
+			.slider-next {
+				background-image: url(../img/images/arrowRight.png);
+			}
 
-            .slider-prev {
-                background-image: url(../img/images/arrowLeft.png);
-            }
-        }
-    }
+			.slider-prev {
+				background-image: url(../img/images/arrowLeft.png);
+			}
+		}
+	}
 }
 
 //---------------------------------------------------------
 
 .btnVideoSlider__wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
 
-    &:focus {
-        outline: none;
-    }
+	&:focus {
+		outline: none;
+	}
 }
 
 .btnVideoEllipse1,
 .btnVideoEllipse2,
 .btnVideoEllipse3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, .3);
+	border-radius: 50%;
 }
 
 .btnVideoEllipse1 {
-    width: 150px;
-    height: 150px;
+	width: 150px;
+	height: 150px;
 
-    @include xs-block {
-        width: 124px;
-        height: 124px;
-    }
+	@include xs-block {
+		width: 124px;
+		height: 124px;
+	}
 
-    .btnVideoEllipse2 {
-        width: 124px;
-        height: 124px;
+	.btnVideoEllipse2 {
+		width: 124px;
+		height: 124px;
 
-        @include xs-block {
-            width: 100px;
-            height: 100px;
-        }
+		@include xs-block {
+			width: 100px;
+			height: 100px;
+		}
 
-        .btnVideoEllipse3 {
-            width: 100px;
-            height: 100px;
+		.btnVideoEllipse3 {
+			width: 100px;
+			height: 100px;
 
-            @include xs-block {
-                width: 83px;
-                height: 83px;
-            }
-        }
-    }
+			@include xs-block {
+				width: 83px;
+				height: 83px;
+			}
+		}
+	}
 }
 
 
 .btnVideoSlider {
-    padding: 5px;
+	padding: 5px;
 
-    img.btnVideoSlider__img {
-        display: block;
-        width: 80px;
-        height: 80px;
-        transform: translateY(14%);
+	img.btnVideoSlider__img {
+		display: block;
+		width: 80px;
+		height: 80px;
+		transform: translateY(14%);
 
-        @include xs-block {
-            width: 66px;
-            height: 66px;
-            transform: translateY(14%);
-        }
-    }
+		@include xs-block {
+			width: 66px;
+			height: 66px;
+			transform: translateY(14%);
+		}
+	}
 
 }
 
@@ -2014,358 +1952,350 @@ body {
   Секция contacts
 --------------------------------------------- */
 .contacts {
-    position: relative;
-    padding: 107px 0 141px;
-    background: #FAFAFA;
-    overflow: hidden;
+	position: relative;
+	padding: 107px 0 141px;
+	background: #FAFAFA;
+	overflow: hidden;
 
-    @include md-block {
-        padding: 67px 0 80px;
-    }
+	@include md-block {
+		padding: 67px 0 80px;
+	}
 
-    @include sm-block {
-        padding: 67px 0 160px;
-    }
+	@include sm-block {
+		padding: 67px 0 160px;
+	}
 
-    h2 {
-        font-weight: 600;
-    }
+	h2 {
+		font-weight: 600;
+	}
 
-    .contacts__box {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
+	.contacts__box {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
 
-        @include llg-block {
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 30px;
-        }
+		@include llg-block {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 30px;
+		}
 
-        @include sm-block {
-            flex-direction: column;
-            align-items: center;
-        }
+		@include sm-block {
+			flex-direction: column;
+			align-items: center;
+		}
 
-        h6 {
-            margin: 0;
-            padding: 0;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 150%;
-            text-align: center;
-            color: #000000;
-        }
+		h6 {
+			margin: 0;
+			padding: 0;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 150%;
+			text-align: center;
+			color: #000000;
+		}
 
-        a {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 30px;
-            line-height: 150%;
-            text-align: center;
-            color: #000000;
+		a {
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 150%;
+			text-align: center;
+			color: #000000;
 
-            @include md-block {
-                font-size: 26px;
-            }
+			@include md-block {
+				font-size: 26px;
+			}
 
-            @include sm-block {
-                font-size: 22px;
-            }
-        }
+			@include sm-block {
+				font-size: 22px;
+			}
+		}
 
-        .socials {
-            a {
-                display: inline-block;
-                margin-left: 10px;
-            }
+		.socials {
+			a {
+				display: inline-block;
+				margin-left: 10px;
+			}
 
-            a:first-child {
-                margin-left: 0;
-            }
-        }
+			a:first-child {
+				margin-left: 0;
+			}
+		}
 
-        .contacts__phone,
-        .contacts__socials,
-        .contacts__email {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-width: 30%;
-            margin-left: 3.33%;
-            padding: 70px 10px;
-            background: #FFFFFF;
-            box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
-            border-radius: 12px;
-            text-align: center;
+		.contacts__phone,
+		.contacts__socials,
+		.contacts__email {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-width: 30%;
+			margin-left: 3.33%;
+			padding: 70px 10px;
+			background: #FFFFFF;
+			box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+			border-radius: 12px;
+			text-align: center;
 
-            @include llg-block {
-                margin-top: 20px;
-            }
+			@include llg-block {
+				margin-top: 20px;
+			}
 
-            @include md-block {
-                max-width: 50%;
-                padding: 40px 30px;
-            }
+			@include md-block {
+				max-width: 50%;
+				padding: 40px 30px;
+			}
 
-            @include sm-block {
-                min-width: 325px;
-                width: 60%;
-                margin-left: 0;
-            }
-        }
+			@include sm-block {
+				min-width: 325px;
+				width: 60%;
+				margin-left: 0;
+			}
+		}
 
-        div:first-child {
-            margin-left: 0;
-        }
-    }
+		div:first-child {
+			margin-left: 0;
+		}
+	}
 }
 
 .map__box {
-    display: flex;
-    margin-top: 40px;
+	display: flex;
+	margin-top: 40px;
 
-    @include sm-block {
-        flex-direction: column;
-        align-items: center;
-    }
+	@include sm-block {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .listCenter {
-        width: 30%;
-        padding: 52px 25px 35px 52px;
-        background: #2098D5;
-        border-radius: 12px 0px 0px 12px;
-        color: #FFFFFF;
+	.listCenter {
+		width: 30%;
+		padding: 52px 25px 35px 52px;
+		background: #2098D5;
+		border-radius: 12px 0px 0px 12px;
+		color: #FFFFFF;
 
-        @include llg-block {
-            min-width: 360px;
-        }
+		@include llg-block {
+			min-width: 360px;
+		}
 
-        @include md-block {
-            min-width: 235px;
-            padding: 30px 15px 25px 30px;
-        }
+		@include md-block {
+			min-width: 235px;
+			padding: 30px 15px 25px 30px;
+		}
 
-        @include sm-block {
-            position: relative;
-            width: 70%;
-            margin-bottom: 20px;
-            border-radius: 12px 12px 0 0;
-        }
+		@include sm-block {
+			position: relative;
+			width: 70%;
+			margin-bottom: 20px;
+			border-radius: 12px 12px 0 0;
+		}
 
-        @include xs-block {
-            width: 100%;
-        }
+		@include xs-block {
+			width: 100%;
+		}
 
-        @include xxs-block {
-            margin-bottom: 0px;
-            border-radius: 12px 12px 0 0;
-        }
+		@include xxs-block {
+			margin-bottom: 0px;
+			border-radius: 12px 12px 0 0;
+		}
 
-        h3 {
-            margin-bottom: 16px;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 125%;
+		h3 {
+			margin-bottom: 16px;
+			font-weight: 600;
+			font-size: 36px;
+			line-height: 125%;
 
-            @include llg-block {
-                font-size: 32px;
-            }
+			@include llg-block {
+				font-size: 32px;
+			}
 
-            @include md-block {
-                font-size: 26px;
-            }
+			@include md-block {
+				font-size: 26px;
+			}
 
-            @include xxs-block {
-                text-align: center;
-                font-size: 24px;
-            }
-        }
+			@include xxs-block {
+				text-align: center;
+				font-size: 24px;
+			}
+		}
 
-        &>p {
-            margin-bottom: 20px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 170%;
+		&>p {
+			margin-bottom: 20px;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 170%;
 
-            @include llg-block {
-                font-size: 16px;
-                line-height: 1.35;
-            }
+			@include llg-block {
+				font-size: 16px;
+				line-height: 1.35;
+			}
 
-            @include md-block {
-                font-size: 14px;
-            }
+			@include md-block {
+				font-size: 14px;
+			}
 
-            @include xxs-block {
-                text-align: center;
-                font-size: 16px;
-            }
-        }
+			@include xxs-block {
+				text-align: center;
+				font-size: 16px;
+			}
+		}
 
-        ul {
-            height: 475px;
-            margin: 0;
-            margin-bottom: 30px;
-            padding: 0;
-            list-style: none;
-            overflow-y: auto;
+		ul {
+			height: 475px;
+			margin: 0;
+			margin-bottom: 30px;
+			padding: 0;
+			list-style: none;
+			overflow-y: auto;
 
-            li {
-                padding: 16px 0;
-                border-bottom: 1px solid rgba(255, 255, 255, .2);
+			li {
+				padding: 16px 0;
+				border-bottom: 1px solid rgba(255, 255, 255, .2);
 
-                @include sm-block {
-                    padding: 10px 0;
-                }
+				@include sm-block {
+					padding: 10px 0;
+				}
 
-                @include xxs-block {
-                    text-align: center;
-                }
+				@include xxs-block {
+					text-align: center;
+				}
 
-                button {
-                    background: transparent;
-                    border: none;
-                    font-family: Montserrat;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 22px;
-                    line-height: 150%;
-                    color: #FFFFFF;
-                    cursor: pointer;
-                    transition: color ease .5s;
+				button {
+					background: transparent;
+					border: none;
+					font-weight: 500;
+					font-size: 22px;
+					line-height: 150%;
+					color: #FFFFFF;
+					cursor: pointer;
+					transition: color ease .5s;
 
-                    &:hover,
-                    &.active {
-                        color: #FFCC00;
-                    }
+					&:hover,
+					&.active {
+						color: #FFCC00;
+					}
 
-                    @include llg-block {
-                        font-size: 18px;
-                        line-height: 1.35;
-                    }
+					@include llg-block {
+						font-size: 18px;
+						line-height: 1.35;
+					}
 
-                    @include md-block {
-                        font-size: 18px;
-                    }
-                }
-            }
+					@include md-block {
+						font-size: 18px;
+					}
+				}
+			}
 
-            &::-webkit-scrollbar {
-                background-color: #2098D5;
-                width: 14px;
-            }
+			&::-webkit-scrollbar {
+				background-color: #2098D5;
+				width: 14px;
+			}
 
-            &::-webkit-scrollbar-track {
-                width: 2px;
-                background-color: rgba(255, 255, 255, .22);
-            }
+			&::-webkit-scrollbar-track {
+				border-right: 6px solid #2098D5;
+				border-left: 6px solid #2098D5;
+				background-color: rgba(255, 255, 255, .22);
+			}
 
-            &::-webkit-scrollbar-thumb {
-                display: block;
-                height: 47px;
-                width: 34px;
-                background: #FFCC00;
-                border-radius: 12px;
-            }
-        }
+			&::-webkit-scrollbar-thumb {
+				display: block;
+				height: 47px;
+				width: 34px;
+				background: #FFCC00;
+				border-radius: 12px;
+			}
+		}
 
-        .btnBase {
-            @include llg-block {
-                padding: 15px 25px;
-            }
+		.btnBase {
+			@include llg-block {
+				padding: 15px 25px;
+			}
 
-            @include md-block {
-                padding: 15px 15px;
-            }
+			@include md-block {
+				padding: 15px 15px;
+			}
 
-            @include sm-block {
-                position: absolute;
-                left: 50%;
-                bottom: -52%;
-                transform: translateX(-50%);
-                padding: 15px 38px;
-            }
+			@include sm-block {
+				position: absolute;
+				left: 50%;
+				bottom: -52%;
+				transform: translateX(-50%);
+				padding: 15px 38px;
+			}
 
-            @include xs-block {
-                padding: 15px 25px;
-            }
+			@include xs-block {
+				padding: 15px 25px;
+			}
 
-            @include xxs-block {
-                bottom: -85%;
-            }
+			@include xxs-block {
+				bottom: -85%;
+			}
 
-            p {
-                font-size: 16px;
+			p {
+				font-size: 16px;
 
-                @include md-block {
-                    font-size: 12px;
-                }
+				@include md-block {
+					font-size: 12px;
+				}
 
-                @include sm-block {
-                    font-size: 18px;
-                }
+				@include sm-block {
+					font-size: 18px;
+				}
 
-                @include xs-block {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
+				@include xs-block {
+					font-size: 14px;
+				}
+			}
+		}
+	}
 
-    .mapContacts {
-        position: relative;
-        z-index: 5;
-        width: 70%;
-        padding-top: 30%;
-        border-radius: 0px 12px 12px 0px;
-        background-image: url(../img/images/bg-top.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+	.mapContacts {
+		position: relative;
+		z-index: 5;
+		width: 70%;
+		padding-top: 30%;
+		border-radius: 0px 12px 12px 0px;
+		background-image: url(../img/images/bg-top.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 
-        @include sm-block {
-            height: 250px;
-            padding-top: 15%;
-            border-radius: 0px 0 12px 12px;
-        }
+		@include sm-block {
+			height: 250px;
+			padding-top: 15%;
+			border-radius: 0px 0 12px 12px;
+		}
 
-        @include xs-block {
-            width: 100%;
-        }
+		@include xs-block {
+			width: 100%;
+		}
 
-        @include xxs-block {
-            padding-top: 55%;
-            height: 525px;
-        }
+		@include xxs-block {
+			padding-top: 55%;
+			height: 525px;
+		}
 
 
-        p {
-            text-align: center;
-            color: rgba(255, 255, 255, .8);
-            font-size: 24px;
-            font-weight: 600;
+		p {
+			text-align: center;
+			color: rgba(255, 255, 255, .8);
+			font-size: 24px;
+			font-weight: 600;
 
-            @include sm-block {
-                font-size: 16px;
-            }
-        }
+			@include sm-block {
+				font-size: 16px;
+			}
+		}
 
-        iframe {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    }
+		iframe {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	}
 }
 
 /*----------------------------------------------*/
@@ -2375,228 +2305,220 @@ body {
   Секция faq
 --------------------------------------------- */
 .faq {
-    padding: 90px 60px 60px;
-    background: #FFCC00;
+	padding: 90px 60px 60px;
+	background: #FFCC00;
 
-    @include md-block {
-        padding: 60px 30px 30px;
-    }
+	@include md-block {
+		padding: 60px 30px 30px;
+	}
 
-    @include xs-block {
-        padding: 60px 15px 30px;
-    }
+	@include xs-block {
+		padding: 60px 15px 30px;
+	}
 
-    h2 {
-        @include xs-block {
-            font-weight: 600;
-        }
-    }
+	h2 {
+		@include xs-block {
+			font-weight: 600;
+		}
+	}
 
-    .faq__content {
-        display: flex;
-        max-width: 1335px;
-        margin: 0 auto;
-        margin-top: 60px;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
-        border-radius: 12px;
+	.faq__content {
+		display: flex;
+		max-width: 1335px;
+		margin: 0 auto;
+		margin-top: 60px;
+		background: #FFFFFF;
+		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+		border-radius: 12px;
 
-        @include llg-block {
-            max-width: 1200px;
-        }
+		@include llg-block {
+			max-width: 1200px;
+		}
 
-        @include sm-block {
-            display: none;
-        }
+		@include sm-block {
+			display: none;
+		}
 
-        .faq__quest {
-            width: 25%;
-            padding: 0;
-            border-right: 1px solid rgba(0, 0, 0, .05);
+		.faq__quest {
+			width: 25%;
+			padding: 0;
+			border-right: 1px solid rgba(0, 0, 0, .05);
 
-            @include md-block {
-                width: 30%;
-            }
+			@include md-block {
+				width: 30%;
+			}
 
-            p {
-                position: relative;
-                padding: 35px 10px 30px 37px;
-                border-bottom: 1px solid rgba(0, 0, 0, .05);
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 150%;
-                color: #000000;
-                cursor: pointer;
-                transition: all ease .3s;
+			p {
+				position: relative;
+				padding: 35px 10px 30px 37px;
+				border-bottom: 1px solid rgba(0, 0, 0, .05);
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 150%;
+				color: #000000;
+				cursor: pointer;
+				transition: all ease .3s;
 
-                &:hover,
-                &.active {
-                    background: #2098D5;
-                }
+				&:hover,
+				&.active {
+					background: #2098D5;
+				}
 
 
-                @include llg-block {
-                    font-size: 16px;
-                }
+				@include llg-block {
+					font-size: 16px;
+				}
 
-                @include md-block {
-                    font-size: 14px;
-                }
-            }
+				@include md-block {
+					font-size: 14px;
+				}
+			}
 
-            .active {
-                color: #FFFFFF;
+			.active {
+				color: #FFFFFF;
 
-                &::after {
-                    position: absolute;
-                    content: '';
-                    right: -14px;
-                    bottom: 50%;
-                    transform: translateY(50%);
-                    border-left: 14px solid #2098D5;
-                    border-bottom: 12px solid #FFFFFF;
-                    border-top: 12px solid #FFFFFF;
-                }
-            }
+				&::after {
+					position: absolute;
+					content: '';
+					right: -14px;
+					bottom: 50%;
+					transform: translateY(50%);
+					border-left: 14px solid #2098D5;
+					border-bottom: 12px solid #FFFFFF;
+					border-top: 12px solid #FFFFFF;
+				}
+			}
 
-            p:first-child {
-                padding-top: 30px;
-            }
+			p:first-child {
+				padding-top: 30px;
+			}
 
-            p:last-child {
-                padding-bottom: 30px;
-                border-bottom: none;
-            }
-        }
+			p:last-child {
+				padding-bottom: 30px;
+				border-bottom: none;
+			}
+		}
 
-        .faq__answer {
-            width: 75%;
-            padding: 44px 57px 63px 53px;
-            color: #000;
+		.faq__answer {
+			width: 75%;
+			padding: 44px 57px 63px 53px;
+			color: #000;
 
-            @include md-block {
-                width: 70%;
-                padding: 24px 27px 23px 23px;
-            }
+			@include md-block {
+				width: 70%;
+				padding: 24px 27px 23px 23px;
+			}
 
-            h4 {
-                margin-top: 0;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 24px;
-                line-height: 180%;
+			h4 {
+				margin-top: 0;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 180%;
 
-                @include llg-block {
-                    font-size: 22px;
-                }
-            }
+				@include llg-block {
+					font-size: 22px;
+				}
+			}
 
-            p {
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 200%;
+			p {
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 200%;
 
-                @include llg-block {
-                    font-size: 15px;
-                }
+				@include llg-block {
+					font-size: 15px;
+				}
 
-                @include md-block {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
+				@include md-block {
+					font-size: 14px;
+				}
+			}
+		}
+	}
 
-    .faq__content--mob {
-        display: none;
-        margin-top: 37px;
-        padding: 40px 0px;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
-        border-radius: 12px;
+	.faq__content--mob {
+		display: none;
+		margin-top: 37px;
+		padding: 40px 0px;
+		background: #FFFFFF;
+		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+		border-radius: 12px;
 
-        @include sm-block {
-            display: block;
-        }
+		@include sm-block {
+			display: block;
+		}
 
-        details {
-            margin-bottom: 20px;
-            font-family: Montserrat;
-            font-style: normal;
-            color: #000000;
+		details {
+			margin-bottom: 20px;
+			color: #000000;
 
-            summary {
-                padding: 20px 10px 20px 20px;
-                font-weight: 500;
-                font-size: 17px;
-                line-height: 150%;
-                cursor: pointer;
-                transition: all ease .3s;
+			summary {
+				padding: 20px 10px 20px 20px;
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 150%;
+				cursor: pointer;
+				transition: all ease .3s;
 
-                &::marker {
-                    display: none;
-                }
+				&::marker {
+					display: none;
+				}
 
-                &::-webkit-details-marker {
-                    display: none;
-                }
+				&::-webkit-details-marker {
+					display: none;
+				}
 
-                &::-moz-list-bullet {
-                    list-style-type: none;
-                }
+				&::-moz-list-bullet {
+					list-style-type: none;
+				}
 
-                &:hover,
-                &:focus {
-                    background: #2098D5;
-                    color: #FFFFFF;
-                    outline: none;
-                }
-            }
+				&:hover,
+				&:focus {
+					background: #2098D5;
+					color: #FFFFFF;
+					outline: none;
+				}
+			}
 
-            h4 {
-                margin-top: 30px;
-                padding-left: 20px;
-                padding-right: 10px;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 160%;
-            }
+			h4 {
+				margin-top: 30px;
+				padding-left: 20px;
+				padding-right: 10px;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 160%;
+			}
 
-            p {
-                padding: 0 20px 40px;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 180%;
-            }
-        }
+			p {
+				padding: 0 20px 40px;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 180%;
+			}
+		}
 
-        details:last-child {
-            margin-bottom: 0;
-        }
-    }
+		details:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-    button {
-        display: block;
-        margin: 0 auto;
-        margin-top: 60px;
-        background: #FFFFFF;
-        border-radius: 12px;
+	button {
+		display: block;
+		margin: 0 auto;
+		margin-top: 60px;
+		background: #FFFFFF;
+		border-radius: 12px;
 
-        &:hover {
-            box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
-        }
+		&:hover {
+			box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
+		}
 
-        p {
-            @include xxs-block {
-                font-size: 14px;
-            }
-        }
-    }
+		p {
+			@include xxs-block {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 /*----------------------------------------------*/
@@ -2606,39 +2528,39 @@ body {
   Секция centers
 --------------------------------------------- */
 .centers {
-    padding: 100px 0;
+	padding: 100px 0;
 
-    @include sm-block {
-        padding: 60px 15px;
-    }
+	@include sm-block {
+		padding: 60px 15px;
+	}
 
-    @include xxs-block {
-        padding: 45px 15px 52px 15px;
-    }
+	@include xxs-block {
+		padding: 45px 15px 52px 15px;
+	}
 
-    h2 {
-        font-weight: 600;
-    }
+	h2 {
+		font-weight: 600;
+	}
 
-    &__video {
-        position: relative;
-        margin: 0 auto;
-        @include fr;
+	&__video {
+		position: relative;
+		margin: 0 auto;
+		@include fr;
 
-        @include llg-block {
-            max-width: 1200px;
-        }
+		@include llg-block {
+			max-width: 1200px;
+		}
 
-        iframe {
-            border: none;
-            ;
-        }
-    }
+		iframe {
+			border: none;
+			;
+		}
+	}
 }
 
 .btnVideo__wrapperCenters {
-    @include centerer();
-    cursor: pointer;
+	@include centerer();
+	cursor: pointer;
 }
 
 /*----------------------------------------------*/
@@ -2648,193 +2570,336 @@ body {
   Секция metods
 --------------------------------------------- */
 .metods {
-    position: relative;
-    padding: 65px 0;
-    background: #FAFAFA;
-    overflow: hidden;
+	position: relative;
+	padding: 65px 0;
+	background: #FAFAFA;
+	overflow: hidden;
 
-    h2 {
-        position: relative;
-        z-index: 9;
+	h2 {
+		position: relative;
+		z-index: 9;
 
-        @include xs-block {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    }
+		@include xs-block {
+			padding-left: 5px;
+			padding-right: 5px;
+			font-weight: 600;
+		}
+	}
 
-    &__slider {
-        position: relative;
-        max-width: 1400px;
-        margin: 0 auto;
-        margin-top: 70px;
-        overflow: visible;
+	.descSection {
+		@include xs-block {
+			font-size: 16px;
+			padding: 0 30px;
+		}
+	}
 
-        @include llg-block {
-            max-width: 1150px;
-        }
-    }
+	&__slider {
+		position: relative;
+		max-width: 1400px;
+		margin: 0 auto;
+		margin-top: 70px;
+		overflow: visible;
 
-    .wrapper {
-        @include xs-block {
-            padding: 0;
-        }
-    }
+		@include llg-block {
+			max-width: 1150px;
+		}
+	}
 
-    &>button {
-        display: block;
-        margin: 53px auto 0;
+	.wrapper {
+		@include xs-block {
+			padding: 0;
+		}
+	}
 
-        @include xs-block {
-            width: 80%;
-        }
+	&>button {
+		display: block;
+		margin: 53px auto 0;
 
-        p {
-            @include xs-block {
-                font-size: 14px;
-            }
-        }
-    }
+		@include xs-block {
+			width: 80%;
+		}
+
+		p {
+			@include xs-block {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 .metodsItem {
-    padding-bottom: 32px;
-    background: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+	padding-bottom: 32px;
+	background: #FFFFFF;
+	border-radius: 12px;
+	box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
 
-    @include llg-block {
-        padding-bottom: 20px;
-    }
+	@include llg-block {
+		padding-bottom: 20px;
+	}
 
-    @include xs-block {
-        text-align: center;
-    }
+	@include xs-block {
+		text-align: center;
+	}
 
-    &:focus {
-        outline: none;
-    }
+	&:focus {
+		outline: none;
+	}
 
-    figure {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        color: #000;
+	figure {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		color: #000;
 
-        img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-        }
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			border-radius: 12px;
+		}
 
-        figaption {
-            display: inline-block;
-            margin: 29px 10px 8px 20px;
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 150%;
+		figaption {
+			display: inline-block;
+			margin: 29px 10px 8px 20px;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 150%;
 
-            @include llg-block {
-                margin-top: 20px;
-                font-size: 16px;
-                line-height: 130%;
-            }
+			@include llg-block {
+				margin-top: 20px;
+				font-size: 16px;
+				line-height: 130%;
+			}
 
-            @include md-block {
-                margin-left: 4px;
-                font-size: 16px;
-            }
+			@include md-block {
+				margin-left: 4px;
+				font-size: 16px;
+			}
 
-            @include sm-block {
-                margin-left: 4px;
-                font-size: 18px;
-            }
+			@include sm-block {
+				margin-left: 4px;
+				font-size: 18px;
+			}
 
-            @include xs-block {
-                text-align: center;
-                font-size: 16px;
-            }
-        }
-    }
+			@include xs-block {
+				text-align: center;
+				font-size: 16px;
+			}
+		}
+	}
 
-    span {
-        margin-left: 20px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 130%;
+	span {
+		margin-left: 20px;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 130%;
 
 
-        @include llg-block {
-            font-size: 13px;
-        }
+		@include llg-block {
+			font-size: 13px;
+		}
 
-        @include md-block {
-            margin-left: 4px;
-            font-size: 12px;
-        }
+		@include md-block {
+			margin-left: 4px;
+			font-size: 12px;
+		}
 
-        @include sm-block {
-            margin-left: 4px;
-            font-size: 14px;
-        }
+		@include sm-block {
+			margin-left: 4px;
+			font-size: 14px;
+		}
 
-        @include xxs-block {
-            font-size: 12px;
-        }
-    }
+		@include xxs-block {
+			font-size: 12px;
+		}
+	}
 }
 
 // Настройки слайдера owl-carousel
 .owl-item.active.center {
-    .metodsItem {
-        @include xxs-block {
-            transform: scale(1.17);
-        }
-    }
+	.metodsItem {
+		@include xxs-block {
+			transform: scale(1.17);
+		}
+	}
 }
 
 .metods__slider.owl-carousel .owl-stage-outer {
-    @include xxs-block {
-        overflow: visible;
-    }
+	@include xxs-block {
+		overflow: visible;
+	}
 }
 
 .metods .owl-carousel {
-    .owl-nav {        
-        left: -4%;
-        right: -4%;        
-       
-        @include lg-block {
-            left: -3%;
-            right: -3%;
-        }
+	.owl-nav {
+		left: -4%;
+		right: -4%;
 
-        @include md-block {
-            left: -5%;
-            right: -5%;
-        }
+		@include lg-block {
+			left: -3%;
+			right: -3%;
+		}
 
-        .owl-next,
-        .owl-prev {    
-            .slider-next {
-                background-image: url(../img/images/sliderMetodsrightArrow.png);
-            }
+		@include md-block {
+			left: -5%;
+			right: -5%;
+		}
 
-            .slider-prev {
-                background-image: url(../img/images/sliderMetodsleftArrow.png);
-            }
-        }
-    }
+		.owl-next,
+		.owl-prev {
+			.slider-next {
+				background-image: url(../img/images/sliderMetodsrightArrow.png);
+			}
+
+			.slider-prev {
+				background-image: url(../img/images/sliderMetodsleftArrow.png);
+			}
+		}
+	}
 }
-
 
 /*----------------------------------------------*/
 
+/*---------------------------------------------
+  Секция gallery
+--------------------------------------------- */
+.gallery {
+	padding-top: 78px;
+	padding-bottom: 5px;
+
+	@include xs-block {
+		padding-top: 54px;
+	}
+
+	h2 {
+		padding: 0 30px;
+
+		@include sm-block {
+			font-weight: 600;
+		}
+
+	}
+
+	&__content {
+		margin-top: 65px;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-gap: 5px;
+
+		@include sm-block {
+			margin-top: 35px;
+		}
+
+		@include xxs-block {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 123px);
+		}
+
+		div:nth-child(1) {
+			grid-column: 1/3;
+		}
+
+		div:nth-child(2) {
+			grid-column: 3/5;
+		}
+
+		div:nth-child(3) {
+			grid-column: 5/7;
+		}
+
+		div:nth-child(8) {
+			grid-column: 5/7;
+		}
+
+		div:nth-child(11) {
+			grid-column: 3/5;
+		}
+
+		div:nth-child(14) {
+			grid-column: 1/3;
+		}
+
+		div:nth-child(1),
+		div:nth-child(2),
+		div:nth-child(3),
+		div:nth-child(8),
+		div:nth-child(11),
+		div:nth-child(14),
+		div:nth-child(15),
+		div:nth-child(16),
+		div:nth-child(17) {
+			@include xxs-block {
+				display: none;
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция gallery
+--------------------------------------------- */
+.formQuest {
+	.formQuest__form {
+		@include md-block {
+			flex-direction: row;
+		}
+
+		@include xs-block {
+			flex-wrap: wrap;
+		}
+	}
+
+	.input__wrapper {
+		flex-basis: 650px;
+		margin-right: 0;
+
+		@include md-block {
+			flex-basis: 350px;
+			margin: 0;
+		}
+	}
+
+	input {
+		border-radius: 12px 0 0 12px;
+
+		@include xs-block {
+			margin-bottom: 20px;
+			border-radius: 12px;
+		}
+	}
+
+	label {
+
+		@include xs-block {
+			top: 43%;
+		}
+	}
+
+	button {
+		border-radius: 0 12px 12px 0;
+
+		@include md-block {
+			min-width: 100px;
+			width: auto;
+			margin: 0;
+		}
+
+		@include xs-block {
+			border-radius: 12px;
+		}
+	}
+}
+
+/*----------------------------------------------*/
 
 /*============================================= */
 
@@ -2842,7 +2907,145 @@ body {
 /*=============================================
         ПОДВАЛ
 ============================================= */
+.footer {
+	padding: 42px 0;
+	background: #FFCC00;
 
+	@include xs-block {
+		padding: 42px 15px 66px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		@include md-block {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		@include xs-block {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		width: 15%;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+		color: #000000;
+
+		@include llg-block {
+			width: 22%;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		@include md-block {
+			width: 25%;
+		}
+
+		@include sm-block {
+			width: 40%;
+			margin-top: 20px;
+		}
+
+		@include xs-block {
+			width: 100%;
+			margin-top: 40px;
+			font-size: 24px;
+		}
+
+		&>span a{
+			color: #000000; ;
+		}
+
+		&>p {
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 150%;
+			color: rgba(0, 0, 0, .71);
+
+			@include llg-block {
+				font-size: 12px;
+			}
+
+			@include md-block {
+				font-size: 11.5px;
+			}
+
+			@include sm-block {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.footer__item.footer__item--socials {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	@include llg-block {
+		width: 17%;
+		margin-right: 15px;
+	}
+
+	@include md-block {
+		order: 5;
+		width: 30%;
+	}
+
+	@include sm-block {
+		margin-top: 30px;
+	}
+
+	@include xs-block {
+		order: -1;
+		justify-content: center;
+		width: 100%;
+	}
+
+	&>a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background: #FFFFFF;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: all ease .5s;
+
+		@include xs-block {
+			margin-left: 25px;
+		}
+
+
+		&:hover {
+			background: #2098D5;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: #2098D5;
+			transition: all ease .5s;
+		}
+
+		&:hover svg {
+			fill: #FFFFFF;
+		}
+	}
+
+	a:first-child {
+		@include xs-block {
+			margin-left: 0;
+		}
+	}
+}
 
 
 /*============================================= */

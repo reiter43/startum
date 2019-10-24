@@ -66,7 +66,7 @@ $(document).ready(function () {
         ],
         lazyLoad: true,
         margin: 30,
-        center: false,       
+        center: false,
         responsive: {
             1200: {
                 items: 4,
@@ -89,57 +89,6 @@ $(document).ready(function () {
         }
     });
 
-    // $('.metods__slider').slick({
-    //     infinite: true,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     arrows: true,
-    // 	prevArrow: '<div class="slick-rightArrow"></div>',
-    // 	nextArrow: '<div class="slick-leftArrow"></div>',
-    //     responsive: [
-    //         {
-    //             breakpoint: 1200,
-    //             settings: {
-    //                 // arrows: false,                    
-    //                 centerPadding: '40px',
-    //                 slidesToShow: 3
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 996,
-    //             settings: {
-    //                 // arrows: false, 
-    //                 slidesToShow: 2
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 750,
-    //             settings: {
-    //                 arrows: false,  
-    //                 slidesToShow: 2                  
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 576,
-    //             settings: {
-    //                 arrows: false,
-    //                 centerMode: true,
-    //                 centerPadding: '50px',
-    //                 slidesToShow: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 375,
-    //             settings: {
-    //                 arrows: false,
-    //                 centerMode: true,
-    //                 centerPadding: '40px',
-    //                 slidesToShow: 1
-    //             }
-    //         }
-    //     ]
-    // });
-
     // 	//Плавный переход к якорям с помощью плагина PageScroll2
     // 	$(".nav__link").mPageScroll2id({
     // 		scrollSpeed: 1000,
@@ -147,71 +96,41 @@ $(document).ready(function () {
     // 	});
 
 
-    // 	//МОдальное окно с помощью плагина magnefic-popap
-    // 	$('.portfolio__item').magnificPopup({
-    // 		type: 'image',
-    // 		zoom: {
-    // 			enabled: true,
-    // 			duration: 500 // продолжительность анимации
-    // 		},
-    // 		gallery: {
-    // 			enabled: true
-    // 		}
-    // 	});
+    //Модальное окно с помощью плагина magnefic-popap
+    $('.gullery__magnefic').magnificPopup({
+        type: 'image',
+        zoom: {
+            enabled: true,
+            duration: 800 // продолжительность анимации
+        },
+        gallery: {
+            enabled: true
+        }
+    });
 
 
-    // 	// Анимация цифр плагином spincrement
-    // 	var show = true;
-    // 	var countbox = ".indicators__items";
+    // // Анимация цифр плагином spincrement
+    // var show = true;
+    // var countbox = ".indicators__content";
 
-    // 	$(window).on("scroll load resize", function(){
+    // $(window).on("scroll load resize", function () {
 
-    // 		if(!show) return false;
+    //     if (!show) return false;
 
-    // 		var w_top = $(window).scrollTop();
-    // 		var e_top = $(countbox).offset().top;
-    // 		var w_height = $(window).height();
-    // 		var d_height = $(document).height();
-    // 		var e_height = $(countbox).outerHeight();
+    //     var w_top = $(window).scrollTop();
+    //     var e_top = $(countbox).offset().top;
+    //     var w_height = $(window).height();
+    //     var d_height = $(document).height();
+    //     var e_height = $(countbox).outerHeight();
 
-    // 		if(w_top + 300 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
-    // 			$(".spincrement").spincrement({				
-    // 				duration: 1200
-    // 			});
+    //     if (w_top + 300 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+    //         $(".spincrement").spincrement({
+    //             duration: 1200
+    //         });
 
-    // 			show = false;
-    // 		}
-    // 	});
+    //         show = false;
+    //     }
     // });
-
-
-    // // Инициализация слик-слайдера
-    // $(document).ready(function(){
-    // $('.reviews__slider').slick({
-    //     centerMode: true,
-    //     centerPadding: '60px',
-    //     slidesToShow: 3,
-    //     responsive: [
-    //       {
-    //         breakpoint: 768,
-    //         settings: {
-    //           arrows: false,
-    //           centerMode: true,
-    //           centerPadding: '40px',
-    //           slidesToShow: 3
-    //         }
-    //       },
-    //       {
-    //         breakpoint: 480,
-    //         settings: {
-    //           arrows: false,
-    //           centerMode: true,
-    //           centerPadding: '40px',
-    //           slidesToShow: 1
-    //         }
-    //       }
-    //     ]
-    //   });
 });
 
 

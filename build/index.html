@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <header class="header">
         <div class="wrapper">
             <div class="topLine">
@@ -116,7 +117,7 @@
                         <button class="btnBase btnBase--mostly">
                             <p>Получить презентацию</p>
                         </button>
-                        <img src="img/images/class.jpg" alt="Фото учебного класса">
+                        <img data-src="img/images/class.jpg" alt="Фото учебного класса">
                         <img src="img/images/collaborator.jpg" alt="Фото сотрудницы">
                         <p>Методики обучения, которые используются в центраx StartUm, успешно применяются в ведущиx
                             развитыx странаx</p>
@@ -134,15 +135,15 @@
                 <div class="indicators__content">
                     <h3>Компания <br> в цифрах</h3>
                     <div class="indicators__item">
-                        <span>43</span>
+                        <span class="spincrement" data-max="43"></span>
                         <p>открытыx центра<br>по всей России и <br> странам СНГ</p>
                     </div>
                     <div class="indicators__item">
-                        <span>159</span>
+                        <span class="spincrement" data-max="159"></span>
                         <p>опытных <br> педагогов <br> центрах</p>
                     </div>
                     <div class="indicators__item">
-                        <span>3000</span>
+                        <span class="spincrement" data-max="3000">0</span>
                         <p>детей каждый месяц<br> учатся с большим<br> удовольствием</p>
                     </div>
                 </div>
@@ -150,7 +151,9 @@
         </section>
 
         <section class="map">
-            <img src="img/images/map.jpg" alt="Карта расположения центров по городам">
+            <img data-src="img/images/map.jpg"
+                src="data:image/gif;base64,R0lGODlhwABxAIAAAP///wAAACH5BAEAAAEALAAAAADAAHEAAAK2jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT3NWgAAOw=="
+                alt="Карта расположения центров по городам">
             <div class="map__content">
                 <h2 class="titleSection">Наши центры открыты в<br> <span>37 городах России и странаx СНГ</span> </h2>
                 <p> STARTUM - это самая быстрорастущая сеть центров развития детей. За 4 месяца мы открыли 29 школ в 25
@@ -438,7 +441,7 @@
                             </figaption>
                         </figure>
                         <div class="videoSlider__wrapper">
-                            <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
+                            <img data-src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
                                 alt="Заставка видеоролика отзыва">
                             <div class="btnVideoSlider__wrapper">
                                 <div class="btnVideoEllipse1">
@@ -492,7 +495,7 @@
                             </figaption>
                         </figure>
                         <div class="videoSlider__wrapper">
-                            <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
+                            <img data-src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
                                 alt="Заставка видеоролика отзыва">
                             <div class="btnVideoSlider__wrapper">
                                 <div class="btnVideoEllipse1">
@@ -546,7 +549,7 @@
                             </figaption>
                         </figure>
                         <div class="videoSlider__wrapper">
-                            <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
+                            <img data-src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
                                 alt="Заставка видеоролика отзыва">
                             <div class="btnVideoSlider__wrapper">
                                 <div class="btnVideoEllipse1">
@@ -599,7 +602,7 @@
                             </figaption>
                         </figure>
                         <div class="videoSlider__wrapper">
-                            <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
+                            <img data-src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
                                 alt="Заставка видеоролика отзыва">
                             <div class="btnVideoSlider__wrapper">
                                 <div class="btnVideoEllipse1">
@@ -902,7 +905,7 @@
             <h2 class="titleSection">Посмотрите, как выглядят наши центры!</h2>
             <p class="descSection">Пройдите 3D-тур по центру в г. Москва</p>
             <div class="centers__video">
-                <img src="img/images/poster.png" alt="Заставка к видеоролику">
+                <img data-src="img/images/poster.png" alt="Заставка к видеоролику">
                 <div class="btnVideo__wrapperCenters">
                     <div class="btnVideo__ellipse1">
                         <div class="btnVideo__ellipse2">
@@ -989,7 +992,125 @@
             </div>
         </section>
 
+        <section class="gallery">
+            <h2 class="titleSection"><span>Почувствуйте атмосферу обучения</span><br> вместе с нашими учениками</h2>
+            <div class="gallery__content">
+                <div><a class="gullery__magnefic" href="img/images/imgGallery1.jpg"><img
+                            src="img/images/imgGallery1.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery2.jpg"><img
+                            src="img/images/imgGallery2.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery3.jpg"><img
+                            src="img/images/imgGallery3.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery4.jpg"><img
+                            src="img/images/imgGallery4.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery5.jpg"><img
+                            src="img/images/imgGallery5.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery6.jpg"><img
+                            src="img/images/imgGallery6.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery7.jpg"><img
+                            src="img/images/imgGallery7.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery8.jpg"><img
+                            src="img/images/imgGallery8.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery9.jpg"><img
+                            src="img/images/imgGallery9.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery10.jpg"><img
+                            src="img/images/imgGallery10.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery11.jpg"><img
+                            src="img/images/imgGallery11.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery12.jpg"><img
+                            src="img/images/imgGallery12.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery17.jpg"><img
+                            src="img/images/imgGallery17.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery13.jpg"><img
+                            src="img/images/imgGallery13.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery14.jpg"><img
+                            src="img/images/imgGallery14.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery15.jpg"><img
+                            src="img/images/imgGallery15.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery16.jpg"><img
+                            src="img/images/imgGallery16.jpg" alt="Фото из галереи про центры"></a></div>
+                <div><a class="gullery__magnefic" href="img/images/imgGallery18.jpg"><img
+                            src="img/images/imgGallery18.jpg" alt="Фото из галереи про центры"></a></div>
+            </div>
+        </section>
+
+        <section class="formQuest">
+            <div class="rest5">
+                <div class="restYellow7"></div>
+                <div class="restYellow8"></div>
+                <div class="restYellow9"></div>
+            </div>
+            <h2 class="titleSection">У вас возникли вопросы? Задайте иx нам!</h2>
+            <p class="descSection">Наши специалисты свяжутся с вами в течении часа</p>
+            <form id="formQuest__form" class="formQuest__form">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper">
+                    <label for="phone">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <button class="form__button">
+                    <span>Отправить</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+            </form>
+            <p><small>Мы не передаем ваши данные третьим лицам.</small></p>
+            <div class="rest6">
+                <div class="restYellow10"></div>
+                <div class="restYellow11"></div>
+            </div>
+        </section>
+
     </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__item">
+                <span>С 9:00 до 18:00</span>
+                <p>Режим работы офиса</p>
+            </div>
+            <div class="footer__item">
+                <span><a href="tel:79650174425">+7 (965) 017-44-25</a></span>
+                <p>Доступен в мессенджерах</p>
+            </div>
+            <div class="footer__item footer__item--socials">
+                <a href="#">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#vk"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#insta"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#fb"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__item">
+                <span><a href="mailto:info@startum24.com" target="blank">info@startum24.com</a></span>
+                <p>Для вопросов и предложений</p>
+            </div>
+
+            <div class="footer__item">
+                <span>@startumcenter</span>
+                <p>Ищите в соц. сетях</p>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="js/all.js"></script>

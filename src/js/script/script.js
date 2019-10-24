@@ -74,9 +74,9 @@ window.addEventListener('resize', function () {
 		else {
 			elem.classList.remove('programItem--button');
 		}
-
 	})
 }, false);
+
 
 // Запуск видеоотзыва в слайдере
 let btnVideo = document.querySelectorAll('.btnVideoSlider__wrapper');
@@ -120,7 +120,7 @@ let quests = document.querySelectorAll('.faq .faq__content .faq__quest>p');
 quests.forEach(item => {
 	item.onclick = (event) => {
 		event.preventDefault();
-		
+
 		quests.forEach(item => {
 			item.classList.remove('active');
 			event.target.classList.add('active');
@@ -131,7 +131,7 @@ quests.forEach(item => {
 
 		answers.forEach(item => {
 			item.classList.add('hide');
-			if (item.classList.contains(questsData)) {				
+			if (item.classList.contains(questsData)) {
 				item.classList.remove('hide');
 			}
 		})
@@ -147,6 +147,97 @@ btnVi.forEach(elem => {
 		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 	};
 });
+
+
+//Скрипт для маски ввода телефона
+window.addEventListener("DOMContentLoaded", function () {
+	[].forEach.call(document.querySelectorAll('.form__phone'), function (input) {
+		let keyCode;
+
+		function mask(event) {
+			event.keyCode && (keyCode = event.keyCode);
+			let pos = this.selectionStart;
+			if (pos < 3) event.preventDefault();
+
+			let matrix = "+7 (___) ___ ____",
+				i = 0,
+				def = matrix.replace(/\D/g, ""),
+				val = this.value.replace(/\D/g, ""),
+				new_value = matrix.replace(/[_\d]/g, function (a) {
+					return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+				});
+			i = new_value.indexOf("_");
+
+			if (i != -1) {
+				i < 5 && (i = 3);
+				new_value = new_value.slice(0, i)
+			}
+
+			let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+				function (a) {
+					return "\\d{1," + a.length + "}"
+				}).replace(/[+()]/g, "\\$&");
+
+			reg = new RegExp("^" + reg + "$");
+
+			if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+			if (event.type == "blur" && this.value.length < 5) this.value = ""
+		}
+
+		input.addEventListener("input", mask, false);
+		input.addEventListener("focus", mask, false);
+		input.addEventListener("blur", mask, false);
+		input.addEventListener("keydown", mask, false)
+	});
+});
+
+
+
+let inTheView = Symbol.for("inTheView");
+let multiplier = Symbol.for("multiplier");
+
+// Создадим новое событие, которое выстреливает, когда счётчик становится видимым
+
+for (let element of document.querySelectorAll(".indicators__content")) {
+	element.addEventListener("scroll", event => {
+		for (let numberElement of element.querySelectorAll(".spincrement")) {
+			let y = (element.scrollTop - numberElement.offsetTop + element.offsetHeight) / (element.offsetHeight);
+			let isInTheView = y > 0 && y < 1;
+
+			if (numberElement[inTheView] !== isInTheView) {
+				numberElement[inTheView] = isInTheView;
+
+				if (isInTheView)
+					numberElement.dispatchEvent(new Event("number:visible", { bubbles: true }));
+			}
+		}
+	});
+}
+
+// обработка нового события
+addEventListener("number:visible", event => {
+	loop.call(event.target);
+	console.log(event.target[inTheView]);
+});
+
+// анимация цифр запускается, когда срабатывает новое событие
+function loop() {
+	if (this[multiplier] === 1) {
+		this[multiplier] = null;
+		return;
+	};
+
+	if (typeof this[multiplier] !== "number") {
+		this[multiplier] = 0;
+		this["dateStart"] = performance.now();
+	}
+
+	this[multiplier] = Math.min((performance.now() - this.dateStart) / 750, 1);
+	this.style.setProperty("--value", (this[multiplier] * this.getAttribute("data-max") | 0));
+
+	requestAnimationFrame(loop.bind(this));
+}
+
 
 
 
