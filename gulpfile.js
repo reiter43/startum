@@ -62,8 +62,7 @@ gulp.task('scripts', () => {
 		// './src/libs/slick/*.js',
 		// './src/libs/pageToScroll/*.js',
 		'./src/libs/lazyLoad/*js',
-		'./src/libs/magneficPopap/*.js',
-		'./src/libs/spincrement/*.js',
+		'./src/libs/magneficPopap/*.js',				
 		'./src/js/scriptJquery/*.js'
 	])
 		.pipe(concat('all.js'))

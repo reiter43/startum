@@ -42,13 +42,13 @@ burger.addEventListener('click', event => {
 		burger.classList.remove('burger--active');
 		nav.style.marginLeft = '101%';
 		nav.style.width = '0';
-		bod.style.overflow = 'auto';
+		// bod.style.overflow = 'auto';
 	}
 	else {
 		burger.classList.add('burger--active');
 		nav.style.marginLeft = '0';
 		nav.style.width = '100%';
-		bod.style.overflow = 'hidden';
+		// bod.style.overflow = 'hidden';
 	}
 });
 
@@ -192,53 +192,67 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Липкая шапка
+window.onscroll = function () {
+	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	let fix = document.querySelector('.topLine');
+	let btnFix = document.querySelector('.btnBase--header');
 
-let inTheView = Symbol.for("inTheView");
-let multiplier = Symbol.for("multiplier");
+	if (scrolled > 140) {
+		fix.classList.add('sticky');
+		btnFix.classList.add('btnBase--sticky');
+	}
+	else {
+		fix.classList.remove('sticky');
+		btnFix.classList.remove('btnBase--sticky');
+	}
+}
 
-// Создадим новое событие, которое выстреливает, когда счётчик становится видимым
 
-for (let element of document.querySelectorAll(".indicators__content")) {
-	element.addEventListener("scroll", event => {
-		for (let numberElement of element.querySelectorAll(".spincrement")) {
-			let y = (element.scrollTop - numberElement.offsetTop + element.offsetHeight) / (element.offsetHeight);
-			let isInTheView = y > 0 && y < 1;
+// Плавный скролл к якорям
+const anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
 
-			if (numberElement[inTheView] !== isInTheView) {
-				numberElement[inTheView] = isInTheView;
+let V = 0.15;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (let i = 0; i < anchors.length; i++) {
+	anchors[i].addEventListener('click', function (e) { //по клику на ссылку
+		e.preventDefault(); //отменяем стандартное поведение		
 
-				if (isInTheView)
-					numberElement.dispatchEvent(new Event("number:visible", { bubbles: true }));
+		burger.classList.remove('burger--active');
+		nav.style.marginLeft = '101%';
+		nav.style.width = '0';
+
+		let w = window.pageYOffset,  // производим прокрутка прокрутка
+			hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
+		let t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id 		
+			start = null;
+			
+		requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
+		
+		function step(time) {
+			if (start === null) start = time;
+			let progress = time - start,
+				r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+			window.scrollTo(0, r);
+			if (r != w + t) {
+				requestAnimationFrame(step)
+			} else {
+				location.hash = hash  // URL с хэшем
 			}
 		}
-	});
+	}, false);
 }
 
-// обработка нового события
-addEventListener("number:visible", event => {
-	loop.call(event.target);
-	console.log(event.target[inTheView]);
-});
+// Выделение активного пункта меню
+const itemsMenu = document.querySelectorAll('.topLine nav a');
 
-// анимация цифр запускается, когда срабатывает новое событие
-function loop() {
-	if (this[multiplier] === 1) {
-		this[multiplier] = null;
-		return;
-	};
-
-	if (typeof this[multiplier] !== "number") {
-		this[multiplier] = 0;
-		this["dateStart"] = performance.now();
+itemsMenu.forEach(elem => {
+	elem.onclick = (event) => {
+		itemsMenu.forEach(elem => {
+			elem.classList.remove('active');
+			event.target.classList.add('active');
+		})
 	}
-
-	this[multiplier] = Math.min((performance.now() - this.dateStart) / 750, 1);
-	this.style.setProperty("--value", (this[multiplier] * this.getAttribute("data-max") | 0));
-
-	requestAnimationFrame(loop.bind(this));
-}
-
-
+})
 
 
 
