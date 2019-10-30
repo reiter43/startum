@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Стартум</title>
+    <title>Стартум | Главная</title>
 
     <link rel="shortcut icon" href="img/images/fav.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
@@ -14,9 +14,9 @@
 
 <body>
 
-    <header class="header">
-        <div class="wrapper">
-            <div class="topLine">
+    <header class="header header--home">
+        <div class="wrapper wrapper--header">
+            <div class="topLine topLine--home">
                 <div class="header__burger hide">
                     <button class="burger ">
                         <span class="burger__line"></span>
@@ -28,7 +28,7 @@
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="/">Главная</a></li>
+                        <li><a href="/" class="active">Главная</a></li>
                         <li><a href="#anchor1">О нас</a></li>
                         <li><a href="#anchor2">География</a></li>
                         <li><a href="#">Центры</a></li>
@@ -36,7 +36,7 @@
                         <li><a href="#anchor4">Отзывы</a></li>
                         <li><a href="#anchor5">Контакты</a></li>
                         <li><a href="#anchor6">Вопросы</a></li>
-                        <li><a href="#">Статьи</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
                         <li><a href="#anchor7">3D Тур</a></li>
                     </ul>
                 </nav>
@@ -47,7 +47,7 @@
                     Новосибирск
                 </button>
                 <div class="btnBase__header">
-                    <button class="btnBase btnBase--header">
+                    <button class="btnBase btnBase--header btnBase--home">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#answer"></use>
                         </svg>
@@ -935,24 +935,24 @@
             </div>
             <div class="wrapper">
                 <h2 class="titleSection">Xотите знать больше о<br> <span>современныx методикаx обучения?</span></h2>
-                <p class="descSection">Почитайте статьи нашиx специалистов</p>
+                <a href="articles.html"><p class="descSection">Почитайте статьи нашиx специалистов</p></a>
                 <div class="metods__slider owl-carousel">
-                    <div class="metodsItem">
+                    <a href="ar1.html" class="metodsItem">
                         <figure>
                             <img src="img/images/metods1.jpg" alt="Картинка-превью статьи">
                             <figaption>Как действительно правильно воспитать ребенка?</figaption>
                         </figure>
                         <span>4 дня назад</span>
                         <span>О воспитании</span>
-                    </div>
-                    <div class="metodsItem">
+                    </a>
+                    <a href="#" class="metodsItem">
                         <figure>
                             <img src="img/images/metods2.jpg" alt="Картинка-превью статьи">
                             <figaption>Как действительно правильно воспитать ребенка?</figaption>
                         </figure>
                         <span>4 дня назад</span>
                         <span>О коммуникации</span>
-                    </div>
+                    </a>
                     <div class="metodsItem">
                         <figure>
                             <img src="img/images/metods3.jpg" alt="Картинка-превью статьи">

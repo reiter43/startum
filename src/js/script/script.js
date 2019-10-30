@@ -1,34 +1,3 @@
-// // Фильтрация по категориям
-
-// let buttons = document.querySelectorAll('.buttonCat');
-
-// buttons.forEach(elem => {
-//     elem.onclick = (event) => {
-// 		event.preventDefault();
-
-// 		buttons.forEach(elem => {
-// 			elem.classList.remove('buttonCat--active');
-// 			event.target.classList.add('buttonCat--active');
-//         });
-
-//         let buttonFilter = elem.getAttribute('data-filter');        
-
-//         let portfolioItems = document.querySelectorAll('.portfolio__item');
-
-//         portfolioItems.forEach(elem => {
-//             elem.style.display = 'none';
-
-//             if (buttonFilter == 'all'){
-//                 elem.style.display = 'block';
-//             }
-
-//             if(elem.classList.contains(buttonFilter)){                
-//                 elem.style.display = 'block';
-//             }                
-//         })
-//     }
-// }); 	
-
 
 // Скрыть/показать меню
 let burger = document.querySelector('.burger');
@@ -193,18 +162,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 // Липкая шапка
-window.onscroll = function () {
-	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-	let fix = document.querySelector('.topLine');
-	let btnFix = document.querySelector('.btnBase--header');
+if (window.location.pathname == "/" ) {
+	window.onscroll = function () {
+		let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+		let fix = document.querySelector('.topLine--home');
+		let btnFix = document.querySelector('.btnBase--home');
 
-	if (scrolled > 140) {
-		fix.classList.add('sticky');
-		btnFix.classList.add('btnBase--sticky');
-	}
-	else {
-		fix.classList.remove('sticky');
-		btnFix.classList.remove('btnBase--sticky');
+		if (scrolled > 140) {
+			fix.classList.add('sticky');
+			btnFix.classList.add('btnBase--sticky');
+		}
+		else {
+			fix.classList.remove('sticky');
+			btnFix.classList.remove('btnBase--sticky');
+		}
 	}
 }
 
@@ -225,9 +196,9 @@ for (let i = 0; i < anchors.length; i++) {
 			hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
 		let t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id 		
 			start = null;
-			
+
 		requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
-		
+
 		function step(time) {
 			if (start === null) start = time;
 			let progress = time - start,
@@ -243,7 +214,7 @@ for (let i = 0; i < anchors.length; i++) {
 }
 
 // Выделение активного пункта меню
-const itemsMenu = document.querySelectorAll('.topLine nav a');
+const itemsMenu = document.querySelectorAll('.topLine nav ul li a');
 
 itemsMenu.forEach(elem => {
 	elem.onclick = (event) => {
@@ -251,8 +222,41 @@ itemsMenu.forEach(elem => {
 			elem.classList.remove('active');
 			event.target.classList.add('active');
 		})
-	}
-})
+	};
+});
+
+
+// Фильтрация статей по категориям
+let buttons = document.querySelectorAll('.articles__cat button');
+
+buttons.forEach(elem => {
+    elem.onclick = (event) => {
+		event.preventDefault();
+
+		buttons.forEach(elem => {
+			elem.classList.remove('active');
+			event.target.classList.add('active');
+        });
+
+        let buttonFilter = elem.getAttribute('data-cat');        
+
+        let articlesItems = document.querySelectorAll('.metodsItem--article');
+
+        articlesItems.forEach(elem => {
+            elem.style.display = 'none';
+
+            if (buttonFilter == 'all'){
+                elem.style.display = 'block';
+            }
+
+            if(elem.classList.contains(buttonFilter)){                
+                elem.style.display = 'block';
+                document.querySelector('.articles__content').style.justifyContent = 'flex-start';
+                elem.style.marginRight = '1%';
+            }                
+        })
+    }
+}); 	
 
 
 
