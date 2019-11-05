@@ -262,3 +262,57 @@
         bottom: -150px;
     }
 }
+
+.rest7 {
+    position: absolute;
+    bottom: 0;
+    right: -290px;
+    z-index: -1;
+    transform: rotate(-45deg);
+
+    @include lllg-block {
+        right: -400px;
+    }
+    @include llg-block {
+        bottom: -150px;
+    }
+    @include sm-block {
+        display: none;
+    }
+
+    .restYellow12 {
+        width: 1668px;
+        height: 7px;
+        margin-right: -250px;
+        background: #FFCC00;
+    }
+
+    .restYellow13 {
+        width: 1668px;
+        height: 83px;
+        margin-top: 10px;
+        margin-right: -400px;
+        background:  #FFCC00;
+    }
+
+    .restBlue7 {
+        width: 1668px;
+        height: 10px;
+        margin-top: 20px;
+        margin-right: -250px;
+        background: #2098D5;
+    }
+}
+
+.main--center{
+    .rest7{
+        right: -200px;
+
+        @include llg-block {
+            right: -350px;
+        }
+        @include md-block {
+            right: -400px;
+        }
+    }
+}

@@ -1296,10 +1296,10 @@ body {
 
 .header {
   position: relative;
-  overflow-x: hidden;
 }
 
 .header--home {
+  overflow-x: hidden;
   padding-bottom: 64px;
   background: -o-radial-gradient(36.59% 50%, 84.57% 47.69%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
   background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
@@ -2476,8 +2476,8 @@ label svg {
 }
 
 .reviews .owl-carousel .owl-nav {
-  left: 60px;
-  right: 60px;
+  left: 130px;
+  right: 130px;
 }
 
 .reviews .owl-carousel .owl-nav .owl-next .slider-next,
@@ -3254,13 +3254,21 @@ label svg {
 ============================================= */
 
 .header--inner {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .topLine--inner {
   position: static;
   padding: 33px 70px;
   background: #2098D5;
+}
+
+.nav .nav__list--inner {
+  background: #2098D5;
+}
+
+.nav .nav__list--inner li a[href*=articles] {
+  display: block;
 }
 
 .articles {
@@ -3310,17 +3318,14 @@ label svg {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   margin-top: 50px;
-  padding: 0 40px;
 }
 
 .metodsItem--article {
   width: 24%;
   margin-bottom: 20px;
+  margin-right: auto;
+  color: #000;
 }
 
 /*============================================= */
@@ -3354,6 +3359,9 @@ label svg {
 }
 
 .main--ar1 {
+  position: relative;
+  z-index: -5;
+  overflow: hidden;
   padding: 67px 30px;
   background: #FAFAFA;
 }
@@ -3478,6 +3486,239 @@ label svg {
   width: 75px;
   height: 1px;
   background: rgba(0, 0, 0, 0.1);
+}
+
+/*============================================= */
+
+/*=============================================
+        СТРАНИЦА ЦЕНТРОВ
+============================================= */
+
+.main--centers {
+  position: relative;
+  padding: 60px 50px;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+
+.main--centers h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.centersContent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.centersContent__item {
+  width: calc(25% - 16px);
+  margin: 8px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  -webkit-box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+}
+
+.centersContent__item figure {
+  margin: 20px 10px;
+}
+
+.centersContent__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.centersContent__item figaption {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000;
+}
+
+/*============================================= */
+
+/*=============================================
+        СТРАНИЦА ОДНОГО ЦЕНТРА
+============================================= */
+
+.main--center {
+  position: relative;
+  z-index: -5;
+  overflow: hidden;
+  padding: 97px 293px;
+}
+
+.main--center .center {
+  margin: 0 auto;
+  padding: 84px 76px 76px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+  box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  color: #000;
+}
+
+.main--center .center h2 {
+  margin-bottom: 0;
+}
+
+.main--center .center h4 {
+  margin-top: 63px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 180%;
+}
+
+.main--center .center button {
+  display: block;
+  margin: 0 auto;
+}
+
+.main--center .center > img {
+  margin: 63px 0 52px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.centerContact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 52px;
+}
+
+.centerContact__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32%;
+  padding: 71px 44px 79px;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+  box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+.centerContact__item h6 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.centerContact__item > a {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.centerContact__item .socials {
+  margin-top: 10px;
+}
+
+.centerProgram {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 32px -10px;
+}
+
+.centerProgram__item {
+  width: calc(33% - 20px);
+  margin: 10px;
+  padding: 63px 30px 43px;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+  box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+.centerProgram__item svg {
+  width: 69px;
+  height: 59px;
+  fill: #2098D5;
+}
+
+.centerProgram__item h5 {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.centerProgram__item p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.centerTeachers {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-top: 52px;
+}
+
+.centerTeachers figure {
+  width: 17%;
+  margin: 0;
+  text-align: center;
+}
+
+.centerTeachers figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 22px;
+}
+
+.centerTeachers figure figaption p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.centerTeachers figure figaption span {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 150%;
 }
 
 /*============================================= */
@@ -3667,6 +3908,43 @@ label svg {
   bottom: -150px;
 }
 
+.rest7 {
+  position: absolute;
+  bottom: 0;
+  right: -290px;
+  z-index: -1;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.rest7 .restYellow12 {
+  width: 1668px;
+  height: 7px;
+  margin-right: -250px;
+  background: #FFCC00;
+}
+
+.rest7 .restYellow13 {
+  width: 1668px;
+  height: 83px;
+  margin-top: 10px;
+  margin-right: -400px;
+  background: #FFCC00;
+}
+
+.rest7 .restBlue7 {
+  width: 1668px;
+  height: 10px;
+  margin-top: 20px;
+  margin-right: -250px;
+  background: #2098D5;
+}
+
+.main--center .rest7 {
+  right: -200px;
+}
+
 /*=============================================
         АДАПТИВ
 ============================================= */
@@ -3685,6 +3963,15 @@ label svg {
     position: absolute;
     top: 170px;
     right: 30px;
+  }
+
+  .reviews .owl-carousel .owl-nav {
+    left: 3%;
+    right: 3%;
+  }
+
+  .rest7 {
+    right: -400px;
   }
 }
 
@@ -3930,6 +4217,42 @@ label svg {
     font-size: 16px;
   }
 
+  .main--center {
+    padding: 97px 140px;
+  }
+
+  .main--center .center {
+    padding: 64px 46px;
+  }
+
+  .main--center .center h4 {
+    font-size: 28px;
+  }
+
+  .centerContact__item {
+    padding: 55px 25px;
+  }
+
+  .centerContact__item h6 {
+    font-size: 13px;
+  }
+
+  .centerContact__item > a {
+    font-size: 20px;
+  }
+
+  .centerProgram__item h5 {
+    font-size: 18px;
+  }
+
+  .centerProgram__item p {
+    font-size: 12px;
+  }
+
+  .centerTeachers figure figaption p {
+    font-size: 18px;
+  }
+
   .rest5 .restYellow7 {
     height: 8px;
   }
@@ -3951,6 +4274,14 @@ label svg {
   .rest6 .restYellow11 {
     height: 60px;
     margin-top: 15px;
+  }
+
+  .rest7 {
+    bottom: -150px;
+  }
+
+  .main--center .rest7 {
+    right: -350px;
   }
 }
 
@@ -4122,6 +4453,14 @@ label svg {
 
   .ar1 ul li {
     font-size: 14px;
+  }
+
+  .centersContent__item figaption {
+    font-size: 16px;
+  }
+
+  .main--center {
+    padding: 97px 50px;
   }
 }
 
@@ -4474,6 +4813,7 @@ label svg {
     -ms-flex-order: 5;
     order: 5;
     width: 30%;
+    margin-top: 20px;
   }
 
   .topLine--inner {
@@ -4508,6 +4848,56 @@ label svg {
 
   .ar1 .ar1__linksBlock a {
     font-size: 14px;
+  }
+
+  .main--centers {
+    padding: 60px 30px;
+  }
+
+  .centersContent__item {
+    width: calc(33% - 16px);
+  }
+
+  .centersContent__item figaption {
+    font-size: 14px;
+  }
+
+  .centerContact {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .centerContact__item {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .centerContact__item h6 {
+    font-size: 16px;
+  }
+
+  .centerContact__item > a {
+    font-size: 24px;
+  }
+
+  .centerProgram {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .centerProgram__item {
+    width: calc(50% - 20px);
+    padding: 43px 30px 23px;
+  }
+
+  .main--center .rest7 {
+    right: -400px;
   }
 }
 
@@ -4624,6 +5014,10 @@ label svg {
 
   .topLine {
     margin-bottom: 303px;
+  }
+
+  .nav .nav__list {
+    padding: 90px 0 20px 50px;
   }
 
   .nav .nav__list li a {
@@ -4874,6 +5268,10 @@ label svg {
     padding: 33px 30px;
   }
 
+  .nav .nav__list--inner {
+    background: #2098D5;
+  }
+
   .articles__cat {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -4912,6 +5310,48 @@ label svg {
   .ar1 .ar1__linksBlock::after {
     width: 20px;
     right: -20px;
+  }
+
+  .centersContent__item {
+    width: calc(50% - 16px);
+  }
+
+  .centerContact {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .centerContact__item {
+    width: 75%;
+    min-width: 250px;
+  }
+
+  .centerProgram__item {
+    padding: 33px 15px 23px;
+  }
+
+  .centerProgram__item h5 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .centerProgram__item p {
+    margin-top: 5px;
+  }
+
+  .centerTeachers {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .centerTeachers figure {
+    width: calc(40% - 30px);
+    margin: 15px;
   }
 
   .rest2 {
@@ -4960,6 +5400,10 @@ label svg {
   .metods .rest4 {
     display: none;
   }
+
+  .rest7 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -4981,6 +5425,10 @@ label svg {
   .header--home h1 {
     margin-bottom: 24px;
     font-size: 28px;
+  }
+
+  .topLine {
+    padding: 33px 15px;
   }
 
   .logo {
@@ -5275,11 +5723,15 @@ label svg {
   }
 
   .topLine--inner {
-    margin-bottom: 50px;
+    padding: 33px 15px;
   }
 
   .articles {
     padding: 0 15px;
+  }
+
+  .articles h2 {
+    margin-top: 50px;
   }
 
   .articles__cat button {
@@ -5336,6 +5788,67 @@ label svg {
 
   .ar1 .ar1__linksBlock a :first-child {
     margin-right: 7px;
+  }
+
+  .main--centers {
+    padding: 60px 15px;
+  }
+
+  .centersContent__item {
+    width: 100%;
+  }
+
+  .main--center .center {
+    padding: 64px 20px;
+  }
+
+  .centerContact__item {
+    width: 85%;
+    min-width: 250px;
+  }
+
+  .centerContact__item h6 {
+    font-size: 14px;
+  }
+
+  .centerContact__item > a {
+    font-size: 20px;
+  }
+
+  .centerProgram__item {
+    width: 75%;
+    min-width: 250px;
+  }
+
+  .centerProgram__item h5 {
+    font-size: 22px;
+  }
+
+  .centerProgram__item p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .centerTeachers {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .centerTeachers figure {
+    width: 75%;
+    -webkit-flex-basis: 300px;
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+  }
+
+  .centerTeachers figure figaption p {
+    font-size: 24px;
+  }
+
+  .centerTeachers figure figaption span {
+    font-size: 15px;
   }
 
   .rest {
@@ -5591,6 +6104,16 @@ label svg {
   .gallery__content div:nth-child(16),
   .gallery__content div:nth-child(17) {
     display: none;
+  }
+
+  .centerContact__item {
+    width: 100%;
+    min-width: 250px;
+    padding: 45px 25px;
+  }
+
+  .centerContact__item > a {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

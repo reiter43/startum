@@ -151,7 +151,6 @@
 }
 
 //Стилизация плейсхолдера
-
 @mixin input-placeholder {
   ::-webkit-input-placeholder {
     @content;
@@ -170,6 +169,13 @@
   :-ms-input-placeholder {
     @content;
   }
+}
+
+//Адаптивность картинки
+@mixin img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 //---------------------------------------------
 

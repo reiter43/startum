@@ -5,19 +5,21 @@ let nav = document.querySelector('nav.nav');
 let bod = document.querySelector('body');
 
 burger.addEventListener('click', event => {
-	event.preventDefault;
+	event.preventDefault;	
 
 	if (burger.classList.contains('burger--active')) {
 		burger.classList.remove('burger--active');
+		document.querySelector('header').style.position = 'relative';
+		nav.classList.remove('nav--active');
 		nav.style.marginLeft = '101%';
 		nav.style.width = '0';
-		// bod.style.overflow = 'auto';
 	}
 	else {
 		burger.classList.add('burger--active');
+		document.querySelector('header').style.position = 'static';
 		nav.style.marginLeft = '0';
 		nav.style.width = '100%';
-		// bod.style.overflow = 'hidden';
+		nav.classList.add('nav--active');
 	}
 });
 
@@ -183,14 +185,11 @@ if (window.location.pathname == "/" ) {
 // Плавный скролл к якорям
 const anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
 
+
 let V = 0.15;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 for (let i = 0; i < anchors.length; i++) {
 	anchors[i].addEventListener('click', function (e) { //по клику на ссылку
-		e.preventDefault(); //отменяем стандартное поведение		
-
-		burger.classList.remove('burger--active');
-		nav.style.marginLeft = '101%';
-		nav.style.width = '0';
+		e.preventDefault(); //отменяем стандартное поведение
 
 		let w = window.pageYOffset,  // производим прокрутка прокрутка
 			hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
@@ -251,12 +250,12 @@ buttons.forEach(elem => {
 
             if(elem.classList.contains(buttonFilter)){                
                 elem.style.display = 'block';
-                document.querySelector('.articles__content').style.justifyContent = 'flex-start';
+                // document.querySelector('.articles__content').style.justifyContent = 'flex-start';
                 elem.style.marginRight = '1%';
             }                
         })
     }
-}); 	
+}); 
 
 
 

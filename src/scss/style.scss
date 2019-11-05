@@ -143,10 +143,10 @@ body {
 ============================================= */
 .header {
 	position: relative;
-	overflow-x: hidden;
 }
 
 .header--home {
+	overflow-x: hidden;
 	padding-bottom: 64px;
 	background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
 	background-image: url(../img/images/bg-top.jpg);
@@ -204,6 +204,10 @@ body {
 
 	@include sm-block {
 		margin-bottom: 303px;
+	}
+
+	@include xs-block {
+		padding: 33px 15px;
 	}
 
 	&__btn {
@@ -284,6 +288,10 @@ body {
 			padding: 120px 0 20px 100px;
 			text-align: left;
 			background: #a5a5a5;
+		}
+
+		@include sm-block {
+			padding: 90px 0 20px 50px;
 		}
 
 		li {
@@ -1896,8 +1904,13 @@ label {
 
 .reviews .owl-carousel {
 	.owl-nav {
-		left: 60px;
-		right: 60px;
+		left: 130px;
+		right: 130px;
+
+		@include lllg-block {
+			left: 3%;
+			right: 3%;
+		}
 
 		@include llg-block {
 			left: 1%;
@@ -3052,6 +3065,7 @@ label {
 	@include md-block {
 		order: 5;
 		width: 30%;
+		margin-top: 20px;
 	}
 
 	@include sm-block {
@@ -3109,7 +3123,7 @@ label {
         СТРАНИЦА СТАТЬИ
 ============================================= */
 .header--inner {
-	overflow: visible;
+	overflow: hidden;
 }
 
 .topLine--inner {
@@ -3127,13 +3141,25 @@ label {
 	}
 
 	@include xs-block {
-		margin-bottom: 50px;
+		padding: 33px 15px;
 	}
 }
 
 .nav .nav__list--inner {
+	background: #2098D5;
+
 	@include llg-block {
 		background: #2098D5;
+	}
+
+	@include sm-block {
+		background: #2098D5;
+	}
+
+	li {
+		a[href*=articles] {
+			display: block;
+		}
 	}
 }
 
@@ -3150,6 +3176,10 @@ label {
 
 		@include md-block {
 			margin-bottom: 30px;
+		}
+
+		@include xs-block {
+			margin-top: 50px;
 		}
 	}
 
@@ -3211,9 +3241,7 @@ label {
 .articles__content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	margin-top: 50px;
-	padding: 0 40px;
 
 	@include lg-block {
 		justify-content: center;
@@ -3232,6 +3260,9 @@ label {
 .metodsItem--article {
 	width: 24%;
 	margin-bottom: 20px;
+	margin-right: auto;
+	color: #000;
+
 
 	@include lg-block {
 		width: 32%;
@@ -3254,7 +3285,7 @@ label {
 /*=============================================
         СТРАНИЦА ОДИНОЧНОЙ СТАТЬИ
 ============================================= */
-.topLine--ar1{
+.topLine--ar1 {
 	@include xs-block {
 		margin-bottom: 0;
 	}
@@ -3295,6 +3326,9 @@ label {
 }
 
 .main--ar1 {
+	position: relative;
+	z-index: -5;
+	overflow: hidden;
 	padding: 67px 30px;
 	background: #FAFAFA;
 
@@ -3425,6 +3459,7 @@ label {
 			@include md-block {
 				font-size: 14px;
 			}
+
 			@include xs-block {
 				font-size: 12px;
 			}
@@ -3453,6 +3488,7 @@ label {
 			width: 75px;
 			height: 1px;
 			background: rgba(0, 0, 0, 0.1);
+
 			@include sm-block {
 				width: 20px;
 				left: -20px;
@@ -3467,9 +3503,395 @@ label {
 			width: 75px;
 			height: 1px;
 			background: rgba(0, 0, 0, 0.1);
+
 			@include sm-block {
 				width: 20px;
 				right: -20px;
+			}
+		}
+	}
+}
+
+/*============================================= */
+
+/*=============================================
+        СТРАНИЦА ЦЕНТРОВ
+============================================= */
+.main--centers {
+	position: relative;
+	padding: 60px 50px;
+	background: #FAFAFA;
+	overflow: hidden;
+
+	@include md-block {
+		padding: 60px 30px;
+	}
+
+	@include xs-block {
+		padding: 60px 15px;
+	}
+
+	h2 {
+		margin-bottom: 30px;
+		font-weight: 600;
+	}
+}
+
+.centersContent {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -8px;
+
+	&__item {
+		width: calc(25% - 16px);
+		margin: 8px;
+		background: #FFFFFF;
+		border-radius: 12px;
+		box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+
+		@include md-block {
+			width: calc(33% - 16px);
+		}
+
+		@include sm-block {
+			width: calc(50% - 16px);
+		}
+
+		@include xs-block {
+			width: 100%;
+		}
+
+		figure {
+			margin: 20px 10px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+
+		figaption {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 150%;
+			color: #000;
+
+			@include lg-block {
+				font-size: 16px;
+			}
+
+			@include md-block {
+				font-size: 14px;
+			}
+
+		}
+	}
+}
+
+/*============================================= */
+
+/*=============================================
+        СТРАНИЦА ОДНОГО ЦЕНТРА
+============================================= */
+.main--center {
+	position: relative;
+	z-index: -5;
+	overflow: hidden;
+	padding: 97px 293px;
+
+	@include llg-block {
+		padding: 97px 140px;
+	}
+
+	@include lg-block {
+		padding: 97px 50px;
+	}
+
+	.center {
+		margin: 0 auto;
+		padding: 84px 76px 76px;
+		background: #FFFFFF;
+		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+		border-radius: 12px;
+		color: #000;
+
+		@include llg-block {
+			padding: 64px 46px;
+		}
+
+		@include xs-block {
+			padding: 64px 20px;
+		}
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		h4 {
+			margin-top: 63px;
+			text-align: center;
+			font-weight: 600;
+			font-size: 32px;
+			line-height: 180%;
+
+
+			@include llg-block {
+				font-size: 28px;
+			}
+		}
+
+		button {
+			display: block;
+			margin: 0 auto;
+		}
+
+		&>img {
+			margin: 63px 0 52px;
+			@include img;
+		}
+	}
+}
+
+
+
+.centerContact {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 52px;
+
+	@include md-block {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	@include sm-block {
+		justify-content: center;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 32%;
+		padding: 71px 44px 79px;
+		text-align: center;
+		background: #FFFFFF;
+		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+		border-radius: 12px;
+
+		@include llg-block {
+			padding: 55px 25px;
+		}
+
+		@include md-block {
+			width: 45%;
+			margin-bottom: 20px;
+		}
+
+		@include sm-block {
+			width: 75%;
+			min-width: 250px;
+		}
+
+		@include xs-block {
+			width: 85%;
+			min-width: 250px;
+		}
+
+		@include xxs-block {
+			width: 100%;
+			min-width: 250px;
+			padding: 45px 25px;
+		}
+
+		h6 {
+			margin: 0;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 150%;
+
+			@include llg-block {
+				font-size: 13px;
+			}
+
+			@include md-block {
+				font-size: 16px;
+			}
+
+			@include xs-block {
+				font-size: 14px;
+			}
+		}
+
+		&>a {
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 150%;
+			color: #000000;
+
+			@include llg-block {
+				font-size: 20px;
+			}
+
+			@include md-block {
+				font-size: 24px;
+			}
+
+			@include xs-block {
+				font-size: 20px;
+			}
+
+			@include xxs-block {
+				font-size: 16px;
+			}
+		}
+
+		.socials {
+			margin-top: 10px;
+		}
+	}
+}
+
+.centerProgram {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 32px -10px;
+
+	@include md-block {
+		justify-content: center;
+	}
+
+	&__item {
+		width: calc(33% - 20px);
+		margin: 10px;
+		padding: 63px 30px 43px;
+		text-align: center;
+		background: #FFFFFF;
+		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+		border-radius: 12px;
+
+		@include md-block {
+			width: calc(50% - 20px);
+			padding: 43px 30px 23px;
+		}
+
+		@include sm-block {
+			padding: 33px 15px 23px;
+		}
+
+		@include xs-block {
+			width: 75%;
+			min-width: 250px;
+		}
+
+		svg {
+			width: 69px;
+			height: 59px;
+			fill: #2098D5;
+		}
+
+		h5 {
+			margin-top: 30px;
+			font-weight: 600;
+			font-size: 22px;
+			line-height: 130%;
+
+			@include llg-block {
+				font-size: 18px;
+			}
+
+			@include sm-block {
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+
+			@include xs-block {
+				font-size: 22px;
+			}
+		}
+
+		p {
+			margin-top: 20px;
+			font-size: 14px;
+			line-height: 170%;
+
+
+			@include llg-block {
+				font-size: 12px;
+			}
+
+			@include sm-block {
+				margin-top: 5px;
+			}
+
+			@include xs-block {
+				margin-top: 20px;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.centerTeachers {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 52px;
+
+	@include sm-block {
+		flex-wrap: wrap;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	@include xs-block {
+		justify-content: center;
+	}
+
+	figure {
+		width: 17%;
+		margin: 0;
+		text-align: center;
+
+		@include sm-block {
+			width: calc(40% - 30px);
+			margin: 15px;
+		}
+
+		@include xs-block {
+			width: 75%;
+			flex-basis: 300px;
+		}
+
+		img {
+			@include img;
+			margin-bottom: 22px;
+		}
+
+		figaption {
+			p {
+				font-weight: 500;
+				font-size: 22px;
+				line-height: 150%;
+
+				@include llg-block {
+					font-size: 18px;
+				}
+
+				@include xs-block {
+					font-size: 24px;
+				}
+			}
+
+			span {
+				font-weight: normal;
+				font-size: 13px;
+				line-height: 150%;
+
+				@include xs-block {
+					font-size: 15px;
+				}
 			}
 		}
 	}

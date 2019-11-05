@@ -33,7 +33,40 @@ $(document).ready(function () {
             1200: {
                 items: 1,
                 center: true,
-                margin: 150,
+                margin: 200,
+                autoWidth: true,
+                nav: true,
+                navText: [
+                    "<span class='slider-prev'></span>",
+                    "<span class='slider-next'></span>",
+                ],
+            },
+            1450: {
+                items: 1,
+                center: true,
+                margin: 250,
+                autoWidth: true,
+                nav: true,
+                navText: [
+                    "<span class='slider-prev'></span>",
+                    "<span class='slider-next'></span>",
+                ],
+            },
+            1750: {
+                items: 1,
+                center: true,
+                margin: 300,
+                autoWidth: true,
+                nav: true,
+                navText: [
+                    "<span class='slider-prev'></span>",
+                    "<span class='slider-next'></span>",
+                ],
+            },
+            1930: {
+                items: 1,
+                center: true,
+                margin: 300,
                 autoWidth: true,
                 nav: true,
                 navText: [
