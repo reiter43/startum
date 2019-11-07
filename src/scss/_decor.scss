@@ -246,9 +246,10 @@
 }
 
 .contacts,
-.metods{
+.metods {
+
     .rest3,
-    .rest4{
+    .rest4 {
         z-index: 1;
 
         @include sm-block {
@@ -257,8 +258,8 @@
     }
 }
 
-.metods{    
-    .rest4{
+.metods {
+    .rest4 {
         bottom: -150px;
     }
 }
@@ -273,9 +274,11 @@
     @include lllg-block {
         right: -400px;
     }
+
     @include llg-block {
         bottom: -150px;
     }
+
     @include sm-block {
         display: none;
     }
@@ -292,7 +295,7 @@
         height: 83px;
         margin-top: 10px;
         margin-right: -400px;
-        background:  #FFCC00;
+        background: #FFCC00;
     }
 
     .restBlue7 {
@@ -304,15 +307,102 @@
     }
 }
 
-.main--center{
-    .rest7{
+.main--center {
+    .rest7 {
         right: -200px;
 
         @include llg-block {
             right: -350px;
         }
+
         @include md-block {
             right: -400px;
         }
+    }
+}
+
+.rest8 {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    z-index: 10;
+    transform: rotate(-45deg);
+
+    @include sm-block {
+        display: none;
+    }
+
+
+    .restYellow14 {
+        width: 684px;
+        height: 50px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            height: 40px;
+        }
+    }
+
+    .restYellow15 {
+        width: 684px;
+        height: 9px;
+        margin-top: 15px;
+        margin-left: -250px;
+        background: #FFCC00;
+
+        @include llg-block {
+            margin-top: 10px;
+        }
+    }
+}
+
+.rest9 {
+    position: absolute;
+    bottom: -300px;
+    right: -400px;
+    z-index: 10;
+    transform: rotate(-45deg);
+
+    @include llg-block {
+        bottom: -300px;
+        right: -450px;
+    }
+
+    @include sm-block {
+        display: none;
+    }
+
+    .restBlue8 {
+        width: 1668px;
+        height: 19px;
+        margin-top: 20px;
+        margin-right: -250px;
+        background: #2098D5;
+
+        @include llg-block {
+            height: 15px;
+        }
+    }
+
+    .restYellow16 {
+        width: 1668px;
+        height: 126px;
+        margin-top: 15px;
+        margin-right: -400px;
+        background: #FFCC00;
+
+        @include llg-block {
+            margin-top: 10px;
+        }
+    }
+}
+
+.modalQuest,
+.modalOrder,
+.modalReview,
+.modalCentr{
+    .rest9{
+        bottom: -350px;
     }
 }

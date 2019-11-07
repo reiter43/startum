@@ -355,7 +355,7 @@
             </div>
             <h2 class="titleSection">Появился вопрос по направлениям?</h2>
             <p>Расскажем все подробно в письме</p>
-            <form id="formAnswer__form" class="formAnswer__form">
+            <form id="formAnswer" class="formAnswer__form">
                 <!-- Hidden Required Fields -->
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
@@ -935,7 +935,9 @@
             </div>
             <div class="wrapper">
                 <h2 class="titleSection">Xотите знать больше о<br> <span>современныx методикаx обучения?</span></h2>
-                <a href="articles.html"><p class="descSection">Почитайте статьи нашиx специалистов</p></a>
+                <a href="articles.html">
+                    <p class="descSection">Почитайте статьи нашиx специалистов</p>
+                </a>
                 <div class="metods__slider owl-carousel">
                     <a href="ar1.html" class="metodsItem">
                         <figure>
@@ -1047,7 +1049,7 @@
             </div>
             <h2 class="titleSection">У вас возникли вопросы? Задайте иx нам!</h2>
             <p class="descSection">Наши специалисты свяжутся с вами в течении часа</p>
-            <form id="formQuest__form" class="formQuest__form">
+            <form id="formQuest" class="formQuest__form">
                 <!-- Hidden Required Fields -->
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
@@ -1116,6 +1118,355 @@
             </div>
         </div>
     </footer>
+
+    <!-- Модальные окна -->
+    <div class="modal modal--hide">
+        <div class="modalBase modalCity">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <div class="closeModal"></div>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Выберите ваш город</h3>
+            <div class="modalCity__content">
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="centerMoscau.html">Москва</a></li>
+                        <li><a href="#">Санкт-Петербург </a></li>
+                        <li><a href="#">Новосибирск</a></li>
+                        <li><a href="#">Екатеринбург</a></li>
+                        <li><a href="#">Нижний Новгород</a></li>
+                        <li><a href="#">Казань</a></li>
+                    </ul>
+                </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Челябинск</a></li>
+                        <li><a href="#">Омск</a></li>
+                        <li><a href="#">Самара</a></li>
+                        <li><a href="#">Ростов-на-Дону</a></li>
+                        <li><a href="#">Уфа</a></li>
+                        <li><a href="#">Красноярск</a></li>
+                    </ul>
+                </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Воронеж</a></li>
+                        <li><a href="#">Пермь</a></li>
+                        <li><a href="#">Волгоград</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btnModal">Вашего города нет в списке?</button>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  modal--hide">
+        <div class="modalBase modalQuest">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <div class="closeModal"></div>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Наши специалисты <br> ответят на все вопросы!</h3>
+            <form id="formModal--quest" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="name">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="phone">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label class="textareaModal" for="answer">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
+                        </svg>
+                    </label>
+                    <textarea name="Объект" id="answer" class="form__subject" placeholder="Опишите ваш вопрос"
+                        required></textarea>
+                </div>
+                <button class="form__button">
+                    <span>Жду звонка</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  modal--hide">
+        <div class="modalBase modalOrder">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <div class="closeModal"></div>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Оформить заявку</h3>
+            <p class="descModal">Наши специалисты изучат вашу заявку и сразу свяжутся с вами для соглашения</p>
+            <form id="formModal--order" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="name">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="phone">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="email">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg>
+                    </label>
+                    <input type="email" name="Электронная почта" id="email" class="form__email"
+                        placeholder="Электронная почта" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <select>
+                        <option>Выберите город</option>
+                        <option>Москва</option>
+                        <option>Новосибирск</option>
+                        <option>Владивосток</option>
+                        <option>Краснодар</option>
+                    </select>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <select>
+                        <option>Выберите программу</option>
+                        <option>Ментальная арифметика</option>
+                        <option>Скорочтение</option>
+                        <option>Робототехника</option>
+                        <option>Подготовка к школе</option>
+                        <option>Обучение чтению</option>
+                        <option>Английский язык</option>
+                        <option>Актерское мастерство</option>
+                        <option>Школа блогинга</option>
+                    </select>
+                </div>
+                <button class="form__button">
+                    <span>Отправить заявку</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  modal--hide">
+        <div class="modalBase modalThanks">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <div class="closeModal"></div>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Заявка отправлена!</h3>
+            <p class="descModal">Вы успешно отправили запрос, в ближайшее время наши специалисты свяжутся с вами для
+                консультации по номеру +7 912 520 64 40</p>
+            <button class="btnModal">Свернуть оповещение</button>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  modal--hide">
+        <div class="modalBase modalReview">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <div class="closeModal"></div>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Оставьте отзыв</h3>
+            <p class="descModal">Мы всегда рады конструктивной критике от своих клиентов</p>
+            <form id="formModal--review" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="name">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="email">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg>
+                    </label>
+                    <input type="email" name="Электронная почта" id="email" class="form__email"
+                        placeholder="Электронная почта" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label class="textareaModal" for="answer">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
+                        </svg>
+                    </label>
+                    <textarea name="Объект" id="answer" class="form__subject" placeholder="Напишите свой отзыв..."
+                        required></textarea>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <input type="file" name="Прикрепить" id="file" class="form__file" required>
+                    <label for="file" class="labelFile">
+                        <span>Прикпепите файл</span>
+                    </label>
+                </div>
+                <button class="form__button">
+                    <span>Отправить заявку</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  modal--hid">
+        <div class="modalBase modalCentr">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <div class="closeModal"></div>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Откройте центр<br> в своем городе!</h3>
+            <p class="descModal">Заполните форму и наши специалисты свяжутся с вами в ближайшее время</p>
+            <form id="formModal--centr" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="name">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="email">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg>
+                    </label>
+                    <input type="email" name="Электронная почта" id="email" class="form__email"
+                        placeholder="Электронная почта" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="phone">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <select>
+                        <option>Выберите город</option>
+                        <option>Москва</option>
+                        <option>Новосибирск</option>
+                        <option>Владивосток</option>
+                        <option>Краснодар</option>
+                    </select>
+                </div>
+                <button class="form__button">
+                    <span>Отправить заявку</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
 
 
     <script src="js/all.js"></script>

@@ -5,7 +5,7 @@ let nav = document.querySelector('nav.nav');
 let bod = document.querySelector('body');
 
 burger.addEventListener('click', event => {
-	event.preventDefault;	
+	event.preventDefault;
 
 	if (burger.classList.contains('burger--active')) {
 		burger.classList.remove('burger--active');
@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 // Липкая шапка
-if (window.location.pathname == "/" ) {
+if (window.location.pathname == "/") {
 	window.onscroll = function () {
 		let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 		let fix = document.querySelector('.topLine--home');
@@ -229,35 +229,43 @@ itemsMenu.forEach(elem => {
 let buttons = document.querySelectorAll('.articles__cat button');
 
 buttons.forEach(elem => {
-    elem.onclick = (event) => {
+	elem.onclick = (event) => {
 		event.preventDefault();
 
 		buttons.forEach(elem => {
 			elem.classList.remove('active');
 			event.target.classList.add('active');
-        });
+		});
 
-        let buttonFilter = elem.getAttribute('data-cat');        
+		let buttonFilter = elem.getAttribute('data-cat');
 
-        let articlesItems = document.querySelectorAll('.metodsItem--article');
+		let articlesItems = document.querySelectorAll('.metodsItem--article');
 
-        articlesItems.forEach(elem => {
-            elem.style.display = 'none';
+		articlesItems.forEach(elem => {
+			elem.style.display = 'none';
 
-            if (buttonFilter == 'all'){
-                elem.style.display = 'block';
-            }
+			if (buttonFilter == 'all') {
+				elem.style.display = 'block';
+			}
 
-            if(elem.classList.contains(buttonFilter)){                
-                elem.style.display = 'block';
-                // document.querySelector('.articles__content').style.justifyContent = 'flex-start';
-                elem.style.marginRight = '1%';
-            }                
-        })
-    }
-}); 
+			if (elem.classList.contains(buttonFilter)) {
+				elem.style.display = 'block';
+				// document.querySelector('.articles__content').style.justifyContent = 'flex-start';
+				elem.style.marginRight = '1%';
+			}
+		})
+	}
+});
 
+// Стилизация инпут-файл
+let inputs = document.querySelectorAll('.form__file');
+Array.prototype.forEach.call(inputs, function (input) {
+	let label = input.nextElementSibling;
 
+	input.addEventListener('change', function (e) {
+		label.querySelector('.labelFile span').innerHTML = 'Прикреплен файл: ' + input.value;
+	});
+});
 
 // // Аякс-запрос формы обратной связи
 
