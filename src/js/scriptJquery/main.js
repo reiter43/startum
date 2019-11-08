@@ -122,13 +122,6 @@ $(document).ready(function () {
         }
     });
 
-    // 	//Плавный переход к якорям с помощью плагина PageScroll2
-    // 	$(".nav__link").mPageScroll2id({
-    // 		scrollSpeed: 1000,
-    // 		offset: -80
-    // 	});
-
-
     //Модальное окно с помощью плагина magnefic-popap
     $('.gullery__magnefic').magnificPopup({
         type: 'image',
@@ -140,28 +133,37 @@ $(document).ready(function () {
             enabled: true
         }
     });
-   
+
+    $('a[href*=qu],a[href*=ci],a[href*=oor],a[href*=re],a[href*=cce]').magnificPopup({
+        type: 'inline',
+        closeBtnInside: false,
+        removalDelay: 250,
+        mainClass: 'my-mfp-zoom-in ',
+    });
+
 
     // Скрипт для анимации цифр
-    var a = 0;
-    $(window).scroll(function () {
-        var oTop = $('.indicators__item').offset().top - window.innerHeight;
+    if (window.location.pathname == "/") {
+        var a = 0;
+        $(window).scroll(function () {
+            var oTop = $('.indicators__item').offset().top - window.innerHeight;
 
-        if (a == 0 && $(window).scrollTop() > oTop + 300) {
-            $('.counter').each(function () {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 3500,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
-                    }
+            if (a == 0 && $(window).scrollTop() > oTop + 300) {
+                $('.counter').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 3500,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
                 });
-            });
-            a = 1;
-        }
-    });
+                a = 1;
+            }
+        });
+    }
 });
 
 

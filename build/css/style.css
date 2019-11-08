@@ -3361,7 +3361,7 @@ label:not(.labelFile) svg {
 
 .main--ar1 {
   position: relative;
-  z-index: -5;
+  z-index: 5;
   overflow: hidden;
   padding: 67px 30px;
   background: #FAFAFA;
@@ -3553,7 +3553,7 @@ label:not(.labelFile) svg {
 
 .main--center {
   position: relative;
-  z-index: -5;
+  z-index: 5;
   overflow: hidden;
   padding: 97px 293px;
 }
@@ -3821,6 +3821,10 @@ label:not(.labelFile) svg {
   transform: rotate(-45deg);
 }
 
+.mfp-close {
+  color: #000;
+}
+
 .modalCity {
   max-width: 1112px;
   padding: 63px 95px 82px;
@@ -4015,6 +4019,67 @@ label:not(.labelFile) svg {
 }
 
 /*============================================= */
+
+/*---------------------------------------------
+  Настройки Magnific
+--------------------------------------------- */
+
+.my-mfp-zoom-in .modalBase {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+}
+
+/* animate in */
+
+.my-mfp-zoom-in.mfp-ready .modalBase {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* animate out */
+
+.my-mfp-zoom-in.mfp-removing .modalBase {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+/* animate out */
+
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-bg {
+  background: rgba(35, 72, 90, 0.3);
+}
+
+.mfp-wrap > button {
+  display: none;
+}
 
 .rest {
   position: absolute;

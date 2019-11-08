@@ -267,6 +267,9 @@ Array.prototype.forEach.call(inputs, function (input) {
 	});
 });
 
+
+console.log(document.querySelector('.center button'))
+
 // // Аякс-запрос формы обратной связи
 
 // let form = document.querySelector('#form');

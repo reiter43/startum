@@ -33,12 +33,14 @@
                     <li><a href="articles.html">Статьи</a></li>
                 </ul>
             </nav>
-            <button class="topLine__btn">
-                <svg>
-                    <use xlink:href="img/svg/sprite.svg#markerButton"></use>
-                </svg>
-                Новосибирск
-            </button>
+            <a href="#ci">
+                <button class="topLine__btn">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#markerButton"></use>
+                    </svg>
+                    Новосибирск
+                </button>
+            </a>
             <div class="btnBase__header">
                 <button class="btnBase btnBase--header btnBase--home">
                     <svg>
@@ -101,9 +103,11 @@
                         и познает мир, ведущий в школу</p>
                 </div>
             </div>
-            <button class="btnBase">
-                <p>Оставить заявку</p>
-            </button>
+            <a href="#oor">
+                <button class="btnBase">
+                    <p>Оставить заявку</p>
+                </button>
+            </a>     
             <img src="img/images/centerMoskau.jpg" alt="Фото учебного класса">
             <h4>Преподаватели центра</h4>
             <div class="centerTeachers">
@@ -183,7 +187,138 @@
         </div>
     </footer>
 
-    <!-- <script src="js/all.js"></script> -->
+    <div id="ci" class="modal mfp-hide">
+        <div class="modalBase modalCity">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Выберите ваш город</h3>
+            <div class="modalCity__content">
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="centerMoscau.html">Москва</a></li>
+                        <li><a href="#">Санкт-Петербург </a></li>
+                        <li><a href="#">Новосибирск</a></li>
+                        <li><a href="#">Екатеринбург</a></li>
+                        <li><a href="#">Нижний Новгород</a></li>
+                        <li><a href="#">Казань</a></li>
+                    </ul>
+                </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Челябинск</a></li>
+                        <li><a href="#">Омск</a></li>
+                        <li><a href="#">Самара</a></li>
+                        <li><a href="#">Ростов-на-Дону</a></li>
+                        <li><a href="#">Уфа</a></li>
+                        <li><a href="#">Красноярск</a></li>
+                    </ul>
+                </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Воронеж</a></li>
+                        <li><a href="#">Пермь</a></li>
+                        <li><a href="#">Волгоград</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btnModal">Вашего города нет в списке?</button>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="oor" class="modal  mfp-hide">
+        <div class="modalBase modalOrder">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Оформить заявку</h3>
+            <p class="descModal">Наши специалисты изучат вашу заявку и сразу свяжутся с вами для соглашения</p>
+            <form id="formModal--order" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="name">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="phone">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="email">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg>
+                    </label>
+                    <input type="email" name="Электронная почта" id="email" class="form__email"
+                        placeholder="Электронная почта" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <select>
+                        <option>Выберите город</option>
+                        <option>Москва</option>
+                        <option>Новосибирск</option>
+                        <option>Владивосток</option>
+                        <option>Краснодар</option>
+                    </select>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <select>
+                        <option>Выберите программу</option>
+                        <option>Ментальная арифметика</option>
+                        <option>Скорочтение</option>
+                        <option>Робототехника</option>
+                        <option>Подготовка к школе</option>
+                        <option>Обучение чтению</option>
+                        <option>Английский язык</option>
+                        <option>Актерское мастерство</option>
+                        <option>Школа блогинга</option>
+                    </select>
+                </div>
+                <button class="form__button">
+                    <span>Отправить заявку</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/all.js"></script>
     <script src="js/scripts.js"></script>
 
 </body>

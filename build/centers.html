@@ -15,40 +15,42 @@
 <body>
 
     <header class="header header--inner">
-        
-            <div class="topLine topLine--inner">
-                <div class="header__burger hide">
-                    <button class="burger ">
-                        <span class="burger__line"></span>
-                        <span class="burger__line"></span>
-                    </button>
-                </div>
-                <a href="/" class="logo">
-                    <img src="img/images/logo.png" alt="" class="logo__img">
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list nav__list--inner">
-                        <li><a href="/" >Главная</a></li>                        
-                        <li><a href="#" class="active">Центры</a></li>
-                        <li><a href="articles.html">Статьи</a></li>
-                    </ul>
-                </nav>
+
+        <div class="topLine topLine--inner">
+            <div class="header__burger hide">
+                <button class="burger ">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+            <a href="/" class="logo">
+                <img src="img/images/logo.png" alt="" class="logo__img">
+            </a>
+            <nav class="nav">
+                <ul class="nav__list nav__list--inner">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="#" class="active">Центры</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                </ul>
+            </nav>
+            <a href="#ci">
                 <button class="topLine__btn">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#markerButton"></use>
                     </svg>
                     Новосибирск
                 </button>
-                <div class="btnBase__header">
-                    <button class="btnBase btnBase--header btnBase--home">
-                        <svg>
-                            <use xlink:href="img/svg/sprite.svg#answer"></use>
-                        </svg>
-                        <p>Есть вопрос?</p>
-                    </button>
-                </div>
-            </div>      
-        
+            </a>
+            <div class="btnBase__header">
+                <button class="btnBase btnBase--header btnBase--home">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#answer"></use>
+                    </svg>
+                    <p>Есть вопрос?</p>
+                </button>
+            </div>
+        </div>
+
     </header>
 
     <main class="main--centers">
@@ -156,8 +158,56 @@
         </div>
     </footer>
 
+    <div id="ci" class="modal mfp-hide">
+        <div class="modalBase modalCity">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Выберите ваш город</h3>
+            <div class="modalCity__content">
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="centerMoscau.html">Москва</a></li>
+                        <li><a href="#">Санкт-Петербург </a></li>
+                        <li><a href="#">Новосибирск</a></li>
+                        <li><a href="#">Екатеринбург</a></li>
+                        <li><a href="#">Нижний Новгород</a></li>
+                        <li><a href="#">Казань</a></li>
+                    </ul>
+                </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Челябинск</a></li>
+                        <li><a href="#">Омск</a></li>
+                        <li><a href="#">Самара</a></li>
+                        <li><a href="#">Ростов-на-Дону</a></li>
+                        <li><a href="#">Уфа</a></li>
+                        <li><a href="#">Красноярск</a></li>
+                    </ul>
+                </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Воронеж</a></li>
+                        <li><a href="#">Пермь</a></li>
+                        <li><a href="#">Волгоград</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btnModal">Вашего города нет в списке?</button>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
 
-    <!-- <script src="js/all.js"></script> -->
+
+    <script src="js/all.js"></script>
     <script src="js/scripts.js"></script>
 
 </body>
