@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 // Липкая шапка
-if (window.location.pathname == "/") {
+if (window.location.pathname == "/smartum/index.html") {
 	window.onscroll = function () {
 		let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 		let fix = document.querySelector('.topLine--home');
@@ -259,6 +259,7 @@ buttons.forEach(elem => {
 
 // Стилизация инпут-файл
 let inputs = document.querySelectorAll('.form__file');
+
 Array.prototype.forEach.call(inputs, function (input) {
 	let label = input.nextElementSibling;
 
@@ -267,28 +268,49 @@ Array.prototype.forEach.call(inputs, function (input) {
 	});
 });
 
+// Аякс-запрос формы обратной связи
+let forms = document.querySelectorAll('.formAll');
 
-console.log(document.querySelector('.center button'))
+forms.forEach(elem => {
+	elem.onsubmit = function (event) {
+		event.preventDefault();
 
-// // Аякс-запрос формы обратной связи
+		let formData = new FormData(elem);
 
-// let form = document.querySelector('#form');
+		let xhttp = new XMLHttpRequest();
+		xhttp.open('POST', 'mail.php');
+		xhttp.send(formData);
 
-// form.onsubmit = function (event) { 
-//     event.preventDefault();
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				elem.reset();
+				document.querySelector('#thanks').classList.remove('mfp-hide');
+				document.querySelector('#closeModal').onclick = function () {
+					document.querySelector('#thanks').classList.add('mfp-hide');
+				}
+			}
+		}
+	}
+})
 
-//     let formData = new FormData(form);    
 
-//     let xhttp = new XMLHttpRequest(); 
-//     xhttp.open('POST', 'mail.php'); 
-//     xhttp.send(formData); 
+let city = document.querySelectorAll('.modalCity__content a');
 
-//     xhttp.onreadystatechange = function () { 
-//         if (this.readyState == 4 && this.status == 200) {
-//             form.reset();             
-//             chips('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся', 5000);
-//         }
-//     }    
-// }
-// /*==================================================================*/
+city.forEach(elem => {
+	elem.onclick = (event) =>{
+		event.preventDefault();
+		;
+		document.querySelector('.topLine__btn span').innerText = elem.innerText;
+		document.querySelector('#ci').classList.add('mfp-hide');
+		
+		// document.querySelector('html').style.marginRight = '0';
+		// document.querySelector('html').style.overflow = 'visible';
+		// document.querySelector('.mfp-bg').parentNode.removeChild(document.querySelector('.mfp-bg'));
+	}
+	document.querySelector('.btnModal').onclick = () =>{
+		document.querySelector('#ci').classList.add('mfp-hide');
+		document.querySelector('#cce').classList.remove('mfp-hide');	
+	}
+})
+
 

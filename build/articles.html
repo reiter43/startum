@@ -22,31 +22,33 @@
                     <span class="burger__line"></span>
                 </button>
             </div>
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <img src="img/images/logo.png" alt="" class="logo__img">
             </a>
             <nav class="nav">
                 <ul class="nav__list nav__list--inner">
-                    <li><a href="/">Главная</a></li>
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="centers.html">Центры</a></li>
                     <li><a href="#" class="active">Статьи</a></li>
                 </ul>
             </nav>
-            <a href="#ci">
-                <button class="topLine__btn">
-                <svg>
-                    <use xlink:href="img/svg/sprite.svg#markerButton"></use>
-                </svg>
-                Новосибирск
-            </button>
-            </a>            
-            <div class="btnBase__header">
-                <button class="btnBase btnBase--header">
+            <a href="#qu">
+                <button class="btnBase btnBase--header btnBase--home">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#answer"></use>
                     </svg>
-                    <p>Есть вопрос?</p>
+                    <span>Есть вопрос?</span>
                 </button>
+            </a>
+            <div class="btnBase__header">
+                <a href="#qu">
+                    <button class="btnBase btnBase--header btnBase--home">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#answer"></use>
+                        </svg>
+                        <span>Есть вопрос?</span>
+                    </button>
+                </a>
             </div>
         </div>
     </header>
@@ -63,59 +65,59 @@
         </div>
         <div class="articles__content">
             <a href="ar1.html" class="metodsItem metodsItem--article cat1">
-                <figure>
+                <div class="metodsItem__img">
                     <img src="img/images/article1.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>О развитии</span>
             </a>
             <a href="#" class="metodsItem metodsItem--article cat1">
-                <figure>
+                <div class="metodsItem__img">
                     <img src="img/images/article2.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>О развитии</span>
             </a>
             <a class="metodsItem metodsItem--article cat3">
-                <figure>
+                 <div class="metodsItem__img">
                     <img src="img/images/article3.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>О коммуникации</span>
             </a>
             <a class="metodsItem metodsItem--article cat3">
-                <figure>
+                 <div class="metodsItem__img">
                     <img src="img/images/article4.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>О коммуникации</span>
             </a>
             <a class="metodsItem metodsItem--article cat2">
-                <figure>
+                 <div class="metodsItem__img">
                     <img src="img/images/article5.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>О воспитании</span>
             </a>
             <a class="metodsItem metodsItem--article cat2">
-                <figure>
+                 <div class="metodsItem__img">
                     <img src="img/images/article6.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>О воспитании</span>
             </a>
             <a class="metodsItem metodsItem--article cat4">
-                <figure>
+                 <div class="metodsItem__img">
                     <img src="img/images/article7.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>Об образовании</span>
             </a>
             <a class="metodsItem metodsItem--article cat5">
-                <figure>
+                 <div class="metodsItem__img">
                     <img src="img/images/article8.jpg" alt="Картинка-превью статьи">
-                    <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                </figure>
+                    <span>Как действительно правильно воспитать ребенка?</span>
+                </div>
                 <span>4 дня назад</span><span>Другое</span>
             </a>
         </div>
@@ -161,52 +163,111 @@
     </footer>
 
     <div id="ci" class="modal mfp-hide">
-            <div class="modalBase modalCity">
-                <div class="rest8">
-                    <div class="restYellow14"></div>
-                    <div class="restYellow15"></div>
+        <div class="modalBase modalCity">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Выберите ваш город</h3>
+            <div class="modalCity__content">
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="centerMoscau.html">Москва</a></li>
+                        <li><a href="#">Санкт-Петербург </a></li>
+                        <li><a href="#">Новосибирск</a></li>
+                        <li><a href="#">Екатеринбург</a></li>
+                        <li><a href="#">Нижний Новгород</a></li>
+                        <li><a href="#">Казань</a></li>
+                    </ul>
                 </div>
-                <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-                <svg>
-                    <use xlink:href="img/svg/sprite.svg#iconModal"></use>
-                </svg>
-                <h3 class="titleModal">Выберите ваш город</h3>
-                <div class="modalCity__content">
-                    <div class="modalCity__col">
-                        <ul>
-                            <li><a href="centerMoscau.html">Москва</a></li>
-                            <li><a href="#">Санкт-Петербург </a></li>
-                            <li><a href="#">Новосибирск</a></li>
-                            <li><a href="#">Екатеринбург</a></li>
-                            <li><a href="#">Нижний Новгород</a></li>
-                            <li><a href="#">Казань</a></li>
-                        </ul>
-                    </div>
-                    <div class="modalCity__col">
-                        <ul>
-                            <li><a href="#">Челябинск</a></li>
-                            <li><a href="#">Омск</a></li>
-                            <li><a href="#">Самара</a></li>
-                            <li><a href="#">Ростов-на-Дону</a></li>
-                            <li><a href="#">Уфа</a></li>
-                            <li><a href="#">Красноярск</a></li>
-                        </ul>
-                    </div>
-                    <div class="modalCity__col">
-                        <ul>
-                            <li><a href="#">Воронеж</a></li>
-                            <li><a href="#">Пермь</a></li>
-                            <li><a href="#">Волгоград</a></li>
-                        </ul>
-                    </div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Челябинск</a></li>
+                        <li><a href="#">Омск</a></li>
+                        <li><a href="#">Самара</a></li>
+                        <li><a href="#">Ростов-на-Дону</a></li>
+                        <li><a href="#">Уфа</a></li>
+                        <li><a href="#">Красноярск</a></li>
+                    </ul>
                 </div>
-                <button class="btnModal">Вашего города нет в списке?</button>
-                <div class="rest9">
-                    <div class="restBlue8"></div>
-                    <div class="restYellow16"></div>
+                <div class="modalCity__col">
+                    <ul>
+                        <li><a href="#">Воронеж</a></li>
+                        <li><a href="#">Пермь</a></li>
+                        <li><a href="#">Волгоград</a></li>
+                    </ul>
                 </div>
             </div>
+            <button class="btnModal">Вашего города нет в списке?</button>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
         </div>
+    </div>
+
+    <div id='qu' class="modal  mfp-hide">
+        <div class="modalBase modalQuest">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Наши специалисты <br> ответят на все вопросы!</h3>
+            <form id="formModal--quest" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="name">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label for="phone">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label class="textareaModal" for="answer">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
+                        </svg>
+                    </label>
+                    <textarea name="Объект" id="answer" class="form__subject" placeholder="Опишите ваш вопрос"
+                        required></textarea>
+                </div>
+                <button class="form__button">
+                    <span>Жду звонка</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/all.js"></script>
     <script src="js/scripts.js"></script>

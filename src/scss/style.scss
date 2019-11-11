@@ -83,8 +83,8 @@ body {
 	border: none;
 	cursor: pointer;
 
-	p {
-
+	p,
+	span {
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 160%;
@@ -134,6 +134,7 @@ body {
 .visible {
 	display: block;
 }
+
 
 /*============================================= */
 
@@ -386,7 +387,8 @@ body {
 		}
 	}
 
-	p {
+	p,
+	span {
 		@include md-block {
 			display: none;
 		}
@@ -415,7 +417,8 @@ body {
 		margin-top: 20px;
 	}
 
-	p {
+	p,
+	span {
 		@include xs-block {
 			font-size: 3.7vw;
 		}
@@ -721,7 +724,9 @@ body {
 		}
 
 		.btnBase--mostly {
-			p {
+
+			p,
+			span {
 				@include xxs-block {
 					font-size: 14px;
 				}
@@ -1001,11 +1006,12 @@ body {
 		}
 
 		@include xxs-block {
+			width: 90%;
 			margin: 0 auto;
 			margin-top: 26px;
 			padding: 14px 20px;
 
-			p {
+			span {
 				font-size: 14px;
 			}
 		}
@@ -1247,9 +1253,10 @@ body {
 		display: none;
 	}
 
-	P {
+	P,
+	span {
 		margin-bottom: 0;
-		;
+		font-size: 14px;
 		font-weight: 600;
 		line-height: 1.3;
 	}
@@ -1498,7 +1505,8 @@ label:not(.labelFile) {
 			margin-top: 0;
 		}
 
-		p {
+		p,
+		span {
 			font-weight: 600;
 			font-size: 18px;
 			line-height: 160%;
@@ -1766,7 +1774,8 @@ label:not(.labelFile) {
 				}
 			}
 
-			figaption {
+			figaption,
+			.reviewsItem__desc {
 
 				@include xs-block {
 					min-width: 160px;
@@ -2121,6 +2130,10 @@ label:not(.labelFile) {
 				width: 60%;
 				margin-left: 0;
 			}
+
+			@include xs-block {
+				min-width: 290px;
+			}
 		}
 
 		div:first-child {
@@ -2302,7 +2315,8 @@ label:not(.labelFile) {
 				bottom: -85%;
 			}
 
-			p {
+			p,
+			span {
 				font-size: 16px;
 
 				@include md-block {
@@ -2682,15 +2696,17 @@ label:not(.labelFile) {
 		}
 	}
 
-	&>button {
+	&>button,
+	&>a {
 		display: block;
+		max-width: 315px;
 		margin: 53px auto 0;
 
 		@include xs-block {
 			width: 80%;
 		}
 
-		p {
+		&>span {
 			@include xs-block {
 				font-size: 14px;
 			}
@@ -2699,10 +2715,12 @@ label:not(.labelFile) {
 }
 
 .metodsItem {
+	display: block;
 	padding-bottom: 32px;
 	background: #FFFFFF;
 	border-radius: 12px;
 	box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+	color: #000;
 
 	@include llg-block {
 		padding-bottom: 20px;
@@ -2716,11 +2734,11 @@ label:not(.labelFile) {
 		outline: none;
 	}
 
-	figure {
+	figure,
+	.metodsItem__img {
 		width: 100%;
 		margin: 0;
 		padding: 0;
-		color: #000;
 
 		img {
 			display: block;
@@ -2729,7 +2747,8 @@ label:not(.labelFile) {
 			border-radius: 12px 12px 0 0;
 		}
 
-		figaption {
+		figaption,
+		&>span {
 			display: inline-block;
 			margin: 29px 10px 8px 20px;
 			font-weight: 600;
@@ -3146,6 +3165,11 @@ label:not(.labelFile) {
 	@include xs-block {
 		padding: 33px 15px;
 	}
+
+	.btnBase__header {
+		display: none;
+	}
+
 }
 
 .nav .nav__list--inner {
@@ -3564,31 +3588,32 @@ label:not(.labelFile) {
 			width: 100%;
 		}
 
-		figure {
+		.centersContent__img {
 			margin: 20px 10px;
-		}
 
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-			margin-bottom: 20px;
-		}
 
-		figaption {
-			font-weight: 600;
-			font-size: 18px;
-			line-height: 150%;
-			color: #000;
-
-			@include lg-block {
-				font-size: 16px;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				margin-bottom: 20px;
 			}
 
-			@include md-block {
-				font-size: 14px;
-			}
+			span {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 150%;
+				color: #000;
 
+				@include lg-block {
+					font-size: 16px;
+				}
+
+				@include md-block {
+					font-size: 14px;
+				}
+
+			}
 		}
 	}
 }
@@ -3604,6 +3629,9 @@ label:not(.labelFile) {
 	overflow: hidden;
 	padding: 97px 293px;
 
+	@include lllg-block {
+		padding: 97px 200px;
+	}
 	@include llg-block {
 		padding: 97px 140px;
 	}
@@ -3620,7 +3648,7 @@ label:not(.labelFile) {
 		border-radius: 12px;
 		color: #000;
 
-		@include llg-block {
+		@include lllg-block {
 			padding: 64px 46px;
 		}
 
@@ -3657,8 +3685,6 @@ label:not(.labelFile) {
 	}
 }
 
-
-
 .centerContact {
 	display: flex;
 	justify-content: space-between;
@@ -3684,7 +3710,8 @@ label:not(.labelFile) {
 		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
 		border-radius: 12px;
 
-		@include llg-block {
+		@include lllg-block {
+			min-width: 264px;
 			padding: 55px 25px;
 		}
 
@@ -3715,7 +3742,7 @@ label:not(.labelFile) {
 			font-size: 16px;
 			line-height: 150%;
 
-			@include llg-block {
+			@include lllg-block {
 				font-size: 13px;
 			}
 
@@ -3852,7 +3879,7 @@ label:not(.labelFile) {
 		justify-content: center;
 	}
 
-	figure {
+	&__item {
 		width: 17%;
 		margin: 0;
 		text-align: center;
@@ -3872,7 +3899,7 @@ label:not(.labelFile) {
 			margin-bottom: 22px;
 		}
 
-		figaption {
+		div {
 			p {
 				font-weight: 500;
 				font-size: 22px;

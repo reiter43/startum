@@ -23,12 +23,12 @@
                         <span class="burger__line"></span>
                     </button>
                 </div>
-                <a href="/" class="logo">
+                <a href="index.html" class="logo">
                     <img src="img/images/logo.png" alt="Логотип" class="logo__img">
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="/" class="active">Главная</a></li>
+                        <li><a href="index.html" class="active">Главная</a></li>
                         <li><a href="#anchor1">О нас</a></li>
                         <li><a href="#anchor2">География</a></li>
                         <li><a href="centers.html">Центры</a></li>
@@ -45,7 +45,7 @@
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#markerButton"></use>
                         </svg>
-                        Новосибирск
+                        <span>Новосибирск</span>
                     </button>
                 </a>
                 <div class="btnBase__header">
@@ -54,7 +54,7 @@
                             <svg>
                                 <use xlink:href="img/svg/sprite.svg#answer"></use>
                             </svg>
-                            <p>Есть вопрос?</p>
+                            <span>Есть вопрос?</span>
                         </button>
                     </a>
                 </div>
@@ -64,7 +64,7 @@
             </h1>
             <a href="#oor">
                 <button class="btnBase btnBase--downHeader">
-                    <p>Записаться на бесплатное занятие</p>
+                    <span>Записаться на бесплатное занятие</span>
                 </button>
             </a>
             <a href="https://www.youtube.com/embed/-WojDLuRBo4" class="btnVideo__wrapper" target="blank">
@@ -127,10 +127,10 @@
                             вовлекаем детей, что позволяет получить максимальную пользу от обучения</p>
                         <a href="#qu">
                             <button class="btnBase btnBase--mostly">
-                                <p>Получить презентацию</p>
+                                <span>Получить презентацию</span>
                             </button>
                         </a>
-                        <img data-src="img/images/class.jpg" alt="Фото учебного класса">
+                        <img src='#' data-src="img/images/class.jpg" alt="Фото учебного класса">
                         <img src="img/images/collaborator.jpg" alt="Фото сотрудницы">
                         <p>Методики обучения, которые используются в центраx StartUm, успешно применяются в ведущиx
                             развитыx странаx</p>
@@ -164,7 +164,7 @@
         </section>
 
         <section id="anchor2" class="map">
-            <img data-src="img/images/map.jpg"
+            <img src='#' data-src="img/images/map.jpg"
                 src="data:image/gif;base64,R0lGODlhwABxAIAAAP///wAAACH5BAEAAAEALAAAAADAAHEAAAK2jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT3NWgAAOw=="
                 alt="Карта расположения центров по городам">
             <div class="map__content">
@@ -222,7 +222,7 @@
                     </div>
                     <a href="#oor">
                         <button class="btnBase btnBase--program">
-                            <p>Записаться на бесплатное занятие</p>
+                            <span>Записаться на бесплатное занятие</span>
                         </button>
                     </a>
                 </div>
@@ -246,7 +246,7 @@
                     </div>
                     <a href="#oor">
                         <button class="btnBase btnBase--program">
-                            <p>Записаться на бесплатное занятие</p>
+                            <span>Записаться на бесплатное занятие</span>
                         </button>
                     </a>
                 </div>
@@ -270,7 +270,7 @@
                     </div>
                     <a href="#oor">
                         <button class="btnBase btnBase--program">
-                            <p>Записаться на бесплатное занятие</p>
+                            <span>Записаться на бесплатное занятие</span>
                         </button>
                     </a>
                 </div>
@@ -353,7 +353,7 @@
             </div>
             <a href="#oor">
                 <button class="btnBase btnBase--program">
-                    <p>Записаться на бесплатное занятие</p>
+                    <span>Записаться на бесплатное занятие</span>
                 </button>
             </a>
             <div class="rest4">
@@ -371,38 +371,37 @@
             </div>
             <h2 class="titleSection">Появился вопрос по направлениям?</h2>
             <p>Расскажем все подробно в письме</p>
-            <form id="formAnswer" class="formAnswer__form">
+            <form id="formAnswer" class="formAll formAnswer__form">
                 <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/startum">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
-                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
+                <input type="hidden" name="form_subject" value="Сайт смартум. Форма на главной: вопрос по направлениям">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper">
-                    <label for="name">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Введите ваше имя" required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Введите ваше имя" required>
                 </div>
                 <div class="input__wrapper">
-                    <label for="email">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" id="email" class="form__email"
-                        placeholder="Электронная почта" required>
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                        required>
                 </div>
                 <div class="input__wrapper">
-                    <label for="answer">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Объект" id="answer" class="form__subject" placeholder="Опишите ваш вопрос"
-                        required>
+                    <input type="text" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required>
                 </div>
                 <button class="form__button">
                     <span>Отправить</span>
@@ -450,7 +449,7 @@
                             <div class="img__wrapper">
                                 <img src="img/images/fhotoSliderReviews1.png" alt="Фото автора отзыва">
                             </div>
-                            <figaption>
+                            <div class="reviewsItem__desc">
                                 <h4>Евгений Кичигин</h4>
                                 <p>Папа Василия, 8 лет</p>
                                 <p>Учится в STARTUM:<br> <span>4 месяца</span> </p>
@@ -459,10 +458,63 @@
                                     <li>Робототехника</li>
                                     <li>Подготовка к школе</li>
                                 </ul>
-                            </figaption>
+                            </div>
                         </figure>
                         <div class="videoSlider__wrapper">
-                            <img data-src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
+                            <img src='#' data-src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
+                                alt="Заставка видеоролика отзыва">
+                            <div class="btnVideoSlider__wrapper">
+                                <div class="btnVideoEllipse1">
+                                    <div class="btnVideoEllipse2">
+                                        <div class="btnVideoEllipse3">
+                                            <div class="btnVideoSlider">
+                                                <img class="btnVideoSlider__img" src="img/images/playArrowSlider.svg"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviewsItem">
+                    <div class="reviewsItem__block1">
+                        <blockquote>
+                            Startum для нас – это семейный бизнес, ведем его совместно с супругой. На этапе
+                            принятия решения о сотрудничестве с данной франшизой было много сомнений. Но после
+                            общения с основателем проекта, когда мы поняли его видение, все сомнения отпали.
+                            <svg>
+                                <use xlink:href="img/svg/sprite.svg#quote"></use>
+                            </svg>
+                        </blockquote>
+                        <h3>Это то, что было нужно!</h3>
+                        <p>Startum для нас – это семейный бизнес, ведем его совместно с супругой. Признаюсь, на этапе
+                            принятия решения о сотрудничестве с данной франшизой было много сомнений. Но после общения с
+                            основателем проекта, когда мы поняли его видение, его цели, все сомнения
+                            отпали.</p>
+                        <p>На этапе запуска оказывалась постоянная поддержка и в плане подбора помещения, доставки
+                            мебели и оборудования...</p>
+                        <button>Показать отзыв полностью</button>
+                    </div>
+                    <div class="reviewsItem__block2">
+                        <figure>
+                            <div class="img__wrapper">
+                                <img src="img/images/fhotoSliderReviews1.png" alt="Фото автора отзыва">
+                            </div>
+                            <div class="reviewsItem__desc">
+                                <h4>Евгений Кичигин</h4>
+                                <p>Папа Василия, 8 лет</p>
+                                <p>Учится в STARTUM:<br> <span>4 месяца</span> </p>
+                                <h6>Направления:</h6>
+                                <ul>
+                                    <li>Робототехника</li>
+                                    <li>Подготовка к школе</li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="videoSlider__wrapper">
+                            <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
                                 alt="Заставка видеоролика отзыва">
                             <div class="btnVideoSlider__wrapper">
                                 <div class="btnVideoEllipse1">
@@ -504,7 +556,7 @@
                             <div class="img__wrapper">
                                 <img src="img/images/fhotoSliderReviews1.png" alt="Фото автора отзыва">
                             </div>
-                            <figaption>
+                            <div class="reviewsItem__desc">
                                 <h4>Евгений Кичигин</h4>
                                 <p>Папа Василия, 8 лет</p>
                                 <p>Учится в STARTUM:<br> <span>4 месяца</span> </p>
@@ -513,61 +565,7 @@
                                     <li>Робототехника</li>
                                     <li>Подготовка к школе</li>
                                 </ul>
-                            </figaption>
-                        </figure>
-                        <div class="videoSlider__wrapper">
-                            <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
-                                alt="Заставка видеоролика отзыва">
-                            <div class="btnVideoSlider__wrapper">
-                                <div class="btnVideoEllipse1">
-                                    <div class="btnVideoEllipse2">
-                                        <div class="btnVideoEllipse3">
-                                            <div class="btnVideoSlider">
-                                                <img class="btnVideoSlider__img" src="img/images/playArrowSlider.svg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="reviewsItem">
-                    <div class="reviewsItem__block1">
-                        <blockquote>
-                            Startum для нас – это семейный бизнес, ведем его совместно с супругой. На этапе
-                            принятия решения о сотрудничестве с данной франшизой было много сомнений. Но после
-                            общения с основателем проекта, когда мы поняли его видение, все сомнения отпали.
-                            <svg>
-                                <use xlink:href="img/svg/sprite.svg#quote"></use>
-                            </svg>
-                        </blockquote>
-                        <h3>Это то, что было нужно!</h3>
-                        <p>Startum для нас – это семейный бизнес, ведем его совместно с супругой. Признаюсь, на этапе
-                            принятия решения о сотрудничестве с данной франшизой было много сомнений. Но после общения с
-                            основателем проекта, когда мы поняли его видение, его цели, все сомнения
-                            отпали.</p>
-                        <p>На этапе запуска оказывалась постоянная поддержка и в плане подбора помещения, доставки
-                            мебели и оборудования...</p>
-                        <button>Показать отзыв полностью</button>
-                    </div>
-                    <div class="reviewsItem__block2">
-                        <figure>
-                            <div class="img__wrapper">
-                                <img src="img/images/fhotoSliderReviews1.png" alt="Фото автора отзыва">
-                            </div>
-                            <figaption>
-                                <h4>Евгений Кичигин</h4>
-                                <p>Папа Василия, 8 лет</p>
-                                <p>Учится в STARTUM:<br> <span>4 месяца</span> </p>
-                                <h6>Направления:</h6>
-                                <ul>
-                                    <li>Робототехника</li>
-                                    <li>Подготовка к школе</li>
-                                </ul>
-                            </figaption>
                         </figure>
                         <div class="videoSlider__wrapper">
                             <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
@@ -611,7 +609,7 @@
                             <div class="img__wrapper">
                                 <img src="img/images/fhotoSliderReviews1.png" alt="Фото автора отзыва">
                             </div>
-                            <figaption>
+                            <div class="reviewsItem__desc">
                                 <h4>Евгений Кичигин</h4>
                                 <p>Папа Василия, 8 лет</p>
                                 <p>Учится в STARTUM:<br> <span>4 месяца</span> </p>
@@ -620,7 +618,7 @@
                                     <li>Робототехника</li>
                                     <li>Подготовка к школе</li>
                                 </ul>
-                            </figaption>
+                            </div>
                         </figure>
                         <div class="videoSlider__wrapper">
                             <img src="img/images/fhotoSliderReviews2.png" class="videoSlider__img"
@@ -643,7 +641,7 @@
             </div>
             <a href="#re">
                 <button class="btnBase btnBase--reviews">
-                    <p>Написать свой отзыв</p>
+                    <span>Написать свой отзыв</span>
                 </button>
             </a>
         </section>
@@ -694,57 +692,59 @@
                             <li><button data-center="rnd">Ростов-на-Дону</button></li>
                             <li><button data-center="nin">Нижний Новгород</button></li>
                             <li><button data-center="kaz">Казань</button></li>
-                            <li><button data-center="vor">Воронеж</button</li> </ul> <a href="#cce">
-                                    <button class="btnBase">
-                                        <p>Открыть в своем городе</p>
-                                    </button>
-                                    </a>
+                            <li><button data-center="vor">Воронеж</button></li>
+                        </ul>
+                        <a href="#cce">
+                            <button class="btnBase">
+                                <span>Открыть в своем городе</span>
+                            </button>
+                        </a>
                     </div>
                     <div class="mapContacts">
                         <p>Выберите город<br>для просмотра карты<br>расположения центра</p>
-                        <iframe class="msc" src=""
+                        <iframe class="msc"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d577325.348415308!2d36.82509701532534!3d55.58152434359988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1571064872471!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="spb" src=""
+                        <iframe class="spb"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.001690396!2d30.361351815618914!3d59.94870616824908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696319d0e2cd5df%3A0x8d38878f7015454e!2z0KjQv9Cw0LvQtdGA0L3QsNGPINGD0LsuLCA0MSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTEyMw!5e0!3m2!1sru!2sru!4v1571242081547!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="kgd" src=""
+                        <iframe class="kgd"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.9066336124624!2d20.505527215375757!3d54.711265779299566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e3161ab2b6e57b%3A0x16cbc0ff65734f56!2z0JrQsNC70LjQvdC40L3Qs9GA0LDQtCDQn9C70LDQt9Cw!5e0!3m2!1sru!2sru!4v1571251666777!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="kuf" src=""
+                        <iframe class="kuf"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.551564481792!2d57.75908923048376!3d56.619065036153195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c2c60966c52c93%3A0x58c35fe69faf20cb!2z0JrRgNCw0YHQvdC-0YPRhNC40LzRgdC6LCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571252858643!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="vlv" src=""
+                        <iframe class="vlv"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186220.6477913151!2d131.89575106533513!3d43.17387094485274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb39cba5249d485%3A0x186704d4dd967e35!2z0JLQu9Cw0LTQuNCy0L7RgdGC0L7Quiwg0J_RgNC40LzQvtGA0YHQutC40Lkg0LrRgNCw0Lk!5e0!3m2!1sru!2sru!4v1571255547681!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="krk" src=""
+                        <iframe class="krk"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84942.31856294758!2d92.67639105842204!3d55.98200637631422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7b369fde42eaf%3A0x84fc4892aa679f6c!2z0JrRgNCw0YHQvdC-0Y_RgNGB0LrQuNC1INGB0YLQvtC70LHRiw!5e0!3m2!1sru!2sru!4v1571256836599!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="ufa" src=""
+                        <iframe class="ufa"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d74090.64675756524!2d55.8267264525764!3d54.52762876328074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d91f809495f783%3A0x69c1f9def7afb091!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1571257112880!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="ekb" src=""
+                        <iframe class="ekb"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114037.32806968356!2d60.52424379781486!3d56.86220976899663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c2fb6528a2d%3A0x9ec1f3208b28ab41!2z0JrQvtC80L_RjNGO0YLQtdGA0L3QsNGPINGI0LrQvtC70LAg0KPRgNCk0KM!5e0!3m2!1sru!2sru!4v1571257319964!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="che" src=""
+                        <iframe class="che"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44634.45597478718!2d61.40897668588026!3d55.1652737809414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed668f3bdeb7%3A0xd85bccbaccb76090!2z0JvQtdC00L7QstGL0Lkg0JTQstC-0YDQtdGGINCh0L_QvtGA0YLQsCDQotGA0LDQutGC0L7RgA!5e0!3m2!1sru!2sru!4v1571257579104!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="oms" src=""
+                        <iframe class="oms"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293026.2089317565!2d73.07595501466203!3d54.98594804256375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafde2f601090b%3A0x5eefc33861a69b1a!2z0J7QvNGB0LosINCe0LzRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1571257680234!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="sam" src=""
+                        <iframe class="sam"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305483.92868536455!2d49.91789176207982!3d53.26099038616022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571257834265!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="rnd" src=""
+                        <iframe class="rnd"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173294.152335792!2d39.48791458566386!3d47.26115615588457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2z0KDQvtGB0YLQvtCyLdC90LAt0JTQvtC90YMsINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1571257936894!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="nin" src=""
+                        <iframe class="nin"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141705.12532385887!2d43.7866614359637!3d56.29285148058397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5f9ee033251%3A0x28d3c0cf849657aa!2z0J3QuNC20L3QuNC5INCd0L7QstCz0L7RgNC-0LQsINCd0LjQttC10LPQvtGA0L7QtNGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1571258023231!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="kaz" src=""
+                        <iframe class="kaz"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287086.8158826498!2d48.79311970940667!3d55.79556904107665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1571258116639!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
-                        <iframe class="vor" src=""
+                        <iframe class="vor"  src="https://fakeimg.pl/1/"
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316560.47003178234!2d39.0510679593414!3d51.69409039544379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413b2f5ce874e813%3A0x48d94c0efba762bd!2z0JLQvtGA0L7QvdC10LYsINCS0L7RgNC-0L3QtdC20YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571258197095!5m2!1sru!2sru"
                             allowfullscreen=""></iframe>
                     </div>
@@ -923,7 +923,7 @@
             </div>
             <a href="#qu">
                 <button class="btnBase">
-                    <p>Задайте свой вопрос</p>
+                    <span>Задайте свой вопрос</span>
                 </button>
             </a>
         </section>
@@ -932,7 +932,7 @@
             <h2 class="titleSection">Посмотрите, как выглядят наши центры!</h2>
             <p class="descSection">Пройдите 3D-тур по центру в г. Москва</p>
             <div class="centers__video">
-                <img data-src="img/images/poster.png" alt="Заставка к видеоролику">
+                <img src='#' data-src="img/images/poster.png" alt="Заставка к видеоролику">
                 <div class="btnVideo__wrapperCenters">
                     <div class="btnVideo__ellipse1">
                         <div class="btnVideo__ellipse2">
@@ -962,61 +962,60 @@
                 </a>
                 <div class="metods__slider owl-carousel">
                     <a href="ar1.html" class="metodsItem">
-                        <figure>
+                        <div class="metodsItem__img">
                             <img src="img/images/metods1.jpg" alt="Картинка-превью статьи">
-                            <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                        </figure>
+                            <span>Как действительно правильно воспитать ребенка?</span>
+                        </div>
                         <span>4 дня назад</span>
                         <span>О воспитании</span>
                     </a>
                     <a href="#" class="metodsItem">
-                        <figure>
+                        <div class="metodsItem__img">
                             <img src="img/images/metods2.jpg" alt="Картинка-превью статьи">
-                            <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                        </figure>
+                            <span>Как действительно правильно воспитать ребенка?</span>
+                        </div>
                         <span>4 дня назад</span>
                         <span>О коммуникации</span>
                     </a>
-                    <div class="metodsItem">
-                        <figure>
+                    <a href="#" class="metodsItem">
+                        <div class="metodsItem__img">
                             <img src="img/images/metods3.jpg" alt="Картинка-превью статьи">
-                            <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                        </figure>
+                            <span>Как действительно правильно воспитать ребенка?</span>
+                        </div>
                         <span>4 дня назад</span>
                         <span>О развитии</span>
-                    </div>
-                    <div class="metodsItem">
-                        <figure>
+                    </a>
+                    <a href="#" class="metodsItem">
+                        <div class="metodsItem__img">
                             <img src="img/images/metods4.jpg" alt="Картинка-превью статьи">
-                            <figaption>Как действительно
-                                правильно воспитать ребенка?</figaption>
-                        </figure>
+                            <span>Как действительно правильно воспитать ребенка?</span>
+                        </div>
                         <span>4 дня назад</span>
                         <span>Об образовании</span>
-                    </div>
-                    <div class="metodsItem">
-                        <figure>
+                    </a>
+                    <a href="#" class="metodsItem">
+                        <div class="metodsItem__img">
                             <img src="img/images/metods1.jpg" alt="Картинка-превью статьи">
-                            <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                        </figure>
+                            <span>Как действительно правильно воспитать ребенка?</span>
+                        </div>
                         <span>4 дня назад</span>
                         <span>О воспитании</span>
-                    </div>
-                    <div class="metodsItem">
-                        <figure>
+                    </a>
+                    <a href="#" class="metodsItem">
+                        <div class="metodsItem__img">
                             <img src="img/images/metods2.jpg" alt="Картинка-превью статьи">
-                            <figaption>Как действительно правильно воспитать ребенка?</figaption>
-                        </figure>
+                            <span>Как действительно правильно воспитать ребенка?</span>
+                        </div>
                         <span>4 дня назад</span>
                         <span>О воспитании</span>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <button class="btnBase">
-                <a href="articles.html">
-                    <p>Показать все статьи</p>
+           
+                <a href="articles.html" class="btnBase">
+                    <span>Показать все статьи</span>
                 </a>
-            </button>
+            
             <div class="rest4">
                 <div class="restYellow5"></div>
                 <div class="restBlue4"></div>
@@ -1074,20 +1073,20 @@
             </div>
             <h2 class="titleSection">У вас возникли вопросы? Задайте иx нам!</h2>
             <p class="descSection">Наши специалисты свяжутся с вами в течении часа</p>
-            <form id="formQuest" class="formQuest__form">
+            <form id="formQuest" class="formAll formQuest__form">
                 <!-- Hidden Required Fields -->
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
-                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
+                <input type="hidden" name="form_subject" value="Сайт стартум. Форма захвата телефона">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper">
-                    <label for="phone">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <button class="form__button">
                     <span>Отправить</span>
@@ -1208,34 +1207,32 @@
                 <!-- Hidden Required Fields -->
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
-                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
+                <input type="hidden" name="form_subject" value="Сайт смартум. Вопрос с модальной формы">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="name">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
-                        required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="phone">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label class="textareaModal" for="answer">
+                    <label class="textareaModal">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <textarea name="Объект" id="answer" class="form__subject" placeholder="Опишите ваш вопрос"
-                        required></textarea>
+                    <textarea name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required></textarea>
                 </div>
                 <button class="form__button">
                     <span>Жду звонка</span>
@@ -1269,33 +1266,32 @@
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
                 <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <input type="hidden" name="form_subject" value="Сайт смартум. Заявка на программу">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="name">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
-                        required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="phone">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="email">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" id="email" class="form__email"
-                        placeholder="Электронная почта" required>
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                        required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
                     <select>
@@ -1334,20 +1330,19 @@
         </div>
     </div>
 
-    <div class="modal  mfp-hide">
+    <div id="thanks" class="modal  mfp-hide" role="alert">
         <div class="modalBase modalThanks">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
             <h3 class="titleModal">Заявка отправлена!</h3>
             <p class="descModal">Вы успешно отправили запрос, в ближайшее время наши специалисты свяжутся с вами для
                 консультации по номеру +7 912 520 64 40</p>
-            <button class="btnModal">Свернуть оповещение</button>
+            <button id="closeModal" class="btnModal">Свернуть оповещение</button>
             <div class="rest9">
                 <div class="restBlue8"></div>
                 <div class="restYellow16"></div>
@@ -1372,39 +1367,38 @@
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
                 <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <input type="hidden" name="form_subject" value="Сайт смартум. Добавить отзыв">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="name">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
-                        required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="email">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" id="email" class="form__email"
-                        placeholder="Электронная почта" required>
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                        required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label class="textareaModal" for="answer">
+                    <label class="textareaModal">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <textarea name="Объект" id="answer" class="form__subject" placeholder="Напишите свой отзыв..."
+                    <textarea name="Отзыв" class="form__subject" placeholder="Напишите свой отзыв..."
                         required></textarea>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <input type="file" name="Прикрепить" id="file" class="form__file" required>
-                    <label for="file" class="labelFile">
-                        <span>Прикпепите файл</span>
+                    <input type="file" name="Прикреплен файл" class="form__file" required>
+                    <label class="labelFile">
+                        <span>Прикрепите файл</span>
                     </label>
                 </div>
                 <button class="form__button">
@@ -1439,33 +1433,32 @@
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
                 <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <input type="hidden" name="form_subject" value="айт смартум. Заявка на открытие центра">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="name">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" id="name" class="form__name" placeholder="Ваше имя и фамилия"
-                        required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="email">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" id="email" class="form__email"
-                        placeholder="Электронная почта" required>
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                        required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="phone">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
                     <select>

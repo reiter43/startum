@@ -1233,7 +1233,8 @@ body {
   cursor: pointer;
 }
 
-.btnBase p {
+.btnBase p,
+.btnBase span {
   font-weight: 600;
   font-size: 18px;
   line-height: 160%;
@@ -2015,8 +2016,10 @@ body {
   border-radius: 0 0 12px 12px;
 }
 
-.programItem .btnBase--program P {
+.programItem .btnBase--program P,
+.programItem .btnBase--program span {
   margin-bottom: 0;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -2211,7 +2214,8 @@ label:not(.labelFile) svg {
   box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
 }
 
-.reviews .btnBase p {
+.reviews .btnBase p,
+.reviews .btnBase span {
   font-weight: 600;
   font-size: 18px;
   line-height: 160%;
@@ -2719,7 +2723,8 @@ label:not(.labelFile) svg {
   border-radius: 12px;
 }
 
-.map__box .listCenter .btnBase p {
+.map__box .listCenter .btnBase p,
+.map__box .listCenter .btnBase span {
   font-size: 16px;
 }
 
@@ -2998,38 +3003,46 @@ label:not(.labelFile) svg {
   overflow: visible;
 }
 
-.metods > button {
+.metods > button,
+.metods > a {
   display: block;
+  max-width: 315px;
   margin: 53px auto 0;
 }
 
 .metodsItem {
+  display: block;
   padding-bottom: 32px;
   background: #FFFFFF;
   border-radius: 12px;
   -webkit-box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
   box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
+  color: #000;
 }
 
 .metodsItem:focus {
   outline: none;
 }
 
-.metodsItem figure {
+.metodsItem figure,
+.metodsItem .metodsItem__img {
   width: 100%;
   margin: 0;
   padding: 0;
-  color: #000;
 }
 
-.metodsItem figure img {
+.metodsItem figure img,
+.metodsItem .metodsItem__img img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 12px 12px 0 0;
 }
 
-.metodsItem figure figaption {
+.metodsItem figure figaption,
+.metodsItem figure > span,
+.metodsItem .metodsItem__img figaption,
+.metodsItem .metodsItem__img > span {
   display: inline-block;
   margin: 29px 10px 8px 20px;
   font-weight: 600;
@@ -3262,6 +3275,10 @@ label:not(.labelFile) svg {
   position: static;
   padding: 33px 70px;
   background: #2098D5;
+}
+
+.topLine--inner .btnBase__header {
+  display: none;
 }
 
 .nav .nav__list--inner {
@@ -3527,18 +3544,18 @@ label:not(.labelFile) svg {
   box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
 }
 
-.centersContent__item figure {
+.centersContent__item .centersContent__img {
   margin: 20px 10px;
 }
 
-.centersContent__item img {
+.centersContent__item .centersContent__img img {
   display: block;
   width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
-.centersContent__item figaption {
+.centersContent__item .centersContent__img span {
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
@@ -3697,26 +3714,26 @@ label:not(.labelFile) svg {
   margin-top: 52px;
 }
 
-.centerTeachers figure {
+.centerTeachers__item {
   width: 17%;
   margin: 0;
   text-align: center;
 }
 
-.centerTeachers figure img {
+.centerTeachers__item img {
   display: block;
   width: 100%;
   height: auto;
   margin-bottom: 22px;
 }
 
-.centerTeachers figure figaption p {
+.centerTeachers__item div p {
   font-weight: 500;
   font-size: 22px;
   line-height: 150%;
 }
 
-.centerTeachers figure figaption span {
+.centerTeachers__item div span {
   font-weight: normal;
   font-size: 13px;
   line-height: 150%;
@@ -4386,6 +4403,23 @@ label:not(.labelFile) svg {
     right: 3%;
   }
 
+  .main--center {
+    padding: 97px 200px;
+  }
+
+  .main--center .center {
+    padding: 64px 46px;
+  }
+
+  .centerContact__item {
+    min-width: 264px;
+    padding: 55px 25px;
+  }
+
+  .centerContact__item h6 {
+    font-size: 13px;
+  }
+
   .rest7 {
     right: -400px;
   }
@@ -4596,7 +4630,10 @@ label:not(.labelFile) svg {
     padding-bottom: 20px;
   }
 
-  .metodsItem figure figaption {
+  .metodsItem figure figaption,
+  .metodsItem figure > span,
+  .metodsItem .metodsItem__img figaption,
+  .metodsItem .metodsItem__img > span {
     margin-top: 20px;
     font-size: 16px;
     line-height: 130%;
@@ -4637,20 +4674,8 @@ label:not(.labelFile) svg {
     padding: 97px 140px;
   }
 
-  .main--center .center {
-    padding: 64px 46px;
-  }
-
   .main--center .center h4 {
     font-size: 28px;
-  }
-
-  .centerContact__item {
-    padding: 55px 25px;
-  }
-
-  .centerContact__item h6 {
-    font-size: 13px;
   }
 
   .centerContact__item > a {
@@ -4665,7 +4690,7 @@ label:not(.labelFile) svg {
     font-size: 12px;
   }
 
-  .centerTeachers figure figaption p {
+  .centerTeachers__item div p {
     font-size: 18px;
   }
 
@@ -4947,7 +4972,7 @@ label:not(.labelFile) svg {
     font-size: 14px;
   }
 
-  .centersContent__item figaption {
+  .centersContent__item .centersContent__img span {
     font-size: 16px;
   }
 
@@ -4996,7 +5021,8 @@ label:not(.labelFile) svg {
     fill: #FFFFFF;
   }
 
-  .btnBase--header p {
+  .btnBase--header p,
+  .btnBase--header span {
     display: none;
   }
 
@@ -5219,7 +5245,8 @@ label:not(.labelFile) svg {
     padding: 15px 15px;
   }
 
-  .map__box .listCenter .btnBase p {
+  .map__box .listCenter .btnBase p,
+  .map__box .listCenter .btnBase span {
     font-size: 12px;
   }
 
@@ -5244,7 +5271,10 @@ label:not(.labelFile) svg {
     font-size: 14px;
   }
 
-  .metodsItem figure figaption {
+  .metodsItem figure figaption,
+  .metodsItem figure > span,
+  .metodsItem .metodsItem__img figaption,
+  .metodsItem .metodsItem__img > span {
     margin-left: 4px;
     font-size: 16px;
   }
@@ -5349,7 +5379,7 @@ label:not(.labelFile) svg {
     width: calc(33% - 16px);
   }
 
-  .centersContent__item figaption {
+  .centersContent__item .centersContent__img span {
     font-size: 14px;
   }
 
@@ -5710,7 +5740,8 @@ label:not(.labelFile) svg {
     padding: 15px 38px;
   }
 
-  .map__box .listCenter .btnBase p {
+  .map__box .listCenter .btnBase p,
+  .map__box .listCenter .btnBase span {
     font-size: 18px;
   }
 
@@ -5736,7 +5767,10 @@ label:not(.labelFile) svg {
     padding: 60px 15px;
   }
 
-  .metodsItem figure figaption {
+  .metodsItem figure figaption,
+  .metodsItem figure > span,
+  .metodsItem .metodsItem__img figaption,
+  .metodsItem .metodsItem__img > span {
     margin-left: 4px;
     font-size: 18px;
   }
@@ -5853,7 +5887,7 @@ label:not(.labelFile) svg {
     margin-right: -15px;
   }
 
-  .centerTeachers figure {
+  .centerTeachers__item {
     width: calc(40% - 30px);
     margin: 15px;
   }
@@ -5972,7 +6006,8 @@ label:not(.labelFile) svg {
     margin-top: 20px;
   }
 
-  .btnBase--downHeader p {
+  .btnBase--downHeader p,
+  .btnBase--downHeader span {
     font-size: 3.7vw;
   }
 
@@ -6064,7 +6099,8 @@ label:not(.labelFile) svg {
     margin-top: 0;
   }
 
-  .reviews .btnBase p {
+  .reviews .btnBase p,
+  .reviews .btnBase span {
     font-size: 14px;
   }
 
@@ -6097,7 +6133,8 @@ label:not(.labelFile) svg {
     margin-right: 20px;
   }
 
-  .reviewsItem .reviewsItem__block2 figure figaption {
+  .reviewsItem .reviewsItem__block2 figure figaption,
+  .reviewsItem .reviewsItem__block2 figure .reviewsItem__desc {
     min-width: 160px;
   }
 
@@ -6137,6 +6174,12 @@ label:not(.labelFile) svg {
     transform: translateY(14%);
   }
 
+  .contacts .contacts__box .contacts__phone,
+  .contacts .contacts__box .contacts__socials,
+  .contacts .contacts__box .contacts__email {
+    min-width: 290px;
+  }
+
   .map__box .listCenter {
     width: 100%;
   }
@@ -6145,7 +6188,8 @@ label:not(.labelFile) svg {
     padding: 15px 25px;
   }
 
-  .map__box .listCenter .btnBase p {
+  .map__box .listCenter .btnBase p,
+  .map__box .listCenter .btnBase span {
     font-size: 14px;
   }
 
@@ -6176,11 +6220,13 @@ label:not(.labelFile) svg {
     padding: 0;
   }
 
-  .metods > button {
+  .metods > button,
+  .metods > a {
     width: 80%;
   }
 
-  .metods > button p {
+  .metods > button > span,
+  .metods > a > span {
     font-size: 14px;
   }
 
@@ -6188,7 +6234,10 @@ label:not(.labelFile) svg {
     text-align: center;
   }
 
-  .metodsItem figure figaption {
+  .metodsItem figure figaption,
+  .metodsItem figure > span,
+  .metodsItem .metodsItem__img figaption,
+  .metodsItem .metodsItem__img > span {
     text-align: center;
     font-size: 16px;
   }
@@ -6368,18 +6417,18 @@ label:not(.labelFile) svg {
     justify-content: center;
   }
 
-  .centerTeachers figure {
+  .centerTeachers__item {
     width: 75%;
     -webkit-flex-basis: 300px;
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
   }
 
-  .centerTeachers figure figaption p {
+  .centerTeachers__item div p {
     font-size: 24px;
   }
 
-  .centerTeachers figure figaption span {
+  .centerTeachers__item div span {
     font-size: 15px;
   }
 
@@ -6469,7 +6518,8 @@ label:not(.labelFile) svg {
     text-align: center;
   }
 
-  .mostly__content .mostly__block2 .btnBase--mostly p {
+  .mostly__content .mostly__block2 .btnBase--mostly p,
+  .mostly__content .mostly__block2 .btnBase--mostly span {
     font-size: 14px;
   }
 
@@ -6508,12 +6558,13 @@ label:not(.labelFile) svg {
   }
 
   .program .btnBase {
+    width: 90%;
     margin: 0 auto;
     margin-top: 26px;
     padding: 14px 20px;
   }
 
-  .program .btnBase p {
+  .program .btnBase span {
     font-size: 14px;
   }
 

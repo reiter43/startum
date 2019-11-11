@@ -122,7 +122,7 @@ $(document).ready(function () {
         }
     });
 
-    //Модальное окно с помощью плагина magnefic-popap
+    //Модальное окно с помощью плагина magnific-popap
     $('.gullery__magnefic').magnificPopup({
         type: 'image',
         zoom: {
@@ -143,7 +143,7 @@ $(document).ready(function () {
 
 
     // Скрипт для анимации цифр
-    if (window.location.pathname == "/") {
+    if (window.location.pathname == "/smartum/index.html") {
         var a = 0;
         $(window).scroll(function () {
             var oTop = $('.indicators__item').offset().top - window.innerHeight;
@@ -164,6 +164,25 @@ $(document).ready(function () {
             }
         });
     }
+
+    // Аякс-запрос с формы magnific
+    $(".formModal").submit(function () {
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: th.serialize()
+        }).done(function () {
+            $.magnificPopup.close();
+            th.trigger("reset");
+            $('#thanks').removeClass('mfp-hide');
+            $('#closeModal').click(function () {
+                $('#thanks').addClass('mfp-hide');
+            })
+        });
+        return false;
+    });
+
 });
 
 

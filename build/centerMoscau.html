@@ -15,7 +15,6 @@
 <body>
 
     <header class="header header--inner">
-
         <div class="topLine topLine--inner">
             <div class="header__burger hide">
                 <button class="burger ">
@@ -23,34 +22,35 @@
                     <span class="burger__line"></span>
                 </button>
             </div>
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <img src="img/images/logo.png" alt="" class="logo__img">
             </a>
             <nav class="nav">
                 <ul class="nav__list nav__list--inner">
-                    <li><a href="/">Главная</a></li>
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="centers.html" class="active">Центры</a></li>
                     <li><a href="articles.html">Статьи</a></li>
                 </ul>
             </nav>
-            <a href="#ci">
-                <button class="topLine__btn">
-                    <svg>
-                        <use xlink:href="img/svg/sprite.svg#markerButton"></use>
-                    </svg>
-                    Новосибирск
-                </button>
-            </a>
-            <div class="btnBase__header">
+            <a href="#qu">
                 <button class="btnBase btnBase--header btnBase--home">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#answer"></use>
                     </svg>
-                    <p>Есть вопрос?</p>
+                    <span>Есть вопрос?</span>
                 </button>
+            </a>
+            <div class="btnBase__header">
+                <a href="#qu">
+                    <button class="btnBase btnBase--header btnBase--home">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#answer"></use>
+                        </svg>
+                        <span>Есть вопрос?</span>
+                    </button>
+                </a>
             </div>
         </div>
-
     </header>
 
     <main class="main--centers main--center">
@@ -105,40 +105,40 @@
             </div>
             <a href="#oor">
                 <button class="btnBase">
-                    <p>Оставить заявку</p>
+                    <span>Оставить заявку</span>
                 </button>
-            </a>     
+            </a>
             <img src="img/images/centerMoskau.jpg" alt="Фото учебного класса">
             <h4>Преподаватели центра</h4>
             <div class="centerTeachers">
-                <figure class="centerTeachers__item">
+                <div class="centerTeachers__item">
                     <img src="img/images/teacher.png" alt="Фото преподавателя">
-                    <figaption>
+                    <div>
                         <p>Валерия Северная</p>
                         <span>Старший преподаватель</span>
-                    </figaption>
-                </figure>
-                <figure class="centerTeachers__item">
+                    </div>
+                </div>
+                <div class="centerTeachers__item">
                     <img src="img/images/teacher.png" alt="Фото преподавателя">
-                    <figaption>
+                    <div>
                         <p>Юлия Самойлова</p>
                         <span>Преподаватель робототехники</span>
-                    </figaption>
-                </figure>
-                <figure class="centerTeachers__item">
+                    </div>
+                </div>
+                <div class="centerTeachers__item">
                     <img src="img/images/teacher.png" alt="Фото преподавателя">
-                    <figaption>
+                    <div>
                         <p>Аркадий Шин</p>
                         <span>Преподаватель скорочтения</span>
-                    </figaption>
-                </figure>
-                <figure class="centerTeachers__item">
+                    </div>
+                </div>
+                <div class="centerTeachers__item">
                     <img src="img/images/teacher.png" alt="Фото преподавателя">
-                    <figaption>
+                    <div>
                         <p>Иван Петров</p>
                         <span>Штатный психолог</span>
-                    </figaption>
-                </figure>
+                    </div>
+                </div>
             </div>
         </article>
         <div class="rest7">
@@ -235,8 +235,8 @@
         </div>
     </div>
 
-    <div id="oor" class="modal  mfp-hide">
-        <div class="modalBase modalOrder">
+    <div id='qu' class="modal  mfp-hide">
+        <div class="modalBase modalQuest">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
@@ -245,9 +245,8 @@
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
-            <h3 class="titleModal">Оформить заявку</h3>
-            <p class="descModal">Наши специалисты изучат вашу заявку и сразу свяжутся с вами для соглашения</p>
-            <form id="formModal--order" class="formModal">
+            <h3 class="titleModal">Наши специалисты <br> ответят на все вопросы!</h3>
+            <form id="formModal--quest" class="formModal">
                 <!-- Hidden Required Fields -->
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
@@ -272,12 +271,72 @@
                     <input type="tel" name="Имя" id="phone" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="email">
+                    <label class="textareaModal" for="answer">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
+                        </svg>
+                    </label>
+                    <textarea name="Объект" id="answer" class="form__subject" placeholder="Опишите ваш вопрос"
+                        required></textarea>
+                </div>
+                <button class="form__button">
+                    <span>Жду звонка</span>
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#btnArrow"></use>
+                    </svg>
+                </button>
+                <small>Мы не передаем ваши данные третьим лицам.</small>
+            </form>
+            <div class="rest9">
+                <div class="restBlue8"></div>
+                <div class="restYellow16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="oor" class="modal mfp-hide">
+        <div class="modalBase modalOrder">
+            <div class="rest8">
+                <div class="restYellow14"></div>
+                <div class="restYellow15"></div>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <svg>
+                <use xlink:href="img/svg/sprite.svg#iconModal"></use>
+            </svg>
+            <h3 class="titleModal">Оформить заявку</h3>
+            <p class="descModal">Наши специалисты изучат вашу заявку и сразу свяжутся с вами для соглашения</p>
+            <form id="formModal--order" class="formModal">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
+                <input type="hidden" name="form_subject" value="Вопрос по направлениям">
+                <!-- END Hidden Required Fields -->
+                <div class="input__wrapper input__wrapper--modal">
+                    <label>
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
+                    </label>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия"
+                        required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label>
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="input__wrapper input__wrapper--modal">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" id="email" class="form__email"
+                    <input type="email" name="Электронная почта" class="form__email"
                         placeholder="Электронная почта" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
