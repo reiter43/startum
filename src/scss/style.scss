@@ -76,6 +76,7 @@ body {
 }
 
 .btnBase {
+	display: inline-block;
 	padding: 15px 38px;
 	text-align: center;
 	background: #FFCC00;
@@ -273,13 +274,13 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 0;
 		z-index: 100;
+		width: 0;
 		margin-left: 101%;
 		transition: all ease 0.8s;
 	}
 
-	.nav__list {
+	&__list {
 		list-style-type: none;
 		display: flex;
 		justify-content: space-around;
@@ -347,7 +348,12 @@ body {
 	}
 }
 
-.header .wrapper .sticky {
+.header .nav.nav--active {
+	width: 100%;
+	margin-left: 0;
+}
+
+.sticky {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -362,7 +368,7 @@ body {
 	}
 }
 
-.btnBase--sticky {
+.topLine--home.sticky .btnBase {
 	background: #a5a5a5;
 
 	&:hover {
@@ -381,9 +387,7 @@ body {
 
 		@include md-block {
 			display: block;
-			width: 24px;
-			height: 24px;
-			fill: #FFFFFF;
+			@include svg(24px, 24px, #FFFFFF);
 		}
 	}
 
@@ -446,10 +450,6 @@ body {
 	@include xs-block {
 		top: 162px;
 	}
-
-	&:focus {
-		outline: none;
-	}
 }
 
 .btnVideo__ellipse1,
@@ -496,21 +496,11 @@ body {
 	padding: 0;
 
 	&--play {
-		width: 5.2vw;
-		height: 4.8vw;
+		@include svg(5.2vw, 4.8vw, #FFCC00);
 
 		@include xs-block {
-			width: 40px;
-			height: 40px;
+			@include svg(40px, 40px, #FFCC00);
 		}
-	}
-
-	&--play {
-		fill: #FFCC00;
-	}
-
-	&--stop {
-		fill: rgba(0, 0, 0, .65);
 	}
 }
 
@@ -544,7 +534,6 @@ body {
 
 		&>span {
 			margin-bottom: 11px;
-
 			font-weight: bold;
 			font-size: 24px;
 			line-height: 150%;
@@ -554,7 +543,6 @@ body {
 		}
 
 		p {
-
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 150%;
@@ -571,7 +559,6 @@ body {
 	}
 }
 
-
 /*============================================= */
 
 
@@ -584,14 +571,12 @@ body {
 --------------------------------------------- */
 .mostly {
 	position: relative;
-	padding-top: 120px;
-	padding-bottom: 126px;
+	padding: 20px 0 126px;
 	color: #000000;
 	overflow: hidden;
 
 	@include lg-block {
-		padding-top: 70px;
-		padding-bottom: 46px;
+		padding: 70px 0 46px;
 	}
 
 	@include sm-block {
@@ -618,9 +603,7 @@ body {
 	}
 
 	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		@include img;
 	}
 
 	.mostly__block1 {
@@ -778,8 +761,7 @@ body {
 	color: #FFFFFF;
 
 	@include xxs-block {
-		padding-top: 44px;
-		padding-bottom: 37px;
+		padding: 44px 0 37px;
 	}
 
 	h3 {
@@ -874,8 +856,8 @@ body {
 				}
 
 				@include xxs-block {
-					font-size: 16px;
 					margin-bottom: 25px;
+					font-size: 16px;
 				}
 			}
 		}
@@ -897,16 +879,11 @@ body {
 	}
 
 	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		@include img;
 	}
 
 	&__content {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%)
+		@include centerer(true, false);
 	}
 
 	h2 {
@@ -919,8 +896,7 @@ body {
 
 	p {
 		width: 888px;
-		margin: 0 auto;
-		margin-top: 27px;
+		margin: 27px auto 0;
 		font-weight: 500;
 		font-size: 1.2vw;
 		line-height: 160%;
@@ -976,9 +952,7 @@ body {
 
 	&>p {
 		max-width: 906px;
-		margin: 0 auto;
-		margin-top: 24px;
-		margin-bottom: 64px;
+		margin: 24px auto 64px;
 		font-weight: 500;
 		font-size: 24px;
 		line-height: 160%;
@@ -1007,8 +981,7 @@ body {
 
 		@include xxs-block {
 			width: 90%;
-			margin: 0 auto;
-			margin-top: 26px;
+			margin: 26px auto 0;
 			padding: 14px 20px;
 
 			span {
@@ -1086,27 +1059,22 @@ body {
 	}
 
 	svg {
-		width: 75px;
-		height: 63px;
-		fill: #2098D5;
+		@include svg(75px, 75px, #2098D5);
 
 		@include xxs-block {
-			width: 38px;
-			height: 34px;
+			@include svg(38px, 34px, #2098D5);
 		}
 	}
 
 	h4 {
-		margin-top: 30px;
-		margin-bottom: 23px;
+		margin: 30px 0 23px;
 		font-weight: 600;
 		font-size: 22px;
 		line-height: 130%;
 
 		@include llg-block {
+			margin: 15px 0 5px;
 			font-size: 16px;
-			margin-top: 15px;
-			margin-bottom: 5px;
 		}
 
 		@include md-block {
@@ -1126,8 +1094,8 @@ body {
 		line-height: 170%;
 
 		@include llg-block {
-			font-size: 13px;
 			margin-bottom: 15px;
+			font-size: 13px;
 		}
 
 		@include md-block {
@@ -1146,8 +1114,8 @@ body {
 		border-radius: 12px;
 
 		&::before {
-			position: absolute;
 			content: '';
+			position: absolute;
 			left: 17px;
 			bottom: -14px;
 			border-left: 11px solid #FAFAFA;
@@ -1287,8 +1255,7 @@ body {
 	}
 
 	p {
-		margin-top: 10px;
-		margin-bottom: 73px;
+		margin: 10px 0 73px;
 		font-weight: 500;
 		font-size: 24px;
 		line-height: 160%;
@@ -1404,9 +1371,7 @@ label:not(.labelFile) {
 	transform: translateY(-50%);
 
 	svg {
-		width: 24px;
-		height: 24px;
-		fill: #000000;
+		@include svg(24px, 24px, #000000);
 	}
 }
 
@@ -1414,8 +1379,7 @@ label:not(.labelFile) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-left: 46px;
-	padding-right: 46px;
+	padding: 0 46px;
 	background: #FFCC00;
 	border: none;
 	border-radius: 12px;
@@ -1426,13 +1390,11 @@ label:not(.labelFile) {
 	}
 
 	@include lg-block {
-		padding-left: 26px;
-		padding-right: 26px;
+		padding: 0 26px;
 	}
 
 	@include md-block {
-		margin: 0;
-		margin-bottom: 10px;
+		margin: 0 0 10px 0;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		text-align: center;
@@ -1456,9 +1418,7 @@ label:not(.labelFile) {
 	}
 
 	svg {
-		width: 17px;
-		height: 16px;
-		fill: #000000;
+		@include svg(17px, 16px, #000000);
 	}
 }
 
@@ -1485,12 +1445,14 @@ label:not(.labelFile) {
 
 		@include xs-block {
 			font-weight: 600;
+			font-size: 28px;
 		}
 
 	}
 
 	.btnBase {
 		display: block;
+		max-width: 350px;
 		margin: 0 auto;
 		margin-top: 111px;
 		background: #FFFFFF;
@@ -2302,9 +2264,10 @@ label:not(.labelFile) {
 			@include sm-block {
 				position: absolute;
 				left: 50%;
-				bottom: -52%;
+				bottom: -54%;
 				transform: translateX(-50%);
 				padding: 15px 38px;
+				white-space: nowrap;
 			}
 
 			@include xs-block {
@@ -2340,10 +2303,7 @@ label:not(.labelFile) {
 		width: 70%;
 		padding-top: 30%;
 		border-radius: 0px 12px 12px 0px;
-		background-image: url(../img/images/bg-top.jpg);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		background: url(../img/images/bg-top.jpg) no-repeat center/cover;
 
 		@include sm-block {
 			height: 250px;
@@ -2356,16 +2316,16 @@ label:not(.labelFile) {
 		}
 
 		@include xxs-block {
-			padding-top: 55%;
 			height: 525px;
+			padding-top: 55%;
 		}
 
 
 		p {
 			text-align: center;
-			color: rgba(255, 255, 255, .8);
 			font-size: 24px;
 			font-weight: 600;
+			color: rgba(255, 255, 255, .8);
 
 			@include sm-block {
 				font-size: 16px;
@@ -2410,8 +2370,7 @@ label:not(.labelFile) {
 	.faq__content {
 		display: flex;
 		max-width: 1335px;
-		margin: 0 auto;
-		margin-top: 60px;
+		margin: 60px auto 0;
 		background: #FFFFFF;
 		box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
 		border-radius: 12px;
@@ -2561,7 +2520,6 @@ label:not(.labelFile) {
 				&:focus {
 					background: #2098D5;
 					color: #FFFFFF;
-					outline: none;
 				}
 			}
 
@@ -2587,10 +2545,10 @@ label:not(.labelFile) {
 		}
 	}
 
-	button {
+	.btnBase {
 		display: block;
-		margin: 0 auto;
-		margin-top: 60px;
+		max-width: 350px;
+		margin: 60px auto 0;
 		background: #FFFFFF;
 		border-radius: 12px;
 
@@ -2638,7 +2596,6 @@ label:not(.labelFile) {
 
 		iframe {
 			border: none;
-			;
 		}
 	}
 }
@@ -2665,8 +2622,8 @@ label:not(.labelFile) {
 		z-index: 9;
 
 		@include xs-block {
-			padding-left: 5px;
-			padding-right: 5px;
+			padding-left: 15px;
+			padding-right: 15px;
 			font-weight: 600;
 		}
 	}
@@ -2681,8 +2638,7 @@ label:not(.labelFile) {
 	&__slider {
 		position: relative;
 		max-width: 1400px;
-		margin: 0 auto;
-		margin-top: 70px;
+		margin: 70px auto 0;
 		overflow: visible;
 
 		@include llg-block {
@@ -2730,10 +2686,6 @@ label:not(.labelFile) {
 		text-align: center;
 	}
 
-	&:focus {
-		outline: none;
-	}
-
 	figure,
 	.metodsItem__img {
 		width: 100%;
@@ -2741,9 +2693,7 @@ label:not(.labelFile) {
 		padding: 0;
 
 		img {
-			display: block;
-			width: 100%;
-			height: auto;
+			@include img;
 			border-radius: 12px 12px 0 0;
 		}
 
@@ -2854,8 +2804,7 @@ label:not(.labelFile) {
   Секция gallery
 --------------------------------------------- */
 .gallery {
-	padding-top: 78px;
-	padding-bottom: 5px;
+	padding: 70px 0 5px;
 
 	@include xs-block {
 		padding-top: 54px;
@@ -2935,7 +2884,7 @@ label:not(.labelFile) {
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция gallery
+  Секция с нижней формой
 --------------------------------------------- */
 .formQuest {
 	.formQuest__form {
@@ -3050,7 +2999,6 @@ label:not(.labelFile) {
 
 		&>span a {
 			color: #000000;
-			;
 		}
 
 		&>p {
@@ -3121,9 +3069,7 @@ label:not(.labelFile) {
 		}
 
 		svg {
-			width: 20px;
-			height: 20px;
-			fill: #2098D5;
+			@include svg(20px, 20px, #2098D5);
 			transition: all ease .5s;
 		}
 
@@ -3270,10 +3216,6 @@ label:not(.labelFile) {
 	flex-wrap: wrap;
 	margin-top: 50px;
 
-	@include lg-block {
-		justify-content: center;
-	}
-
 	@include sm-block {
 		justify-content: space-between;
 	}
@@ -3287,9 +3229,8 @@ label:not(.labelFile) {
 .metodsItem--article {
 	width: 24%;
 	margin-bottom: 20px;
-	margin-right: auto;
+	margin-right: 1%;
 	color: #000;
-
 
 	@include lg-block {
 		width: 32%;
@@ -3345,9 +3286,7 @@ label:not(.labelFile) {
 	}
 
 	svg {
-		width: 12px;
-		height: 12px;
-		fill: #2098D5;
+		@include svg(12px, 12px, #2098D5);
 		margin-right: 11px;
 	}
 }
@@ -3366,8 +3305,7 @@ label:not(.labelFile) {
 
 .ar1 {
 	max-width: 1335px;
-	margin: 0 auto;
-	margin-top: -40px;
+	margin: -40px auto 0;
 	padding: 84px 75px 32px;
 	background: #FFFFFF;
 	box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
@@ -3375,8 +3313,8 @@ label:not(.labelFile) {
 	color: #000000;
 
 	@include md-block {
-		padding: 64px 55px 32px;
 		margin-top: -30px;
+		padding: 64px 55px 32px;
 	}
 
 	@include sm-block {
@@ -3385,8 +3323,7 @@ label:not(.labelFile) {
 	}
 
 	h1 {
-		margin: 0;
-		margin-bottom: 60px;
+		margin: 0 0 60px;
 		text-align: center;
 		font-weight: 600;
 		font-size: 2.5vw;
@@ -3402,9 +3339,7 @@ label:not(.labelFile) {
 	}
 
 	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		@include img;
 	}
 
 	p {
@@ -3423,8 +3358,7 @@ label:not(.labelFile) {
 	}
 
 	h2 {
-		margin: 0;
-		margin-top: 40px;
+		margin: 40px 0 0;
 		font-weight: 600;
 		font-size: 32px;
 		line-height: 180%;
@@ -3445,8 +3379,7 @@ label:not(.labelFile) {
 		padding: 0;
 
 		li {
-			margin: 0;
-			margin-bottom: 20px;
+			margin: 0 0 20px;
 			padding: 0;
 			font-weight: normal;
 			font-size: 18px;
@@ -3492,9 +3425,7 @@ label:not(.labelFile) {
 			}
 
 			svg {
-				width: 12px;
-				height: 12px;
-				fill: #2098D5;
+				@include svg(12px, 12px, #2098D5);
 			}
 
 			:first-child {
@@ -3508,32 +3439,32 @@ label:not(.labelFile) {
 		}
 
 		&::before {
+			content: '';
 			position: absolute;
 			top: -1px;
 			left: -75px;
-			content: '';
 			width: 75px;
 			height: 1px;
 			background: rgba(0, 0, 0, 0.1);
 
 			@include sm-block {
-				width: 20px;
 				left: -20px;
+				width: 20px;
 			}
 		}
 
 		&::after {
+			content: '';
 			position: absolute;
 			top: -1px;
 			right: -75px;
-			content: '';
 			width: 75px;
 			height: 1px;
 			background: rgba(0, 0, 0, 0.1);
 
 			@include sm-block {
-				width: 20px;
 				right: -20px;
+				width: 20px;
 			}
 		}
 	}
@@ -3593,9 +3524,7 @@ label:not(.labelFile) {
 
 
 			img {
-				display: block;
-				width: 100%;
-				height: auto;
+				@include img;
 				margin-bottom: 20px;
 			}
 
@@ -3632,6 +3561,7 @@ label:not(.labelFile) {
 	@include lllg-block {
 		padding: 97px 200px;
 	}
+
 	@include llg-block {
 		padding: 97px 140px;
 	}
@@ -3679,8 +3609,8 @@ label:not(.labelFile) {
 		}
 
 		&>img {
-			margin: 63px 0 52px;
 			@include img;
+			margin: 63px 0 52px;
 		}
 	}
 }
@@ -3817,9 +3747,7 @@ label:not(.labelFile) {
 		}
 
 		svg {
-			width: 69px;
-			height: 59px;
-			fill: #2098D5;
+			@include svg(69px, 69px, #2098D5);
 		}
 
 		h5 {
@@ -3934,11 +3862,8 @@ label:not(.labelFile) {
 ============================================= */
 .modal {
 	position: fixed;
+	@include coverpos;
 	z-index: 9999;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -3988,9 +3913,7 @@ label:not(.labelFile) {
 	}
 
 	&>svg {
-		width: 59px;
-		height: 54px;
-		fill: #FFCC00;
+		@include svg(59px, 54px, #FFCC00);
 	}
 }
 

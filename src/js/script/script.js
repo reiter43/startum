@@ -1,7 +1,7 @@
 
 // Скрыть/показать меню
 let burger = document.querySelector('.burger');
-let nav = document.querySelector('nav.nav');
+let nav = document.querySelector('.nav');
 let bod = document.querySelector('body');
 
 burger.addEventListener('click', event => {
@@ -11,14 +11,10 @@ burger.addEventListener('click', event => {
 		burger.classList.remove('burger--active');
 		document.querySelector('header').style.position = 'relative';
 		nav.classList.remove('nav--active');
-		nav.style.marginLeft = '101%';
-		nav.style.width = '0';
 	}
 	else {
 		burger.classList.add('burger--active');
 		document.querySelector('header').style.position = 'static';
-		nav.style.marginLeft = '0';
-		nav.style.width = '100%';
 		nav.classList.add('nav--active');
 	}
 });
@@ -53,10 +49,50 @@ window.addEventListener('resize', function () {
 let btnVideo = document.querySelectorAll('.btnVideoSlider__wrapper');
 
 btnVideo.forEach(elem => {
-	elem.onclick = (event) => {
+	elem.onclick = () => {
 		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/lTKr_Sb4xq4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 	};
 });
+
+
+// Общая функция фильтрации
+function filter(btnFilter, itemContent, getAtr, getAtr2) {
+	let btn = document.querySelectorAll(btnFilter);
+
+	btn.forEach(el => {
+		el.onclick = event => {
+			event.preventDefault();
+
+			btn.forEach(el => {
+				el.classList.remove('active');
+				event.target.classList.add('active');
+			});
+
+			let item = document.querySelectorAll(itemContent);
+			let atr = el.getAttribute(getAtr);
+
+			item.forEach(el => {
+				el.classList.add('modal--hide');
+
+				if (atr === 'all') {
+					el.classList.remove('modal--hide');
+				}
+
+				if (el.hasAttribute(getAtr2)) {
+					el.src = el.getAttribute(getAtr2);
+				}
+
+				if (el.classList.contains(atr)) {
+					el.classList.remove('modal--hide');
+				}
+			})
+		}
+	})
+}
+
+// Фильтрация вопросов и статей
+filter('.faq__quest > p', '.faq__answer div', 'data-answer');
+filter('.articles__cat button', '.metodsItem--article', 'data-cat');
 
 
 // Фильтрация центров и карт в контактах
@@ -85,29 +121,7 @@ centers.forEach(elem => {
 	}
 })
 
-// Фильтрация вопросов
-let quests = document.querySelectorAll('.faq .faq__content .faq__quest>p');
-
-quests.forEach(item => {
-	item.onclick = (event) => {
-		event.preventDefault();
-
-		quests.forEach(item => {
-			item.classList.remove('active');
-			event.target.classList.add('active');
-		});
-
-		let answers = document.querySelectorAll('.faq__answer div');
-		let questsData = item.getAttribute('data-answer');
-
-		answers.forEach(item => {
-			item.classList.add('hide');
-			if (item.classList.contains(questsData)) {
-				item.classList.remove('hide');
-			}
-		})
-	};
-});
+// filter('.listCenter ul li button', '.mapContacts iframe', 'data-center', 'data-map');
 
 
 // Запуск видеоролика о центре в москве
@@ -164,27 +178,26 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 // Липкая шапка
-if (window.location.pathname == "/smartum/index.html") {
+function sticky(elemSticky, offset) {
 	window.onscroll = function () {
 		let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-		let fix = document.querySelector('.topLine--home');
-		let btnFix = document.querySelector('.btnBase--home');
+		let fix = document.querySelector(elemSticky);
 
-		if (scrolled > 140) {
+		if (scrolled > offset) {
 			fix.classList.add('sticky');
-			btnFix.classList.add('btnBase--sticky');
 		}
 		else {
 			fix.classList.remove('sticky');
-			btnFix.classList.remove('btnBase--sticky');
 		}
 	}
 }
 
+if (window.location.pathname == "/") {
+	sticky('.topLine--home', 140);
+}
 
 // Плавный скролл к якорям
 const anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
-
 
 let V = 0.15;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 for (let i = 0; i < anchors.length; i++) {
@@ -217,44 +230,12 @@ const itemsMenu = document.querySelectorAll('.topLine nav ul li a');
 
 itemsMenu.forEach(elem => {
 	elem.onclick = (event) => {
+		event.preventDefault;
 		itemsMenu.forEach(elem => {
 			elem.classList.remove('active');
 			event.target.classList.add('active');
 		})
 	};
-});
-
-
-// Фильтрация статей по категориям
-let buttons = document.querySelectorAll('.articles__cat button');
-
-buttons.forEach(elem => {
-	elem.onclick = (event) => {
-		event.preventDefault();
-
-		buttons.forEach(elem => {
-			elem.classList.remove('active');
-			event.target.classList.add('active');
-		});
-
-		let buttonFilter = elem.getAttribute('data-cat');
-
-		let articlesItems = document.querySelectorAll('.metodsItem--article');
-
-		articlesItems.forEach(elem => {
-			elem.style.display = 'none';
-
-			if (buttonFilter == 'all') {
-				elem.style.display = 'block';
-			}
-
-			if (elem.classList.contains(buttonFilter)) {
-				elem.style.display = 'block';
-				// document.querySelector('.articles__content').style.justifyContent = 'flex-start';
-				elem.style.marginRight = '1%';
-			}
-		})
-	}
 });
 
 // Стилизация инпут-файл
@@ -293,23 +274,23 @@ forms.forEach(elem => {
 	}
 })
 
-
+// Выбор города
 let city = document.querySelectorAll('.modalCity__content a');
 
 city.forEach(elem => {
-	elem.onclick = (event) =>{
+	elem.onclick = (event) => {
 		event.preventDefault();
-		;
+
 		document.querySelector('.topLine__btn span').innerText = elem.innerText;
 		document.querySelector('#ci').classList.add('mfp-hide');
-		
+
 		// document.querySelector('html').style.marginRight = '0';
 		// document.querySelector('html').style.overflow = 'visible';
 		// document.querySelector('.mfp-bg').parentNode.removeChild(document.querySelector('.mfp-bg'));
 	}
-	document.querySelector('.btnModal').onclick = () =>{
+	document.querySelector('.btnModal').onclick = () => {
 		document.querySelector('#ci').classList.add('mfp-hide');
-		document.querySelector('#cce').classList.remove('mfp-hide');	
+		document.querySelector('#cce').classList.remove('mfp-hide');
 	}
 })
 

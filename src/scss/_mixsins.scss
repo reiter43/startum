@@ -1,182 +1,191 @@
 //Очистка потока
 @mixin clearfix {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 //Расположение бэкграунда
 @mixin bgpos {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 //Позиционирование фона с наложением на картинку
 @mixin coverpos {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 }
 
 // Центрирование
 @mixin centerer($horizontal: true, $vertical: true) {
-  position: absolute;
+	position: absolute;
 
-  @if ($horizontal and $vertical) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 
-  @else if ($horizontal) {
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
+	@else if ($horizontal) {
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 
-  @else if ($vertical) {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+	@else if ($vertical) {
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+	}
 }
 
 
 // Адаптивность фрэймов с видео
 
 @mixin fr {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
 
-  &>img,
-  iframe {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+	&>img,
+	iframe {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
 }
 
 
 //Горизонтальные линии у заголовка
 @mixin title ($w, $h, $c) {
-  overflow: hidden;
+	overflow: hidden;
 
-  span {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-  }
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
 
-  &:before,
-  &:after {
-    content: '';
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: $w;
-    height: $h;
-    background-color: $c;
-  }
+	&:before,
+	&:after {
+		content: '';
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: $w;
+		height: $h;
+		background-color: $c;
+	}
 
-  &:before {
-    left: -0.2%;
-    margin-left: -100%;
-  }
+	&:before {
+		left: -0.2%;
+		margin-left: -100%;
+	}
 
-  &:after {
-    right: -0.2%;
-    margin-right: -100%;
-  }
+	&:after {
+		right: -0.2%;
+		margin-right: -100%;
+	}
 }
 
 //Кнопка-гамбургер для меню
 
 @mixin gamburger ($widthButton, $heightButton, $widthLine, $heightLine, $gat, $colorLine, $colorButton) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: $widthButton;
-  height: $heightButton;
-  z-index: 100;
-  padding: 0;
-  border: none;
-  background: none;
-  background: $colorButton;
-  cursor: pointer;
-  outline: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: $widthButton;
+	height: $heightButton;
+	z-index: 100;
+	padding: 0;
+	border: none;
+	background: none;
+	background: $colorButton;
+	cursor: pointer;
+	outline: none;
 
 
-  &__line {
-    width: $widthLine;
-    height: $heightLine;
-    margin-bottom: $gat;
-    background: $colorLine;
-    transition: all ease .3s;
+	&__line {
+		width: $widthLine;
+		height: $heightLine;
+		margin-bottom: $gat;
+		background: $colorLine;
+		transition: all ease .3s;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-  &--active {
-    .burger__line {
+	&--active {
+		.burger__line {
 
-      &:first-child {
-        position: relative;
-        top: ($heightLine+$gat)/2;
-        transform: rotate(45deg);
-        transition: all ease 0.5s;
-      }
+			&:first-child {
+				position: relative;
+				top: ($heightLine+$gat)/2;
+				transform: rotate(45deg);
+				transition: all ease 0.5s;
+			}
 
-      // &:nth-child(2) {
-      //   opacity: 0;
-      // }
+			// &:nth-child(2) {
+			//   opacity: 0;
+			// }
 
-      &:last-child {
-        position: relative;
-        top: ($heightLine+$gat)/2*-1;
-        transform: rotate(-45deg);
-        transition: all ease 0.5s;
-      }
-    }
-  }
+			&:last-child {
+				position: relative;
+				top: ($heightLine+$gat)/2*-1;
+				transform: rotate(-45deg);
+				transition: all ease 0.5s;
+			}
+		}
+	}
 }
 
 //Стилизация плейсхолдера
 @mixin input-placeholder {
-  ::-webkit-input-placeholder {
-    @content;
-  }
+	::-webkit-input-placeholder {
+		@content;
+	}
 
-  :-moz-placeholder {
-    /* Firefox 18- */
-    @content;
-  }
+	:-moz-placeholder {
+		/* Firefox 18- */
+		@content;
+	}
 
-  ::-moz-placeholder {
-    /* Firefox 19+ */
-    @content;
-  }
+	::-moz-placeholder {
+		/* Firefox 19+ */
+		@content;
+	}
 
-  :-ms-input-placeholder {
-    @content;
-  }
+	:-ms-input-placeholder {
+		@content;
+	}
 }
 
 //Адаптивность картинки
 @mixin img {
-  display: block;
-  width: 100%;
-  height: auto;
+	display: block;
+	width: 100%;
+	height: auto;
 }
+
+// Параметры svg
+@mixin svg ($width, $height, $fill) {
+	width: $width;
+	height: $height;
+	fill: $fill;
+}
+
 //---------------------------------------------
 
 
@@ -186,5 +195,5 @@
 
 //Перевод пикселей в ремы
 @function rem($pxsize) {
-  @return ($pxsize/16px)+rem;
+	@return ($pxsize/16px)+rem;
 }

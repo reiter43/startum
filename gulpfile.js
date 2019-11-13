@@ -77,11 +77,11 @@ gulp.task('scriptsCustom', () => {
 		'./src/js/script/*.js',
 		'./src/js/script/script.js'
 	])
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
+		// .pipe(babel({
+		// 	presets: ['@babel/env']
+		// }))
 		.pipe(concat('scripts.js'))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 });

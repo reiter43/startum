@@ -1,1 +1,297 @@
-"use strict";var burger=document.querySelector(".burger"),nav=document.querySelector("nav.nav"),bod=document.querySelector("body");burger.addEventListener("click",function(e){e.preventDefault,burger.classList.contains("burger--active")?(burger.classList.remove("burger--active"),document.querySelector("header").style.position="relative",nav.classList.remove("nav--active"),nav.style.marginLeft="101%",nav.style.width="0"):(burger.classList.add("burger--active"),document.querySelector("header").style.position="static",nav.style.marginLeft="0",nav.style.width="100%",nav.classList.add("nav--active"))}),window.addEventListener("resize",function(){var t=document.documentElement.clientWidth,n=document.querySelectorAll(".programItem");n.forEach(function(e){t<1920&&1200<t?(e.classList.remove("programItem--button"),n[3].classList.add("programItem--button")):t<1200&&996<t?(e.classList.remove("programItem--button"),n[2].classList.add("programItem--button")):t<996&&576<t?(e.classList.remove("programItem--button"),n[1].classList.add("programItem--button")):e.classList.remove("programItem--button")})},!1);var btnVideo=document.querySelectorAll(".btnVideoSlider__wrapper");btnVideo.forEach(function(t){t.onclick=function(e){t.parentNode.innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/lTKr_Sb4xq4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}});var centers=document.querySelectorAll(".listCenter ul li button");centers.forEach(function(r){r.onclick=function(t){t.preventDefault(),document.querySelector(".mapContacts p").classList.add("hide"),centers.forEach(function(e){e.classList.remove("active"),t.target.classList.add("active")});var e=document.querySelectorAll(".mapContacts iframe"),n=r.getAttribute("data-center");e.forEach(function(e){e.classList.add("hide"),e.classList.contains(n)&&(e.src=e.getAttribute("data-map"),e.classList.remove("hide"))})}});var quests=document.querySelectorAll(".faq .faq__content .faq__quest>p");quests.forEach(function(r){r.onclick=function(t){t.preventDefault(),quests.forEach(function(e){e.classList.remove("active"),t.target.classList.add("active")});var e=document.querySelectorAll(".faq__answer div"),n=r.getAttribute("data-answer");e.forEach(function(e){e.classList.add("hide"),e.classList.contains(n)&&e.classList.remove("hide")})}});var btnVi=document.querySelectorAll(".btnVideo__wrapperCenters");btnVi.forEach(function(t){t.onclick=function(e){t.parentNode.innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}}),window.addEventListener("DOMContentLoaded",function(){[].forEach.call(document.querySelectorAll(".form__phone"),function(e){var i;function t(e){e.keyCode&&(i=e.keyCode),this.selectionStart<3&&e.preventDefault();var t="+7 (___) ___ ____",n=0,r=t.replace(/\D/g,""),c=this.value.replace(/\D/g,""),a=t.replace(/[_\d]/g,function(e){return n<c.length?c.charAt(n++)||r.charAt(n):e});-1!=(n=a.indexOf("_"))&&(n<5&&(n=3),a=a.slice(0,n));var o=t.substr(0,this.value.length).replace(/_+/g,function(e){return"\\d{1,"+e.length+"}"}).replace(/[+()]/g,"\\$&");(!(o=new RegExp("^"+o+"$")).test(this.value)||this.value.length<5||47<i&&i<58)&&(this.value=a),"blur"==e.type&&this.value.length<5&&(this.value="")}e.addEventListener("input",t,!1),e.addEventListener("focus",t,!1),e.addEventListener("blur",t,!1),e.addEventListener("keydown",t,!1)})}),"/smartum/index.html"==window.location.pathname&&(window.onscroll=function(){var e=window.pageYOffset||document.documentElement.scrollTop,t=document.querySelector(".topLine--home"),n=document.querySelector(".btnBase--home");140<e?(t.classList.add("sticky"),n.classList.add("btnBase--sticky")):(t.classList.remove("sticky"),n.classList.remove("btnBase--sticky"))});for(var anchors=document.querySelectorAll(".topLine nav a[href*=anchor]"),V=.15,i=0;i<anchors.length;i++)anchors[i].addEventListener("click",function(e){e.preventDefault();var c=window.pageYOffset,a=this.href.replace(/[^#]*(.*)/,"$1"),o=document.querySelector(a).getBoundingClientRect().top,i=null;requestAnimationFrame(function e(t){null===i&&(i=t);var n=t-i,r=o<0?Math.max(c-n/V,c+o):Math.min(c+n/V,c+o);window.scrollTo(0,r);r!=c+o?requestAnimationFrame(e):location.hash=a})},!1);var itemsMenu=document.querySelectorAll(".topLine nav ul li a");itemsMenu.forEach(function(e){e.onclick=function(t){itemsMenu.forEach(function(e){e.classList.remove("active"),t.target.classList.add("active")})}});var buttons=document.querySelectorAll(".articles__cat button");buttons.forEach(function(e){e.onclick=function(t){t.preventDefault(),buttons.forEach(function(e){e.classList.remove("active"),t.target.classList.add("active")});var n=e.getAttribute("data-cat");document.querySelectorAll(".metodsItem--article").forEach(function(e){e.style.display="none","all"==n&&(e.style.display="block"),e.classList.contains(n)&&(e.style.display="block",e.style.marginRight="1%")})}});var inputs=document.querySelectorAll(".form__file");Array.prototype.forEach.call(inputs,function(t){var n=t.nextElementSibling;t.addEventListener("change",function(e){n.querySelector(".labelFile span").innerHTML="Прикреплен файл: "+t.value})});var forms=document.querySelectorAll(".formAll");forms.forEach(function(r){r.onsubmit=function(e){e.preventDefault();var t=new FormData(r),n=new XMLHttpRequest;n.open("POST","mail.php"),n.send(t),n.onreadystatechange=function(){4==this.readyState&&200==this.status&&(r.reset(),document.querySelector("#thanks").classList.remove("mfp-hide"),document.querySelector("#closeModal").onclick=function(){document.querySelector("#thanks").classList.add("mfp-hide")})}}});var city=document.querySelectorAll(".modalCity__content a");city.forEach(function(t){t.onclick=function(e){e.preventDefault(),document.querySelector(".topLine__btn span").innerText=t.innerText,document.querySelector("#ci").classList.add("mfp-hide")},document.querySelector(".btnModal").onclick=function(){document.querySelector("#ci").classList.add("mfp-hide"),document.querySelector("#cce").classList.remove("mfp-hide")}});
+
+// Скрыть/показать меню
+let burger = document.querySelector('.burger');
+let nav = document.querySelector('.nav');
+let bod = document.querySelector('body');
+
+burger.addEventListener('click', event => {
+	event.preventDefault;
+
+	if (burger.classList.contains('burger--active')) {
+		burger.classList.remove('burger--active');
+		document.querySelector('header').style.position = 'relative';
+		nav.classList.remove('nav--active');
+	}
+	else {
+		burger.classList.add('burger--active');
+		document.querySelector('header').style.position = 'static';
+		nav.classList.add('nav--active');
+	}
+});
+
+
+// Показ кнопки на определенной карточке программы
+window.addEventListener('resize', function () {
+	let screen = document.documentElement.clientWidth;
+	let programItems = document.querySelectorAll('.programItem');
+
+	programItems.forEach(elem => {
+		if (screen < 1920 && screen > 1200) {
+			elem.classList.remove('programItem--button');
+			programItems[3].classList.add('programItem--button');
+		}
+		else if (screen < 1200 && screen > 996) {
+			elem.classList.remove('programItem--button');
+			programItems[2].classList.add('programItem--button');
+		}
+		else if (screen < 996 && screen > 576) {
+			elem.classList.remove('programItem--button');
+			programItems[1].classList.add('programItem--button');
+		}
+		else {
+			elem.classList.remove('programItem--button');
+		}
+	})
+}, false);
+
+
+// Запуск видеоотзыва в слайдере
+let btnVideo = document.querySelectorAll('.btnVideoSlider__wrapper');
+
+btnVideo.forEach(elem => {
+	elem.onclick = () => {
+		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/lTKr_Sb4xq4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	};
+});
+
+
+// Общая функция фильтрации
+function filter(btnFilter, itemContent, getAtr, getAtr2) {
+	let btn = document.querySelectorAll(btnFilter);
+
+	btn.forEach(el => {
+		el.onclick = event => {
+			event.preventDefault();
+
+			btn.forEach(el => {
+				el.classList.remove('active');
+				event.target.classList.add('active');
+			});
+
+			let item = document.querySelectorAll(itemContent);
+			let atr = el.getAttribute(getAtr);
+
+			item.forEach(el => {
+				el.classList.add('modal--hide');
+
+				if (atr === 'all') {
+					el.classList.remove('modal--hide');
+				}
+
+				if (el.hasAttribute(getAtr2)) {
+					el.src = el.getAttribute(getAtr2);
+				}
+
+				if (el.classList.contains(atr)) {
+					el.classList.remove('modal--hide');
+				}
+			})
+		}
+	})
+}
+
+// Фильтрация вопросов и статей
+filter('.faq__quest > p', '.faq__answer div', 'data-answer');
+filter('.articles__cat button', '.metodsItem--article', 'data-cat');
+
+
+// Фильтрация центров и карт в контактах
+let centers = document.querySelectorAll('.listCenter ul li button');
+
+centers.forEach(elem => {
+	elem.onclick = (event) => {
+		event.preventDefault();
+		document.querySelector('.mapContacts p').classList.add('hide');
+
+		centers.forEach(elem => {
+			elem.classList.remove('active');
+			event.target.classList.add('active');
+		});
+
+		let map = document.querySelectorAll('.mapContacts iframe');
+		let centersData = elem.getAttribute('data-center');
+
+		map.forEach(elem => {
+			elem.classList.add('hide');
+			if (elem.classList.contains(centersData)) {
+				elem.src = elem.getAttribute('data-map');
+				elem.classList.remove('hide');
+			}
+		})
+	}
+})
+
+// filter('.listCenter ul li button', '.mapContacts iframe', 'data-center', 'data-map');
+
+
+// Запуск видеоролика о центре в москве
+let btnVi = document.querySelectorAll('.btnVideo__wrapperCenters');
+
+btnVi.forEach(elem => {
+	elem.onclick = (event) => {
+		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	};
+});
+
+
+//Скрипт для маски ввода телефона
+window.addEventListener("DOMContentLoaded", function () {
+	[].forEach.call(document.querySelectorAll('.form__phone'), function (input) {
+		let keyCode;
+
+		function mask(event) {
+			event.keyCode && (keyCode = event.keyCode);
+			let pos = this.selectionStart;
+			if (pos < 3) event.preventDefault();
+
+			let matrix = "+7 (___) ___ ____",
+				i = 0,
+				def = matrix.replace(/\D/g, ""),
+				val = this.value.replace(/\D/g, ""),
+				new_value = matrix.replace(/[_\d]/g, function (a) {
+					return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+				});
+			i = new_value.indexOf("_");
+
+			if (i != -1) {
+				i < 5 && (i = 3);
+				new_value = new_value.slice(0, i)
+			}
+
+			let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+				function (a) {
+					return "\\d{1," + a.length + "}"
+				}).replace(/[+()]/g, "\\$&");
+
+			reg = new RegExp("^" + reg + "$");
+
+			if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+			if (event.type == "blur" && this.value.length < 5) this.value = ""
+		}
+
+		input.addEventListener("input", mask, false);
+		input.addEventListener("focus", mask, false);
+		input.addEventListener("blur", mask, false);
+		input.addEventListener("keydown", mask, false)
+	});
+});
+
+
+// Липкая шапка
+function sticky(elemSticky, offset) {
+	window.onscroll = function () {
+		let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+		let fix = document.querySelector(elemSticky);
+
+		if (scrolled > offset) {
+			fix.classList.add('sticky');
+		}
+		else {
+			fix.classList.remove('sticky');
+		}
+	}
+}
+
+if (window.location.pathname == "/") {
+	sticky('.topLine--home', 140);
+}
+
+// Плавный скролл к якорям
+const anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
+
+let V = 0.15;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (let i = 0; i < anchors.length; i++) {
+	anchors[i].addEventListener('click', function (e) { //по клику на ссылку
+		e.preventDefault(); //отменяем стандартное поведение
+
+		let w = window.pageYOffset,  // производим прокрутка прокрутка
+			hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
+		let t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id 		
+			start = null;
+
+		requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
+
+		function step(time) {
+			if (start === null) start = time;
+			let progress = time - start,
+				r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+			window.scrollTo(0, r);
+			if (r != w + t) {
+				requestAnimationFrame(step)
+			} else {
+				location.hash = hash  // URL с хэшем
+			}
+		}
+	}, false);
+}
+
+// Выделение активного пункта меню
+const itemsMenu = document.querySelectorAll('.topLine nav ul li a');
+
+itemsMenu.forEach(elem => {
+	elem.onclick = (event) => {
+		event.preventDefault;
+		itemsMenu.forEach(elem => {
+			elem.classList.remove('active');
+			event.target.classList.add('active');
+		})
+	};
+});
+
+// Стилизация инпут-файл
+let inputs = document.querySelectorAll('.form__file');
+
+Array.prototype.forEach.call(inputs, function (input) {
+	let label = input.nextElementSibling;
+
+	input.addEventListener('change', function (e) {
+		label.querySelector('.labelFile span').innerHTML = 'Прикреплен файл: ' + input.value;
+	});
+});
+
+// Аякс-запрос формы обратной связи
+let forms = document.querySelectorAll('.formAll');
+
+forms.forEach(elem => {
+	elem.onsubmit = function (event) {
+		event.preventDefault();
+
+		let formData = new FormData(elem);
+
+		let xhttp = new XMLHttpRequest();
+		xhttp.open('POST', 'mail.php');
+		xhttp.send(formData);
+
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				elem.reset();
+				document.querySelector('#thanks').classList.remove('mfp-hide');
+				document.querySelector('#closeModal').onclick = function () {
+					document.querySelector('#thanks').classList.add('mfp-hide');
+				}
+			}
+		}
+	}
+})
+
+// Выбор города
+let city = document.querySelectorAll('.modalCity__content a');
+
+city.forEach(elem => {
+	elem.onclick = (event) => {
+		event.preventDefault();
+
+		document.querySelector('.topLine__btn span').innerText = elem.innerText;
+		document.querySelector('#ci').classList.add('mfp-hide');
+
+		// document.querySelector('html').style.marginRight = '0';
+		// document.querySelector('html').style.overflow = 'visible';
+		// document.querySelector('.mfp-bg').parentNode.removeChild(document.querySelector('.mfp-bg'));
+	}
+	document.querySelector('.btnModal').onclick = () => {
+		document.querySelector('#ci').classList.add('mfp-hide');
+		document.querySelector('#cce').classList.remove('mfp-hide');
+	}
+})
+
+
