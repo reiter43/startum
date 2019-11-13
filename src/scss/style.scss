@@ -2893,6 +2893,7 @@ label:not(.labelFile) {
 		}
 
 		@include xs-block {
+			flex-direction: column;
 			flex-wrap: wrap;
 		}
 	}
@@ -2904,6 +2905,10 @@ label:not(.labelFile) {
 		@include md-block {
 			flex-basis: 350px;
 			margin: 0;
+		}
+
+		@include xs-block {
+			flex-basis: 35px;
 		}
 	}
 

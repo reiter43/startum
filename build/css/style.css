@@ -6213,9 +6213,20 @@ label:not(.labelFile) svg {
   }
 
   .formQuest .formQuest__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  .formQuest .input__wrapper {
+    -webkit-flex-basis: 35px;
+    -ms-flex-preferred-size: 35px;
+    flex-basis: 35px;
   }
 
   .formQuest input {
