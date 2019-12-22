@@ -221,7 +221,7 @@ gulp.task('watch', () => {
 
 
 
-//Таск по умолчанию. Запускает del, styles, scripts и watch
+//Таск по умолчанию. Запускает сборку
 gulp.task('default', gulp.series('del', 'grid', gulp.parallel('styles', 'scripts', 'scriptsCustom', 'img-compress', 'svg'), 'watch'));
 
 
