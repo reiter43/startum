@@ -124,15 +124,6 @@ centers.forEach(elem => {
 // filter('.listCenter ul li button', '.mapContacts iframe', 'data-center', 'data-map');
 
 
-// Запуск видеоролика о центре в москве
-let btnVi = document.querySelectorAll('.btnVideo__wrapperCenters');
-
-btnVi.forEach(elem => {
-	elem.onclick = (event) => {
-		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-	};
-});
-
 
 //Скрипт для маски ввода телефона
 window.addEventListener("DOMContentLoaded", function () {
@@ -282,16 +273,18 @@ city.forEach(elem => {
 		event.preventDefault();
 
 		document.querySelector('.topLine__btn span').innerText = elem.innerText;
+		document.querySelector('.centers > p').innerText = 'Пройдите 3D-тур по центру в г. ' + elem.innerText;
 		document.querySelector('#ci').classList.add('mfp-hide');
+	}
+});
 
-		// document.querySelector('html').style.marginRight = '0';
-		// document.querySelector('html').style.overflow = 'visible';
-		// document.querySelector('.mfp-bg').parentNode.removeChild(document.querySelector('.mfp-bg'));
-	}
-	document.querySelector('.btnModal').onclick = () => {
-		document.querySelector('#ci').classList.add('mfp-hide');
-		document.querySelector('#cce').classList.remove('mfp-hide');
-	}
-})
+// Запуск видеоролика о центре в москве
+let btnVi = document.querySelectorAll('.btnVideo__wrapperCenters');
+
+btnVi.forEach(elem => {
+	elem.onclick = (event) => {
+		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	};
+});
 
 

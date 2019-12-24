@@ -33,7 +33,7 @@ gulp.task('styles', () => {
 	return gulp.src([
 		'./src/libs/owlcarousel/*.css',
 		// './src/libs/slick/*.css',
-		'./src/libs/magneficPopap/*.css',		
+		'./src/libs/magneficPopap/*.css',
 		'./src/scss/style.scss'
 	])
 		.pipe(sourcemaps.init())
@@ -42,7 +42,7 @@ gulp.task('styles', () => {
 		.pipe(gcmq())
 		.pipe(autoprefixer({
 			grid: true,
-			overrideBrowserslist: ['last 10 versions'],
+			overrideBrowserslist: ['last 3 versions'],
 			cascade: false
 		}))
 		// .pipe(cleanCSS({
@@ -77,9 +77,9 @@ gulp.task('scriptsCustom', () => {
 		'./src/js/script/*.js',
 		'./src/js/script/script.js'
 	])
-		// .pipe(babel({
-		// 	presets: ['@babel/env']
-		// }))
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
 		.pipe(concat('scripts.js'))
 		// .pipe(uglify())
 		.pipe(gulp.dest('./build/js'))
@@ -191,9 +191,10 @@ gulp.task('grid', (done) => {
 		}
 	};
 
-	smartgrid('./src/scss', settings);
+	smartgrid('./src/libs', settings);
 	done();
 });
+
 
 
 

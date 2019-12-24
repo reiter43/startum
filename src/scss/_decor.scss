@@ -1,8 +1,8 @@
 .rest {
     position: absolute;
+    z-index: -1;
     top: -135px;
     left: 0;
-    z-index: -1;
     transform: rotate(-45deg);
 
     @include xs-block {
@@ -13,7 +13,7 @@
         width: 684px;
         height: 34px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include xs-block {
             width: 206px;
@@ -27,7 +27,7 @@
         height: 90px;
         margin-top: 10px;
         margin-left: -400px;
-        background: #2098D5;
+        background: #2098d5;
 
         @include xs-block {
             width: 206px;
@@ -39,9 +39,9 @@
 
 .rest2 {
     position: absolute;
-    bottom: -135px;
-    right: 0;
     z-index: -1;
+    right: 0;
+    bottom: -135px;
     transform: rotate(-45deg);
 
     @include sm-block {
@@ -53,22 +53,22 @@
         height: 126px;
         margin-top: 10px;
         margin-right: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
     }
 
     .restBlue2 {
         width: 684px;
         height: 19px;
         margin-right: -400px;
-        background: #2098D5;
+        background: #2098d5;
     }
 }
 
 .rest3 {
     position: absolute;
+    z-index: -1;
     top: -135px;
     left: 0;
-    z-index: -1;
     transform: rotate(-45deg);
 
 
@@ -76,7 +76,7 @@
         width: 684px;
         height: 8px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include sm-block {
             height: 6px;
@@ -88,7 +88,7 @@
         height: 83px;
         margin-top: 10px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include sm-block {
             height: 45px;
@@ -101,7 +101,7 @@
         height: 7px;
         margin-top: 10px;
         margin-left: -400px;
-        background: #2098D5;
+        background: #2098d5;
 
         @include sm-block {
             height: 5px;
@@ -112,9 +112,9 @@
 
 .rest4 {
     position: absolute;
-    bottom: -30px;
-    right: 0;
     z-index: -1;
+    right: 0;
+    bottom: -30px;
     transform: rotate(-45deg);
 
     @include sm-block {
@@ -125,7 +125,7 @@
         width: 684px;
         height: 17px;
         margin-right: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
     }
 
     .restBlue4 {
@@ -133,7 +133,7 @@
         height: 83px;
         margin-top: 20px;
         margin-right: -400px;
-        background: #2098D5;
+        background: #2098d5;
     }
 
     .restYellow6 {
@@ -141,15 +141,15 @@
         height: 10px;
         margin-top: 10px;
         margin-right: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
     }
 }
 
 .rest5 {
     position: absolute;
+    z-index: 1;
     top: -135px;
     left: 0;
-    z-index: 1;
     transform: rotate(-45deg);
 
     @include xs-block {
@@ -161,7 +161,7 @@
         width: 684px;
         height: 10px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             height: 8px;
@@ -177,7 +177,7 @@
         height: 83px;
         margin-top: 70px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             height: 60px;
@@ -195,7 +195,7 @@
         height: 10px;
         margin-top: 20px;
         margin-left: -400px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             height: 8px;
@@ -211,9 +211,9 @@
 
 .rest6 {
     position: absolute;
-    bottom: -170px;
-    right: 0;
     z-index: 1;
+    right: 0;
+    bottom: -170px;
     transform: rotate(-45deg);
 
     @include sm-block {
@@ -224,7 +224,7 @@
         width: 684px;
         height: 17px;
         margin-right: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             height: 12px;
@@ -236,7 +236,7 @@
         height: 83px;
         margin-top: 20px;
         margin-right: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             height: 60px;
@@ -246,10 +246,10 @@
 }
 
 .contacts,
-.metods {
+ .metods {
 
     .rest3,
-    .rest4 {
+ .rest4 {
         z-index: 1;
 
         @include sm-block {
@@ -266,9 +266,9 @@
 
 .rest7 {
     position: absolute;
-    bottom: 0;
-    right: -290px;
     z-index: -1;
+    right: -290px;
+    bottom: 0;
     transform: rotate(-45deg);
 
     @include lllg-block {
@@ -287,7 +287,7 @@
         width: 1668px;
         height: 7px;
         margin-right: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
     }
 
     .restYellow13 {
@@ -295,7 +295,7 @@
         height: 83px;
         margin-top: 10px;
         margin-right: -400px;
-        background: #FFCC00;
+        background: #ffcc00;
     }
 
     .restBlue7 {
@@ -303,7 +303,7 @@
         height: 10px;
         margin-top: 20px;
         margin-right: -250px;
-        background: #2098D5;
+        background: #2098d5;
     }
 }
 
@@ -323,9 +323,9 @@
 
 .rest8 {
     position: absolute;
+    z-index: 10;
     top: -135px;
     left: 0;
-    z-index: 10;
     transform: rotate(-45deg);
 
     @include sm-block {
@@ -337,7 +337,7 @@
         width: 684px;
         height: 50px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             height: 40px;
@@ -349,7 +349,7 @@
         height: 9px;
         margin-top: 15px;
         margin-left: -250px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             margin-top: 10px;
@@ -359,14 +359,14 @@
 
 .rest9 {
     position: absolute;
-    bottom: -300px;
-    right: -400px;
     z-index: 10;
+    right: -400px;
+    bottom: -300px;
     transform: rotate(-45deg);
 
     @include llg-block {
-        bottom: -300px;
         right: -450px;
+        bottom: -300px;
     }
 
     @include sm-block {
@@ -378,7 +378,7 @@
         height: 19px;
         margin-top: 20px;
         margin-right: -250px;
-        background: #2098D5;
+        background: #2098d5;
 
         @include llg-block {
             height: 15px;
@@ -390,7 +390,7 @@
         height: 126px;
         margin-top: 15px;
         margin-right: -400px;
-        background: #FFCC00;
+        background: #ffcc00;
 
         @include llg-block {
             margin-top: 10px;
@@ -399,10 +399,10 @@
 }
 
 .modalQuest,
-.modalOrder,
-.modalReview,
-.modalCentr{
-    .rest9{
+ .modalOrder,
+ .modalReview,
+ .modalCentr {
+    .rest9 {
         bottom: -350px;
     }
 }

@@ -1,14 +1,11 @@
 @import 'fonts.scss';
-@import 'normalize.scss';
+@import './src/libs/normalize.scss';
 @import 'mixsins.scss';
-@import 'smart-grid.scss';
-
-
+@import '../libs/smart-grid.scss';
 
 /*=============================================
       ОБЩИЕ ПРАВИЛА
-  ============================================= */
-
+  =============================================*/
 .clearfix {
     @include clearfix;
 }
@@ -26,24 +23,20 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-style: normal;
-    font-weight: 400;
+    font-family: Montserrat, sans-serif;
     line-height: 1.375;
-    font-family: 'Montserrat', 'sans serif';
+    font-weight: 400;
+    font-style: 400;
 }
 
 .titleSection {
     margin: 0;
-
-    font-weight: normal;
+    text-align: center;
     font-size: 2.5vw;
     line-height: 120%;
-    text-align: center;
-    color: #000;
 
-    span {
-        font-weight: 600;
-    }
+    font-weight: 400;
+    color: #000;
 
     @include lg-block {
         font-size: 32px;
@@ -53,14 +46,18 @@ body {
     @include xs-block {
         font-size: 28px;
     }
+
+    span {
+        font-weight: 600;
+    }
 }
 
 .descSection {
     margin-bottom: 20px;
-    font-weight: 500;
+    text-align: center;
     font-size: 24px;
     line-height: 160%;
-    text-align: center;
+    font-weight: 500;
     color: #000000;
 
     @include md-block {
@@ -78,26 +75,26 @@ body {
 .btnBase {
     display: inline-block;
     padding: 15px 38px;
-    text-align: center;
-    background: #FFCC00;
-    border-radius: 12px;
+    background: #ffcc00;
     border: none;
+    border-radius: 12px;
+    text-align: center;
     cursor: pointer;
 
-    p,
-    span {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 160%;
-        color: #000000;
-    }
-
     &:hover {
-        box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+        box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6);
     }
 
     &:focus {
         outline: none;
+    }
+
+    p,
+    span {
+        font-size: 18px;
+        line-height: 160%;
+        font-weight: 600;
+        color: #000000;
     }
 }
 
@@ -105,14 +102,14 @@ body {
     .owl-nav {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         display: flex;
         justify-content: space-between;
+        transform: translateY(-50%);
 
         .owl-next,
         .owl-prev {
-            outline: none;
             cursor: pointer;
+            outline: none;
 
             .slider-next,
             .slider-prev {
@@ -136,20 +133,19 @@ body {
     display: block;
 }
 
-
-/*============================================= */
+//=============================================
 
 
 /*=============================================
         ШАПКА
-============================================= */
+=============================================*/
 .header {
     position: relative;
 }
 
 .header--home {
-    overflow-x: hidden;
     padding-bottom: 64px;
+    overflow-x: hidden;
     background: radial-gradient(84.57% 47.69% at 36.59% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%), url(015.jpg), rgba(0, 0, 0, 0.1);
     background-image: url(../img/images/bg-top.jpg);
     background-repeat: no-repeat;
@@ -166,10 +162,10 @@ body {
         max-width: 1002px;
         margin-bottom: 53px;
         padding-top: 366px;
-        font-weight: 400;
         font-size: 3.125vw;
         line-height: 130%;
-        color: #FFFFFF;
+        font-weight: 400;
+        color: #ffffff;
 
         @include md-block {
             font-size: 32px;
@@ -194,10 +190,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 50px 50px 0;
 
     @include md-block {
@@ -216,13 +212,13 @@ body {
         display: flex;
         align-items: center;
         padding: 13px 22px;
-        border: 1.5px solid rgba(255, 255, 255, .2);
         background: transparent;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-        font-weight: 600;
         font-size: 16px;
         line-height: 160%;
-        color: #FFFFFF;
+        font-weight: 600;
+        color: #ffffff;
         cursor: pointer;
 
         @include md-block {
@@ -230,14 +226,14 @@ body {
         }
 
         &:hover {
-            border: 1.5px solid rgba(255, 255, 255, .8);
+            border: 1.5px solid rgba(255, 255, 255, 0.8);
         }
 
         svg {
             width: 15px;
             height: 18px;
             margin-right: 8px;
-            fill: #FFFFFF;
+            fill: #ffffff;
         }
     }
 }
@@ -255,8 +251,8 @@ body {
 }
 
 .logo {
-    width: 298px;
     z-index: 102;
+    width: 298px;
 
     @include xs-block {
         width: 162px;
@@ -270,26 +266,26 @@ body {
 
 .nav {
     @include llg-block {
-        display: block;
         position: absolute;
+        z-index: 100;
         top: 0;
         left: 0;
-        z-index: 100;
+        display: block;
         width: 0;
         margin-left: 101%;
         transition: all ease 0.8s;
     }
 
     &__list {
-        list-style-type: none;
         display: flex;
         justify-content: space-around;
+        list-style-type: none;
 
         @include llg-block {
             display: block;
             padding: 120px 0 20px 100px;
-            text-align: left;
             background: #a5a5a5;
+            text-align: left;
         }
 
         @include sm-block {
@@ -299,10 +295,10 @@ body {
         li {
             a {
                 margin-right: 30px;
-                font-weight: 600;
                 font-size: 26px;
                 line-height: 1.3;
-                color: #FFFFFF;
+                font-weight: 600;
+                color: #ffffff;
                 transition: all ease 0.5s;
 
                 @include lllg-block {
@@ -326,12 +322,12 @@ body {
                 }
 
                 &:hover {
-                    color: #FFCC00;
+                    color: #ffcc00;
                 }
             }
 
             a.active {
-                color: #FFCC00;
+                color: #ffcc00;
             }
 
             a[href*=anchor2],
@@ -355,16 +351,16 @@ body {
 
 .sticky {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
-    z-index: 1000;
     width: 100%;
     margin: 0;
     padding: 10px 50px;
     background: #a5a5a5;
 
     @include xs-block {
-        padding: 10px 15px
+        padding: 10px 15px;
     }
 }
 
@@ -372,7 +368,7 @@ body {
     background: #a5a5a5;
 
     &:hover {
-        box-shadow: 0px 8px 30px #000;
+        box-shadow: 0 8px 30px #000;
     }
 }
 
@@ -417,8 +413,8 @@ body {
 
 .btnBase--downHeader {
     @include xs-block {
-        padding: 14px 30px;
         margin-top: 20px;
+        padding: 14px 30px;
     }
 
     p,
@@ -458,7 +454,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
 
@@ -510,14 +506,14 @@ body {
 .btnVideo__wrapperCenters:hover .btnVideo__ellipse1,
 .btnVideo__wrapperCenters:hover .btnVideo__ellipse2,
 .btnVideo__wrapperCenters:hover .btnVideo__ellipse3 {
-    box-shadow: 0px 8px 30px #FFFFFF;
+    box-shadow: 0 8px 30px #ffffff;
 }
 
 
 .header__items {
-    @include row-flex();
     justify-content: space-between;
     margin-top: 184px;
+    @include row-flex();
 
     @include sm-block {
         display: none;
@@ -526,6 +522,7 @@ body {
     .header__item {
         @include col();
         @include size(3);
+
         max-width: 228px;
 
         @include llg-block {
@@ -534,19 +531,19 @@ body {
 
         &>span {
             margin-bottom: 11px;
-            font-weight: bold;
             font-size: 24px;
             line-height: 150%;
+            font-weight: 700;
             letter-spacing: 0.1em;
-            color: #FFCC00;
-            text-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
+            text-shadow: 0 8px 30px rgba(255, 204, 0, 0.6);
+            color: #ffcc00;
         }
 
         p {
-            font-weight: 400;
             font-size: 16px;
             line-height: 150%;
-            color: #FFFFFF;
+            font-weight: 400;
+            color: #ffffff;
 
             @include md-block {
                 font-size: 14px;
@@ -559,34 +556,35 @@ body {
     }
 }
 
-/*============================================= */
+//============================================== 
 
 
-/*=============================================
+
+/*==============================================
         ОСНОВНОЙ КОНТЕНТ
-============================================= */
+===============================================*/
 
 /*---------------------------------------------
   Секция mostly
---------------------------------------------- */
+---------------------------------------------*/
 .mostly {
     position: relative;
     padding: 60px 0 126px;
-    color: #000000;
     overflow: hidden;
+    color: #000000;
 
     @include lg-block {
         padding: 70px 0 46px;
     }
 
     @include sm-block {
-        text-align: center;
         padding-top: 83px;
+        text-align: center;
     }
 
     @include xxs-block {
-        text-align: left;
         padding-bottom: 74px;
+        text-align: left;
     }
 }
 
@@ -600,10 +598,6 @@ body {
 
     @include xxs-block {
         align-items: flex-start;
-    }
-
-    img {
-        @include img;
     }
 
     .mostly__block1 {
@@ -637,9 +631,9 @@ body {
 
         p {
             margin-top: 45px;
-            font-weight: normal;
             font-size: 16px;
             line-height: 170%;
+            font-weight: 400;
 
             @include md-block {
                 font-size: 14px;
@@ -648,7 +642,6 @@ body {
             @include sm-block {
                 display: none;
             }
-
         }
     }
 
@@ -665,10 +658,20 @@ body {
             width: 100%;
         }
 
+        .btnBase--mostly {
+
+            p,
+            span {
+                @include xxs-block {
+                    font-size: 14px;
+                }
+            }
+        }
+
         &>p {
-            font-weight: normal;
             font-size: 20px;
             line-height: 190%;
+            font-weight: 400;
 
             @include llg-block {
                 font-size: 16px;
@@ -706,16 +709,6 @@ body {
             }
         }
 
-        .btnBase--mostly {
-
-            p,
-            span {
-                @include xxs-block {
-                    font-size: 14px;
-                }
-            }
-        }
-
         &>p:nth-child(6) {
             display: none;
 
@@ -748,52 +741,30 @@ body {
             }
         }
     }
+
+    img {
+        @include img;
+    }
 }
 
-/*----------------------------------------------*/
+// ----------------------------------------------
+
 
 /*---------------------------------------------
   Секция indicators
---------------------------------------------- */
+---------------------------------------------*/
 .indicators {
     padding: 59px 0;
-    background: #2098D5;
-    color: #FFFFFF;
+    background: #2098d5;
+    color: #ffffff;
 
     @include xxs-block {
         padding: 44px 0 37px;
     }
 
-    h3 {
-        width: 20%;
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 120%;
-
-        @include llg-block {
-            font-size: 30px;
-        }
-
-        @include md-block {
-            width: 16%;
-            font-size: 21px;
-        }
-
-        @include sm-block {
-            width: 75%;
-            text-align: center;
-            font-size: 36px;
-        }
-
-        @include xxs-block {
-            width: 80%;
-            font-size: 28px;
-        }
-    }
-
     .indicators__content {
-        @include row-flex();
         align-items: center;
+        @include row-flex();
 
         @include sm-block {
             flex-direction: column;
@@ -801,10 +772,10 @@ body {
         }
 
         .indicators__item {
-            @include col();
-            width: 23%;
             display: flex;
             align-items: center;
+            width: 23%;
+            @include col();
 
             @include lg-block {
                 flex-direction: column;
@@ -818,9 +789,9 @@ body {
 
 
             span {
-                font-weight: normal;
                 font-size: 5vw;
                 line-height: 130%;
+                font-weight: 400;
 
                 @include llg-block {
                     font-size: 60px;
@@ -837,9 +808,9 @@ body {
 
             p {
                 margin-left: 10px;
-                font-weight: normal;
                 font-size: 18px;
                 line-height: 150%;
+                font-weight: 400;
 
                 @include llg-block {
                     font-size: 15px;
@@ -862,32 +833,59 @@ body {
             }
         }
     }
+
+    h3 {
+        width: 20%;
+        font-size: 40px;
+        line-height: 120%;
+        font-weight: 600;
+
+        @include llg-block {
+            font-size: 30px;
+        }
+
+        @include md-block {
+            width: 16%;
+            font-size: 21px;
+        }
+
+        @include sm-block {
+            width: 75%;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        @include xxs-block {
+            width: 80%;
+            font-size: 28px;
+        }
+    }
 }
 
 /*----------------------------------------------*/
 
 /*---------------------------------------------
   Секция map
---------------------------------------------- */
+---------------------------------------------*/
 .map {
     position: relative;
     width: 100%;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @include sm-block {
         display: none;
-    }
-
-    img {
-        @include img;
     }
 
     &__content {
         @include centerer(true, false);
     }
 
+    img {
+        @include img;
+    }
+
     h2 {
-        color: #FFFFFF;
+        color: #ffffff;
 
         @include llg-block {
             padding-top: 35px;
@@ -897,10 +895,10 @@ body {
     p {
         width: 888px;
         margin: 27px auto 0;
-        font-weight: 500;
+        text-align: center;
         font-size: 1.2vw;
         line-height: 160%;
-        text-align: center;
+        font-weight: 500;
 
         @include llg-block {
             margin-top: 13px;
@@ -918,57 +916,20 @@ body {
 
 /*---------------------------------------------
   Секция program
---------------------------------------------- */
+---------------------------------------------*/
 .program {
     position: relative;
-    padding: 40px 87px 94px 87px;
-    color: #000000;
+    padding: 40px 87px 94px;
     overflow: hidden;
+    color: #000000;
 
     @include md-block {
-        padding: 40px 47px 94px 47px;
+        padding: 40px 47px 94px;
     }
 
     @include xxs-block {
-        padding: 40px 0px 94px 0px;
+        padding: 40px 0 94px;
         text-align: center;
-    }
-
-    &>h2 {
-        @include md-block {
-            font-size: 25px;
-        }
-
-        @include xs-block {
-            font-weight: 600;
-        }
-
-        @include xxs-block {
-            font-size: 28px;
-            margin-bottom: 85px;
-            padding: 0 40px;
-        }
-    }
-
-    &>p {
-        max-width: 906px;
-        margin: 24px auto 64px;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 160%;
-        text-align: center;
-
-        @include lg-block {
-            font-size: 20px;
-        }
-
-        @include md-block {
-            font-size: 18px;
-        }
-
-        @include xxs-block {
-            display: none;
-        }
     }
 
     .btnBase {
@@ -989,11 +950,48 @@ body {
             }
         }
     }
+
+    &>h2 {
+        @include md-block {
+            font-size: 25px;
+        }
+
+        @include xs-block {
+            font-weight: 600;
+        }
+
+        @include xxs-block {
+            margin-bottom: 85px;
+            padding: 0 40px;
+            font-size: 28px;
+        }
+    }
+
+    &>p {
+        max-width: 906px;
+        margin: 24px auto 64px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 160%;
+        font-weight: 500;
+
+        @include lg-block {
+            font-size: 20px;
+        }
+
+        @include md-block {
+            font-size: 18px;
+        }
+
+        @include xxs-block {
+            display: none;
+        }
+    }
 }
 
 .program__content {
-    @include row-flex();
     justify-content: space-around;
+    @include row-flex();
 
     @include md-block {
         justify-content: center;
@@ -1002,14 +1000,13 @@ body {
 
 .program__content .programItem:last-child {
     @include xxs-block {
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 }
 
 .programItem {
     @include col();
     @include size(3);
-
     @include size-lg(4);
     @include size-md(6);
     @include size-xs(12);
@@ -1019,11 +1016,11 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 35px;
-    padding: 61px 40px 87px 40px;
-    text-align: center;
-    background: #FFFFFF;
-    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+    padding: 61px 40px 87px;
+    background: #ffffff;
     border-radius: 12px;
+    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+    text-align: center;
 
     @include llg-block {
         padding: 30px 10px;
@@ -1042,75 +1039,26 @@ body {
     }
 
     @include xs-block {
-        max-width: 300px;
         width: 90%;
+        max-width: 300px;
     }
 
     @include xxs-block {
-        max-width: 390px;
-        width: 100%;
-        margin-bottom: 0;
-        padding: 23px 6px 23px 36px;
         flex-direction: row;
         justify-content: flex-start;
+        width: 100%;
+        max-width: 390px;
+        margin-bottom: 0;
+        padding: 23px 6px 23px 36px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
         box-shadow: none;
-        border-radius: 0px;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-    }
-
-    svg {
-        @include svg(75px, 75px, #2098D5);
-
-        @include xxs-block {
-            @include svg(38px, 34px, #2098D5);
-        }
-    }
-
-    h4 {
-        margin: 30px 0 23px;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 130%;
-
-        @include llg-block {
-            margin: 15px 0 5px;
-            font-size: 16px;
-        }
-
-        @include md-block {
-            font-size: 20px;
-        }
-
-        @include xxs-block {
-            margin-left: 22px;
-            font-size: 16px;
-        }
-    }
-
-    p {
-        margin-bottom: 25px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 170%;
-
-        @include llg-block {
-            margin-bottom: 15px;
-            font-size: 13px;
-        }
-
-        @include md-block {
-            font-size: 15px;
-        }
-
-        @include xxs-block {
-            display: none;
-        }
     }
 
     .programItem__quote {
         position: relative;
         margin-top: auto;
-        background: #FAFAFA;
+        background: #fafafa;
         border-radius: 12px;
 
         &::before {
@@ -1118,15 +1066,15 @@ body {
             position: absolute;
             left: 17px;
             bottom: -14px;
-            border-left: 11px solid #FAFAFA;
-            border-right: 11px solid #FAFAFA;
-            border-top: 16px solid #EDEDED;
+            border-top: 16px solid #ededed;
+            border-left: 11px solid #fafafa;
+            border-right: 11px solid #fafafa;
 
             @include llg-block {
                 bottom: -8px;
-                border-left: 7px solid #FAFAFA;
-                border-right: 7px solid #FAFAFA;
-                border-top: 9px solid #EDEDED;
+                border-top: 9px solid #ededed;
+                border-left: 7px solid #fafafa;
+                border-right: 7px solid #fafafa;
             }
 
             @include xxs-block {
@@ -1138,9 +1086,9 @@ body {
             margin: 15px;
             padding: 15px 0;
             text-align: left;
-            font-weight: normal;
             font-size: 13px;
             line-height: 160%;
+            font-weight: 400;
 
             @include xxs-block {
                 display: none;
@@ -1166,9 +1114,9 @@ body {
 
         h6 {
             margin: 0;
-            font-weight: 600;
             font-size: 16px;
             line-height: 130%;
+            font-weight: 600;
 
             @include llg-block {
                 font-size: 14px;
@@ -1180,14 +1128,63 @@ body {
             margin: 0;
             padding: 0;
             text-align: left;
-            font-weight: normal;
             font-size: 13px;
             line-height: 130%;
+            font-weight: 400;
         }
     }
 
     .btnBase {
         display: none;
+    }
+
+    svg {
+        @include svg(75px, 75px, #2098D5);
+
+        @include xxs-block {
+            @include svg(38px, 34px, #2098D5);
+        }
+    }
+
+    h4 {
+        margin: 30px 0 23px;
+        font-size: 22px;
+        line-height: 130%;
+        font-weight: 600;
+
+        @include llg-block {
+            margin: 15px 0 5px;
+            font-size: 16px;
+        }
+
+        @include md-block {
+            font-size: 20px;
+        }
+
+        @include xxs-block {
+            margin-left: 22px;
+            font-size: 16px;
+        }
+    }
+
+    p {
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 170%;
+        font-weight: 400;
+
+        @include llg-block {
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        @include md-block {
+            font-size: 15px;
+        }
+
+        @include xxs-block {
+            display: none;
+        }
     }
 }
 
@@ -1221,12 +1218,12 @@ body {
         display: none;
     }
 
-    P,
+    p,
     span {
         margin-bottom: 0;
         font-size: 14px;
-        font-weight: 600;
         line-height: 1.3;
+        font-weight: 600;
     }
 }
 
@@ -1234,13 +1231,13 @@ body {
 
 /*---------------------------------------------
   Секция formAnswer
---------------------------------------------- */
+---------------------------------------------*/
 .formAnswer,
 .formQuest {
     position: relative;
-    padding: 83px 20px 10px 20px;
-    background: #2098D5;
+    padding: 83px 20px 10px;
     overflow: hidden;
+    background: #2098d5;
 
     @include xs-block {
         padding: 47px 15px 7px;
@@ -1249,18 +1246,18 @@ body {
     &>h2 {
         position: relative;
         z-index: 5;
-        font-weight: 600;
         line-height: 1.5;
-        color: #FFFFFF;
+        font-weight: 600;
+        color: #ffffff;
     }
 
     p {
         margin: 10px 0 73px;
-        font-weight: 500;
+        text-align: center;
         font-size: 24px;
         line-height: 160%;
-        text-align: center;
-        color: #FFFFFF;
+        font-weight: 500;
+        color: #ffffff;
 
         @include lg-block {
             font-size: 22px;
@@ -1279,9 +1276,9 @@ body {
 
 p>small {
     max-width: 1160px;
-    font: 500 13px/1.6 Montserrat;
     text-align: center;
-    color: #FFFFFF;
+    font: 500 13px/1.6 Montserrat, sans-serif;
+    color: #ffffff;
     opacity: 0.5;
 
     @include llg-block {
@@ -1322,38 +1319,38 @@ p>small {
 
     @include md-block {
         width: 352px;
-        margin-bottom: 20px;
         margin-right: 0;
+        margin-bottom: 20px;
     }
 
     @include xxs-block {
-        width: 100%
+        width: 100%;
     }
 }
 
-input
+input,
 select {
     width: 100%;
     height: 68px;
     padding-left: 59px;
-    background: #FFFFFF;
-    border-radius: 12px;
+    background: #ffffff;
     border: none;
+    border-radius: 12px;
     font-size: 14px;
-
-    &:focus {
-        outline: none;
-    }
 
     @include xxs-block {
         height: 60px;
     }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 @include input-placeholder {
-    font-weight: normal;
     font-size: 16px;
     line-height: 160%;
+    font-weight: 400;
     color: #000000;
     opacity: 0.5;
 
@@ -1380,21 +1377,17 @@ label:not(.labelFile) {
     justify-content: center;
     align-items: center;
     padding: 0 46px;
-    background: #FFCC00;
+    background: #ffcc00;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-
-    &:hover {
-        box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
-    }
 
     @include lg-block {
         padding: 0 26px;
     }
 
     @include md-block {
-        margin: 0 0 10px 0;
+        margin: 0 0 10px;
         padding-top: 20px;
         padding-bottom: 20px;
         text-align: center;
@@ -1406,9 +1399,13 @@ label:not(.labelFile) {
         padding-top: 15px;
     }
 
+    &:hover {
+        box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6);
+    }
+
     span {
         margin-right: 11px;
-        font: 600 18px/1.6 Montserrat;
+        font: 600 18px/1.6 Montserrat, sans-serif;
         color: #000000;
 
         @include xs-block {
@@ -1423,17 +1420,46 @@ label:not(.labelFile) {
 
 /*----------------------------------------------*/
 
-
 /*---------------------------------------------
   Секция reviiews
---------------------------------------------- */
+---------------------------------------------*/
 .reviews {
     padding: 103px 70px;
-    background: #FFCC00;
     overflow-x: hidden;
+    background: #ffcc00;
 
     @include xs-block {
         padding: 40px 15px 68px;
+    }
+
+    .btnBase {
+        display: block;
+        max-width: 350px;
+        margin: 0 auto;
+        margin-top: 111px;
+        background: #ffffff;
+        border-radius: 12px;
+        cursor: pointer;
+
+        @include xs-block {
+            margin-top: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6);
+        }
+
+        p,
+        span {
+            font-size: 18px;
+            line-height: 160%;
+            font-weight: 600;
+            color: #000000;
+
+            @include xs-block {
+                font-size: 14px;
+            }
+        }
     }
 
     h2 {
@@ -1443,38 +1469,8 @@ label:not(.labelFile) {
         }
 
         @include xs-block {
-            font-weight: 600;
             font-size: 28px;
-        }
-    }
-
-    .btnBase {
-        display: block;
-        max-width: 350px;
-        margin: 0 auto;
-        margin-top: 111px;
-        background: #FFFFFF;
-        border-radius: 12px;
-        cursor: pointer;
-
-        &:hover {
-            box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
-        }
-
-        @include xs-block {
-            margin-top: 0;
-        }
-
-        p,
-        span {
             font-weight: 600;
-            font-size: 18px;
-            line-height: 160%;
-            color: #000000;
-
-            @include xs-block {
-                font-size: 14px;
-            }
         }
     }
 }
@@ -1499,9 +1495,9 @@ label:not(.labelFile) {
     max-width: 100%;
     margin: 0 auto;
     padding: 42px 55px;
-    background: #FFFFFF;
-    box-shadow: 2px 56px 44px rgba(0, 0, 0, 0.07);
+    background: #ffffff;
     border-radius: 12px;
+    box-shadow: 2px 56px 44px rgba(0, 0, 0, 0.07);
 
     @include llg-block {
         width: 100%;
@@ -1511,9 +1507,9 @@ label:not(.labelFile) {
 
     @include md-block {
         position: relative;
-        max-width: 600px;
         flex-direction: column;
         align-items: center;
+        max-width: 600px;
 
         @include xs-block {
             padding: 32px 20px;
@@ -1532,40 +1528,12 @@ label:not(.labelFile) {
             position: relative;
             margin: 0;
             padding: 20px 20px 10px 25px;
-            background: #FAFAFA;
+            background: #fafafa;
             border-radius: 12px;
-            font-weight: normal;
             font-size: 14px;
             line-height: 175%;
+            font-weight: 400;
             color: #000000;
-
-            &::before {
-                position: absolute;
-                content: '';
-
-                @include md-block {
-                    left: 40px;
-                    top: -11px;
-                    border-bottom: 11px solid #EDEDED;
-                    border-left: 12px solid #FFFFFF;
-                    border-right: 12px solid #FFFFFF;
-                }
-            }
-
-            &::after {
-                position: absolute;
-                content: '';
-                right: -11px;
-                bottom: 50%;
-                transform: translateY(50%);
-                border-left: 11px solid #EDEDED;
-                border-bottom: 12px solid #FFFFFF;
-                border-top: 12px solid #FFFFFF;
-
-                @include md-block {
-                    display: none;
-                }
-            }
 
             @include llg-block {
                 font-size: 13px;
@@ -1584,21 +1552,49 @@ label:not(.labelFile) {
                 font-size: 12px;
             }
 
+            &::before {
+                content: '';
+                position: absolute;
+
+                @include md-block {
+                    top: -11px;
+                    left: 40px;
+                    border-left: 12px solid #ffffff;
+                    border-right: 12px solid #ffffff;
+                    border-bottom: 11px solid #ededed;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -11px;
+                bottom: 50%;
+                border-top: 12px solid #ffffff;
+                border-left: 11px solid #ededed;
+                border-bottom: 12px solid #ffffff;
+                transform: translateY(50%);
+
+                @include md-block {
+                    display: none;
+                }
+            }
+
             svg {
                 position: absolute;
                 top: -17px;
                 right: 17px;
                 width: 42px;
                 height: 34px;
-                fill: #FFCC00;
+                fill: #ffcc00;
             }
         }
 
         h3 {
-            margin: 100px 0 10px 0;
-            font-weight: 600;
+            margin: 100px 0 10px;
             font-size: 24px;
             line-height: 170%;
+            font-weight: 600;
             color: #000000;
 
             @include llg-block {
@@ -1614,13 +1610,12 @@ label:not(.labelFile) {
                 font-size: 18px;
                 line-height: 1.3;
             }
-
         }
 
         p {
-            font-weight: normal;
             font-size: 14px;
             line-height: 190%;
+            font-weight: 400;
             color: #000000;
 
             @include llg-block {
@@ -1634,7 +1629,6 @@ label:not(.labelFile) {
             @include xxs-block {
                 font-size: 12px;
             }
-
         }
 
         p:nth-child(4) {
@@ -1645,19 +1639,15 @@ label:not(.labelFile) {
             width: 100%;
             margin-top: 20px;
             padding: 12px 110px;
-            border: 2px solid #FFCC00;
+            background: none;
+            border: 2px solid #ffcc00;
             border-radius: 12px;
             text-align: center;
-            background: none;
-            font-weight: 500;
             font-size: 14px;
             line-height: 160%;
+            font-weight: 500;
             color: #000000;
             cursor: pointer;
-
-            &:hover {
-                box-shadow: 0px 8px 30px rgba(255, 204, 0, 0.6);
-            }
 
             @include llg-block {
                 padding: 12px 78px;
@@ -1682,6 +1672,9 @@ label:not(.labelFile) {
                 font-size: 12px;
             }
 
+            &:hover {
+                box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6);
+            }
         }
     }
 
@@ -1691,8 +1684,8 @@ label:not(.labelFile) {
         padding-left: 40px;
 
         @include md-block {
-            padding-left: 0;
             width: 100%;
+            padding-left: 0;
         }
 
         figure {
@@ -1734,7 +1727,6 @@ label:not(.labelFile) {
                 }
             }
 
-            figaption,
             .reviewsItem__desc {
 
                 @include xs-block {
@@ -1744,9 +1736,9 @@ label:not(.labelFile) {
 
             h4 {
                 margin: 0;
-                font-weight: 600;
                 font-size: 20px;
                 line-height: 170%;
+                font-weight: 600;
                 color: #000000;
 
                 @include xs-block {
@@ -1757,9 +1749,9 @@ label:not(.labelFile) {
             p {
                 margin: 0;
                 padding: 0;
-                font-weight: normal;
                 font-size: 12px;
                 line-height: 1.4;
+                font-weight: 400;
                 color: #000000;
             }
 
@@ -1768,12 +1760,12 @@ label:not(.labelFile) {
                 margin-bottom: 16px;
                 font-size: 13px;
 
-                span {
-                    font-weight: 600;
-                }
-
                 @include xs-block {
                     font-size: 12px;
+                }
+
+                span {
+                    font-weight: 600;
                 }
             }
 
@@ -1781,9 +1773,9 @@ label:not(.labelFile) {
             li {
                 margin-top: 0;
                 margin-bottom: 5px;
-                font-weight: normal;
                 font-size: 13px;
                 line-height: 160%;
+                font-weight: 400;
                 color: #000000;
 
                 @include xs-block {
@@ -1820,10 +1812,10 @@ label:not(.labelFile) {
 
 
 .navSlider {
-    display: flex;
+
+    display: none;
     justify-content: center;
     margin-top: 31px;
-    display: none;
 
     @include sm-block {
         display: flex;
@@ -1835,33 +1827,33 @@ label:not(.labelFile) {
         max-width: 137px;
         margin-bottom: 0;
         padding: 15px 0;
-        text-align: center;
+        background: #ffffff;
         border: none;
-        background: #FFFFFF;
-        font-weight: 600;
+        text-align: center;
         font-size: 14px;
         line-height: 160%;
+        font-weight: 600;
         color: #000000;
         cursor: pointer;
     }
 
     .navSlider__prev {
-        border-right: 0.5px solid rgba(0, 0, 0, .1);
+        border-right: 0.5px solid rgba(0, 0, 0, 0.1);
         border-radius: 12px 0 0 12px;
     }
 
     .navSlider__next {
-        border-left: 0.5px solid rgba(0, 0, 0, .1);
+        border-left: 0.5px solid rgba(0, 0, 0, 0.1);
         border-radius: 0 12px 12px 0;
     }
 }
 
 //Настройки слайдера
-.owl-item.active.center {
+.reviews .owl-item.active.center {
     .reviewsItem {
         position: relative;
-        transform: scale(1.2);
         z-index: 100;
+        transform: scale(1.2);
 
         @include llg-block {
             transform: scale(1.1);
@@ -1928,7 +1920,7 @@ label:not(.labelFile) {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, .3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
 }
 
@@ -1983,12 +1975,12 @@ label:not(.labelFile) {
 
 /*---------------------------------------------
   Секция contacts
---------------------------------------------- */
+---------------------------------------------*/
 .contacts {
     position: relative;
     padding: 107px 0 141px;
-    background: #FAFAFA;
     overflow: hidden;
+    background: #fafafa;
 
     @include md-block {
         padding: 67px 0 80px;
@@ -1996,10 +1988,6 @@ label:not(.labelFile) {
 
     @include sm-block {
         padding: 67px 0 160px;
-    }
-
-    h2 {
-        font-weight: 600;
     }
 
     .contacts__box {
@@ -2016,32 +2004,6 @@ label:not(.labelFile) {
         @include sm-block {
             flex-direction: column;
             align-items: center;
-        }
-
-        h6 {
-            margin: 0;
-            padding: 0;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 150%;
-            text-align: center;
-            color: #000000;
-        }
-
-        a {
-            font-weight: 600;
-            font-size: 30px;
-            line-height: 150%;
-            text-align: center;
-            color: #000000;
-
-            @include md-block {
-                font-size: 26px;
-            }
-
-            @include sm-block {
-                font-size: 22px;
-            }
         }
 
         .socials {
@@ -2064,9 +2026,9 @@ label:not(.labelFile) {
             min-width: 30%;
             margin-left: 3.33%;
             padding: 70px 10px;
-            background: #FFFFFF;
-            box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+            background: #ffffff;
             border-radius: 12px;
+            box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
             text-align: center;
 
             @include llg-block {
@@ -2079,8 +2041,8 @@ label:not(.labelFile) {
             }
 
             @include sm-block {
-                min-width: 325px;
                 width: 60%;
+                min-width: 325px;
                 margin-left: 0;
             }
 
@@ -2089,9 +2051,39 @@ label:not(.labelFile) {
             }
         }
 
+        h6 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 16px;
+            line-height: 150%;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        a {
+            text-align: center;
+            font-size: 30px;
+            line-height: 150%;
+            font-weight: 600;
+            color: #000000;
+
+            @include md-block {
+                font-size: 26px;
+            }
+
+            @include sm-block {
+                font-size: 22px;
+            }
+        }
+
         div:first-child {
             margin-left: 0;
         }
+    }
+
+    h2 {
+        font-weight: 600;
     }
 }
 
@@ -2107,9 +2099,9 @@ label:not(.labelFile) {
     .listCenter {
         width: 30%;
         padding: 52px 25px 35px 52px;
-        background: #2098D5;
-        border-radius: 12px 0px 0px 12px;
-        color: #FFFFFF;
+        background: #2098d5;
+        border-radius: 12px 0 0 12px;
+        color: #ffffff;
 
         @include llg-block {
             min-width: 360px;
@@ -2132,115 +2124,8 @@ label:not(.labelFile) {
         }
 
         @include xxs-block {
-            margin-bottom: 0px;
+            margin-bottom: 0;
             border-radius: 12px 12px 0 0;
-        }
-
-        h3 {
-            margin-bottom: 16px;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 125%;
-
-            @include llg-block {
-                font-size: 32px;
-            }
-
-            @include md-block {
-                font-size: 26px;
-            }
-
-            @include xxs-block {
-                text-align: center;
-                font-size: 24px;
-            }
-        }
-
-        &>p {
-            margin-bottom: 20px;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 170%;
-
-            @include llg-block {
-                font-size: 16px;
-                line-height: 1.35;
-            }
-
-            @include md-block {
-                font-size: 14px;
-            }
-
-            @include xxs-block {
-                text-align: center;
-                font-size: 16px;
-            }
-        }
-
-        ul {
-            height: 475px;
-            margin: 0;
-            margin-bottom: 30px;
-            padding: 0;
-            list-style: none;
-            overflow-y: auto;
-
-            li {
-                padding: 16px 0;
-                border-bottom: 1px solid rgba(255, 255, 255, .2);
-
-                @include sm-block {
-                    padding: 10px 0;
-                }
-
-                @include xxs-block {
-                    text-align: center;
-                }
-
-                button {
-                    background: transparent;
-                    border: none;
-                    font-weight: 500;
-                    font-size: 22px;
-                    line-height: 150%;
-                    color: #FFFFFF;
-                    cursor: pointer;
-                    transition: color ease .5s;
-
-                    &:hover,
-                    &.active {
-                        color: #FFCC00;
-                    }
-
-                    @include llg-block {
-                        font-size: 18px;
-                        line-height: 1.35;
-                    }
-
-                    @include md-block {
-                        font-size: 18px;
-                    }
-                }
-            }
-
-            &::-webkit-scrollbar {
-                background-color: #2098D5;
-                width: 14px;
-            }
-
-            &::-webkit-scrollbar-track {
-                border-right: 6px solid #2098D5;
-                border-left: 6px solid #2098D5;
-                background-color: rgba(255, 255, 255, .22);
-            }
-
-            &::-webkit-scrollbar-thumb {
-                display: block;
-                height: 47px;
-                width: 34px;
-                background: #FFCC00;
-                border-radius: 12px;
-            }
         }
 
         .btnBase {
@@ -2249,16 +2134,16 @@ label:not(.labelFile) {
             }
 
             @include md-block {
-                padding: 15px 15px;
+                padding: 15px;
             }
 
             @include sm-block {
                 position: absolute;
                 left: 50%;
                 bottom: -54%;
-                transform: translateX(-50%);
                 padding: 15px 38px;
                 white-space: nowrap;
+                transform: translateX(-50%);
             }
 
             @include xs-block {
@@ -2286,6 +2171,113 @@ label:not(.labelFile) {
                 }
             }
         }
+
+        h3 {
+            margin-bottom: 16px;
+            font-size: 36px;
+            line-height: 125%;
+            font-weight: 600;
+
+            @include llg-block {
+                font-size: 32px;
+            }
+
+            @include md-block {
+                font-size: 26px;
+            }
+
+            @include xxs-block {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+
+        &>p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 170%;
+            font-weight: 500;
+
+            @include llg-block {
+                font-size: 16px;
+                line-height: 1.35;
+            }
+
+            @include md-block {
+                font-size: 14px;
+            }
+
+            @include xxs-block {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        ul {
+            height: 475px;
+            margin: 0;
+            margin-bottom: 30px;
+            padding: 0;
+            overflow-y: auto;
+            list-style: none;
+
+            li {
+                padding: 16px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+                @include sm-block {
+                    padding: 10px 0;
+                }
+
+                @include xxs-block {
+                    text-align: center;
+                }
+
+                button {
+                    background: transparent;
+                    border: none;
+                    font-size: 22px;
+                    line-height: 150%;
+                    font-weight: 500;
+                    color: #ffffff;
+                    transition: color ease 0.5s;
+                    cursor: pointer;
+
+                    @include llg-block {
+                        font-size: 18px;
+                        line-height: 1.35;
+                    }
+
+                    @include md-block {
+                        font-size: 18px;
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: #ffcc00;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 14px;
+                background-color: #2098d5;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: rgba(255, 255, 255, 0.22);
+                border-left: 6px solid #2098d5;
+                border-right: 6px solid #2098d5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                display: block;
+                width: 34px;
+                height: 47px;
+                background: #ffcc00;
+                border-radius: 12px;
+            }
+        }
     }
 
     .mapContacts {
@@ -2293,13 +2285,13 @@ label:not(.labelFile) {
         z-index: 5;
         width: 70%;
         padding-top: 30%;
-        border-radius: 0px 12px 12px 0px;
         background: url(../img/images/bg-top.jpg) no-repeat center/cover;
+        border-radius: 0 12px 12px 0;
 
         @include sm-block {
             height: 250px;
             padding-top: 15%;
-            border-radius: 0px 0 12px 12px;
+            border-radius: 0 0 12px 12px;
         }
 
         @include xs-block {
@@ -2316,7 +2308,7 @@ label:not(.labelFile) {
             text-align: center;
             font-size: 24px;
             font-weight: 600;
-            color: rgba(255, 255, 255, .8);
+            color: rgba(255, 255, 255, 0.8);
 
             @include sm-block {
                 font-size: 16px;
@@ -2325,8 +2317,8 @@ label:not(.labelFile) {
 
         iframe {
             position: absolute;
-            left: 0;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             border: none;
@@ -2336,13 +2328,12 @@ label:not(.labelFile) {
 
 /*----------------------------------------------*/
 
-
 /*---------------------------------------------
   Секция faq
---------------------------------------------- */
+---------------------------------------------*/
 .faq {
     padding: 90px 60px 60px;
-    background: #FFCC00;
+    background: #ffcc00;
 
     @include md-block {
         padding: 60px 30px 30px;
@@ -2352,19 +2343,13 @@ label:not(.labelFile) {
         padding: 60px 15px 30px;
     }
 
-    h2 {
-        @include xs-block {
-            font-weight: 600;
-        }
-    }
-
     .faq__content {
         display: flex;
         max-width: 1335px;
         margin: 60px auto 0;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        background: #ffffff;
         border-radius: 12px;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
 
         @include llg-block {
             max-width: 1200px;
@@ -2377,27 +2362,37 @@ label:not(.labelFile) {
         .faq__quest {
             width: 25%;
             padding: 0;
-            border-right: 1px solid rgba(0, 0, 0, .05);
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
 
             @include md-block {
                 width: 30%;
             }
 
+            .active {
+                color: #ffffff;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -14px;
+                    bottom: 50%;
+                    border-top: 12px solid #ffffff;
+                    border-left: 14px solid #2098d5;
+                    border-bottom: 12px solid #ffffff;
+                    transform: translateY(50%);
+                }
+            }
+
             p {
                 position: relative;
                 padding: 35px 10px 30px 37px;
-                border-bottom: 1px solid rgba(0, 0, 0, .05);
-                font-weight: 500;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
                 font-size: 18px;
                 line-height: 150%;
+                font-weight: 500;
                 color: #000000;
+                transition: all ease 0.3s;
                 cursor: pointer;
-                transition: all ease .3s;
-
-                &:hover,
-                &.active {
-                    background: #2098D5;
-                }
 
 
                 @include llg-block {
@@ -2407,20 +2402,10 @@ label:not(.labelFile) {
                 @include md-block {
                     font-size: 14px;
                 }
-            }
 
-            .active {
-                color: #FFFFFF;
-
-                &::after {
-                    position: absolute;
-                    content: '';
-                    right: -14px;
-                    bottom: 50%;
-                    transform: translateY(50%);
-                    border-left: 14px solid #2098D5;
-                    border-bottom: 12px solid #FFFFFF;
-                    border-top: 12px solid #FFFFFF;
+                &:hover,
+                &.active {
+                    background: #2098d5;
                 }
             }
 
@@ -2446,9 +2431,9 @@ label:not(.labelFile) {
 
             h4 {
                 margin-top: 0;
-                font-weight: 600;
                 font-size: 24px;
                 line-height: 180%;
+                font-weight: 600;
 
                 @include llg-block {
                     font-size: 22px;
@@ -2456,9 +2441,9 @@ label:not(.labelFile) {
             }
 
             p {
-                font-weight: normal;
                 font-size: 16px;
                 line-height: 200%;
+                font-weight: 400;
 
                 @include llg-block {
                     font-size: 15px;
@@ -2474,10 +2459,10 @@ label:not(.labelFile) {
     .faq__content--mob {
         display: none;
         margin-top: 37px;
-        padding: 40px 0px;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        padding: 40px 0;
+        background: #ffffff;
         border-radius: 12px;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
 
         @include sm-block {
             display: block;
@@ -2489,11 +2474,17 @@ label:not(.labelFile) {
 
             summary {
                 padding: 20px 10px 20px 20px;
-                font-weight: 500;
                 font-size: 17px;
                 line-height: 150%;
+                font-weight: 500;
+                transition: all ease 0.3s;
                 cursor: pointer;
-                transition: all ease .3s;
+
+                &:hover,
+                &:focus {
+                    background: #2098d5;
+                    color: #ffffff;
+                }
 
                 &::marker {
                     display: none;
@@ -2506,28 +2497,22 @@ label:not(.labelFile) {
                 &::-moz-list-bullet {
                     list-style-type: none;
                 }
-
-                &:hover,
-                &:focus {
-                    background: #2098D5;
-                    color: #FFFFFF;
-                }
             }
 
             h4 {
                 margin-top: 30px;
-                padding-left: 20px;
                 padding-right: 10px;
-                font-weight: 600;
+                padding-left: 20px;
                 font-size: 18px;
                 line-height: 160%;
+                font-weight: 600;
             }
 
             p {
                 padding: 0 20px 40px;
-                font-weight: normal;
                 font-size: 14px;
                 line-height: 180%;
+                font-weight: 400;
             }
         }
 
@@ -2540,11 +2525,11 @@ label:not(.labelFile) {
         display: block;
         max-width: 350px;
         margin: 60px auto 0;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 12px;
 
         &:hover {
-            box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6);
         }
 
         p {
@@ -2553,14 +2538,19 @@ label:not(.labelFile) {
             }
         }
     }
+
+    h2 {
+        @include xs-block {
+            font-weight: 600;
+        }
+    }
 }
 
 /*----------------------------------------------*/
 
-
 /*---------------------------------------------
   Секция centers
---------------------------------------------- */
+---------------------------------------------*/
 .centers {
     padding: 100px 0;
 
@@ -2569,11 +2559,7 @@ label:not(.labelFile) {
     }
 
     @include xxs-block {
-        padding: 45px 15px 52px 15px;
-    }
-
-    h2 {
-        font-weight: 600;
+        padding: 45px 15px 52px;
     }
 
     &__video {
@@ -2589,40 +2575,38 @@ label:not(.labelFile) {
             border: none;
         }
     }
+
+    h2 {
+        font-weight: 600;
+    }
 }
 
 .btnVideo__wrapperCenters {
-    @include centerer();
     cursor: pointer;
+    @include centerer();
 }
 
 /*----------------------------------------------*/
 
-
 /*---------------------------------------------
   Секция metods
---------------------------------------------- */
+---------------------------------------------*/
 .metods {
     position: relative;
     padding: 65px 0;
-    background: #FAFAFA;
     overflow: hidden;
-
-    h2 {
-        position: relative;
-        z-index: 9;
-
-        @include xs-block {
-            padding-left: 15px;
-            padding-right: 15px;
-            font-weight: 600;
-        }
-    }
+    background: #fafafa;
 
     .descSection {
         @include xs-block {
-            font-size: 16px;
             padding: 0 30px;
+            font-size: 16px;
+        }
+    }
+
+    .wrapper {
+        @include xs-block {
+            padding: 0;
         }
     }
 
@@ -2637,9 +2621,14 @@ label:not(.labelFile) {
         }
     }
 
-    .wrapper {
+    h2 {
+        position: relative;
+        z-index: 9;
+
         @include xs-block {
-            padding: 0;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-weight: 600;
         }
     }
 
@@ -2664,7 +2653,7 @@ label:not(.labelFile) {
 .metodsItem {
     display: block;
     padding-bottom: 32px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 12px;
     box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
     color: #000;
@@ -2684,17 +2673,16 @@ label:not(.labelFile) {
         padding: 0;
 
         img {
-            @include img;
             border-radius: 12px 12px 0 0;
+            @include img;
         }
 
-        figaption,
         &>span {
             display: inline-block;
             margin: 29px 10px 8px 20px;
-            font-weight: 600;
             font-size: 18px;
             line-height: 150%;
+            font-weight: 600;
 
             @include llg-block {
                 margin-top: 20px;
@@ -2721,9 +2709,9 @@ label:not(.labelFile) {
 
     span {
         margin-left: 20px;
-        font-weight: normal;
         font-size: 14px;
         line-height: 130%;
+        font-weight: 400;
 
 
         @include llg-block {
@@ -2793,7 +2781,7 @@ label:not(.labelFile) {
 
 /*---------------------------------------------
   Секция gallery
---------------------------------------------- */
+---------------------------------------------*/
 .gallery {
     padding: 70px 0 5px;
 
@@ -2801,20 +2789,11 @@ label:not(.labelFile) {
         padding-top: 54px;
     }
 
-    h2 {
-        padding: 0 30px;
-
-        @include sm-block {
-            font-weight: 600;
-        }
-
-    }
-
     &__content {
-        margin-top: 65px;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
         grid-gap: 5px;
+        margin-top: 65px;
+        grid-template-columns: repeat(6, 1fr);
 
         @include sm-block {
             margin-top: 35px;
@@ -2870,13 +2849,21 @@ label:not(.labelFile) {
             object-fit: cover;
         }
     }
+
+    h2 {
+        padding: 0 30px;
+
+        @include sm-block {
+            font-weight: 600;
+        }
+    }
 }
 
 /*----------------------------------------------*/
 
 /*---------------------------------------------
   Секция с нижней формой
---------------------------------------------- */
+---------------------------------------------*/
 .formQuest {
     .formQuest__form {
         @include md-block {
@@ -2923,8 +2910,8 @@ label:not(.labelFile) {
         border-radius: 0 12px 12px 0;
 
         @include md-block {
-            min-width: 100px;
             width: auto;
+            min-width: 100px;
             margin: 0;
         }
 
@@ -2936,15 +2923,14 @@ label:not(.labelFile) {
 
 /*----------------------------------------------*/
 
-/*============================================= */
-
+/*=============================================*/
 
 /*=============================================
         ПОДВАЛ
-============================================= */
+=============================================*/
 .footer {
     padding: 42px 0;
-    background: #FFCC00;
+    background: #ffcc00;
 
     @include xs-block {
         padding: 42px 15px 66px;
@@ -2967,9 +2953,9 @@ label:not(.labelFile) {
 
     &__item {
         width: 15%;
-        font-weight: 500;
         font-size: 24px;
         line-height: 29px;
+        font-weight: 500;
         color: #000000;
 
         @include llg-block {
@@ -2998,10 +2984,10 @@ label:not(.labelFile) {
         }
 
         &>p {
-            font-weight: normal;
             font-size: 14px;
             line-height: 150%;
-            color: rgba(0, 0, 0, .71);
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.71);
 
             @include llg-block {
                 font-size: 12px;
@@ -3039,8 +3025,8 @@ label:not(.labelFile) {
     }
 
     @include xs-block {
-        order: -1;
         justify-content: center;
+        order: -1;
         width: 100%;
     }
 
@@ -3050,10 +3036,10 @@ label:not(.labelFile) {
         align-items: center;
         width: 50px;
         height: 50px;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 50%;
+        transition: all ease 0.5s;
         cursor: pointer;
-        transition: all ease .5s;
 
         @include xs-block {
             margin-left: 25px;
@@ -3061,16 +3047,16 @@ label:not(.labelFile) {
 
 
         &:hover {
-            background: #2098D5;
-        }
-
-        svg {
-            @include svg(20px, 20px, #2098D5);
-            transition: all ease .5s;
+            background: #2098d5;
         }
 
         &:hover svg {
-            fill: #FFFFFF;
+            fill: #ffffff;
+        }
+
+        svg {
+            transition: all ease 0.5s;
+            @include svg(20px, 20px, #2098D5);
         }
     }
 
@@ -3081,11 +3067,11 @@ label:not(.labelFile) {
     }
 }
 
-/*============================================= */
+/*=============================================*/
 
 /*=============================================
         СТРАНИЦА СТАТЬИ
-============================================= */
+=============================================*/
 .header--inner {
     overflow: hidden;
 }
@@ -3093,14 +3079,14 @@ label:not(.labelFile) {
 .topLine--inner {
     position: static;
     padding: 33px 70px;
-    background: #2098D5;
+    background: #2098d5;
 
     @include md-block {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     @include sm-block {
-        margin-bottom: 0px;
+        margin-bottom: 0;
         padding: 33px 30px;
     }
 
@@ -3111,18 +3097,17 @@ label:not(.labelFile) {
     .btnBase__header {
         display: none;
     }
-
 }
 
 .nav .nav__list--inner {
-    background: #2098D5;
+    background: #2098d5;
 
     @include llg-block {
-        background: #2098D5;
+        background: #2098d5;
     }
 
     @include sm-block {
-        background: #2098D5;
+        background: #2098d5;
     }
 
     li {
@@ -3132,24 +3117,12 @@ label:not(.labelFile) {
     }
 }
 
-.articles {
+.mainArticles {
     z-index: -1;
     padding: 80px 30px 20px;
 
     @include xs-block {
         padding: 0 15px;
-    }
-
-    h2 {
-        margin-bottom: 53px;
-
-        @include md-block {
-            margin-bottom: 30px;
-        }
-
-        @include xs-block {
-            margin-top: 50px;
-        }
     }
 
     &__cat {
@@ -3158,7 +3131,7 @@ label:not(.labelFile) {
         max-width: 1062px;
         margin: 0 auto;
         padding-bottom: 28px;
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
         @include llg-block {
             padding-bottom: 20px;
@@ -3172,9 +3145,9 @@ label:not(.labelFile) {
             padding: 0;
             background: transparent;
             border: none;
-            font-weight: 600;
             font-size: 18px;
             line-height: 120%;
+            font-weight: 600;
             color: #000000;
             cursor: pointer;
 
@@ -3201,13 +3174,25 @@ label:not(.labelFile) {
 
             &:hover,
             &.active {
-                color: #FFCC00;
+                color: #ffcc00;
             }
+        }
+    }
+
+    h2 {
+        margin-bottom: 53px;
+
+        @include md-block {
+            margin-bottom: 30px;
+        }
+
+        @include xs-block {
+            margin-top: 50px;
         }
     }
 }
 
-.articles__content {
+.mainArticles__content {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -3224,8 +3209,8 @@ label:not(.labelFile) {
 
 .metodsItem--article {
     width: 24%;
-    margin-bottom: 20px;
     margin-right: 1%;
+    margin-bottom: 20px;
     color: #000;
 
     @include lg-block {
@@ -3243,13 +3228,12 @@ label:not(.labelFile) {
     }
 }
 
-/*============================================= */
-
+/*=============================================*/
 
 /*=============================================
         СТРАНИЦА ОДИНОЧНОЙ СТАТЬИ
-============================================= */
-.topLine--ar1 {
+=============================================*/
+.topLine--article {
     @include xs-block {
         margin-bottom: 0;
     }
@@ -3262,50 +3246,50 @@ label:not(.labelFile) {
     max-width: 270px;
     margin: 0 auto;
     padding: 30px 44px;
-    background: #FAFAFA;
+    background: #fafafa;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    font-weight: 500;
+    text-align: center;
     font-size: 18px;
     line-height: 120%;
-    text-align: center;
+    font-weight: 500;
     color: #000000;
 
     @include md-block {
-        font-size: 16px;
         padding: 20px 0;
+        font-size: 16px;
     }
 
     @include xs-block {
-        font-size: 14px;
         padding: 15px 0;
+        font-size: 14px;
     }
 
     svg {
-        @include svg(12px, 12px, #2098D5);
         margin-right: 11px;
+        @include svg(12px, 12px, #2098D5);
     }
 }
 
-.main--ar1 {
+.main--article {
     position: relative;
     z-index: 5;
-    overflow: hidden;
     padding: 67px 30px;
-    background: #FAFAFA;
+    overflow: hidden;
+    background: #fafafa;
 
     @include xs-block {
         padding: 67px 15px;
     }
 }
 
-.ar1 {
+.article {
     max-width: 1335px;
     margin: -40px auto 0;
     padding: 84px 75px 32px;
-    background: #FFFFFF;
-    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+    background: #ffffff;
     border-radius: 12px;
+    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
     color: #000000;
 
     @include md-block {
@@ -3318,80 +3302,7 @@ label:not(.labelFile) {
         padding: 64px 20px 32px;
     }
 
-    h1 {
-        margin: 0 0 60px;
-        text-align: center;
-        font-weight: 600;
-        font-size: 2.5vw;
-        line-height: 120%;
-
-        @include lg-block {
-            font-size: 32px;
-        }
-
-        @include xs-block {
-            font-size: 28px;
-        }
-    }
-
-    img {
-        @include img;
-    }
-
-    p {
-        margin-top: 36px;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 180%;
-
-        @include lg-block {
-            font-size: 14px;
-        }
-
-        @include xs-block {
-            font-size: 12px;
-        }
-    }
-
-    h2 {
-        margin: 40px 0 0;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 180%;
-
-        @include md-block {
-            font-size: 26px;
-        }
-
-        @include xs-block {
-            font-size: 20px;
-            line-height: 1.3;
-        }
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin: 0 0 20px;
-            padding: 0;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 180%;
-
-            @include lg-block {
-                font-size: 14px;
-            }
-
-            @include xs-block {
-                font-size: 12px;
-            }
-        }
-    }
-
-    .ar1__linksBlock {
+    .article__linksBlock {
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -3401,37 +3312,6 @@ label:not(.labelFile) {
 
         @include md-block {
             margin-top: 60px;
-        }
-
-        a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 120%;
-            color: #000000;
-
-            @include md-block {
-                font-size: 14px;
-            }
-
-            @include xs-block {
-                font-size: 12px;
-            }
-
-            svg {
-                @include svg(12px, 12px, #2098D5);
-            }
-
-            :first-child {
-                text-align: right;
-                margin-right: 14px;
-
-                @include xs-block {
-                    margin-right: 7px;
-                }
-            }
         }
 
         &::before {
@@ -3463,19 +3343,123 @@ label:not(.labelFile) {
                 width: 20px;
             }
         }
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            line-height: 120%;
+            font-weight: 500;
+            color: #000000;
+
+            @include md-block {
+                font-size: 14px;
+            }
+
+            @include xs-block {
+                font-size: 12px;
+            }
+
+            svg {
+                @include svg(12px, 12px, #2098D5);
+            }
+
+            :first-child {
+                margin-right: 14px;
+                text-align: right;
+
+                @include xs-block {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+    h1 {
+        margin: 0 0 60px;
+        text-align: center;
+        font-size: 2.5vw;
+        line-height: 120%;
+        font-weight: 600;
+
+        @include lg-block {
+            font-size: 32px;
+        }
+
+        @include xs-block {
+            font-size: 28px;
+        }
+    }
+
+    img {
+        @include img;
+    }
+
+    p {
+        margin-top: 36px;
+        font-size: 18px;
+        line-height: 180%;
+        font-weight: 400;
+
+        @include lg-block {
+            font-size: 14px;
+        }
+
+        @include xs-block {
+            font-size: 12px;
+        }
+    }
+
+    h2 {
+        margin: 40px 0 0;
+        font-size: 32px;
+        line-height: 180%;
+        font-weight: 600;
+
+        @include md-block {
+            font-size: 26px;
+        }
+
+        @include xs-block {
+            font-size: 20px;
+            line-height: 1.3;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin: 0 0 20px;
+            padding: 0;
+            font-size: 18px;
+            line-height: 180%;
+            font-weight: 400;
+
+            @include lg-block {
+                font-size: 14px;
+            }
+
+            @include xs-block {
+                font-size: 12px;
+            }
+        }
     }
 }
 
-/*============================================= */
+/*=============================================*/
 
 /*=============================================
         СТРАНИЦА ЦЕНТРОВ
-============================================= */
-.main--centers {
+=============================================*/
+.mainCenters {
     position: relative;
     padding: 60px 50px;
-    background: #FAFAFA;
     overflow: hidden;
+    background: #fafafa;
 
     @include md-block {
         padding: 60px 30px;
@@ -3499,7 +3483,7 @@ label:not(.labelFile) {
     &__item {
         width: calc(25% - 16px);
         margin: 8px;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 12px;
         box-shadow: 2px 4px 34px rgba(0, 0, 0, 0.05);
 
@@ -3520,14 +3504,14 @@ label:not(.labelFile) {
 
 
             img {
-                @include img;
                 margin-bottom: 20px;
+                @include img;
             }
 
             span {
-                font-weight: 600;
                 font-size: 18px;
                 line-height: 150%;
+                font-weight: 600;
                 color: #000;
 
                 @include lg-block {
@@ -3537,22 +3521,22 @@ label:not(.labelFile) {
                 @include md-block {
                     font-size: 14px;
                 }
-
             }
         }
     }
 }
 
-/*============================================= */
+/*=============================================*/
 
 /*=============================================
         СТРАНИЦА ОДНОГО ЦЕНТРА
-============================================= */
+=============================================*/
 .main--center {
     position: relative;
     z-index: 5;
-    overflow: hidden;
     padding: 97px 293px;
+    overflow: hidden;
+    background: #fafafa;
 
     @include lllg-block {
         padding: 97px 200px;
@@ -3569,9 +3553,9 @@ label:not(.labelFile) {
     .center {
         margin: 0 auto;
         padding: 84px 76px 76px;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        background: #ffffff;
         border-radius: 12px;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
         color: #000;
 
         @include lllg-block {
@@ -3589,9 +3573,9 @@ label:not(.labelFile) {
         h4 {
             margin-top: 63px;
             text-align: center;
-            font-weight: 600;
             font-size: 32px;
             line-height: 180%;
+            font-weight: 600;
 
 
             @include llg-block {
@@ -3605,8 +3589,8 @@ label:not(.labelFile) {
         }
 
         &>img {
-            @include img;
             margin: 63px 0 52px;
+            @include img;
         }
     }
 }
@@ -3631,10 +3615,10 @@ label:not(.labelFile) {
         justify-content: center;
         width: 32%;
         padding: 71px 44px 79px;
-        text-align: center;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        background: #ffffff;
         border-radius: 12px;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        text-align: center;
 
         @include lllg-block {
             min-width: 264px;
@@ -3662,11 +3646,15 @@ label:not(.labelFile) {
             padding: 45px 25px;
         }
 
+        .socials {
+            margin-top: 10px;
+        }
+
         h6 {
             margin: 0;
-            font-weight: 500;
             font-size: 16px;
             line-height: 150%;
+            font-weight: 500;
 
             @include lllg-block {
                 font-size: 13px;
@@ -3682,9 +3670,9 @@ label:not(.labelFile) {
         }
 
         &>a {
-            font-weight: 600;
             font-size: 24px;
             line-height: 150%;
+            font-weight: 600;
             color: #000000;
 
             @include llg-block {
@@ -3703,10 +3691,6 @@ label:not(.labelFile) {
                 font-size: 16px;
             }
         }
-
-        .socials {
-            margin-top: 10px;
-        }
     }
 }
 
@@ -3723,10 +3707,10 @@ label:not(.labelFile) {
         width: calc(33% - 20px);
         margin: 10px;
         padding: 63px 30px 43px;
-        text-align: center;
-        background: #FFFFFF;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        background: #ffffff;
         border-radius: 12px;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+        text-align: center;
 
         @include md-block {
             width: calc(50% - 20px);
@@ -3748,17 +3732,17 @@ label:not(.labelFile) {
 
         h5 {
             margin-top: 30px;
-            font-weight: 600;
             font-size: 22px;
             line-height: 130%;
+            font-weight: 600;
 
             @include llg-block {
                 font-size: 18px;
             }
 
             @include sm-block {
-                font-size: 16px;
                 margin-bottom: 0;
+                font-size: 16px;
             }
 
             @include xs-block {
@@ -3795,8 +3779,8 @@ label:not(.labelFile) {
 
     @include sm-block {
         flex-wrap: wrap;
-        margin-left: -15px;
         margin-right: -15px;
+        margin-left: -15px;
     }
 
     @include xs-block {
@@ -3814,20 +3798,20 @@ label:not(.labelFile) {
         }
 
         @include xs-block {
-            width: 75%;
             flex-basis: 300px;
+            width: 75%;
         }
 
         img {
-            @include img;
             margin-bottom: 22px;
+            @include img;
         }
 
         div {
             p {
-                font-weight: 500;
                 font-size: 22px;
                 line-height: 150%;
+                font-weight: 500;
 
                 @include llg-block {
                     font-size: 18px;
@@ -3839,9 +3823,9 @@ label:not(.labelFile) {
             }
 
             span {
-                font-weight: normal;
                 font-size: 13px;
                 line-height: 150%;
+                font-weight: 400;
 
                 @include xs-block {
                     font-size: 15px;
@@ -3851,30 +3835,30 @@ label:not(.labelFile) {
     }
 }
 
-/*============================================= */
+/*=============================================*/
 
 /*=============================================
         МОДАЛЬНЫЕ ОКНА
-============================================= */
+=============================================*/
 .modal {
     position: fixed;
-    @include coverpos;
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 30px 15px;
-    background: rgba(35, 72, 90, .3);
-    color: #000000;
     overflow: auto;
+    background: rgba(35, 72, 90, 0.3);
+    color: #000000;
+    @include coverpos;
 
     .titleModal {
         margin: 0;
         padding: 0;
-        font-weight: 600;
+        text-align: center;
         font-size: 36px;
         line-height: 130%;
-        text-align: center;
+        font-weight: 600;
 
         @include llg-block {
             font-size: 30px;
@@ -3895,17 +3879,17 @@ label:not(.labelFile) {
     max-width: 668px;
     padding: 63px 80px 44px;
     overflow: hidden;
-    text-align: center;
-    background: #FFFFFF;
-    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+    background: #ffffff;
     border-radius: 12px;
+    box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
+    text-align: center;
 
     @include llg-block {
         padding: 20px 50px;
     }
 
     @include xs-block {
-        padding: 20px 20px;
+        padding: 20px;
     }
 
     &>svg {
@@ -3966,12 +3950,16 @@ label:not(.labelFile) {
         padding: 30px 20px 32px;
     }
 
+    .modalCity__col:last-child ul li {
+        border-right: none;
+    }
+
     &__content {
         display: flex;
         margin-top: 53px;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 12px;
+        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
 
         @include llg-block {
             margin-top: 23px;
@@ -4010,47 +3998,39 @@ label:not(.labelFile) {
                     height: 100%;
                     padding: 17px 34px;
                     text-align: left;
-                    font-weight: normal;
+                    white-space: nowrap;
                     font-size: 20px;
                     line-height: 150%;
+                    font-weight: 400;
                     color: #000000;
-                    white-space: nowrap;
-
-                    &:hover {
-                        background: #FAFAFA;
-                        color: #2098D5;
-                    }
 
                     @include llg-block {
                         padding: 10px 34px;
                         font-size: 14px;
                     }
+
+                    &:hover {
+                        background: #fafafa;
+                        color: #2098d5;
+                    }
                 }
             }
         }
     }
-
-    .modalCity__col:last-child ul li {
-        border-right: none;
-    }
 }
 
 .btnModal {
+    box-sizing: border-box;
     margin-top: 36px;
     padding: 12px 55px;
     background: none;
-    border: 2px solid #FFCC00;
-    box-sizing: border-box;
+    border: 2px solid #ffcc00;
     border-radius: 12px;
-    font-weight: 500;
     font-size: 16px;
     line-height: 160%;
+    font-weight: 500;
     color: #000;
     cursor: pointer;
-
-    &:hover {
-        background: #FFCC00;
-    }
 
     @include sm-block {
         padding: 12px 35px;
@@ -4062,14 +4042,17 @@ label:not(.labelFile) {
         line-height: 1.3;
     }
 
+    &:hover {
+        background: #ffcc00;
+    }
 }
 
 .formModal {
-    margin-top: 41px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 41px;
 
     @include llg-block {
         margin-top: 20px;
@@ -4083,9 +4066,9 @@ label:not(.labelFile) {
     small {
         display: inline-block;
         margin-top: 63px;
-        font-weight: 500;
         font-size: 13px;
         line-height: 160%;
+        font-weight: 500;
 
         @include llg-block {
             margin-top: 13px;
@@ -4106,6 +4089,10 @@ label:not(.labelFile) {
         width: 100%;
     }
 
+    .textareaModal {
+        top: 17%;
+    }
+
     input,
     select {
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -4118,18 +4105,17 @@ label:not(.labelFile) {
             padding-left: 49px;
             font-size: 12px;
         }
-
     }
 
     textarea {
         width: 100%;
         height: 185px;
-        padding-left: 59px;
         padding-top: 15px;
-        border-radius: 12px;
+        padding-left: 59px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        resize: none;
+        border-radius: 12px;
         font-size: 14px;
+        resize: none;
 
         @include llg-block {
             height: 140px;
@@ -4141,18 +4127,14 @@ label:not(.labelFile) {
             font-size: 12px;
         }
     }
-
-    .textareaModal {
-        top: 17%;
-    }
 }
 
 .descModal {
     max-width: 393px;
     margin-top: 15px;
-    font-weight: 500;
     font-size: 18px;
     line-height: 160%;
+    font-weight: 500;
 
     @include llg-block {
         margin-top: 10px;
@@ -4167,14 +4149,14 @@ label:not(.labelFile) {
 
 .input__wrapper--modal select {
     padding-left: 20px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 160%;
-    background: #FAFAFA;
-    appearance: none;
+    background: #fafafa;
     background-image: url(../img/images/select.svg);
     background-repeat: no-repeat;
     background-position: 94%, 50%;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 500;
+    appearance: none;
 
     @include xs-block {
         padding-left: 20px;
@@ -4198,76 +4180,76 @@ label:not(.labelFile) {
 
     .btnModal {
         @include md-block {
-            padding-left: 20px;
             padding-right: 20px;
+            padding-left: 20px;
         }
     }
 }
 
 .form__file {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .labelFile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 15px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 160%;
-    background: #FAFAFA;
+    background: #fafafa;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 12px;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 500;
     cursor: pointer;
 }
 
-/*============================================= */
+/*=============================================*/
 
 /*---------------------------------------------
   Настройки Magnific
---------------------------------------------- */
+---------------------------------------------*/
 .my-mfp-zoom-in .modalBase {
     opacity: 0;
     transition: all 0.5s ease-in-out;
     transform: scale(0.2);
 }
 
-/* animate in */
+/*animate in*/
 .my-mfp-zoom-in.mfp-ready .modalBase {
     opacity: 1;
     transform: scale(1);
 }
 
-/* animate out */
+/*animate out*/
 .my-mfp-zoom-in.mfp-removing .modalBase {
-    transform: scale(0.7);
     opacity: 0;
+    transform: scale(0.7);
 }
 
-/* Dark overlay, start state */
+/*Dark overlay, start state*/
 .my-mfp-zoom-in.mfp-bg {
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
 
-/* animate in */
+/*animate in*/
 .my-mfp-zoom-in.mfp-ready.mfp-bg {
     opacity: 0.8;
 }
 
-/* animate out */
+/*animate out*/
 .my-mfp-zoom-in.mfp-removing.mfp-bg {
     opacity: 0;
 }
 
 .mfp-bg {
-    background: rgba(35, 72, 90, .3);
+    background: rgba(35, 72, 90, 0.3);
 }
 
 .mfp-wrap>button {
@@ -4278,9 +4260,6 @@ label:not(.labelFile) {
 
 @import '_decor.scss';
 
-
 /*=============================================
         АДАПТИВ
-============================================= */
-
-@import '_media.scss';
+=============================================*/
