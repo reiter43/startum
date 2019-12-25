@@ -45,9 +45,9 @@ gulp.task('styles', () => {
 			overrideBrowserslist: ['last 3 versions'],
 			cascade: false
 		}))
-		// .pipe(cleanCSS({
-		// 	level: 2
-		// }))
+		.pipe(cleanCSS({
+			level: 2
+		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./build/css'))
 		.pipe(browserSync.stream());

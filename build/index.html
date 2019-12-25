@@ -18,7 +18,7 @@
         <div class="wrapper wrapper--header">
             <div class="topLine topLine--home">
                 <div class="header__burger hide">
-                    <button class="burger ">
+                    <button class="burger"aria-label="Меню">
                         <span class="burger__line"></span>
                         <span class="burger__line"></span>
                     </button>
@@ -405,8 +405,8 @@
         <section id="anchor4" class="reviews">
             <h2 class="titleSection">Истории и отзывы родителей<br> <span>об успеxаx детей</span></h2>
             <div class="navSlider">
-                <button class="navSlider__prev">Предыдущий</button>
-                <button class="navSlider__next">Следующий</button>
+                <button class="navSlider__prev" aria-hidden="true">Предыдущий</button>
+                <button class="navSlider__next" aria-hidden="true">Следующий</button>
             </div>
             <div class="reviews__slider owl-carousel">
                 <div class="reviewsItem">
@@ -660,21 +660,21 @@
                         <h3>Наши центры в 28 городах</h3>
                         <p>Найдите и вы представителей нашего центра в своем городе!</p>
                         <ul>
-                            <li><button data-center="msc">Москва</button></li>
-                            <li><button data-center="spb">Санкт-Петербург</button></li>
-                            <li><button data-center="kgd">Калининград</button></li>
-                            <li><button data-center="kuf">Сероуфимск</button></li>
-                            <li><button data-center="vlv">Владивосток</button></li>
-                            <li><button data-center="krk">Красноярск</button></li>
-                            <li><button data-center="ufa">Уфа</button></li>
-                            <li><button data-center="ekb">Екатеринбург</button></li>
-                            <li><button data-center="che">Челябинск</button></li>
-                            <li><button data-center="oms">Омск</button></li>
-                            <li><button data-center="sam">Самара </button></li>
-                            <li><button data-center="rnd">Ростов-на-Дону</button></li>
-                            <li><button data-center="nin">Нижний Новгород</button></li>
-                            <li><button data-center="kaz">Казань</button></li>
-                            <li><button data-center="vor">Воронеж</button></li>
+                            <li><button data-center="msc" aria-label="Карта центра в городе">Москва</button></li>
+                            <li><button data-center="spb" aria-label="Карта центра в городе">Санкт-Петербург</button></li>
+                            <li><button data-center="kgd" aria-label="Карта центра в городе">Калининград</button></li>
+                            <li><button data-center="kuf" aria-label="Карта центра в городе">Сероуфимск</button></li>
+                            <li><button data-center="vlv" aria-label="Карта центра в городе">Владивосток</button></li>
+                            <li><button data-center="krk" aria-label="Карта центра в городе">Красноярск</button></li>
+                            <li><button data-center="ufa" aria-label="Карта центра в городе">Уфа</button></li>
+                            <li><button data-center="ekb" aria-label="Карта центра в городе">Екатеринбург</button></li>
+                            <li><button data-center="che" aria-label="Карта центра в городе">Челябинск</button></li>
+                            <li><button data-center="oms" aria-label="Карта центра в городе">Омск</button></li>
+                            <li><button data-center="sam" aria-label="Карта центра в городе">Самара </button></li>
+                            <li><button data-center="rnd" aria-label="Карта центра в городе">Ростов-на-Дону</button></li>
+                            <li><button data-center="nin" aria-label="Карта центра в городе">Нижний Новгород</button></li>
+                            <li><button data-center="kaz" aria-label="Карта центра в городе">Казань</button></li>
+                            <li><button data-center="vor" aria-label="Карта центра в городе">Воронеж</button></li>
                         </ul>
                         <a href="#cce" class="btnBase">
                             <span>Открыть в своем городе</span>
@@ -742,15 +742,15 @@
                 <span>Мы ответили на частые вопросы</span><br>родителей для вашего удобства
             </h2>
             <div class="faq__content">
-                <div class="faq__quest">
-                    <p data-answer='answer1'>Почему STARTUM, ведь центров развития очень много?</p>
-                    <p data-answer='answer2'>Есть ли у преподавателей специализированное образование?</p>
-                    <p data-answer='answer3' class="active">Мой ребенок неусидчивый, вы с ним справитесь?</p>
-                    <p data-answer='answer4'>Есть ли центр в другом районе?</p>
-                    <p data-answer='answer5'>Сколько занятий в месяц за такую стоимость?</p>
-                    <p data-answer='answer6'>Чем обусловлена цена?</p>
+                <div class="faq__quest" role="tablist">
+                    <p data-answer='answer1' role="tab">Почему STARTUM, ведь центров развития очень много?</p>
+                    <p data-answer='answer2' role="tab">Есть ли у преподавателей специализированное образование?</p>
+                    <p data-answer='answer3' role="tab" class="active">Мой ребенок неусидчивый, вы с ним справитесь?</p>
+                    <p data-answer='answer4' role="tab">Есть ли центр в другом районе?</p>
+                    <p data-answer='answer5' role="tab">Сколько занятий в месяц за такую стоимость?</p>
+                    <p data-answer='answer6' role="tab">Чем обусловлена цена?</p>
                 </div>
-                <div class="faq__answer">
+                <div class="faq__answer" role="tabpanel">
                     <div class="answer1 modal--hide">
                         <h4>Почему STARTUM, ведь центров развития очень много?</h4>
                         <p>Дорогие друзья, консультация с профессионалами из IT напрямую зависит от позиций, занимаемых
@@ -1129,13 +1129,13 @@
     </footer>
 
     <!-- Модальные окна -->
-    <div id="ci" class="modal mfp-hide">
+    <div id="ci" class="modal mfp-hide" role="dialog" aria-label="Выбор города">
         <div class="modalBase modalCity">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1169,7 +1169,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="btnModal">Вашего города нет в списке?</button>
+            <button class="btnModal" aria-label="Заявка на открытие центра">Вашего города нет в списке?</button>
             <div class="rest9">
                 <div class="restBlue8"></div>
                 <div class="restYellow16"></div>
@@ -1177,13 +1177,13 @@
         </div>
     </div>
 
-    <div id='qu' class="modal  mfp-hide">
+    <div id='qu' class="modal mfp-hide" role="dialog" aria-label="Форма отправки вопроса">
         <div class="modalBase modalQuest">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1234,13 +1234,13 @@
         </div>
     </div>
 
-    <div id="oor" class="modal  mfp-hide">
+    <div id="oor" class="modal mfp-hide" role="dialog" aria-label="Форма отправки заявки">
         <div class="modalBase modalOrder">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1315,7 +1315,7 @@
         </div>
     </div>
 
-    <div id="thanks" class="modal  mfp-hide" role="alert">
+    <div id="thanks" class="modal mfp-hide" role="alert">
         <div class="modalBase modalThanks">
             <div class="rest8">
                 <div class="restYellow14"></div>
@@ -1327,7 +1327,7 @@
             <h3 class="titleModal">Заявка отправлена!</h3>
             <p class="descModal">Вы успешно отправили запрос, в ближайшее время наши специалисты свяжутся с вами для
                 консультации по номеру +7 912 520 64 40</p>
-            <button id="closeModal" class="btnModal">Свернуть оповещение</button>
+            <button id="closeModal" class="btnModal" aria-label="Закрыть окно">Свернуть оповещение</button>
             <div class="rest9">
                 <div class="restBlue8"></div>
                 <div class="restYellow16"></div>
@@ -1335,13 +1335,13 @@
         </div>
     </div>
 
-    <div id="re" class="modal  mfp-hide">
+    <div id="re" class="modal mfp-hide" role="dialog" aria-label="Форма отправки отзыва">
         <div class="modalBase modalReview">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1401,13 +1401,13 @@
         </div>
     </div>
 
-    <div id="cce" class="modal  mfp-hide">
+    <div id="cce" class="modal mfp-hide" role="dialog" aria-label="Форма отправки заявки на открытие центра">
         <div class="modalBase modalCentr">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1418,7 +1418,7 @@
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
                 <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="айт смартум. Заявка на открытие центра">
+                <input type="hidden" name="form_subject" value="Сайт смартум. Заявка на открытие центра">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
                     <label>
