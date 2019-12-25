@@ -92,7 +92,7 @@ function filter(btnFilter, itemContent, getAtr, getAtr2) {
 
 // Фильтрация вопросов и статей
 filter('.faq__quest > p', '.faq__answer div', 'data-answer');
-filter('.articles__cat button', '.metodsItem--article', 'data-cat');
+filter('.mainArticles__cat button', '.metodsItem--article', 'data-cat');
 
 
 // Фильтрация центров и карт в контактах

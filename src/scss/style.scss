@@ -659,6 +659,11 @@ body {
         }
 
         .btnBase--mostly {
+            @include xxs-block {
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+            }
 
             p,
             span {
@@ -1294,7 +1299,6 @@ p>small {
     }
 
     @include xxs-block {
-        font-size: 11px;
         line-height: 1.6;
     }
 }
@@ -1395,8 +1399,6 @@ label:not(.labelFile) {
 
     @include xxs-block {
         height: 60px;
-        margin-bottom: 33px;
-        padding-top: 15px;
     }
 
     &:hover {
@@ -2115,7 +2117,6 @@ label:not(.labelFile) {
         @include sm-block {
             position: relative;
             width: 70%;
-            margin-bottom: 20px;
             border-radius: 12px 12px 0 0;
         }
 
@@ -2124,7 +2125,6 @@ label:not(.labelFile) {
         }
 
         @include xxs-block {
-            margin-bottom: 0;
             border-radius: 12px 12px 0 0;
         }
 
@@ -2152,6 +2152,7 @@ label:not(.labelFile) {
 
             @include xxs-block {
                 bottom: -85%;
+                width: 90%;
             }
 
             p,

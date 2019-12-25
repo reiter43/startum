@@ -76,7 +76,7 @@ function filter(btnFilter, itemContent, getAtr, getAtr2) {
 
 
 filter('.faq__quest > p', '.faq__answer div', 'data-answer');
-filter('.articles__cat button', '.metodsItem--article', 'data-cat'); // Фильтрация центров и карт в контактах
+filter('.mainArticles__cat button', '.metodsItem--article', 'data-cat'); // Фильтрация центров и карт в контактах
 
 var centers = document.querySelectorAll('.listCenter ul li button');
 centers.forEach(function (elem) {
