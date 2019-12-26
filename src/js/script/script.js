@@ -183,7 +183,7 @@ function sticky(elemSticky, offset) {
 	}
 }
 
-if (window.location.pathname == "/") {
+if (window.location.pathname == "/smartumStat/" || window.location.pathname == "/smartumStat/index.html") {
 	sticky('.topLine--home', 140);
 }
 

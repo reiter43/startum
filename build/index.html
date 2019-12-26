@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Центр, дети, занятия, обучение, развитие, класс, методики, программы">
+    <meta name="description" content="Стартум-развивающие центры для детей">
 
     <title>Стартум | Главная</title>
 
@@ -18,7 +20,7 @@
         <div class="wrapper wrapper--header">
             <div class="topLine topLine--home">
                 <div class="header__burger hide">
-                    <button class="burger"aria-label="Меню">
+                    <button class="burger" aria-label="Меню">
                         <span class="burger__line"></span>
                         <span class="burger__line"></span>
                     </button>
@@ -61,7 +63,7 @@
             <a href="#oor" class="btnBase btnBase--downHeader">
                 <span>Записаться на бесплатное занятие</span>
             </a>
-            <a href="https://www.youtube.com/embed/-WojDLuRBo4" class="btnVideo__wrapper" target="blank">
+            <a href="https://www.youtube.com/embed/-WojDLuRBo4" class="btnVideo__wrapper" target="blank" aria-label="Ссылка на ролик о центре">
                 <div class="btnVideo__ellipse1">
                     <div class="btnVideo__ellipse2">
                         <div class="btnVideo__ellipse3">
@@ -363,29 +365,29 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Форма на главной: вопрос по направлениям">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper">
-                    <label>
+                    <label for="formAnswer__name" id="formAnswer__label--name">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" class="form__name" placeholder="Введите ваше имя" required>
+                    <input id="formAnswer__name" type="text" name="Имя" class="form__name" placeholder="Введите ваше имя" aria-labelledby="formAnswer__label--name" required>
                 </div>
                 <div class="input__wrapper">
-                    <label>
+                    <label for="formAnswer__email">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input id="formAnswer__email" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper">
-                    <label>
+                    <label for="formAnswer__subject">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required>
+                    <input id="formAnswer__subject" type="text" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required>
                 </div>
                 <button class="form__button">
                     <span>Отправить</span>
@@ -684,49 +686,49 @@
                         <p>Выберите город<br>для просмотра карты<br>расположения центра</p>
                         <iframe class="msc" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d577325.348415308!2d36.82509701532534!3d55.58152434359988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1571064872471!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="spb" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.001690396!2d30.361351815618914!3d59.94870616824908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696319d0e2cd5df%3A0x8d38878f7015454e!2z0KjQv9Cw0LvQtdGA0L3QsNGPINGD0LsuLCA0MSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTEyMw!5e0!3m2!1sru!2sru!4v1571242081547!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="kgd" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.9066336124624!2d20.505527215375757!3d54.711265779299566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e3161ab2b6e57b%3A0x16cbc0ff65734f56!2z0JrQsNC70LjQvdC40L3Qs9GA0LDQtCDQn9C70LDQt9Cw!5e0!3m2!1sru!2sru!4v1571251666777!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="kuf" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.551564481792!2d57.75908923048376!3d56.619065036153195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c2c60966c52c93%3A0x58c35fe69faf20cb!2z0JrRgNCw0YHQvdC-0YPRhNC40LzRgdC6LCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571252858643!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="vlv" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186220.6477913151!2d131.89575106533513!3d43.17387094485274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb39cba5249d485%3A0x186704d4dd967e35!2z0JLQu9Cw0LTQuNCy0L7RgdGC0L7Quiwg0J_RgNC40LzQvtGA0YHQutC40Lkg0LrRgNCw0Lk!5e0!3m2!1sru!2sru!4v1571255547681!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="krk" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84942.31856294758!2d92.67639105842204!3d55.98200637631422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7b369fde42eaf%3A0x84fc4892aa679f6c!2z0JrRgNCw0YHQvdC-0Y_RgNGB0LrQuNC1INGB0YLQvtC70LHRiw!5e0!3m2!1sru!2sru!4v1571256836599!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="ufa" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d74090.64675756524!2d55.8267264525764!3d54.52762876328074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d91f809495f783%3A0x69c1f9def7afb091!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1571257112880!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="ekb" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114037.32806968356!2d60.52424379781486!3d56.86220976899663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c2fb6528a2d%3A0x9ec1f3208b28ab41!2z0JrQvtC80L_RjNGO0YLQtdGA0L3QsNGPINGI0LrQvtC70LAg0KPRgNCk0KM!5e0!3m2!1sru!2sru!4v1571257319964!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="che" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44634.45597478718!2d61.40897668588026!3d55.1652737809414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed668f3bdeb7%3A0xd85bccbaccb76090!2z0JvQtdC00L7QstGL0Lkg0JTQstC-0YDQtdGGINCh0L_QvtGA0YLQsCDQotGA0LDQutGC0L7RgA!5e0!3m2!1sru!2sru!4v1571257579104!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="oms" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293026.2089317565!2d73.07595501466203!3d54.98594804256375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafde2f601090b%3A0x5eefc33861a69b1a!2z0J7QvNGB0LosINCe0LzRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1571257680234!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="sam" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305483.92868536455!2d49.91789176207982!3d53.26099038616022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571257834265!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="rnd" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173294.152335792!2d39.48791458566386!3d47.26115615588457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2z0KDQvtGB0YLQvtCyLdC90LAt0JTQvtC90YMsINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1571257936894!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="nin" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141705.12532385887!2d43.7866614359637!3d56.29285148058397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5f9ee033251%3A0x28d3c0cf849657aa!2z0J3QuNC20L3QuNC5INCd0L7QstCz0L7RgNC-0LQsINCd0LjQttC10LPQvtGA0L7QtNGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1571258023231!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="kaz" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287086.8158826498!2d48.79311970940667!3d55.79556904107665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1571258116639!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                         <iframe class="vor" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316560.47003178234!2d39.0510679593414!3d51.69409039544379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413b2f5ce874e813%3A0x48d94c0efba762bd!2z0JLQvtGA0L7QvdC10LYsINCS0L7RgNC-0L3QtdC20YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571258197095!5m2!1sru!2sru"
-                            allowfullscreen=""></iframe>
+                            allowfullscreen="" title="Карта центра"></iframe>
                     </div>
                 </div>
             </div>
@@ -1066,12 +1068,12 @@
                 <input type="hidden" name="form_subject" value="Сайт стартум. Форма захвата телефона">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper">
-                    <label>
+                    <label for="formQuest__phone" id="formQuest__label--phone">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
+                    <input id="formQuest__phone" type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required aria-labelledby="formQuest__label--phone">
                 </div>
                 <button class="form__button">
                     <span>Отправить</span>
@@ -1100,17 +1102,17 @@
                 <p>Доступен в мессенджерах</p>
             </div>
             <div class="footer__item footer__item--socials">
-                <a href="#">
+                <a href="#" aria-label="Ссылка на профиль в ВК">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#vk"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="Ссылка на профиль в Инстаграм">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#insta"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="Ссылка на профиль в Фэйсбук">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#fb"></use>
                     </svg>
@@ -1196,28 +1198,28 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Вопрос с модальной формы">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__name--quest">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input id="formModal__name--quest" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__phone--quest">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
+                    <input id="formModal__phone--quest" type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label class="textareaModal">
+                    <label for="formModal__subject--quest" class="textareaModal">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <textarea name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required></textarea>
+                    <textarea id="formModal__subject--quest" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required></textarea>
                 </div>
                 <button class="form__button">
                     <span>Жду звонка</span>
@@ -1254,28 +1256,28 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Заявка на программу">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__name--order">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input id="formModal__name--order" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__phone--order"> 
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
+                    <input id="formModal__phone--order" type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__email--order">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input id="formModal__email--order" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
@@ -1355,34 +1357,30 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Добавить отзыв">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
-                        <svg>
-                            <use xlink:href="img/svg/sprite.svg#name"></use>
-                        </svg>
+                    <label for="formModal__name--review">
+                        <svg><use xlink:href="img/svg/sprite.svg#name"></use></svg>
                     </label>
-                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input id="formModal__name--review" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
-                        <svg>
-                            <use xlink:href="img/svg/sprite.svg#mail"></use>
-                        </svg>
+                    <label for="formModal__email--review">
+                        <svg><use xlink:href="img/svg/sprite.svg#mail"></use></svg>
                     </label>
-                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input id="formModal__email--review" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label class="textareaModal">
+                    <label class="textareaModal"  for="formModal__subject--review">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <textarea name="Отзыв" class="form__subject" placeholder="Напишите свой отзыв..."
+                    <textarea id="formModal__subject--review" name="Отзыв" class="form__subject" placeholder="Напишите свой отзыв..."
                         required></textarea>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <input type="file" name="Прикреплен файл" class="form__file" required>
-                    <label class="labelFile">
+                    <input id="formModal__file--review" type="file" name="Прикреплен файл" class="form__file" required>
+                    <label class="labelFile" for="formModal__file--review">
                         <span>Прикрепите файл</span>
                     </label>
                 </div>
@@ -1421,29 +1419,29 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Заявка на открытие центра">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__name--centr">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input id="formModal__name--centr" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__email--centr">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input id="formModal__email--centr" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label>
+                    <label for="formModal__phone--centr">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
+                    <input id="formModal__phone--centr" type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
                     <select>
