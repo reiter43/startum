@@ -23,17 +23,14 @@
         "gulp-replace": "^1.0.0",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.5",
-        "gulp-stylelint": "^11.0.0",
         "gulp-svg-sprite": "^1.5.0",
         "gulp-uglify": "^3.0.1",
-        "smart-grid": "^2.1.2",
-        "stylelint": "^12.0.0",
-        "stylelint-order": "^3.1.1"
+        "smart-grid": "^2.1.2"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "style:lint": "stylelint \"./src/scss/*.scss\"",
-        "style:fix": "stylelint \"src/scss/*.scss\" --fix"
+        "style:lint": "stylelint \"src/scss/**/*.scss\" --syntax=scss",
+        "style:fix": "stylelint \"src/scss/**/*.scss\" --syntax=scss --fix"
     },
     "keywords": [],
     "author": "",

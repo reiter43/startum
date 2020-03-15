@@ -143,12 +143,12 @@ $(document).ready(function () {
 
 
     // Скрипт для анимации цифр
-    if (window.location.pathname == "/smartum/") {
+    if (window.location.pathname == "/smartum/" || window.location.pathname == "/index.html") {
         var a = 0;
         $(window).scroll(function () {
             var oTop = $('.indicators__item').offset().top - window.innerHeight;
 
-            if (a == 0 && $(window).scrollTop() > oTop + 300) {
+            if (a == 0 && $(window).scrollTop() > oTop + 100) {
                 $('.counter').each(function () {
                     $(this).prop('Counter', 0).animate({
                         Counter: $(this).text()

@@ -183,38 +183,44 @@ function sticky(elemSticky, offset) {
 	}
 }
 
-if (window.location.pathname == "/smartumStat/" || window.location.pathname == "/smartumStat/index.html") {
+if (window.location.pathname == "/smartumStat/" || window.location.pathname == "/index.html") {
 	sticky('.topLine--home', 140);
 }
 
+
 // Плавный скролл к якорям
-const anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
+let anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
+let speed = 0.3;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 
-let V = 0.15;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
-for (let i = 0; i < anchors.length; i++) {
-	anchors[i].addEventListener('click', function (e) { //по клику на ссылку
-		e.preventDefault(); //отменяем стандартное поведение
+anchors.forEach(anchor => {
+	anchor.addEventListener('click', function (e) { 
+		e.preventDefault(); 
 
-		let w = window.pageYOffset,  // производим прокрутка прокрутка
-			hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
-		let t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id 		
-			start = null;
+		let widthTop = window.pageYOffset;  // производим прокрутка прокрутка
+		let hash = this.hash;  // к id элемента, к которому нужно перейти
+		let toBlock = document.querySelector(hash).getBoundingClientRect().top;  // отступ от окна браузера до id 		
+		let	start = null;
 
 		requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
 
 		function step(time) {
-			if (start === null) start = time;
-			let progress = time - start,
-				r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
-			window.scrollTo(0, r);
-			if (r != w + t) {
+			if (start === null) {
+				start = time;
+			}
+
+			let progress = time - start;
+			let	rrorr = (toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock));
+
+			window.scrollTo(0, rrorr); 
+
+			if (rrorr != widthTop + toBlock) {
 				requestAnimationFrame(step)
 			} else {
 				location.hash = hash  // URL с хэшем
 			}
 		}
-	}, false);
-}
+	});
+})
 
 // Выделение активного пункта меню
 const itemsMenu = document.querySelectorAll('.topLine nav ul li a');
@@ -286,5 +292,28 @@ btnVi.forEach(elem => {
 		elem.parentNode.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XClbPtMlQVo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 	};
 });
+
+
+// Анимация цифр
+// const time = 2000; // время анимации
+// const step = 20 // шаг
+
+// function animateNumber(number, elem) {
+// 	let el = document.querySelector(elem),
+// 	n = 0;
+// 	console.log(el);
+// 	let t = Math.round(time/(number/step));
+// 	console.log(t);
+	
+// 	let interval = setInterval(() => {
+// 		n = n + step;
+// 		if (n == number) {
+// 			clearInterval(interval);
+// 		}
+// 		el.innerHTML = n;
+// 	}, t)
+// }
+
+// animateNumber(900, '.counter1')
 
 

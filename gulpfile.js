@@ -25,7 +25,16 @@ const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const svgSprite = require("gulp-svg-sprite");
 
+// const gulpStylelint = require('gulp-stylelint');
 
+gulp.task('lint', () => {
+	return gulp.src('./src/scss/*.scss')
+		.pipe(gulpStylelint({
+			reporters: [
+				{ formatter: 'string', console: true }
+			],
+		}));
+});
 
 
 //Таск для обработки стилей
@@ -81,7 +90,7 @@ gulp.task('scriptsCustom', () => {
 			presets: ['@babel/env']
 		}))
 		.pipe(concat('scripts.js'))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 });

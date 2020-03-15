@@ -63,7 +63,7 @@
             <a href="#oor" class="btnBase btnBase--downHeader">
                 <span>Записаться на бесплатное занятие</span>
             </a>
-            <a href="https://www.youtube.com/embed/-WojDLuRBo4" class="btnVideo__wrapper" target="blank" aria-label="Ссылка на ролик о центре">
+            <a href="https://www.youtube.com/embed/-WojDLuRBo4" class="btnVideo__wrapper" target="blank" aria-label="Ссылка на видеоролик о центре">
                 <div class="btnVideo__ellipse1">
                     <div class="btnVideo__ellipse2">
                         <div class="btnVideo__ellipse3">
@@ -142,7 +142,7 @@
                 <div class="indicators__content">
                     <h3>Компания <br> в цифрах</h3>
                     <div class="indicators__item">
-                        <span class="counter">43</span>
+                        <span class="counter counter1">43</span>
                         <p>открытыx центра<br>по всей России и <br> странам СНГ</p>
                     </div>
                     <div class="indicators__item">
@@ -365,29 +365,29 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Форма на главной: вопрос по направлениям">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper">
-                    <label for="formAnswer__name" id="formAnswer__label--name">
-                        <svg>
+                    <label for="formAnswer_name">
+                        <svg role="img" aria-label="Имя">
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input id="formAnswer__name" type="text" name="Имя" class="form__name" placeholder="Введите ваше имя" aria-labelledby="formAnswer__label--name" required>
+                    <input id="formAnswer_name" type="text" name="Имя" class="form__name" placeholder="Введите ваше имя" required>
                 </div>
                 <div class="input__wrapper">
-                    <label for="formAnswer__email">
-                        <svg>
+                    <label for="formAnswer_email">
+                        <svg role="img" aria-label="Электронная почта">
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input id="formAnswer__email" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input id="formAnswer_email" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper">
-                    <label for="formAnswer__subject">
-                        <svg>
+                    <label for="formAnswer_subject">
+                        <svg role="img" aria-label="Вопрос">
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <input id="formAnswer__subject" type="text" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required>
+                    <input id="formAnswer_subject" type="text" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required>
                 </div>
                 <button class="form__button">
                     <span>Отправить</span>
@@ -407,8 +407,8 @@
         <section id="anchor4" class="reviews">
             <h2 class="titleSection">Истории и отзывы родителей<br> <span>об успеxаx детей</span></h2>
             <div class="navSlider">
-                <button class="navSlider__prev" aria-hidden="true">Предыдущий</button>
-                <button class="navSlider__next" aria-hidden="true">Следующий</button>
+                <button class="navSlider__prev">Предыдущий</button>
+                <button class="navSlider__next">Следующий</button>
             </div>
             <div class="reviews__slider owl-carousel">
                 <div class="reviewsItem">
@@ -662,21 +662,21 @@
                         <h3>Наши центры в 28 городах</h3>
                         <p>Найдите и вы представителей нашего центра в своем городе!</p>
                         <ul>
-                            <li><button data-center="msc" aria-label="Карта центра в городе">Москва</button></li>
-                            <li><button data-center="spb" aria-label="Карта центра в городе">Санкт-Петербург</button></li>
-                            <li><button data-center="kgd" aria-label="Карта центра в городе">Калининград</button></li>
-                            <li><button data-center="kuf" aria-label="Карта центра в городе">Сероуфимск</button></li>
-                            <li><button data-center="vlv" aria-label="Карта центра в городе">Владивосток</button></li>
-                            <li><button data-center="krk" aria-label="Карта центра в городе">Красноярск</button></li>
-                            <li><button data-center="ufa" aria-label="Карта центра в городе">Уфа</button></li>
-                            <li><button data-center="ekb" aria-label="Карта центра в городе">Екатеринбург</button></li>
-                            <li><button data-center="che" aria-label="Карта центра в городе">Челябинск</button></li>
-                            <li><button data-center="oms" aria-label="Карта центра в городе">Омск</button></li>
-                            <li><button data-center="sam" aria-label="Карта центра в городе">Самара </button></li>
-                            <li><button data-center="rnd" aria-label="Карта центра в городе">Ростов-на-Дону</button></li>
-                            <li><button data-center="nin" aria-label="Карта центра в городе">Нижний Новгород</button></li>
-                            <li><button data-center="kaz" aria-label="Карта центра в городе">Казань</button></li>
-                            <li><button data-center="vor" aria-label="Карта центра в городе">Воронеж</button></li>
+                            <li><button data-center="msc">Москва</button></li>
+                            <li><button data-center="spb">Санкт-Петербург</button></li>
+                            <li><button data-center="kgd">Калининград</button></li>
+                            <li><button data-center="kuf">Сероуфимск</button></li>
+                            <li><button data-center="vlv">Владивосток</button></li>
+                            <li><button data-center="krk">Красноярск</button></li>
+                            <li><button data-center="ufa">Уфа</button></li>
+                            <li><button data-center="ekb">Екатеринбург</button></li>
+                            <li><button data-center="che">Челябинск</button></li>
+                            <li><button data-center="oms">Омск</button></li>
+                            <li><button data-center="sam">Самара </button></li>
+                            <li><button data-center="rnd">Ростов-на-Дону</button></li>
+                            <li><button data-center="nin">Нижний Новгород</button></li>
+                            <li><button data-center="kaz">Казань</button></li>
+                            <li><button data-center="vor">Воронеж</button></li>
                         </ul>
                         <a href="#cce" class="btnBase">
                             <span>Открыть в своем городе</span>
@@ -686,49 +686,49 @@
                         <p>Выберите город<br>для просмотра карты<br>расположения центра</p>
                         <iframe class="msc" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d577325.348415308!2d36.82509701532534!3d55.58152434359988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1571064872471!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="spb" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.001690396!2d30.361351815618914!3d59.94870616824908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696319d0e2cd5df%3A0x8d38878f7015454e!2z0KjQv9Cw0LvQtdGA0L3QsNGPINGD0LsuLCA0MSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTEyMw!5e0!3m2!1sru!2sru!4v1571242081547!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="kgd" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.9066336124624!2d20.505527215375757!3d54.711265779299566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e3161ab2b6e57b%3A0x16cbc0ff65734f56!2z0JrQsNC70LjQvdC40L3Qs9GA0LDQtCDQn9C70LDQt9Cw!5e0!3m2!1sru!2sru!4v1571251666777!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="kuf" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.551564481792!2d57.75908923048376!3d56.619065036153195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c2c60966c52c93%3A0x58c35fe69faf20cb!2z0JrRgNCw0YHQvdC-0YPRhNC40LzRgdC6LCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571252858643!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="vlv" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186220.6477913151!2d131.89575106533513!3d43.17387094485274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb39cba5249d485%3A0x186704d4dd967e35!2z0JLQu9Cw0LTQuNCy0L7RgdGC0L7Quiwg0J_RgNC40LzQvtGA0YHQutC40Lkg0LrRgNCw0Lk!5e0!3m2!1sru!2sru!4v1571255547681!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="krk" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84942.31856294758!2d92.67639105842204!3d55.98200637631422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7b369fde42eaf%3A0x84fc4892aa679f6c!2z0JrRgNCw0YHQvdC-0Y_RgNGB0LrQuNC1INGB0YLQvtC70LHRiw!5e0!3m2!1sru!2sru!4v1571256836599!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="ufa" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d74090.64675756524!2d55.8267264525764!3d54.52762876328074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d91f809495f783%3A0x69c1f9def7afb091!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1571257112880!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="ekb" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114037.32806968356!2d60.52424379781486!3d56.86220976899663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c2fb6528a2d%3A0x9ec1f3208b28ab41!2z0JrQvtC80L_RjNGO0YLQtdGA0L3QsNGPINGI0LrQvtC70LAg0KPRgNCk0KM!5e0!3m2!1sru!2sru!4v1571257319964!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="che" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44634.45597478718!2d61.40897668588026!3d55.1652737809414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed668f3bdeb7%3A0xd85bccbaccb76090!2z0JvQtdC00L7QstGL0Lkg0JTQstC-0YDQtdGGINCh0L_QvtGA0YLQsCDQotGA0LDQutGC0L7RgA!5e0!3m2!1sru!2sru!4v1571257579104!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="oms" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293026.2089317565!2d73.07595501466203!3d54.98594804256375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafde2f601090b%3A0x5eefc33861a69b1a!2z0J7QvNGB0LosINCe0LzRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1571257680234!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="sam" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305483.92868536455!2d49.91789176207982!3d53.26099038616022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571257834265!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="rnd" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173294.152335792!2d39.48791458566386!3d47.26115615588457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2z0KDQvtGB0YLQvtCyLdC90LAt0JTQvtC90YMsINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1571257936894!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="nin" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141705.12532385887!2d43.7866614359637!3d56.29285148058397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5f9ee033251%3A0x28d3c0cf849657aa!2z0J3QuNC20L3QuNC5INCd0L7QstCz0L7RgNC-0LQsINCd0LjQttC10LPQvtGA0L7QtNGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1571258023231!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="kaz" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287086.8158826498!2d48.79311970940667!3d55.79556904107665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1571258116639!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                         <iframe class="vor" src="data:image/gif;base64,R0lGODlhVQBUAIAAAP///wAAACH5BAEAAAEALAAAAABVAFQAAAJdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/cFADs="
                             data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316560.47003178234!2d39.0510679593414!3d51.69409039544379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413b2f5ce874e813%3A0x48d94c0efba762bd!2z0JLQvtGA0L7QvdC10LYsINCS0L7RgNC-0L3QtdC20YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1571258197095!5m2!1sru!2sru"
-                            allowfullscreen="" title="Карта центра"></iframe>
+                            allowfullscreen="" title="Карта центроа в городе"></iframe>
                     </div>
                 </div>
             </div>
@@ -744,16 +744,16 @@
                 <span>Мы ответили на частые вопросы</span><br>родителей для вашего удобства
             </h2>
             <div class="faq__content">
-                <div class="faq__quest" role="tablist">
-                    <p data-answer='answer1' role="tab">Почему STARTUM, ведь центров развития очень много?</p>
-                    <p data-answer='answer2' role="tab">Есть ли у преподавателей специализированное образование?</p>
-                    <p data-answer='answer3' role="tab" class="active">Мой ребенок неусидчивый, вы с ним справитесь?</p>
-                    <p data-answer='answer4' role="tab">Есть ли центр в другом районе?</p>
-                    <p data-answer='answer5' role="tab">Сколько занятий в месяц за такую стоимость?</p>
-                    <p data-answer='answer6' role="tab">Чем обусловлена цена?</p>
+                <div class="faq__quest" role="tablist" aria-label="Вопросы" aria-orientation="vertical">
+                    <p data-answer='answer1' role="tab" tabindex="0" aria-controls="answer1" >Почему STARTUM, ведь центров развития очень много?</p>
+                    <p data-answer='answer2' role="tab" tabindex="0" aria-controls="answer2" >Есть ли у преподавателей специализированное образование?</p>
+                    <p data-answer='answer3' class="active" role="tab" tabindex="0" aria-controls="answer3" >Мой ребенок неусидчивый, вы с ним справитесь?</p>
+                    <p data-answer='answer4' role="tab" tabindex="0" aria-controls="answer4" >Есть ли центр в другом районе?</p>
+                    <p data-answer='answer5' role="tab" tabindex="0" aria-controls="answer5" >Сколько занятий в месяц за такую стоимость?</p>
+                    <p data-answer='answer6' role="tab" tabindex="0" aria-controls="answer6" >Чем обусловлена цена?</p>
                 </div>
-                <div class="faq__answer" role="tabpanel">
-                    <div class="answer1 modal--hide">
+                <div class="faq__answer">
+                    <div id="answer1" class="answer1 modal--hide" role="tabpanel">
                         <h4>Почему STARTUM, ведь центров развития очень много?</h4>
                         <p>Дорогие друзья, консультация с профессионалами из IT напрямую зависит от позиций, занимаемых
                             участниками в отношении поставленных задач!<br> <br> Соображения высшего порядка, а также
@@ -762,7 +762,7 @@
                             Таким образом, курс на социально-ориентированный национальный проект обеспечивает широкому
                             кругу специалистов участие в формировании ключевых</p>
                     </div>
-                    <div class="answer2 modal--hide">
+                    <div id="answer2" class="answer2 modal--hide" role="tabpanel">
                         <h4>Есть ли у преподавателей специализированное образование?</h4>
                         <p>Разнообразный и богатый опыт рамки и место обучения кадров требует от нас анализа
                             экономической целесообразности принимаемых решений.<br> <br>
@@ -777,7 +777,7 @@
                             Равным образом консультация с профессионалами из IT способствует подготовке и реализации
                             системы.</p>
                     </div>
-                    <div class="answer3">
+                    <div id="answer3" class="answer3" role="tabpanel">
                         <h4>Мой ребенок неусидчивый, вы с ним справитесь?</h4>
                         <p>Для этого у нас есть специальные пятиминутки — мы никогда не работаем монотонно, постоянно
                             происходит смена деятельности, чтобы ребенок не успел утомиться.<br> <br> Курсы разработаны
@@ -794,7 +794,7 @@
                             своего сорванца — он станет заметно более уравновешенным. Мы планируем открытие новых
                             центров по всем городу в этом году.</p>
                     </div>
-                    <div class="answer4 modal--hide">
+                    <div id="answer4" class="answer4 modal--hide" role="tabpanel">
                         <h4>Есть ли центр в другом районе?</h4>
                         <p>Задача организации, в особенности же постоянное информационно-техническое обеспечение нашей
                             деятельности позволяет выполнить важнейшие задания по разработке ключевых компонентов
@@ -804,7 +804,7 @@
                             Соображения высшего порядка, а также начало повседневной работы по формированию позиции
                             играет важную роль в формировании</p>
                     </div>
-                    <div class="answer5 modal--hide">
+                    <div id="answer5" class="answer5 modal--hide" role="tabpanel">
                         <h4>Сколько занятий в месяц за такую стоимость?</h4>
                         <p>Дорогие друзья, социально-экономическое развитие обеспечивает широкому кругу специалистов
                             участие в формировании экономической целесообразности принимаемых решений? С другой стороны
@@ -814,7 +814,7 @@
                             насущным потребностям.<br> <br>
                             Разнообразный и богатый опыт</p>
                     </div>
-                    <div class="answer6 modal--hide">
+                    <div id="answer6" class="answer6 modal--hide" role="tabpanel">
                         <h4>Чем обусловлена цена?</h4>
                         <p>Задача организации, в особенности же постоянный количественный рост и сфера нашей активности
                             играет важную роль в формировании всесторонне сбалансированных нововведений! Таким образом,
@@ -1068,12 +1068,12 @@
                 <input type="hidden" name="form_subject" value="Сайт стартум. Форма захвата телефона">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper">
-                    <label for="formQuest__phone" id="formQuest__label--phone">
-                        <svg>
+                    <label for="formQuest_phone">
+                        <svg role="img" aria-label="Телефон">
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input id="formQuest__phone" type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required aria-labelledby="formQuest__label--phone">
+                    <input id="formQuest_phone" type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <button class="form__button">
                     <span>Отправить</span>
@@ -1102,17 +1102,17 @@
                 <p>Доступен в мессенджерах</p>
             </div>
             <div class="footer__item footer__item--socials">
-                <a href="#" aria-label="Ссылка на профиль в ВК">
+                <a href="#" aria-label="Ссылка на профиль в соцсети">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#vk"></use>
                     </svg>
                 </a>
-                <a href="#" aria-label="Ссылка на профиль в Инстаграм">
+                <a href="#" aria-label="Ссылка на профиль в соцсети">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#insta"></use>
                     </svg>
                 </a>
-                <a href="#" aria-label="Ссылка на профиль в Фэйсбук">
+                <a href="#" aria-label="Ссылка на профиль в соцсети">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#fb"></use>
                     </svg>
@@ -1131,13 +1131,13 @@
     </footer>
 
     <!-- Модальные окна -->
-    <div id="ci" class="modal mfp-hide" role="dialog" aria-label="Выбор города">
+    <div id="ci" class="modal mfp-hide">
         <div class="modalBase modalCity">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1171,7 +1171,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="btnModal" aria-label="Заявка на открытие центра">Вашего города нет в списке?</button>
+            <button class="btnModal">Вашего города нет в списке?</button>
             <div class="rest9">
                 <div class="restBlue8"></div>
                 <div class="restYellow16"></div>
@@ -1179,13 +1179,13 @@
         </div>
     </div>
 
-    <div id='qu' class="modal mfp-hide" role="dialog" aria-label="Форма отправки вопроса">
+    <div id='qu' class="modal  mfp-hide">
         <div class="modalBase modalQuest">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1198,28 +1198,28 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Вопрос с модальной формы">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__name--quest">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input id="formModal__name--quest" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__phone--quest">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input id="formModal__phone--quest" type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Телефон" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__subject--quest" class="textareaModal">
+                    <label class="textareaModal">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <textarea id="formModal__subject--quest" name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required></textarea>
+                    <textarea name="Вопрос" class="form__subject" placeholder="Опишите ваш вопрос" required></textarea>
                 </div>
                 <button class="form__button">
                     <span>Жду звонка</span>
@@ -1236,13 +1236,13 @@
         </div>
     </div>
 
-    <div id="oor" class="modal mfp-hide" role="dialog" aria-label="Форма отправки заявки">
+    <div id="oor" class="modal  mfp-hide">
         <div class="modalBase modalOrder">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1256,28 +1256,28 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Заявка на программу">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__name--order">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input id="formModal__name--order" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__phone--order"> 
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input id="formModal__phone--order" type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__email--order">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input id="formModal__email--order" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
@@ -1317,7 +1317,7 @@
         </div>
     </div>
 
-    <div id="thanks" class="modal mfp-hide" role="alert">
+    <div id="thanks" class="modal  mfp-hide" role="alert">
         <div class="modalBase modalThanks">
             <div class="rest8">
                 <div class="restYellow14"></div>
@@ -1329,7 +1329,7 @@
             <h3 class="titleModal">Заявка отправлена!</h3>
             <p class="descModal">Вы успешно отправили запрос, в ближайшее время наши специалисты свяжутся с вами для
                 консультации по номеру +7 912 520 64 40</p>
-            <button id="closeModal" class="btnModal" aria-label="Закрыть окно">Свернуть оповещение</button>
+            <button id="closeModal" class="btnModal">Свернуть оповещение</button>
             <div class="rest9">
                 <div class="restBlue8"></div>
                 <div class="restYellow16"></div>
@@ -1337,13 +1337,13 @@
         </div>
     </div>
 
-    <div id="re" class="modal mfp-hide" role="dialog" aria-label="Форма отправки отзыва">
+    <div id="re" class="modal  mfp-hide">
         <div class="modalBase modalReview">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1357,30 +1357,34 @@
                 <input type="hidden" name="form_subject" value="Сайт смартум. Добавить отзыв">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__name--review">
-                        <svg><use xlink:href="img/svg/sprite.svg#name"></use></svg>
+                    <label>
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#name"></use>
+                        </svg>
                     </label>
-                    <input id="formModal__name--review" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__email--review">
-                        <svg><use xlink:href="img/svg/sprite.svg#mail"></use></svg>
+                    <label>
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg>
                     </label>
-                    <input id="formModal__email--review" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label class="textareaModal"  for="formModal__subject--review">
+                    <label class="textareaModal">
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#btnAnswer"></use>
                         </svg>
                     </label>
-                    <textarea id="formModal__subject--review" name="Отзыв" class="form__subject" placeholder="Напишите свой отзыв..."
+                    <textarea name="Отзыв" class="form__subject" placeholder="Напишите свой отзыв..."
                         required></textarea>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <input id="formModal__file--review" type="file" name="Прикреплен файл" class="form__file" required>
-                    <label class="labelFile" for="formModal__file--review">
+                    <input type="file" name="Прикреплен файл" class="form__file" required>
+                    <label class="labelFile">
                         <span>Прикрепите файл</span>
                     </label>
                 </div>
@@ -1399,13 +1403,13 @@
         </div>
     </div>
 
-    <div id="cce" class="modal mfp-hide" role="dialog" aria-label="Форма отправки заявки на открытие центра">
+    <div id="cce" class="modal  mfp-hide">
         <div class="modalBase modalCentr">
             <div class="rest8">
                 <div class="restYellow14"></div>
                 <div class="restYellow15"></div>
             </div>
-            <button title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть окно">×</button>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
             <svg>
                 <use xlink:href="img/svg/sprite.svg#iconModal"></use>
             </svg>
@@ -1416,32 +1420,32 @@
                 <input type="hidden" name="project_name" value="http://f0315577.xsph.ru">
                 <input type="hidden" name="admin_email" value="43reiter@gmail.com">
                 <input type="hidden" name="email_from" value="info@f0315577.xsph.ru">
-                <input type="hidden" name="form_subject" value="Сайт смартум. Заявка на открытие центра">
+                <input type="hidden" name="form_subject" value="айт смартум. Заявка на открытие центра">
                 <!-- END Hidden Required Fields -->
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__name--centr">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#name"></use>
                         </svg>
                     </label>
-                    <input id="formModal__name--centr" type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
+                    <input type="text" name="Имя" class="form__name" placeholder="Ваше имя и фамилия" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__email--centr">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#mail"></use>
                         </svg>
                     </label>
-                    <input id="formModal__email--centr" type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
+                    <input type="email" name="Электронная почта" class="form__email" placeholder="Электронная почта"
                         required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
-                    <label for="formModal__phone--centr">
+                    <label>
                         <svg>
                             <use xlink:href="img/svg/sprite.svg#phone"></use>
                         </svg>
                     </label>
-                    <input id="formModal__phone--centr" type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
+                    <input type="tel" name="Имя" class="form__phone" placeholder="Номер телефона" required>
                 </div>
                 <div class="input__wrapper input__wrapper--modal">
                     <select>

@@ -5,11 +5,7 @@
 
 /*=============================================
       ОБЩИЕ ПРАВИЛА
-  =============================================*/
-.clearfix {
-    @include clearfix;
-}
-
+=============================================*/
 .wrapper {
     @include wrapper;
 }
@@ -258,7 +254,7 @@ body {
         width: 162px;
     }
 
-    .logo__img {
+    &__img {
         display: block;
         width: 100%;
     }
@@ -767,7 +763,7 @@ body {
         padding: 44px 0 37px;
     }
 
-    .indicators__content {
+    &__content {
         align-items: center;
         @include row-flex();
 
@@ -775,66 +771,66 @@ body {
             flex-direction: column;
             justify-content: center;
         }
+    }
 
-        .indicators__item {
-            display: flex;
-            align-items: center;
-            width: 23%;
-            @include col();
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 23%;
+        @include col();
 
-            @include lg-block {
-                flex-direction: column;
-                justify-content: center;
+        @include lg-block {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include sm-block {
+            width: 75%;
+            text-align: center;
+        }
+
+
+        span {
+            font-size: 5vw;
+            line-height: 130%;
+            font-weight: 400;
+
+            @include llg-block {
+                font-size: 60px;
             }
 
             @include sm-block {
-                width: 75%;
-                text-align: center;
+                font-size: 75px;
             }
 
+            @include xxs-block {
+                font-size: 72px;
+            }
+        }
 
-            span {
-                font-size: 5vw;
-                line-height: 130%;
-                font-weight: 400;
+        p {
+            margin-left: 10px;
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 400;
 
-                @include llg-block {
-                    font-size: 60px;
-                }
-
-                @include sm-block {
-                    font-size: 75px;
-                }
-
-                @include xxs-block {
-                    font-size: 72px;
-                }
+            @include llg-block {
+                font-size: 15px;
             }
 
-            p {
-                margin-left: 10px;
+            @include lg-block {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            @include sm-block {
+                margin-bottom: 20px;
                 font-size: 18px;
-                line-height: 150%;
-                font-weight: 400;
+            }
 
-                @include llg-block {
-                    font-size: 15px;
-                }
-
-                @include lg-block {
-                    margin: 0;
-                    font-size: 14px;
-                }
-
-                @include sm-block {
-                    margin-bottom: 20px;
-                    font-size: 18px;
-                }
-
-                @include xxs-block {
-                    margin-bottom: 25px;
-                    font-size: 16px;
-                }
+            @include xxs-block {
+                margin-bottom: 25px;
+                font-size: 16px;
             }
         }
     }
@@ -1060,7 +1056,7 @@ body {
         box-shadow: none;
     }
 
-    .programItem__quote {
+    &__quote {
         position: relative;
         margin-top: auto;
         background: #fafafa;
@@ -1113,7 +1109,7 @@ body {
             display: none;
         }
 
-        .dataQuote__fio {
+        &__fio {
             padding-left: 10px;
         }
 
@@ -3837,6 +3833,8 @@ label:not(.labelFile) {
 }
 
 /*=============================================*/
+
+
 
 /*=============================================
         МОДАЛЬНЫЕ ОКНА
