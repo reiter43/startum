@@ -30,7 +30,6 @@ body {
     text-align: center;
     font-size: 2.5vw;
     line-height: 120%;
-
     font-weight: 400;
     color: #000;
 
@@ -2664,7 +2663,7 @@ label:not(.labelFile) {
     }
 
     figure,
-    .metodsItem__img {
+    &__img {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -2862,7 +2861,7 @@ label:not(.labelFile) {
   Секция с нижней формой
 ---------------------------------------------*/
 .formQuest {
-    .formQuest__form {
+    &__form {
         @include md-block {
             flex-direction: row;
         }
