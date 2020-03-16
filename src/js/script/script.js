@@ -4,7 +4,7 @@ let burger = document.querySelector('.burger');
 let nav = document.querySelector('.nav');
 let bod = document.querySelector('body');
 
-burger.addEventListener('click', event => {
+burger.addEventListener('click', (event) => {
 	event.preventDefault;
 
 	if (burger.classList.contains('burger--active')) {
@@ -57,7 +57,7 @@ btnVideo.forEach(elem => {
 
 // Общая функция фильтрации
 function filter(btnFilter, itemContent, data, activeClass) {
-	let tabs = document.querySelectorAll(btnFilter);
+	const tabs = document.querySelectorAll(btnFilter);
 
 	if (tabs) {
 		tabs.forEach(el => {
@@ -72,13 +72,15 @@ function filter(btnFilter, itemContent, data, activeClass) {
 			}
 
 			function run() {
+				event.preventDefault();
+
 				tabs.forEach(el => {
 					el.classList.remove(activeClass);
 					event.target.classList.add(activeClass);
 				});
 
-				let items = document.querySelectorAll(itemContent);
-				let dataAtr = el.getAttribute(data);
+				const items = document.querySelectorAll(itemContent);
+				const dataAtr = el.getAttribute(data);
 
 				items.forEach(el => {
 					el.classList.add('modal--hide');
@@ -97,7 +99,7 @@ function filter(btnFilter, itemContent, data, activeClass) {
 }
 
 // Фильтрация вопросов и статей
-filter('.faq__quest > p', '.faq__answer > div', 'data-answer', 'active');
+filter('.faq__quest > li', '.faq__answer > div', 'data-answer', 'active');
 filter('.mainArticles__cat button', '.metodsItem--article', 'data-cat', 'active');
 
 

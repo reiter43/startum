@@ -2340,7 +2340,7 @@ label:not(.labelFile) {
         padding: 60px 15px 30px;
     }
 
-    .faq__content {
+    &__content {
         display: flex;
         max-width: 1335px;
         margin: 60px auto 0;
@@ -2356,118 +2356,26 @@ label:not(.labelFile) {
             display: none;
         }
 
-        .faq__quest {
-            width: 25%;
-            padding: 0;
-            border-right: 1px solid rgba(0, 0, 0, 0.05);
+        &--mob {
+            display: none;
+            margin-top: 37px;
+            padding: 40px 0;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
 
-            @include md-block {
-                width: 30%;
+            @include sm-block {
+                display: block;
             }
 
-            .active {
-                color: #ffffff;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    right: -14px;
-                    bottom: 50%;
-                    border-top: 12px solid #ffffff;
-                    border-left: 14px solid #2098d5;
-                    border-bottom: 12px solid #ffffff;
-                    transform: translateY(50%);
-                }
+            details {
+                margin-bottom: 20px;
+                color: #000000;                
             }
 
-            p {
-                position: relative;
-                padding: 35px 10px 30px 37px;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-                font-size: 18px;
-                line-height: 150%;
-                font-weight: 500;
-                color: #000000;
-                transition: all ease 0.3s;
-                cursor: pointer;
-
-
-                @include llg-block {
-                    font-size: 16px;
-                }
-
-                @include md-block {
-                    font-size: 14px;
-                }
-
-                &:hover,
-                &.active {
-                    background: #2098d5;
-                }
+            details:last-child {
+                margin-bottom: 0;
             }
-
-            p:first-child {
-                padding-top: 30px;
-            }
-
-            p:last-child {
-                padding-bottom: 30px;
-                border-bottom: none;
-            }
-        }
-
-        .faq__answer {
-            width: 75%;
-            padding: 44px 57px 63px 53px;
-            color: #000;
-
-            @include md-block {
-                width: 70%;
-                padding: 24px 27px 23px 23px;
-            }
-
-            h4 {
-                margin-top: 0;
-                font-size: 24px;
-                line-height: 180%;
-                font-weight: 600;
-
-                @include llg-block {
-                    font-size: 22px;
-                }
-            }
-
-            p {
-                font-size: 16px;
-                line-height: 200%;
-                font-weight: 400;
-
-                @include llg-block {
-                    font-size: 15px;
-                }
-
-                @include md-block {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-
-    .faq__content--mob {
-        display: none;
-        margin-top: 37px;
-        padding: 40px 0;
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 2px 6px 44px rgba(0, 0, 0, 0.07);
-
-        @include sm-block {
-            display: block;
-        }
-
-        details {
-            margin-bottom: 20px;
-            color: #000000;
 
             summary {
                 padding: 20px 10px 20px 20px;
@@ -2512,9 +2420,101 @@ label:not(.labelFile) {
                 font-weight: 400;
             }
         }
+    }
 
-        details:last-child {
-            margin-bottom: 0;
+    &__quest {
+        width: 25%;
+        padding: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+
+        @include md-block {
+            width: 30%;
+        }        
+
+        li {
+            position: relative;
+            padding: 35px 10px 30px 37px;
+            list-style-type: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 500;
+            color: #000000;
+            transition: all ease 0.3s;
+            cursor: pointer;
+
+
+            @include llg-block {
+                font-size: 16px;
+            }
+
+            @include md-block {
+                font-size: 14px;
+            }
+
+            &:hover,
+            &.active {
+                background: #2098d5;
+                color: #ffffff;
+            }
+
+            &.active { 
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -14px;
+                    bottom: 50%;
+                    border-top: 12px solid #ffffff;
+                    border-left: 14px solid #2098d5;
+                    border-bottom: 12px solid #ffffff;
+                    transform: translateY(50%);
+                }
+            }
+        }
+
+        li:first-child {
+            padding-top: 30px;
+        }
+
+        li:last-child {
+            padding-bottom: 30px;
+            border-bottom: none;
+        }
+    }
+
+    &__answer {
+        width: 75%;
+        padding: 44px 57px 63px 53px;
+        color: #000;
+
+        @include md-block {
+            width: 70%;
+            padding: 24px 27px 23px 23px;
+        }
+
+        h4 {
+            margin-top: 0;
+            font-size: 24px;
+            line-height: 180%;
+            font-weight: 600;
+
+            @include llg-block {
+                font-size: 22px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 200%;
+            font-weight: 400;
+
+            @include llg-block {
+                font-size: 15px;
+            }
+
+            @include md-block {
+                font-size: 14px;
+            }
         }
     }
 
