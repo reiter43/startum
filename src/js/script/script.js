@@ -56,43 +56,49 @@ btnVideo.forEach(elem => {
 
 
 // Общая функция фильтрации
-function filter(btnFilter, itemContent, getAtr, getAtr2) {
-	let btn = document.querySelectorAll(btnFilter);
+function filter(btnFilter, itemContent, data, activeClass) {
+	let tabs = document.querySelectorAll(btnFilter);
 
-	btn.forEach(el => {
-		el.onclick = event => {
-			event.preventDefault();
+	if (tabs) {
+		tabs.forEach(el => {
+			el.addEventListener('click', run);
 
-			btn.forEach(el => {
-				el.classList.remove('active');
-				event.target.classList.add('active');
-			});
+			if (el.tagName != 'button') {
+				el.addEventListener('keydown', (event) => {
+					if (event.keyCode == 13 || event.keyCode == 32) {
+						run();
+					}
+				});
+			}
 
-			let item = document.querySelectorAll(itemContent);
-			let atr = el.getAttribute(getAtr);
+			function run() {
+				tabs.forEach(el => {
+					el.classList.remove(activeClass);
+					event.target.classList.add(activeClass);
+				});
 
-			item.forEach(el => {
-				el.classList.add('modal--hide');
+				let items = document.querySelectorAll(itemContent);
+				let dataAtr = el.getAttribute(data);
 
-				if (atr === 'all') {
-					el.classList.remove('modal--hide');
-				}
+				items.forEach(el => {
+					el.classList.add('modal--hide');
 
-				if (el.hasAttribute(getAtr2)) {
-					el.src = el.getAttribute(getAtr2);
-				}
+					if (dataAtr === 'all') {
+						el.classList.remove('modal--hide');
+					}
 
-				if (el.classList.contains(atr)) {
-					el.classList.remove('modal--hide');
-				}
-			})
-		}
-	})
+					if (el.classList.contains(dataAtr)) {
+						el.classList.remove('modal--hide');
+					}
+				})
+			}
+		})
+	}
 }
 
 // Фильтрация вопросов и статей
-filter('.faq__quest > p', '.faq__answer div', 'data-answer');
-filter('.mainArticles__cat button', '.metodsItem--article', 'data-cat');
+filter('.faq__quest > p', '.faq__answer > div', 'data-answer', 'active');
+filter('.mainArticles__cat button', '.metodsItem--article', 'data-cat', 'active');
 
 
 // Фильтрация центров и карт в контактах
@@ -183,7 +189,7 @@ function sticky(elemSticky, offset) {
 	}
 }
 
-if (window.location.pathname == "/smartumStat/" || window.location.pathname == "/index.html") {
+if (window.location.pathname == "/smartumStat/" || window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/build/") {
 	sticky('.topLine--home', 140);
 }
 
@@ -193,13 +199,13 @@ let anchors = document.querySelectorAll('.topLine nav a[href*=anchor]');
 let speed = 0.3;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 
 anchors.forEach(anchor => {
-	anchor.addEventListener('click', function (e) { 
-		e.preventDefault(); 
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
 
 		let widthTop = window.pageYOffset;  // производим прокрутка прокрутка
 		let hash = this.hash;  // к id элемента, к которому нужно перейти
 		let toBlock = document.querySelector(hash).getBoundingClientRect().top;  // отступ от окна браузера до id 		
-		let	start = null;
+		let start = null;
 
 		requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
 
@@ -209,9 +215,9 @@ anchors.forEach(anchor => {
 			}
 
 			let progress = time - start;
-			let	rrorr = (toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock));
+			let rrorr = (toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock));
 
-			window.scrollTo(0, rrorr); 
+			window.scrollTo(0, rrorr);
 
 			if (rrorr != widthTop + toBlock) {
 				requestAnimationFrame(step)
@@ -304,7 +310,7 @@ btnVi.forEach(elem => {
 // 	console.log(el);
 // 	let t = Math.round(time/(number/step));
 // 	console.log(t);
-	
+
 // 	let interval = setInterval(() => {
 // 		n = n + step;
 // 		if (n == number) {
