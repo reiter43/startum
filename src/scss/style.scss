@@ -581,21 +581,25 @@ body {
         padding-bottom: 74px;
         text-align: left;
     }
-}
 
-.mostly__content {
-    display: flex;
+    &__content {
+        display: flex;
 
-    @include sm-block {
-        flex-direction: column;
-        align-items: center;
+        @include sm-block {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include xxs-block {
+            align-items: flex-start;
+        }
+
+        img {
+            @include img;
+        }
     }
 
-    @include xxs-block {
-        align-items: flex-start;
-    }
-
-    .mostly__block1 {
+    &__block1 {
         width: 37%;
 
         @include sm-block {
@@ -640,7 +644,7 @@ body {
         }
     }
 
-    .mostly__block2 {
+    &__block2 {
         width: 57%;
         margin-left: 6%;
 
@@ -740,10 +744,6 @@ body {
                 display: none;
             }
         }
-    }
-
-    img {
-        @include img;
     }
 }
 
@@ -928,7 +928,7 @@ body {
     }
 
     @include xxs-block {
-        padding: 40px 0 94px;
+        padding: 50px 0 68px;
         text-align: center;
     }
 
@@ -942,7 +942,7 @@ body {
 
         @include xxs-block {
             width: 90%;
-            margin: 26px auto 0;
+            margin: 45px auto 0;
             padding: 14px 20px;
 
             span {
@@ -961,7 +961,7 @@ body {
         }
 
         @include xxs-block {
-            margin-bottom: 85px;
+            margin-bottom: 45px;
             padding: 0 40px;
             font-size: 28px;
         }
@@ -1049,7 +1049,7 @@ body {
         width: 100%;
         max-width: 390px;
         margin-bottom: 0;
-        padding: 23px 6px 23px 36px;
+        padding: 23px 6px 23px 20px;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 0;
         box-shadow: none;
@@ -1348,7 +1348,7 @@ select {
 
 @include input-placeholder {
     font-size: 16px;
-    line-height: 160%;
+    line-height: 16px;
     font-weight: 400;
     color: #000000;
     opacity: 0.5;
@@ -2369,7 +2369,7 @@ label:not(.labelFile) {
 
             details {
                 margin-bottom: 20px;
-                color: #000000;                
+                color: #000000;
             }
 
             details:last-child {
@@ -2428,7 +2428,7 @@ label:not(.labelFile) {
 
         @include md-block {
             width: 30%;
-        }        
+        }
 
         li {
             position: relative;
@@ -2457,7 +2457,7 @@ label:not(.labelFile) {
                 color: #ffffff;
             }
 
-            &.active { 
+            &.active {
                 &::after {
                     content: '';
                     position: absolute;
