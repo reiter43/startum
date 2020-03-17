@@ -196,7 +196,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	if (window.location.pathname == "/smartumStat/" || window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/build/") {
+	if (document.querySelector('.topLine--home')) {
 		sticky('.topLine--home', 140);
 	}
 

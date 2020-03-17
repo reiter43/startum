@@ -2388,6 +2388,7 @@ label:not(.labelFile) {
                 &:focus {
                     background: #2098d5;
                     color: #ffffff;
+                    font-weight: 600;
                 }
 
                 &::marker {

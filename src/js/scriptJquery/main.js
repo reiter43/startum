@@ -143,7 +143,7 @@ $(document).ready(function () {
 
 
     // Скрипт для анимации цифр
-    if (window.location.pathname == "/smartum/" || window.location.pathname == "/index.html") {
+    if (document.querySelector('.indicators')) {
         var a = 0;
         $(window).scroll(function () {
             var oTop = $('.indicators__item').offset().top - window.innerHeight;
